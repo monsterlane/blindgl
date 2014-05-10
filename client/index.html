@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>blindGL</title>
+	<link rel="shortcut icon" href="/favicon.ico" />
+
+	<meta charset="utf-8" />
+	<meta name="author" content="Jonathan Down" />
+	<meta name="description" content="BlindGL is an HTML game engine." />
+	<meta name="robots" content="index,follow" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="system/css/normalize.css" type="text/css" rel="stylesheet" media="screen" />
+	<link href="system/css/system.css" type="text/css" rel="stylesheet" media="screen" />
+	<link href="game/css/game.css" type="text/css" rel="stylesheet" media="screen" />
+
+	<script data-main="system/js/boot" src="system/js/require.min.js"></script>
+</head>
+<body id="bglApplication" tabindex="0">
+
+<article id="bglWindow">
+	<section id="bglInterface">
+		<header>
+			<hgroup>
+				<h1>blindGL</h1>
+
+				<ul class="toolbar">
+					<li>
+						<span>FPS</span>
+						<span id="bglFps">0</span>
+					</li>
+				</ul>
+			</hgroup>
+		</header>
+
+		<div id="bglOverlay"></div>
+		<div id="bglEngine"></div>
+
+		<footer>
+			<nav id="">
+				<ul class="toolbar">
+					<li>
+						<button id="bglKeyLeft">
+							<span class="role-icon icon-key-left"></span>
+							<span class="role-label">Left</span>
+						</button>
+					</li>
+					<li>
+						<button id="bglKeyDown">
+							<span class="role-icon icon-key-down"></span>
+							<span class="role-label">Down</span>
+						</button>
+					</li>
+					<li>
+						<button id="bglKeyUp">
+							<span class="role-icon icon-key-up"></span>
+							<span class="role-label">Up</span>
+						</button>
+					</li>
+					<li>
+						<button id="bglKeyRight">
+							<span class="role-icon icon-key-right"></span>
+							<span class="role-label">Right</span>
+						</button>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+	</section>
+</article>
+
+</body>
+</html>

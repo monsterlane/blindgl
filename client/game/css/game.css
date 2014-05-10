@@ -1,0 +1,89 @@
+
+body {
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	background-color:#000;
+}
+
+/* */
+
+span.icon-key-up {
+	background:url(../img/glyphicons_213_up_arrow.png) no-repeat;
+	width:18px;
+	height:20px;
+	margin:0 1px;
+}
+
+span.icon-key-down {
+	background:url(../img/glyphicons_212_down_arrow.png) no-repeat;
+	width:18px;
+	height:20px;
+	margin:0 1px;
+}
+
+span.icon-key-left {
+	background:url(../img/glyphicons_210_left_arrow.png) no-repeat;
+	width:20px;
+	height:18px;
+	margin:1px 0;
+}
+
+span.icon-key-right {
+	background:url(../img/glyphicons_211_right_arrow.png) no-repeat;
+	width:20px;
+	height:18px;
+	margin:1px 0;
+}
+
+/* */
+
+#bglInterface {
+	position:relative;
+	top:50%;
+	left:50%;
+	width:600px;
+	height:400px;
+	margin:-200px 0 0 -300px;
+}
+	#bglInterface > header {
+		position:absolute;
+		top:-1.5em; left:0;
+		width:100%;
+	}
+		#bglInterface > header > hgroup:after {
+			content:'.';
+			display:block;
+			visibility:hidden;
+			height:0;
+			clear:both;
+		}
+			#bglInterface > header > hgroup > h1 {
+				display:inline-block;
+				margin:0;
+				color:#fff;
+				font-size:1em;
+			}
+
+			#bglInterface > header > hgroup > ul.toolbar {
+				float:right;
+			}
+				#bglInterface > header > hgroup > ul.toolbar > li > span {
+					color:white;
+				}
+
+	#bglInterface > footer {
+		position:absolute;
+		bottom:-2em; left:0;
+		width:100%;
+	}
+		#bglInterface > footer > nav > ul > li > button {
+			border:1px solid #fff;
+			background-color:#fff;
+			-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;
+		}
+			#bglInterface > footer > nav > ul > li > button > span.role-label {
+				display:none;
+			}
+
+			#bglInterface > footer > nav > ul > li > button.selected {
+				background-color:#333;
+			}
