@@ -1,5 +1,5 @@
 
-define( [ '../../game/js/game' ], function( aGame ) {
+define( [ 'audio', '../../game/js/game' ], function( Audio, aGame ) {
 	return {
 		settings: {
 			debug: true,
@@ -15,6 +15,7 @@ define( [ '../../game/js/game' ], function( aGame ) {
 			keyDown: [ ],
 			binding: [ ]
 		},
+		audio: null,
 		game: null,
 		verbose: function( aMessage ) {
 			if ( this.settings.debug == true ) {
@@ -58,6 +59,9 @@ define( [ '../../game/js/game' ], function( aGame ) {
 		},
 		init: function( ) {
 			this.verbose( 'blindGL: booting...' );
+
+			this.audio = new Audio( );
+			this.audio.init( );
 
 			this.bindInputEventListeners( );
 
