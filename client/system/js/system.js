@@ -2,13 +2,14 @@
 define( [ '../../game/js/game' ], function( aGame ) {
 	return {
 		settings: {
-			debug: true
+			debug: true,
+			showFps: true
 		},
 		engine: {
+			fps: document.getElementById( 'bglFps' ),
 			tickRate: Math.round( 1000 / 60 ),
 			lastTick: new Date( ).getTime( ),
-			ticks: 0,
-			fps: document.getElementById( 'bglFps' )
+			ticks: 0
 		},
 		input: {
 			keyDown: [ ],
@@ -72,13 +73,18 @@ define( [ '../../game/js/game' ], function( aGame ) {
 			this.engine.ticks++;
 
 			if ( now - this.engine.lastTick >= 1000 ) {
-				this.engine.fps.innerHTML = this.engine.ticks;
+				if ( this.settings.showFps == true && this.engine.fps != null ) {
+					this.engine.fps.innerHTML = this.engine.ticks;
+				}
+
 				this.engine.lastTick = now;
 				this.engine.ticks = 0;
 			}
 
 			setTimeout( function( ) {
-				self.think( );
+				window.requestAnimationFrame( function( ) {
+					self.think( );
+				});
 			}, this.engine.tickRate );
 		}
 	};

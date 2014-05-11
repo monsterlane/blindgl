@@ -1,54 +1,25 @@
 
-define( function( ) {
+define( [ '../../system/js/player' ], function( Player ) {
 	return {
 		system: null,
-		bindPlayerBindings: function( ) {
-			var self = this;
+		players: [ ],
+		addPlayer: function( ) {
+			var player = new Player( ),
+				count;
 
-			this.system.bindKey( 38, {
-				button: document.getElementById( 'bglKeyUp' ),
-				keyUp: function( ) {
-					this.button.className = '';
-				},
-				keyDown: function( ) {
-					this.button.className = 'selected';
-				}
-			});
+			this.players.push( player );
 
-			this.system.bindKey( 40, {
-				button: document.getElementById( 'bglKeyDown' ),
-				keyUp: function( ) {
-					this.button.className = '';
-				},
-				keyDown: function( ) {
-					this.button.className = 'selected';
-				}
-			});
+			player.init( this.system, this );
+			player.spawn( );
 
-			this.system.bindKey( 37, {
-				button: document.getElementById( 'bglKeyLeft' ),
-				keyUp: function( ) {
-					this.button.className = '';
-				},
-				keyDown: function( ) {
-					this.button.className = 'selected';
-				}
-			});
-
-			this.system.bindKey( 39, {
-				button: document.getElementById( 'bglKeyRight' ),
-				keyUp: function( ) {
-					this.button.className = '';
-				},
-				keyDown: function( ) {
-					this.button.className = 'selected';
-				}
-			});
+			if ( ( count = document.getElementById( 'bglPlayers' ) ) != null ) {
+				count.innerHTML = parseInt( count.innerHTML, 10 ) + 1;
+			}
 		},
 		start: function( ) {
-			this.bindPlayerBindings( );
-
 			this.system.verbose( 'blindGL: game started' );
+
+			this.addPlayer( );
 		},
 		init: function( aSystem ) {
 			this.system = aSystem;
