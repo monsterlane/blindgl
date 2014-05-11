@@ -1,6 +1,6 @@
 
 define( [ 'audio', '../../game/js/game' ], function( Audio, aGame ) {
-	return {
+	var System = {
 		settings: {
 			debug: true,
 			showFps: true
@@ -16,80 +16,88 @@ define( [ 'audio', '../../game/js/game' ], function( Audio, aGame ) {
 			binding: [ ]
 		},
 		audio: null,
-		game: null,
-		verbose: function( aMessage ) {
-			if ( this.settings.debug == true ) {
-				console.log( aMessage );
-			}
-		},
-		bindInputEventListeners: function( ) {
-			var el = document.getElementById( 'bglApplication' ),
-				self = this;
+		game: null
+	};
 
-			el.addEventListener( 'keydown', function( aEvent ) {
-				if ( aEvent.repeat != true ) {
-					self.handleKeypress( aEvent.keyCode );
-				}
-			});
-
-			el.addEventListener( 'keyup', function( aEvent ) {
-				if ( aEvent.repeat != true ) {
-					self.handleKeypress( aEvent.keyCode );
-				}
-			});
-		},
-		handleKeypress: function( aKey ) {
-			if ( this.input.keyDown[ aKey ] === true ) {
-				this.input.keyDown[ aKey ] = false;
-
-				if ( this.input.binding[ aKey ] ) {
-					this.input.binding[ aKey ].keyUp( );
-				}
-			}
-			else {
-				this.input.keyDown[ aKey ] = true;
-
-				if ( this.input.binding[ aKey ] ) {
-					this.input.binding[ aKey ].keyDown( );
-				}
-			}
-		},
-		bindKey: function( aKey, aBinding ) {
-			this.input.binding[ aKey ] = aBinding;
-		},
-		init: function( ) {
-			this.verbose( 'blindGL: booting...' );
-
-			this.audio = new Audio( );
-			this.audio.init( );
-
-			this.bindInputEventListeners( );
-
-			if ( aGame && aGame.hasOwnProperty( 'init' ) ) {
-				this.game = aGame;
-				this.game.init( this );
-			}
-		},
-		think: function( ) {
-			var now = new Date( ).getTime( ),
-				self = this;
-
-			this.engine.ticks++;
-
-			if ( now - this.engine.lastTick >= 1000 ) {
-				if ( this.settings.showFps == true && this.engine.fps != null ) {
-					this.engine.fps.innerHTML = this.engine.ticks;
-				}
-
-				this.engine.lastTick = now;
-				this.engine.ticks = 0;
-			}
-
-			setTimeout( function( ) {
-				window.requestAnimationFrame( function( ) {
-					self.think( );
-				});
-			}, this.engine.tickRate );
+	System.verbose = function( aMessage ) {
+		if ( this.settings.debug == true ) {
+			console.log( aMessage );
 		}
 	};
+
+	System.bindInputEventListeners = function( ) {
+		var el = document.getElementById( 'bglApplication' ),
+			self = this;
+
+		el.addEventListener( 'keydown', function( aEvent ) {
+			if ( aEvent.repeat != true ) {
+				self.handleKeypress( aEvent.keyCode );
+			}
+		});
+
+		el.addEventListener( 'keyup', function( aEvent ) {
+			if ( aEvent.repeat != true ) {
+				self.handleKeypress( aEvent.keyCode );
+			}
+		});
+	};
+
+	System.handleKeypress = function( aKey ) {
+		if ( this.input.keyDown[ aKey ] === true ) {
+			this.input.keyDown[ aKey ] = false;
+
+			if ( this.input.binding[ aKey ] ) {
+				this.input.binding[ aKey ].keyUp( );
+			}
+		}
+		else {
+			this.input.keyDown[ aKey ] = true;
+
+			if ( this.input.binding[ aKey ] ) {
+				this.input.binding[ aKey ].keyDown( );
+			}
+		}
+	};
+
+	System.bindKey = function( aKey, aBinding ) {
+		this.input.binding[ aKey ] = aBinding;
+	};
+
+	System.init = function( ) {
+		this.verbose( 'blindGL: booting...' );
+
+		this.audio = Audio;
+		this.audio.init( this );
+
+		this.bindInputEventListeners( );
+
+		if ( aGame && aGame.hasOwnProperty( 'init' ) ) {
+			this.game = aGame;
+			this.game.init( this );
+		}
+	};
+
+	System.think = function( ) {
+		var now = new Date( ).getTime( ),
+			self = this;
+
+		this.engine.ticks++;
+
+		if ( now - this.engine.lastTick >= 1000 ) {
+			if ( this.settings.showFps == true && this.engine.fps != null ) {
+				this.engine.fps.innerHTML = this.engine.ticks;
+			}
+
+			this.engine.lastTick = now;
+			this.engine.ticks = 0;
+		}
+
+		setTimeout( function( ) {
+			window.requestAnimationFrame( function( ) {
+				self.think( );
+			});
+		}, this.engine.tickRate );
+	};
+
+	return System;
 });

@@ -21,7 +21,7 @@ define( [ '../../system/js/player' ], function( Player ) {
 
 			this.system.verbose( 'blindGL: game started' );
 
-			this.system.audio.playMusic( 'game/snd/overworld.mp3', 100 );
+			this.system.audio.playMusic( 'game/snd/overworld.mp3', 25 );
 
 			this.addPlayer( );
 		},
