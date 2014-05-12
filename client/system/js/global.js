@@ -13,7 +13,7 @@ define( [ 'class' ], function( ) {
 			numBanks: 32
 		},
 		video: {
-			numLayers: 3,
+			fps: 60,
 			resolutions: [
 				[ 800, 600 ],
 				[ 1024, 576 ],
@@ -23,7 +23,8 @@ define( [ 'class' ], function( ) {
 				[ 1600, 1200 ],
 				[ 1664, 936 ],
 				[ 1920, 1080 ]
-			]
+			],
+			numLayers: 3
 		},
 		input: {
 			keyboard: {

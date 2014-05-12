@@ -9,7 +9,7 @@ define( [ 'global', 'audio', 'canvas', '../../game/js/game', 'class' ], function
 	var blindGL = Class.extend({
 		engine: {
 			fps: document.getElementById( 'bglFps' ),
-			tickRate: Math.round( 1000 / 60 ),
+			tickRate: Math.round( 1000 / GLOBAL.video.fps ),
 			lastTick: new Date( ).getTime( ),
 			ticks: 0
 		},
