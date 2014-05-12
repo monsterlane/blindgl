@@ -1,17 +1,6 @@
 
-define( ['class' ], function( ) {
-	const NUM_LAYERS = 3;
-
-	var SCREEN_RESOLUTIONS = [
-		[ 800, 600 ],
-		[ 1024, 576 ],
-		[ 1024, 768 ],
-		[ 1280, 720 ],
-		[ 1280, 1024 ],
-		[ 1600, 1200 ],
-		[ 1664, 936 ],
-		[ 1920, 1080 ]
-	];
+define( [ 'global', 'class' ], function( Global ) {
+	var GLOBAL = new Global( );
 
 	/**
 	 * Class: Layer
@@ -57,21 +46,21 @@ define( ['class' ], function( ) {
 			var el = document.getElementById( 'bglInterface' ),
 				width = window.innerWidth,
 				height = window.innerHeight,
-				i = SCREEN_RESOLUTIONS.length,
+				i = GLOBAL.video.resolutions.length,
 				res = 0;
 
 			while ( i-- ) {
-				if ( SCREEN_RESOLUTIONS[ i ][ 0 ] < width && SCREEN_RESOLUTIONS[ i ][ 1 ] < height ) {
+				if ( GLOBAL.video.resolutions[ i ][ 0 ] < width && GLOBAL.video.resolutions[ i ][ 1 ] < height ) {
 					res = i;
 					break;
 				}
 			}
 
-			this.resolution = SCREEN_RESOLUTIONS[ res ];
+			this.resolution = GLOBAL.video.resolutions[ res ];
 
-			el.style.width = SCREEN_RESOLUTIONS[ res ][ 0 ] + 'px';
-			el.style.height = SCREEN_RESOLUTIONS[ res ][ 1 ] + 'px';
-			el.style.margin = '-' + parseInt( SCREEN_RESOLUTIONS[ res ][ 1 ] / 2, 10 ) + 'px 0 0 -' + parseInt( SCREEN_RESOLUTIONS[ res ][ 0 ] / 2, 10 ) + 'px';
+			el.style.width = GLOBAL.video.resolutions[ res ][ 0 ] + 'px';
+			el.style.height = GLOBAL.video.resolutions[ res ][ 1 ] + 'px';
+			el.style.margin = '-' + parseInt( GLOBAL.video.resolutions[ res ][ 1 ] / 2, 10 ) + 'px 0 0 -' + parseInt( GLOBAL.video.resolutions[ res ][ 0 ] / 2, 10 ) + 'px';
 			el.style.display = 'block';
 
 			el.querySelectorAll( 'header' )[ 0 ].style.display = 'inline-block';
@@ -92,7 +81,7 @@ define( ['class' ], function( ) {
 
 			this.setResolution( );
 
-			for ( i = 0; i < NUM_LAYERS; i++ ) {
+			for ( i = 0; i < GLOBAL.video.numLayers; i++ ) {
 				layer = new Layer( i );
 
 				frag.appendChild( layer.display );

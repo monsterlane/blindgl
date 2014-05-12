@@ -1,9 +1,6 @@
 
-define( [ 'player', 'class' ], function( Player ) {
-	const KEYBOARD_UP = 38;
-	const KEYBOARD_DOWN = 40;
-	const KEYBOARD_LEFT = 37;
-	const KEYBOARD_RIGHT = 39;
+define( [ 'global', 'player', 'class' ], function( Global, Player ) {
+	var GLOBAL = new Global( );
 
 	/**
 	 * Class: Client
@@ -17,7 +14,7 @@ define( [ 'player', 'class' ], function( Player ) {
 		bindKeyboardBindings: function( ) {
 			var self = this;
 
-			this.system.bindKey( KEYBOARD_UP, {
+			this.system.bindKey( GLOBAL.input.keyboard.up, {
 				button: document.getElementById( 'bglKeyUp' ),
 				keyUp: function( ) {
 					this.button.className = '';
@@ -27,7 +24,7 @@ define( [ 'player', 'class' ], function( Player ) {
 				}
 			});
 
-			this.system.bindKey( KEYBOARD_DOWN, {
+			this.system.bindKey( GLOBAL.input.keyboard.down, {
 				button: document.getElementById( 'bglKeyDown' ),
 				keyUp: function( ) {
 					this.button.className = '';
@@ -37,7 +34,7 @@ define( [ 'player', 'class' ], function( Player ) {
 				}
 			});
 
-			this.system.bindKey( KEYBOARD_LEFT, {
+			this.system.bindKey( GLOBAL.input.keyboard.left, {
 				button: document.getElementById( 'bglKeyLeft' ),
 				keyUp: function( ) {
 					this.button.className = '';
@@ -47,7 +44,7 @@ define( [ 'player', 'class' ], function( Player ) {
 				}
 			});
 
-			this.system.bindKey( KEYBOARD_RIGHT, {
+			this.system.bindKey( GLOBAL.input.keyboard.right, {
 				button: document.getElementById( 'bglKeyRight' ),
 				keyUp: function( ) {
 					this.button.className = '';

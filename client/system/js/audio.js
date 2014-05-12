@@ -1,6 +1,6 @@
 
-define( [ 'linkedlist', 'class' ], function( LinkedList ) {
-	const AUDIO_BANKS = 32;
+define( [ 'global', 'linkedlist', 'class' ], function( Global, LinkedList ) {
+	var GLOBAL = new Global( );
 
 	/**
 	 * Class: Soundbank
@@ -8,6 +8,10 @@ define( [ 'linkedlist', 'class' ], function( LinkedList ) {
 	 */
 
 	var Soundbank = Class.extend({
+		sound: null,
+		playing: false,
+		paused: false,
+
 		/**
 		 * Method: init
 		 * @param {DOMelement} aElement
@@ -17,8 +21,6 @@ define( [ 'linkedlist', 'class' ], function( LinkedList ) {
 			var self = this;
 
 			this.sound = aElement;
-			this.playing = false;
-			this.paused = false;
 
 			this.sound.addEventListener( 'ended', function( ) {
 				self.playing = false;
@@ -58,7 +60,7 @@ define( [ 'linkedlist', 'class' ], function( LinkedList ) {
 
 			this.background = new Soundbank( bank );
 
-			for ( i = 0; i < AUDIO_BANKS; i++ ) {
+			for ( i = 0; i < GLOBAL.audio.numBanks; i++ ) {
 				bank = document.createElement( 'audio' );
 				bank.setAttribute( 'id', 'bglAudioBank' + i );
 				bank.setAttribute( 'autoplay', 'autoplay' );
