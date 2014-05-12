@@ -1,4 +1,4 @@
 
-require( [ 'system' ], function( system ) {
-	system.init( );
+require( [ 'blindgl' ], function( blindgl ) {
+	blindgl.init( );
 });

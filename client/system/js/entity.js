@@ -1,5 +1,9 @@
 
 define( [ 'class' ], function( ) {
+	/**
+	 * Class: Entity
+	 */
+
 	var Entity = Class.extend({
 		system: null,
 		game: null,
@@ -8,7 +12,7 @@ define( [ 'class' ], function( ) {
 			this.game = aGame;
 		},
 		spawn: function( ) {
-			console.log( 'blindGL: created entity' );
+			this.system.verbose( 'created entity' );
 		}
 	});
 

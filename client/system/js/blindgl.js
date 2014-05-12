@@ -1,6 +1,10 @@
 
-define( [ 'audio', '../../game/js/game' ], function( Audio, aGame ) {
-	var System = {
+define( [ 'audio', 'canvas', '../../game/js/game' ], function( Audio, Canvas, Game ) {
+	/**
+	 * Class: blindGL
+	 */
+
+	var blindGL = {
 		settings: {
 			debug: true,
 			showFps: true
@@ -16,16 +20,26 @@ define( [ 'audio', '../../game/js/game' ], function( Audio, aGame ) {
 			binding: [ ]
 		},
 		audio: null,
+		canvas: null,
 		game: null
 	};
 
-	System.verbose = function( aMessage ) {
+	/**
+	 * Method: verbose
+ 	 * @param {String} aMessage
+	 */
+
+	blindGL.verbose = function( aMessage ) {
 		if ( this.settings.debug == true ) {
-			console.log( aMessage );
+			console.log( 'blindGL: ' + aMessage );
 		}
 	};
 
-	System.bindInputEventListeners = function( ) {
+	/**
+	 * Method: bindEventListeners
+	 */
+
+	blindGL.bindEventListeners = function( ) {
 		var el = document.getElementById( 'bglApplication' ),
 			self = this;
 
@@ -42,7 +56,12 @@ define( [ 'audio', '../../game/js/game' ], function( Audio, aGame ) {
 		});
 	};
 
-	System.handleKeypress = function( aKey ) {
+	/**
+	 * Method: handleKeypress
+ 	 * @param {Int} aKey
+	 */
+
+	blindGL.handleKeypress = function( aKey ) {
 		if ( this.input.keyDown[ aKey ] === true ) {
 			this.input.keyDown[ aKey ] = false;
 
@@ -59,25 +78,42 @@ define( [ 'audio', '../../game/js/game' ], function( Audio, aGame ) {
 		}
 	};
 
-	System.bindKey = function( aKey, aBinding ) {
+	/**
+	 * Method: bindKey
+	 * @param {Int} aKey
+	 * @param {Object} aBinding
+	 */
+
+	blindGL.bindKey = function( aKey, aBinding ) {
 		this.input.binding[ aKey ] = aBinding;
 	};
 
-	System.init = function( ) {
-		this.verbose( 'blindGL: booting...' );
+	/**
+	 * Method: init
+	 */
+
+	blindGL.init = function( ) {
+		this.verbose( 'booting...' );
 
 		this.audio = Audio;
 		this.audio.init( this );
 
-		this.bindInputEventListeners( );
+		this.canvas = Canvas;
+		this.canvas.init( this );
 
-		if ( aGame && aGame.hasOwnProperty( 'init' ) ) {
-			this.game = aGame;
+		this.bindEventListeners( );
+
+		if ( Game && Game.hasOwnProperty( 'init' ) ) {
+			this.game = Game;
 			this.game.init( this );
 		}
 	};
 
-	System.think = function( ) {
+	/**
+	 * Method: think
+	 */
+
+	blindGL.think = function( ) {
 		var now = new Date( ).getTime( ),
 			self = this;
 
@@ -99,5 +135,5 @@ define( [ 'audio', '../../game/js/game' ], function( Audio, aGame ) {
 		}, this.engine.tickRate );
 	};
 
-	return System;
+	return blindGL;
 });

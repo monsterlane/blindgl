@@ -1,5 +1,9 @@
 
 define(function( ) {
+	/**
+	 * Class: DoublyLinkedList
+	 */
+
 	function DoublyLinkedList( ) {
 		this.head = null;
 		this.tail = null;
@@ -8,7 +12,6 @@ define(function( ) {
 
 	DoublyLinkedList.prototype = {
 		constructor: DoublyLinkedList,
-
 		add: function( data ) {
 			var node = {
 				data: data,
@@ -28,7 +31,6 @@ define(function( ) {
 
 			this.length++;
 		},
-
 		item: function( index ) {
 			if ( index > -1 && index < this.length ) {
 				var current = this.head;
@@ -44,7 +46,6 @@ define(function( ) {
 				return null;
 			}
 		},
-
 		remove: function( index ) {
 			if ( index > -1 && index < this.length ) {
 				var current = this.head;
@@ -81,11 +82,9 @@ define(function( ) {
 				return null;
 			}
 		},
-
 		size: function( ) {
 			return this.length;
 		},
-
 		toArray: function( ) {
 			var result = [ ];
 			var current = this.head;
@@ -97,7 +96,6 @@ define(function( ) {
 
 			return result;
 		},
-
 		toString: function( ) {
 			return this.toArray( ).toString( );
 		}

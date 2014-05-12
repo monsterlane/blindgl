@@ -5,6 +5,10 @@ define( [ 'entity' ], function( Entity ) {
 	const KEYBOARD_LEFT = 37;
 	const KEYBOARD_RIGHT = 39;
 
+	/**
+	 * Class: Player
+	 */
+
 	var Player = Entity.extend({
 		bindKeyBindings: function( ) {
 			var self = this;
@@ -53,7 +57,7 @@ define( [ 'entity' ], function( Entity ) {
 			this._super( );
 			this.bindKeyBindings( );
 
-			console.log( 'blindGL: spawned player' );
+			this.system.verbose( 'spawned player' );
 		}
 	});
 

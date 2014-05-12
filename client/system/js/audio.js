@@ -2,10 +2,15 @@
 define( [ 'linkedlist' ], function( LinkedList ) {
 	const AUDIO_BANKS = 32;
 
-	function Soundbank( aSound ) {
+	/**
+	 * Class: Soundbank
+	 * @param {DOMelement} aElement
+	 */
+
+	function Soundbank( aElement ) {
 		var self = this;
 
-		this.sound = aSound;
+		this.sound = aElement;
 		this.playing = false;
 		this.paused = false;
 
@@ -16,12 +21,21 @@ define( [ 'linkedlist' ], function( LinkedList ) {
 		});
 	}
 
+	/**
+	 * Class: Audio
+	 */
+
 	var Audio = {
 		system: null,
 		background: null,
 		banks: new LinkedList( ),
 		lastBank: null
 	};
+
+	/**
+	 * Method: init
+	 * @param {Object} aSystem
+	 */
 
 	Audio.init = function( aSystem ) {
 		var el = document.getElementById( 'bglAudio' ),
@@ -48,7 +62,13 @@ define( [ 'linkedlist' ], function( LinkedList ) {
 		}
 
 		el.appendChild( frag );
+
+		this.system.verbose( 'audio engine initialized' );
 	};
+
+	/**
+	 * Method: getNextBank
+	 */
 
 	Audio.getNextBank = function( ) {
 		var next = ( this.lastBank == null || this.lastBank == this.banks.tail ) ? this.banks.head : this.lastBank.next,
@@ -69,6 +89,12 @@ define( [ 'linkedlist' ], function( LinkedList ) {
 		return ( i == this.banks.length ) ? false : next;
 	};
 
+	/**
+	 * Method: playMusic
+	 * @param {String} aUrl
+	 * @param {Int} aVolume
+	 */
+
 	Audio.playMusic = function( aUrl, aVolume ) {
 		this.background.sound.setAttribute( 'src', aUrl );
 		this.background.sound.setAttribute( 'volume', aVolume );
@@ -78,11 +104,19 @@ define( [ 'linkedlist' ], function( LinkedList ) {
 		this.background.sound.play( );
 	};
 
+	/**
+	 * Method: pauseMusic
+	 */
+
 	Audio.pauseMusic = function( ) {
 		this.background.sound.pause( );
 		this.background.playing = false;
 		this.background.paused = true;
 	};
+
+	/**
+	 * Method: stopMusic
+	 */
 
 	Audio.stopMusic = function( ) {
 		this.background.sound.pause( );
@@ -90,6 +124,12 @@ define( [ 'linkedlist' ], function( LinkedList ) {
 		this.background.playing = false;
 		this.background.paused = false;
 	};
+
+	/**
+	 * Method: playSound
+	 * @param {String} aUrl
+	 * @param {Int} aVolume
+	 */
 
 	Audio.playSound = function( aUrl, aVolume ) {
 		var bank = this.getNextBank( );
