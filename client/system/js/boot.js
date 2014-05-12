@@ -1,4 +1,8 @@
 
-require( [ 'blindgl' ], function( blindgl ) {
-	blindgl.init( );
+require.config({
+	urlArgs: new Date( ).getTime( ).toString( )
+});
+
+require( [ 'blindgl' ], function( blindGL ) {
+	var engine = new blindGL( );
 });

@@ -1,34 +1,22 @@
 
-define( [ '../../system/js/player' ], function( Player ) {
-	return {
-		system: null,
-		players: [ ],
-		addPlayer: function( ) {
-			var player = new Player( ),
-				count;
+define( [ '../../system/js/world' ], function( World ) {
+	/**
+	 * Class: Game
+	 */
 
-			this.players.push( player );
+	var Game = World.extend({
+		/**
+		 * Method: start
+		 */
 
-			player.init( this.system, this );
-			player.spawn( );
-
-			if ( ( count = document.getElementById( 'bglPlayers' ) ) != null ) {
-				count.innerHTML = parseInt( count.innerHTML, 10 ) + 1;
-			}
-		},
 		start: function( ) {
-			var self = this;
+			this._super( );
 
 			this.system.verbose( 'game started' );
 
-			this.addPlayer( );
-		},
-		init: function( aSystem ) {
-			this.system = aSystem;
-
-			this.start( );
-
-			this.system.think( );
+			this.addClient( );
 		}
-	};
+	});
+
+	return Game;
 });
