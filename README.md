@@ -1,4 +1,4 @@
-BlindGL
+blindGL
 =======
 
-...
+HTML5 game engine

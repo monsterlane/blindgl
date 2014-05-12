@@ -40,41 +40,37 @@ span.icon-key-right {
 	position:relative;
 	top:50%;
 	left:50%;
-	width:600px;
-	height:400px;
-	margin:-200px 0 0 -300px;
+	width:0px;
+	height:0px;
 }
 	#bglInterface > header {
+		display:none;
 		position:absolute;
-		top:-1.5em; left:0;
-		width:100%;
+		top:0; right:-5.5em;
 	}
-		#bglInterface > header > hgroup:after {
-			content:'.';
-			display:block;
-			visibility:hidden;
-			height:0;
-			clear:both;
+		#bglInterface > header > hgroup > h1 {
+			display:inline-block;
+			margin:0;
+			color:#fff;
+			font-size:1em;
 		}
-			#bglInterface > header > hgroup > h1 {
-				display:inline-block;
-				margin:0;
-				color:#fff;
-				font-size:1em;
-			}
 
-			#bglInterface > header > hgroup > ul.toolbar {
-				float:right;
-			}
-				#bglInterface > header > hgroup > ul.toolbar > li > span {
-					color:white;
-				}
+		#bglInterface > header > hgroup > ul.fieldList > li > span {
+			color:white;
+		}
 
 	#bglInterface > footer {
+		display:none;
 		position:absolute;
-		bottom:-2em; left:0;
-		width:100%;
+		bottom:0; right:-3em;
 	}
+		#bglInterface > footer > nav > ul > li {
+			margin-top:0.5em;
+		}
+			#bglInterface > footer > nav > ul > li:first-child {
+				margin-top:0;
+			}
+
 		#bglInterface > footer > nav > ul > li > button {
 			border:1px solid #fff;
 			background-color:#fff;

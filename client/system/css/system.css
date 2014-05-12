@@ -22,13 +22,32 @@ ul.toolbar {
 		padding:0;
 	}
 
+ul.fieldList {
+	list-style-type:none;
+	display:block;
+	margin:0;
+	padding:0;
+}
+	ul.fieldList > li {
+		display:block;
+		margin:0;
+		padding:0;
+	}
+
+.bglLayer {
+	position:absolute;
+	top:0; left:0;
+	width:100%;
+	height:100%;
+}
+
 #bglWindow {
 	width:100%;
 	height:100%;
 	margin:0;
 }
 
-#bglEngine {
+#bglCanvas {
 	display:block;
 	position:absolute;
 	top:0; left:0;

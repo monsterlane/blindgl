@@ -16,7 +16,7 @@
 
 	<script data-main="system/js/boot" src="system/js/require.min.js"></script>
 </head>
-<body id="bglApplication" tabindex="0">
+<body tabindex="0">
 
 <article id="bglWindow">
 	<section id="bglInterface">
@@ -24,13 +24,13 @@
 			<hgroup>
 				<h1>blindGL</h1>
 
-				<ul class="toolbar">
+				<ul class="fieldList">
 					<li>
-						<span>Players</span>
+						<span>players</span>
 						<span id="bglPlayers">0</span>
 					</li>
 					<li>
-						<span>FPS</span>
+						<span>fps</span>
 						<span id="bglFps">0</span>
 					</li>
 				</ul>
@@ -39,23 +39,11 @@
 
 		<div id="bglOverlay"></div>
 		<div id="bglAudio"></div>
-		<div id="bglEngine"></div>
+		<div id="bglCanvas"></div>
 
 		<footer>
 			<nav id="">
-				<ul class="toolbar">
-					<li>
-						<button id="bglKeyLeft">
-							<span class="role-icon icon-key-left"></span>
-							<span class="role-label">Left</span>
-						</button>
-					</li>
-					<li>
-						<button id="bglKeyDown">
-							<span class="role-icon icon-key-down"></span>
-							<span class="role-label">Down</span>
-						</button>
-					</li>
+				<ul class="fieldList">
 					<li>
 						<button id="bglKeyUp">
 							<span class="role-icon icon-key-up"></span>
@@ -66,6 +54,18 @@
 						<button id="bglKeyRight">
 							<span class="role-icon icon-key-right"></span>
 							<span class="role-label">Right</span>
+						</button>
+					</li>
+					<li>
+						<button id="bglKeyLeft">
+							<span class="role-icon icon-key-left"></span>
+							<span class="role-label">Left</span>
+						</button>
+					</li>
+					<li>
+						<button id="bglKeyDown">
+							<span class="role-icon icon-key-down"></span>
+							<span class="role-label">Down</span>
 						</button>
 					</li>
 				</ul>

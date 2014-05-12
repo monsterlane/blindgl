@@ -40,7 +40,7 @@ define( [ 'audio', 'canvas', '../../game/js/game' ], function( Audio, Canvas, Ga
 	 */
 
 	blindGL.bindEventListeners = function( ) {
-		var el = document.getElementById( 'bglApplication' ),
+		var el = document.querySelectorAll( 'body' )[ 0 ],
 			self = this;
 
 		el.addEventListener( 'keydown', function( aEvent ) {
