@@ -33,6 +33,22 @@ define( [ 'class' ], function( ) {
 				left: 37,
 				right: 39
 			}
+		},
+		solid: {
+			not: 0,
+			bbox: 1
+		},
+		moveType: {
+			none: 0,
+			walk: 1,
+			run: 2
+		},
+		ai: {
+			idle: 0,
+			walk: 1,
+			run: 2,
+			chase: 3,
+			evade: 4
 		}
 	});
 

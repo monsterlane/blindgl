@@ -1,10 +1,10 @@
 
-define( [ 'entity', 'class' ], function( Entity ) {
+define( [ 'sprite', 'class' ], function( Sprite ) {
 	/**
 	 * Class: Player
 	 */
 
-	var Player = Entity.extend({
+	var Player = Sprite.extend({
 		/**
 		 * Method: spawn
 		 */
