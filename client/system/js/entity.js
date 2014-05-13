@@ -1,5 +1,7 @@
 
-define( [ 'class' ], function( ) {
+define( [ 'global', 'class' ], function( Global ) {
+	var GLOBAL = new Global( );
+
 	/**
 	 * Class: Entity
 	 */
@@ -7,7 +9,18 @@ define( [ 'class' ], function( ) {
 	var Entity = Class.extend({
 		system: null,
 		game: null,
-
+		position: {
+			x: 0,
+			y: 0,
+			z: 0
+		},
+		velocity: {
+			x: 0,
+			y: 0,
+			z: 0
+		},
+		solid: GLOBAL.solid.none,
+		moveType: GLOBAL.moveType.none,
 		/**
 		 * Method: init
 		 * @param {Object} aSystem
