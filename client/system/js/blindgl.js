@@ -7,6 +7,7 @@ define( [ 'global', 'audio', 'canvas', '../../game/js/game', 'class' ], function
 	 */
 
 	var blindGL = Class.extend({
+		settings: GLOBAL.settings,
 		engine: {
 			fps: document.getElementById( 'bglFps' ),
 			tickRate: Math.round( 1000 / GLOBAL.video.fps ),
@@ -27,7 +28,7 @@ define( [ 'global', 'audio', 'canvas', '../../game/js/game', 'class' ], function
 		 */
 
 		verbose: function( aMessage ) {
-			if ( GLOBAL.settings.verbose == true ) {
+			if ( this.settings.verbose == true ) {
 				console.log( 'blindGL: ' + aMessage );
 			}
 		},
@@ -110,7 +111,7 @@ define( [ 'global', 'audio', 'canvas', '../../game/js/game', 'class' ], function
 			this.engine.ticks++;
 
 			if ( now - this.engine.lastTick >= 1000 ) {
-				if ( GLOBAL.settings.showFps == true && this.engine.fps != null ) {
+				if ( this.settings.showFps == true && this.engine.fps != null ) {
 					this.engine.fps.innerHTML = this.engine.ticks;
 				}
 

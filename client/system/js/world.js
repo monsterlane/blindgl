@@ -13,7 +13,7 @@ define( [ 'client', 'class' ], function( Client ) {
 		 */
 
 		addClient: function( ) {
-			var client = new Client( ),
+			var client = new Client( this.system, this ),
 				count;
 
 			this.clients.push( client );

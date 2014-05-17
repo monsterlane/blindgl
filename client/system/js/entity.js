@@ -9,6 +9,7 @@ define( [ 'global', 'class' ], function( Global ) {
 	var Entity = Class.extend({
 		system: null,
 		game: null,
+		layer: null,
 		position: {
 			x: 0,
 			y: 0,
@@ -21,6 +22,7 @@ define( [ 'global', 'class' ], function( Global ) {
 		},
 		solid: GLOBAL.solid.none,
 		moveType: GLOBAL.moveType.none,
+
 		/**
 		 * Method: init
 		 * @param {Object} aSystem
@@ -33,11 +35,28 @@ define( [ 'global', 'class' ], function( Global ) {
 		},
 
 		/**
+		 * Method: setLayer
+		 * @param {Object} aLayer
+		 */
+
+		setLayer: function( aLayer ) {
+			this.layer = aLayer;
+		},
+
+		/**
 		 * Method: spawn
 		 */
 
 		spawn: function( ) {
 			this.system.verbose( 'created entity' );
+		},
+
+		/**
+		 * Method: think
+		 */
+
+		think: function( ) {
+
 		}
 	});
 

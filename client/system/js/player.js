@@ -17,6 +17,8 @@ define( [ 'global', 'sprite', 'class' ], function( Global, Sprite ) {
 		spawn: function( ) {
 			this._super( );
 
+			this.setLayer( this.system.canvas.layers[ 1 ] );
+
 			this.system.verbose( 'spawned player' );
 		}
 	});

@@ -1,7 +1,7 @@
 
 body {
 	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
-	background-color:#000;
+	background-color:#fff;
 }
 
 /* */
@@ -38,8 +38,7 @@ span.icon-key-right {
 
 #bglInterface {
 	position:relative;
-	top:50%;
-	left:50%;
+	top:50%; left:50%;
 	width:0px;
 	height:0px;
 }
@@ -81,5 +80,5 @@ span.icon-key-right {
 			}
 
 			#bglInterface > footer > nav > ul > li > button.selected {
-				background-color:#333;
+				background-color:#666;
 			}
