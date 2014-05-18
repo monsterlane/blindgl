@@ -84,13 +84,13 @@ define( [ 'global', 'keyboard', 'audio', 'canvas', '../../game/js/game', 'class'
 
 			this.engine.ticks++;
 
-			if ( elapsed > this.engine.tickRate ) {
+			if ( elapsed >= this.engine.tickRate ) {
 				this.engine.lastTick = now - ( elapsed % this.engine.tickRate );
 
 				this.canvas.think( );
 			}
 
-			if ( this.settings.showFps == true && now - this.engine.lastRate > 1000 ) {
+			if ( this.settings.showFps == true && now - this.engine.lastRate >= 1000 ) {
 				this.engine.fps.innerHTML = this.engine.ticks;
 				this.engine.lastRate = now;
 				this.engine.ticks = 0;

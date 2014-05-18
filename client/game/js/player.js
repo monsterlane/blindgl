@@ -22,7 +22,8 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				file_url: '/game/img/player/walk-up.png',
 				frameWidth: 16,
 				frameHeight: 24,
-				frameCount: 7
+				frameCount: 7,
+				timeBetweenFrames: 100
 			});
 
 			this.addAnimation({
@@ -31,7 +32,8 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				file_url: '/game/img/player/walk-down.png',
 				frameWidth: 16,
 				frameHeight: 24,
-				frameCount: 7
+				frameCount: 7,
+				timeBetweenFrames: 100
 			});
 
 			this.addAnimation({
@@ -40,7 +42,8 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				file_url: '/game/img/player/walk-left.png',
 				frameWidth: 17,
 				frameHeight: 24,
-				frameCount: 8
+				frameCount: 8,
+				timeBetweenFrames: 100
 			});
 
 			this.addAnimation({
@@ -49,7 +52,8 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				file_url: '/game/img/player/walk-right.png',
 				frameWidth: 17,
 				frameHeight: 24,
-				frameCount: 8
+				frameCount: 8,
+				timeBetweenFrames: 100
 			});
 		}
 	});
