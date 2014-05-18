@@ -1,12 +1,12 @@
 
-define( [ 'global', 'player', 'class' ], function( Global, Player ) {
-	var GLOBAL = new Global( );
+define( [ 'global', '../../game/js/player', 'class' ], function( aGlobal, aPlayer ) {
+	var GLOBAL = new aGlobal( );
 
 	/**
 	 * Class: Client
 	 */
 
-	var Client = Player.extend({
+	var Client = aPlayer.extend({
 		/**
 		 * Method: bindKeyboardBindings
 		 */

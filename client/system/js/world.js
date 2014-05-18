@@ -1,5 +1,5 @@
 
-define( [ 'client', 'class' ], function( Client ) {
+define( [ 'client', 'class' ], function( aClient ) {
 	/**
 	 * Class: World
 	 */
@@ -13,7 +13,7 @@ define( [ 'client', 'class' ], function( Client ) {
 		 */
 
 		addClient: function( ) {
-			var client = new Client( this.system, this ),
+			var client = new aClient( this.system, this ),
 				count = document.getElementById( 'bglClients' );
 
 			this.clients.push( client );

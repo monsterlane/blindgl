@@ -1,12 +1,12 @@
 
-define( [ 'global', 'sprite', 'class' ], function( Global, Sprite ) {
-	var GLOBAL = new Global( );
+define( [ 'global', 'sprite', 'class' ], function( aGlobal, aSprite ) {
+	var GLOBAL = new aGlobal( );
 
 	/**
 	 * Class: Player
 	 */
 
-	var Player = Sprite.extend({
+	var Player = aSprite.extend({
 		solid: GLOBAL.solid.bbox,
 		bbox: [ null, null ],
 

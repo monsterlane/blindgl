@@ -1,10 +1,10 @@
 
-define( [ '../../system/js/world' ], function( World ) {
+define( [ '../../system/js/world' ], function( aWorld ) {
 	/**
 	 * Class: Game
 	 */
 
-	var Game = World.extend({
+	var Game = aWorld.extend({
 		/**
 		 * Method: start
 		 */

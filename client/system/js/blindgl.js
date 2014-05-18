@@ -1,6 +1,6 @@
 
-define( [ 'global', 'audio', 'canvas', '../../game/js/game', 'class' ], function( Global, Audio, Canvas, Game ) {
-	var GLOBAL = new Global( );
+define( [ 'global', 'audio', 'canvas', '../../game/js/game', 'class' ], function( aGlobal, aAudio, aCanvas, aGame ) {
+	var GLOBAL = new aGlobal( );
 
 	/**
 	 * Class: blindGL
@@ -116,9 +116,9 @@ define( [ 'global', 'audio', 'canvas', '../../game/js/game', 'class' ], function
 
 			this.bindEventListeners( );
 
-			this.audio = new Audio( this );
-			this.canvas = new Canvas( this );
-			this.game = new Game( this );
+			this.audio = new aAudio( this );
+			this.canvas = new aCanvas( this );
+			this.game = new aGame( this );
 		},
 
 		/**

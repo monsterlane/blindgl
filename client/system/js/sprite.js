@@ -1,17 +1,35 @@
 
-define( [ 'global', 'entity', 'class' ], function( Global, Entity ) {
-	var GLOBAL = new Global( );
+define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
+	var GLOBAL = new aGlobal( );
 
 	/**
-	 * Class: Entity
+	 * Class: Sprite
 	 */
 
-	var Sprite = Entity.extend({
+	var Sprite = aEntity.extend({
 		animation: null,
 		animations: { },
 		currentFrame: 0,
 		timeBetweenFrames: 1 / GLOBAL.video.fps,
 		timeSinceLastFrame: this.timeBetweenFrames,
+
+		/**
+		 * Method: init
+		 */
+
+		init: function( aSystem, aGame ) {
+			this._super( aSystem, aGame );
+
+			this.addAnimations( );
+		},
+
+		/**
+		 * Method: addAnimations
+		 */
+
+		addAnimations: function( ) {
+
+		},
 
 		/**
 		 * Method: draw

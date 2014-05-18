@@ -1,6 +1,6 @@
 
-define( [ 'global', 'class' ], function( Global ) {
-	var GLOBAL = new Global( );
+define( [ 'global', 'class' ], function( aGlobal ) {
+	var GLOBAL = new aGlobal( );
 
 	/**
 	 * Class: Entity

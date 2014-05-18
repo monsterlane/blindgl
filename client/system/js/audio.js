@@ -1,6 +1,6 @@
 
-define( [ 'global', 'linkedlist', 'class' ], function( Global, LinkedList ) {
-	var GLOBAL = new Global( );
+define( [ 'global', 'class' ], function( aGlobal ) {
+	var GLOBAL = new aGlobal( );
 
 	/**
 	 * Class: Soundbank
@@ -11,6 +11,7 @@ define( [ 'global', 'linkedlist', 'class' ], function( Global, LinkedList ) {
 		sound: null,
 		playing: false,
 		paused: false,
+		next: null,
 
 		/**
 		 * Method: init
@@ -37,8 +38,8 @@ define( [ 'global', 'linkedlist', 'class' ], function( Global, LinkedList ) {
 	var Audio = Class.extend({
 		system: null,
 		background: null,
-		banks: new LinkedList( ),
-		lastBank: null,
+		banks: [ ],
+		lastBank: false,
 
 		/**
 		 * Method: init
@@ -66,7 +67,7 @@ define( [ 'global', 'linkedlist', 'class' ], function( Global, LinkedList ) {
 				bank.setAttribute( 'autoplay', 'autoplay' );
 				frag.appendChild( bank );
 
-				this.banks.add( new Soundbank( bank ) );
+				this.addBank( bank );
 			}
 
 			el.appendChild( frag );
@@ -75,26 +76,48 @@ define( [ 'global', 'linkedlist', 'class' ], function( Global, LinkedList ) {
 		},
 
 		/**
+		 * Method: addBank
+		 * @param {Object} aBank
+		 */
+
+		addBank: function( aBank ) {
+			var bank = new Soundbank( aBank ),
+				len = this.banks.length;
+
+			if ( len == 0 ) {
+				this.banks.push( bank );
+				this.banks[ 0 ].next = this.banks[ 0 ];
+				this.lastBank = this.banks[ 0 ];
+			}
+			else {
+				this.banks.push( bank );
+				this.banks[ len ].next = this.banks[ 0 ];
+				this.banks[ len - 1 ].next = this.banks[ len ];
+			}
+		},
+
+		/**
 		 * Method: getNextBank
 		 */
 
 		getNextBank: function( ) {
-			var next = ( this.lastBank == null || this.lastBank == this.banks.tail ) ? this.banks.head : this.lastBank.next,
-				i = 0;
+			var bank,
+				i, len;
 
-			if ( next.playing == true ) {
-				while ( i < this.banks.length ) {
-					if ( next.playing == false ) {
-						break;
-					}
-
-					next = ( next == this.banks.tail ) ? this.banks.head : this.lastBank.next;
-					i++;
-				}
-
+			if ( this.lastBank === false ) {
+				return false;
 			}
 
-			return ( i == this.banks.length ) ? false : next;
+			i = 0;
+			len = this.banks.length;
+			bank = this.lastBank;
+
+			while ( i < len && bank.playing == true ) {
+				bank = bank.next;
+				i++;
+			}
+
+			return ( i == len ) ? false : bank;
 		},
 
 		/**
@@ -145,12 +168,12 @@ define( [ 'global', 'linkedlist', 'class' ], function( Global, LinkedList ) {
 			if ( bank !== false ) {
 				this.lastBank = bank;
 
-				bank.data.sound.setAttribute( 'src', aUrl );
-				bank.data.sound.setAttribute( 'volume', aVolume );
-				bank.data.sound.load( );
+				bank.sound.setAttribute( 'src', aUrl );
+				bank.sound.setAttribute( 'volume', aVolume );
+				bank.sound.load( );
 
-				bank.data.playing = true;
-				bank.data.sound.play( );
+				bank.playing = true;
+				bank.sound.play( );
 			}
 		}
 	});
