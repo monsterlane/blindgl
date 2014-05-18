@@ -14,43 +14,39 @@ define( [ 'global', '../../game/js/player', 'class' ], function( aGlobal, aPlaye
 		bindKeyboardBindings: function( ) {
 			var self = this;
 
-			this.system.bindKey( GLOBAL.input.keyboard.up, {
-				button: document.getElementById( 'bglKeyUp' ),
-				keyUp: function( ) {
-					this.button.className = '';
+			this.system.input.bindKey( GLOBAL.input.keyboard.up, {
+				onUp: function( ) {
+					document.getElementById( 'bglKeyUp' ).className = '';
 				},
-				keyDown: function( ) {
-					this.button.className = 'selected';
+				onDown: function( ) {
+					document.getElementById( 'bglKeyUp' ).className = 'selected';
 				}
 			});
 
-			this.system.bindKey( GLOBAL.input.keyboard.down, {
-				button: document.getElementById( 'bglKeyDown' ),
-				keyUp: function( ) {
-					this.button.className = '';
+			this.system.input.bindKey( GLOBAL.input.keyboard.down, {
+				onUp: function( ) {
+					document.getElementById( 'bglKeyDown' ).className = '';
 				},
-				keyDown: function( ) {
-					this.button.className = 'selected';
+				onDown: function( ) {
+					document.getElementById( 'bglKeyDown' ).className = 'selected';
 				}
 			});
 
-			this.system.bindKey( GLOBAL.input.keyboard.left, {
-				button: document.getElementById( 'bglKeyLeft' ),
-				keyUp: function( ) {
-					this.button.className = '';
+			this.system.input.bindKey( GLOBAL.input.keyboard.left, {
+				onUp: function( ) {
+					document.getElementById( 'bglKeyLeft' ).className = '';
 				},
-				keyDown: function( ) {
-					this.button.className = 'selected';
+				onDown: function( ) {
+					document.getElementById( 'bglKeyLeft' ).className = 'selected';
 				}
 			});
 
-			this.system.bindKey( GLOBAL.input.keyboard.right, {
-				button: document.getElementById( 'bglKeyRight' ),
-				keyUp: function( ) {
-					this.button.className = '';
+			this.system.input.bindKey( GLOBAL.input.keyboard.right, {
+				onUp: function( ) {
+					document.getElementById( 'bglKeyRight' ).className = '';
 				},
-				keyDown: function( ) {
-					this.button.className = 'selected';
+				onDown: function( ) {
+					document.getElementById( 'bglKeyRight' ).className = 'selected';
 				}
 			});
 		},

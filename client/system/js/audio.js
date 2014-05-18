@@ -84,13 +84,13 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			var bank = new Soundbank( aBank ),
 				len = this.banks.length;
 
+			this.banks.push( bank );
+
 			if ( len == 0 ) {
-				this.banks.push( bank );
 				this.banks[ 0 ].next = this.banks[ 0 ];
 				this.lastBank = this.banks[ 0 ];
 			}
 			else {
-				this.banks.push( bank );
 				this.banks[ len ].next = this.banks[ 0 ];
 				this.banks[ len - 1 ].next = this.banks[ len ];
 			}

@@ -1,5 +1,5 @@
 
-define( [ 'global', 'audio', 'canvas', '../../game/js/game', 'class' ], function( aGlobal, aAudio, aCanvas, aGame ) {
+define( [ 'global', 'keyboard', 'audio', 'canvas', '../../game/js/game', 'class' ], function( aGlobal, aKeyboard, aAudio, aCanvas, aGame ) {
 	var GLOBAL = new aGlobal( );
 
 	/**
@@ -15,10 +15,7 @@ define( [ 'global', 'audio', 'canvas', '../../game/js/game', 'class' ], function
 			lastTick: Date.now( ),
 			ticks: 0
 		},
-		input: {
-			keyDown: [ ],
-			binding: [ ]
-		},
+		input: null,
 		audio: null,
 		canvas: null,
 		game: null,
@@ -32,61 +29,6 @@ define( [ 'global', 'audio', 'canvas', '../../game/js/game', 'class' ], function
 			if ( this.settings.verbose == true ) {
 				console.log( 'blindGL: ' + aMessage );
 			}
-		},
-
-		/**
-		 * Method: bindEventListeners
-		 */
-
-		bindEventListeners: function( ) {
-			var el = document.querySelectorAll( 'body' )[ 0 ],
-				self = this;
-
-			el.addEventListener( 'keydown', function( aEvent ) {
-				if ( aEvent.repeat != true ) {
-					self.handleKeypress( aEvent.keyCode );
-				}
-			});
-
-			el.addEventListener( 'keyup', function( aEvent ) {
-				if ( aEvent.repeat != true ) {
-					self.handleKeypress( aEvent.keyCode );
-				}
-			});
-
-			this.verbose( 'init->input' );
-		},
-
-		/**
-		 * Method: handleKeypress
-	 	 * @param {Int} aKey
-		 */
-
-		handleKeypress: function( aKey ) {
-			if ( this.input.keyDown[ aKey ] === true ) {
-				this.input.keyDown[ aKey ] = false;
-
-				if ( this.input.binding[ aKey ] ) {
-					this.input.binding[ aKey ].keyUp( );
-				}
-			}
-			else {
-				this.input.keyDown[ aKey ] = true;
-
-				if ( this.input.binding[ aKey ] ) {
-					this.input.binding[ aKey ].keyDown( );
-				}
-			}
-		},
-
-		/**
-		 * Method: bindKey
-		 * @param {Int} aKey
-		 * @param {Object} aBinding
-		 */
-
-		bindKey: function( aKey, aBinding ) {
-			this.input.binding[ aKey ] = aBinding;
 		},
 
 		/**
@@ -116,8 +58,7 @@ define( [ 'global', 'audio', 'canvas', '../../game/js/game', 'class' ], function
 		init: function( ) {
 			this.verbose( 'booting...' );
 
-			this.bindEventListeners( );
-
+			this.input = new aKeyboard( this );
 			this.audio = new aAudio( this );
 			this.canvas = new aCanvas( this );
 			this.game = new aGame( this );
