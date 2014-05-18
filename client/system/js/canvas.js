@@ -11,6 +11,7 @@ define( [ 'global', 'class' ], function( Global ) {
 		displayContext: null,
 		buffer: null,
 		bufferContext: null,
+		entities: [ ],
 
 		/**
 		 * Method: init
@@ -26,6 +27,20 @@ define( [ 'global', 'class' ], function( Global ) {
 
 			this.buffer = document.createElement( 'canvas' );
 			this.bufferContext = this.buffer.getContext( '2d' );
+		},
+
+		/**
+		 * Method: draw
+		 */
+
+		draw: function( ) {
+			var i, len;
+
+			for ( i = 0, len = this.entities.length; i < len; i++ ) {
+				this.entities[ i ].think( );
+			}
+
+			this.displayContext.drawImage( this.buffer, 0, 0 );
 		}
 	});
 
@@ -92,6 +107,16 @@ define( [ 'global', 'class' ], function( Global ) {
 			el.appendChild( frag );
 
 			this.system.verbose( 'canvas renderer initialized' );
+		},
+
+		/**
+		 * Method: think
+		 */
+
+		think: function( ) {
+			for ( i = 0; i < GLOBAL.video.numLayers; i++ ) {
+				this.layers[ i ].draw( );
+			}
 		}
 	});
 

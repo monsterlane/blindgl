@@ -37,9 +37,11 @@ define( [ 'global', 'entity', 'class' ], function( Global, Entity ) {
 		think: function( ) {
 			this._super( );
 
-			this.draw( this.timeSinceLastFrame );
+			if ( this.animation != null ) {
+				this.draw( this.timeSinceLastFrame );
+			}
 		}
 	});
 
-	return Entity;
+	return Sprite;
 });

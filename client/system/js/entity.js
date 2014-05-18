@@ -41,6 +41,7 @@ define( [ 'global', 'class' ], function( Global ) {
 
 		setLayer: function( aLayer ) {
 			this.layer = aLayer;
+			this.layer.entities.push( this );
 		},
 
 		/**

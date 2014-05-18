@@ -14,14 +14,13 @@ define( [ 'client', 'class' ], function( Client ) {
 
 		addClient: function( ) {
 			var client = new Client( this.system, this ),
-				count;
+				count = document.getElementById( 'bglClients' );
 
 			this.clients.push( client );
 
-			client.init( this.system, this );
 			client.spawn( );
 
-			if ( ( count = document.getElementById( 'bglClients' ) ) != null ) {
+			if ( count != null ) {
 				count.innerHTML = parseInt( count.innerHTML, 10 ) + 1;
 			}
 		},
@@ -35,8 +34,6 @@ define( [ 'client', 'class' ], function( Client ) {
 			this.system = aSystem;
 
 			this.start( );
-
-			this.system.think( );
 		},
 
 		/**
@@ -44,7 +41,15 @@ define( [ 'client', 'class' ], function( Client ) {
 		 */
 
 		start: function( ) {
+			this.think( );
+		},
 
+		/**
+		 * Method: think
+		 */
+
+		think: function( ) {
+			this.system.think( );
 		}
 	});
 
