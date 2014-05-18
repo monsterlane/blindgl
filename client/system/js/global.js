@@ -95,7 +95,16 @@ define( [ 'class' ], function( ) {
 		moveType: {
 			none: 0,
 			walk: 1,
-			run: 2
+			run: 2,
+			slide: 3,
+			swim: 4,
+			push: 5
+		},
+		direction: {
+			up: 0,
+			down: 1,
+			left: 2,
+			right: 3
 		},
 		ai: {
 			idle: 0,

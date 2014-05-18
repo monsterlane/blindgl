@@ -21,6 +21,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			z: 0
 		},
 		state: GLOBAL.ai.idle,
+		direction: GLOBAL.direction.down,
 		solid: GLOBAL.solid.none,
 		moveType: GLOBAL.moveType.none,
 
@@ -45,6 +46,27 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		setLayer: function( aLayer ) {
 			this.layer = aLayer;
 			this.layer.entities.push( this );
+		},
+
+		/**
+		 * Method: setPosition
+		 * @param {Int} aX
+		 * @param {Int} aY
+		 * @param {Int} aZ
+		 */
+
+		setPosition: function( aX, aY, aZ ) {
+			this.position.x = aX;
+			this.position.y = aY;
+			this.position.z = aZ;
+		},
+
+		/**
+		 * Method: setState
+		 */
+
+		setState: function( aState, aOptions ) {
+
 		},
 
 		/**

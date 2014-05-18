@@ -8,10 +8,11 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 	var Sprite = aEntity.extend({
 		animation: null,
-		animations: [ ],
+		animations: { },
+		currentImage: null,
 		currentFrame: 0,
 		timeBetweenFrames: 1 / GLOBAL.video.fps,
-		timeSinceLastFrame: this.timeBetweenFrames,
+		timeSinceLastFrame: 0,
 		sounds: [ ],
 
 		/**
@@ -41,7 +42,27 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		 */
 
 		addAnimation: function( aAnimation ) {
+			var s = aAnimation.state,
+				d = aAnimation.direction;
 
+			if ( !this.animations[ s ] ) {
+				this.animations[ s ] = { };
+			}
+
+			this.animations[ s ][ d ] = aAnimation;
+		},
+
+		/**
+		 * Method: setAnimation
+		 * @param {Object} aAnimation
+		 */
+
+		setAnimation: function( aAnimation ) {
+			this.animation = aAnimation;
+			this.timeSinceLastFrame = this.timeBetweenFrames;
+
+			this.currentImage = new Image( );
+			this.currentImage.setAttribute( 'src', this.animation.file_url );
 		},
 
 		/**
@@ -59,6 +80,15 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 		addSound: function( aSound ) {
 
+		},
+
+		/**
+		 * Method: playSound
+		 * @param {Object} aSound
+		 */
+
+		playSound: function( aSound ) {
+			this.system.audio.playSound( aSound.file_url, aSound.volume );
 		},
 
 		/**
@@ -86,7 +116,8 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		 */
 
 		draw: function( aTime ) {
-			this.layer.buffer.drawImage( this.animation.source, this.animation.frameWidth * this.currentFrame, 0, this.animation.frameWidth, this.animation.frameHeight, this.x, this.y );
+			this.layer.bufferContext.clearRect( this.position.x, this.position.y, this.animation.frameWidth, this.animation.frameHeight );
+			this.layer.bufferContext.drawImage( this.currentImage, this.animation.frameWidth * this.currentFrame, 0, this.animation.frameWidth, this.animation.frameHeight, this.position.x, this.position.y, this.animation.frameWidth, this.animation.frameHeight );
 
 			this.timeSinceLastFrame -= aTime;
 

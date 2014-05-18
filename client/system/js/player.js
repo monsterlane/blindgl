@@ -11,13 +11,29 @@ define( [ 'global', 'sprite', 'class' ], function( aGlobal, aSprite ) {
 		bbox: [ null, null ],
 
 		/**
+		 * Method: walk
+		 */
+
+		walk: function( ) {
+			this.setAnimation( this.animations[ GLOBAL.ai.walk ][ this.direction ] );
+		},
+
+		/**
 		 * Method: spawn
 		 */
 
 		spawn: function( ) {
 			this._super( );
 
-			this.setLayer( this.system.canvas.layers[ 1 ] );
+			var layer = this.system.canvas.layers[ 1 ],
+				x = parseInt( layer.width / 2, 10 ) - parseInt( this.bbox[ 0 ] / 2, 10 ),
+				y = parseInt( layer.height / 2, 10 ) - parseInt( this.bbox[ 1 ] / 2, 10 ),
+				z = 0;
+
+			this.setLayer( layer );
+			this.setPosition( x, y, z );
+
+			this.walk( );
 		}
 	});
 

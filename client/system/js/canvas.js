@@ -7,6 +7,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 	 */
 
 	var Layer = Class.extend({
+		width: 0,
+		height: 0,
 		display: null,
 		displayContext: null,
 		buffer: null,
@@ -15,18 +17,29 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		/**
 		 * Method: init
+		 * @param {Int} aWidth
+		 * @param {Int} aHeight
 		 * @param {Int} aIndex
 		 */
 
-		init: function( aIndex ) {
+		init: function( aWidth, aHeight, aIndex ) {
+			this.width = aWidth;
+			this.height = aHeight;
+
 			this.display = document.createElement( 'canvas' );
-			this.display.setAttribute( 'id', 'bglLayer' + aIndex );
-			this.display.setAttribute( 'class', 'bglLayer' );
-			this.display.setAttribute( 'style', 'z-index:' + ( 10 + ( aIndex * 10 ) ) );
+			this.display.id = 'bglLayer' + aIndex;
+			this.display.className = 'bglLayer';
+			this.display.width = aWidth;
+			this.display.height = aHeight;
+			this.display.style.zIndex = 10 + ( aIndex * 10 );
 			this.displayContext = this.display.getContext( '2d' );
+			this.displayContext.scale( 1, 1 );
 
 			this.buffer = document.createElement( 'canvas' );
+			this.buffer.width = aWidth;
+			this.buffer.height = aHeight;
 			this.bufferContext = this.buffer.getContext( '2d' );
+			this.bufferContext.scale( 1, 1 );
 		},
 
 		/**
@@ -40,6 +53,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				this.entities[ i ].think( );
 			}
 
+			this.displayContext.clearRect( 0, 0, this.width, this.height );
 			this.displayContext.drawImage( this.buffer, 0, 0 );
 		}
 	});
@@ -97,7 +111,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			this.setResolution( );
 
 			for ( i = 0; i < GLOBAL.video.numLayers; i++ ) {
-				layer = new Layer( i );
+				layer = new Layer( this.resolution[ 0 ], this.resolution[ 1 ], i );
 
 				frag.appendChild( layer.display );
 
