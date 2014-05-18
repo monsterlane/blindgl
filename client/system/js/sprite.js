@@ -10,7 +10,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		animation: null,
 		animations: { },
 		currentImage: null,
-		currentFrame: 0,
+		currentFrame: -1,
 		lastTick: Date.now( ),
 		sounds: [ ],
 
@@ -25,6 +25,20 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 			this.addSounds( );
 
 			this.cache( );
+		},
+
+		/**
+		 * Method: setState
+		 * @param {Int} aState
+		 * @param {Object} aOptions
+		 */
+
+		setState: function( aState, aOptions ) {
+			this._super( aState, aOptions );
+
+			if ( this.animations[ this.state ] ) {
+				this.setAnimation( );
+			}
 		},
 
 		/**
@@ -57,11 +71,16 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		 */
 
 		setAnimation: function( aAnimation ) {
-			this.animation = aAnimation;
-			this.timeSinceLastFrame = this.animation.timeBetweenFrames;
+			var animation = aAnimation || this.animations[ this.state ][ this.direction ];
 
-			this.currentImage = new Image( );
-			this.currentImage.setAttribute( 'src', this.animation.file_url );
+			if ( this.animation != animation ) {
+				this.animation = animation;
+				this.timeSinceLastFrame = this.animation.timeBetweenFrames;
+				this.currentFrame = -1;
+
+				this.currentImage = new Image( );
+				this.currentImage.setAttribute( 'src', this.animation.file_url );
+			}
 		},
 
 		/**
@@ -95,12 +114,14 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		 */
 
 		cache: function( ) {
-			var i, len,
+			var i, j, len,
 				el;
 
-			for ( i = 0, len = this.animations.length; i < len; i++ ) {
-				el = new Image( );
-				el.setAttribute( 'src', this.animations[ i ].file_url );
+			for ( i in this.animations ) {
+				for ( j in this.animations[ i ] ) {
+					el = new Image( );
+					el.setAttribute( 'src', this.animations[ i ][ j ].file_url );
+				}
 			}
 
 			for ( i = 0, len = this.sounds.length; i < len; i++ ) {

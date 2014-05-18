@@ -10,6 +10,62 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 		bbox:[ 16, 24 ],
 
 		/**
+		 * Method: bindKeyboardBindings
+		 */
+
+		bindKeyboardBindings: function( ) {
+			var self = this;
+
+			this.system.input.bindKey( GLOBAL.input.keyboard.up, {
+				onUp: function( ) {
+					document.getElementById( 'bglKeyUp' ).className = '';
+				},
+				onDown: function( ) {
+					document.getElementById( 'bglKeyUp' ).className = 'selected';
+
+					self.setDirection( GLOBAL.direction.up );
+					self.setAnimation( );
+				}
+			});
+
+			this.system.input.bindKey( GLOBAL.input.keyboard.down, {
+				onUp: function( ) {
+					document.getElementById( 'bglKeyDown' ).className = '';
+				},
+				onDown: function( ) {
+					document.getElementById( 'bglKeyDown' ).className = 'selected';
+
+					self.setDirection( GLOBAL.direction.down );
+					self.setAnimation( );
+				}
+			});
+
+			this.system.input.bindKey( GLOBAL.input.keyboard.left, {
+				onUp: function( ) {
+					document.getElementById( 'bglKeyLeft' ).className = '';
+				},
+				onDown: function( ) {
+					document.getElementById( 'bglKeyLeft' ).className = 'selected';
+
+					self.setDirection( GLOBAL.direction.left );
+					self.setAnimation( );
+				}
+			});
+
+			this.system.input.bindKey( GLOBAL.input.keyboard.right, {
+				onUp: function( ) {
+					document.getElementById( 'bglKeyRight' ).className = '';
+				},
+				onDown: function( ) {
+					document.getElementById( 'bglKeyRight' ).className = 'selected';
+
+					self.setDirection( GLOBAL.direction.right );
+					self.setAnimation( );
+				}
+			});
+		},
+
+		/**
 		 * Method: addAnimations
 		 */
 
@@ -55,6 +111,18 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				frameCount: 8,
 				timeBetweenFrames: 100
 			});
+		},
+
+		/**
+		 * Method: spawn
+		 */
+
+		spawn: function( ) {
+			this._super( );
+
+			this.bindKeyboardBindings( );
+
+			this.system.verbose( 'player->spawn' );
 		}
 	});
 

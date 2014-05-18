@@ -63,10 +63,23 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		/**
 		 * Method: setState
+		 * @param {Int} aState
+		 * @param {Object} aOptions
 		 */
 
 		setState: function( aState, aOptions ) {
+			var options = aOptions || { };
 
+			this.state = aState;
+		},
+
+		/**
+		 * Method: setDirection
+		 * @param {Int} aDirection
+		 */
+
+		setDirection: function( aDirection ) {
+			this.direction = aDirection;
 		},
 
 		/**

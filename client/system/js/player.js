@@ -8,14 +8,14 @@ define( [ 'global', 'sprite', 'class' ], function( aGlobal, aSprite ) {
 
 	var Player = aSprite.extend({
 		solid: GLOBAL.solid.bbox,
-		bbox: [ null, null ],
+		bbox: [ 0, 0 ],
 
 		/**
 		 * Method: walk
 		 */
 
 		walk: function( ) {
-			this.setAnimation( this.animations[ GLOBAL.ai.walk ][ this.direction ] );
+			this.setState( GLOBAL.ai.walk );
 		},
 
 		/**
