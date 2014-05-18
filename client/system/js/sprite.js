@@ -12,6 +12,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		currentImage: null,
 		currentFrame: -1,
 		lastTick: Date.now( ),
+		lastPosition: null,
 		sounds: [ ],
 
 		/**
@@ -28,6 +29,23 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		},
 
 		/**
+		 * Method: setPosition
+		 * @param {Int} aX
+		 * @param {Int} aY
+		 * @param {Int} aZ
+		 */
+
+		setPosition: function( aX, aY, aZ ) {
+			this._super( aX, aY, aZ );
+
+			this.lastPosition = {
+				x: aX,
+				y: aY,
+				z: aZ
+			};
+		},
+
+		/**
 		 * Method: setState
 		 * @param {Int} aState
 		 * @param {Object} aOptions
@@ -39,6 +57,17 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 			if ( this.animations[ this.state ] ) {
 				this.setAnimation( );
 			}
+		},
+
+		/**
+		 * Method: setDirection
+		 * @param {Int} aDirection
+		 */
+
+		setDirection: function( aDirection ) {
+			this._super( aDirection );
+
+			this.setAnimation( );
 		},
 
 		/**
@@ -131,6 +160,52 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		},
 
 		/**
+		 * Method: move
+		 * @param {Int} aX
+		 * @param {Int} aY
+		 * @param {Int} aZ
+		 */
+
+		move: function( aX, aY, aZ ) {
+			var vX = this.velocity.x + aX,
+				vY = this.velocity.y + aY,
+				vZ = this.velocity.z + aZ;
+
+			if ( vX > 1 ) vX = 1;
+			else if ( vX < -1 ) vX = -1;
+
+			if ( vY > 1 ) vY = 1;
+			else if ( vY < -1 ) vY = -1;
+
+			if ( vZ > 1 ) vZ = 1;
+			else if ( vZ < -1 ) vZ = -1;
+
+			this.velocity.x = vX;
+			this.velocity.y = vY;
+			this.velocity.z = vZ;
+		},
+
+		/**
+		 * Method: update
+		 */
+
+		update: function( ) {
+			var posX = this.position.x + this.velocity.x,
+				posY = this.position.y + this.velocity.y,
+				posZ = this.position.z + this.velocity.v;
+
+			if ( posX > 0 && posX < this.layer.width - this.bbox[ 0 ] ) {
+				this.position.x = posX;
+			}
+
+			if ( posY > 0 && posY < this.layer.height - this.bbox[ 1 ] ) {
+				this.position.y = posY;
+			}
+
+			this.position.z = posZ;
+		},
+
+		/**
 		 * Method: draw
 		 */
 
@@ -144,8 +219,12 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 				++this.currentFrame;
 				this.currentFrame %= this.animation.frameCount;
 
-				this.layer.bufferContext.clearRect( this.position.x, this.position.y, this.animation.frameWidth, this.animation.frameHeight );
+				this.layer.bufferContext.clearRect( this.lastPosition.x, this.lastPosition.y, this.animation.frameWidth, this.animation.frameHeight );
 				this.layer.bufferContext.drawImage( this.currentImage, this.animation.frameWidth * this.currentFrame, 0, this.animation.frameWidth, this.animation.frameHeight, this.position.x, this.position.y, this.animation.frameWidth, this.animation.frameHeight );
+
+				this.lastPosition.x = this.position.x;
+				this.lastPosition.y = this.position.y;
+				this.lastPosition.z = this.position.z;
 			}
 		},
 
@@ -157,6 +236,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 			this._super( );
 
 			if ( this.animation != null ) {
+				this.update( );
 				this.draw( );
 			}
 		}

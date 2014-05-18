@@ -19,48 +19,56 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			this.system.input.bindKey( GLOBAL.input.keyboard.up, {
 				onUp: function( ) {
 					document.getElementById( 'bglKeyUp' ).className = '';
+
+					self.move( 0, 1, 0 );
 				},
 				onDown: function( ) {
 					document.getElementById( 'bglKeyUp' ).className = 'selected';
 
 					self.setDirection( GLOBAL.direction.up );
-					self.setAnimation( );
+					self.move( 0, -1, 0 );
 				}
 			});
 
 			this.system.input.bindKey( GLOBAL.input.keyboard.down, {
 				onUp: function( ) {
 					document.getElementById( 'bglKeyDown' ).className = '';
+
+					self.move( 0, -1, 0 );
 				},
 				onDown: function( ) {
 					document.getElementById( 'bglKeyDown' ).className = 'selected';
 
 					self.setDirection( GLOBAL.direction.down );
-					self.setAnimation( );
+					self.move( 0, 1, 0 );
 				}
 			});
 
 			this.system.input.bindKey( GLOBAL.input.keyboard.left, {
 				onUp: function( ) {
 					document.getElementById( 'bglKeyLeft' ).className = '';
+
+					self.move( 1, 0, 0 );
 				},
 				onDown: function( ) {
 					document.getElementById( 'bglKeyLeft' ).className = 'selected';
 
 					self.setDirection( GLOBAL.direction.left );
-					self.setAnimation( );
+					self.move( -1, 0, 0 );
 				}
 			});
 
 			this.system.input.bindKey( GLOBAL.input.keyboard.right, {
 				onUp: function( ) {
 					document.getElementById( 'bglKeyRight' ).className = '';
+
+					self.move( -1, 0, 0 );
 				},
 				onDown: function( ) {
 					document.getElementById( 'bglKeyRight' ).className = 'selected';
 
 					self.setDirection( GLOBAL.direction.right );
-					self.setAnimation( );
+					self.move( 1, 0, 0 );
 				}
 			});
 		},
