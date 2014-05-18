@@ -72,13 +72,13 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			var self = this;
 
 			document.body.addEventListener( 'keydown', function( aEvent ) {
-				if ( aEvent.repeat != true ) {
+				if ( aEvent.repeat != true && self.system.game.running == true ) {
 					self.handleKeypress( aEvent.keyCode, true );
 				}
 			}, true );
 
 			document.body.addEventListener( 'keyup', function( aEvent ) {
-				if ( aEvent.repeat != true ) {
+				if ( aEvent.repeat != true && self.system.game.running == true ) {
 					self.handleKeypress( aEvent.keyCode, false );
 				}
 			}, true );

@@ -27,7 +27,7 @@ define( [ 'global', 'keyboard', 'audio', 'canvas', '../../game/js/game', 'class'
 
 		verbose: function( aMessage ) {
 			if ( this.settings.verbose == true ) {
-				console.log( 'blindGL: ' + aMessage );
+				console.log( 'blindGL::' + aMessage );
 			}
 		},
 
@@ -52,16 +52,25 @@ define( [ 'global', 'keyboard', 'audio', 'canvas', '../../game/js/game', 'class'
 		},
 
 		/**
+		 * Method: loadGame
+		 */
+
+		loadGame: function( ) {
+			this.game = new aGame( this );
+		},
+
+		/**
 		 * Method: init
 		 */
 
 		init: function( ) {
-			this.verbose( 'booting...' );
+			this.verbose( 'boot' );
 
 			this.input = new aKeyboard( this );
-			this.audio = new aAudio( this );
 			this.canvas = new aCanvas( this );
-			this.game = new aGame( this );
+			this.audio = new aAudio( this );
+
+			this.loadGame( );
 		},
 
 		/**

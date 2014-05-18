@@ -6,6 +6,7 @@ define( [ 'client', 'class' ], function( aClient ) {
 
 	var World = Class.extend({
 		system: null,
+		running: false,
 		clients: [ ],
 
 		/**
@@ -44,6 +45,7 @@ define( [ 'client', 'class' ], function( aClient ) {
 			this.system.canvas.clear( );
 			this.system.hideOverlay( );
 
+			this.running = true;
 			this.think( );
 		},
 
