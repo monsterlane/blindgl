@@ -33,7 +33,7 @@ span.icon-key-right {
 /* */
 
 #bglInterface {
-	position:relative;
+	position:absolute;
 	top:50%; left:50%;
 	width:0px;
 	height:0px;

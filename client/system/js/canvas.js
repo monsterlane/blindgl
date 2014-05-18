@@ -90,7 +90,6 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			el.style.width = GLOBAL.video.resolutions[ res ][ 0 ] + 'px';
 			el.style.height = GLOBAL.video.resolutions[ res ][ 1 ] + 'px';
 			el.style.margin = '-' + parseInt( GLOBAL.video.resolutions[ res ][ 1 ] / 2, 10 ) + 'px 0 0 -' + parseInt( GLOBAL.video.resolutions[ res ][ 0 ] / 2, 10 ) + 'px';
-			el.style.display = 'inline-block';
 
 			el.querySelectorAll( 'header' )[ 0 ].style.display = 'inline-block';
 			el.querySelectorAll( 'footer' )[ 0 ].style.display = 'inline-block';
