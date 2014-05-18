@@ -41,6 +41,9 @@ define( [ 'client', 'class' ], function( Client ) {
 		 */
 
 		start: function( ) {
+			this.system.canvas.clear( );
+			this.system.hideOverlay( );
+
 			this.think( );
 		},
 

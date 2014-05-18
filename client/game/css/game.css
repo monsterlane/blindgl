@@ -7,31 +7,27 @@ body {
 /* */
 
 span.icon-key-up {
-	background:url(../img/glyphicons_213_up_arrow.png) no-repeat;
-	width:18px;
-	height:20px;
-	margin:0 1px;
+	background:url(../img/ui/arrow-up.png) no-repeat;
+	width:16px;
+	height:16px;
 }
 
 span.icon-key-down {
-	background:url(../img/glyphicons_212_down_arrow.png) no-repeat;
-	width:18px;
-	height:20px;
-	margin:0 1px;
+	background:url(../img/ui/arrow-down.png) no-repeat;
+	width:16px;
+	height:16px;
 }
 
 span.icon-key-left {
-	background:url(../img/glyphicons_210_left_arrow.png) no-repeat;
-	width:20px;
-	height:18px;
-	margin:1px 0;
+	background:url(../img/ui/arrow-left.png) no-repeat;
+	width:16px;
+	height:16px;
 }
 
 span.icon-key-right {
-	background:url(../img/glyphicons_211_right_arrow.png) no-repeat;
-	width:20px;
-	height:18px;
-	margin:1px 0;
+	background:url(../img/ui/arrow-right.png) no-repeat;
+	width:16px;
+	height:16px;
 }
 
 /* */
@@ -61,7 +57,7 @@ span.icon-key-right {
 	#bglInterface > footer {
 		display:none;
 		position:absolute;
-		bottom:0; right:-3em;
+		bottom:0; right:-2.75em;
 	}
 		#bglInterface > footer > nav > ul > li {
 			margin-top:0.5em;
@@ -71,14 +67,19 @@ span.icon-key-right {
 			}
 
 		#bglInterface > footer > nav > ul > li > button {
-			border:1px solid #fff;
+			padding:0.25em 0.5em;
+			border:1px solid #000;
 			background-color:#fff;
 			-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;
 		}
 			#bglInterface > footer > nav > ul > li > button > span.role-label {
 				display:none;
 			}
+			#bglInterface > footer > nav > ul > li > button > span.role-icon {
+				margin-top:-0.25em;
+			}
 
 			#bglInterface > footer > nav > ul > li > button.selected {
+				border:1px solid #fff;
 				background-color:#666;
 			}

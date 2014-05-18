@@ -110,6 +110,17 @@ define( [ 'global', 'class' ], function( Global ) {
 		},
 
 		/**
+		 * Method: clear
+		 */
+
+		clear: function( ) {
+			var el = document.getElementById( 'bglCanvas' );
+
+			el.style.backgroundImage = 'none';
+			el.style.backgroundColor = '#fff';
+		},
+
+		/**
 		 * Method: think
 		 */
 

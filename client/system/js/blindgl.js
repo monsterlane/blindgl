@@ -88,6 +88,26 @@ define( [ 'global', 'audio', 'canvas', '../../game/js/game', 'class' ], function
 		},
 
 		/**
+		 * Method: showOverlay
+		 */
+
+		showOverlay: function( ) {
+			var el = document.getElementById( 'bglOverlay' );
+
+			el.style.display = 'block';
+		},
+
+		/**
+		 * Method: hideOverlay
+		 */
+
+		hideOverlay: function( ) {
+			var el = document.getElementById( 'bglOverlay' );
+
+			el.style.display = 'none';
+		},
+
+		/**
 		 * Method: init
 		 */
 
