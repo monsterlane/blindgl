@@ -11,6 +11,10 @@ define( [ '../../system/js/player' ], function( aPlayer ) {
 
 		addAnimations: function( ) {
 			this._super( );
+
+			this.addAnimation({
+
+			});
 		}
 	});
 

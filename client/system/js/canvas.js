@@ -106,7 +106,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 			el.appendChild( frag );
 
-			this.system.verbose( 'canvas renderer initialized' );
+			this.system.verbose( 'init->canvas' );
 		},
 
 		/**

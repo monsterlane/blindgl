@@ -64,7 +64,7 @@ define( [ 'global', '../../game/js/player', 'class' ], function( aGlobal, aPlaye
 
 			this.bindKeyboardBindings( );
 
-			this.system.verbose( 'spawned client' );
+			this.system.verbose( 'client->spawn' );
 		}
 	});
 

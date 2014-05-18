@@ -20,6 +20,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			y: 0,
 			z: 0
 		},
+		state: GLOBAL.ai.idle,
 		solid: GLOBAL.solid.none,
 		moveType: GLOBAL.moveType.none,
 
@@ -32,6 +33,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		init: function( aSystem, aGame ) {
 			this.system = aSystem;
 			this.game = aGame;
+
+			this.system.verbose( 'entity->init' );
 		},
 
 		/**
@@ -49,7 +52,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		spawn: function( ) {
-			this.system.verbose( 'created entity' );
+
 		},
 
 		/**

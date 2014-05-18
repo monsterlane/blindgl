@@ -53,6 +53,8 @@ define( [ 'global', 'audio', 'canvas', '../../game/js/game', 'class' ], function
 					self.handleKeypress( aEvent.keyCode );
 				}
 			});
+
+			this.verbose( 'init->input' );
 		},
 
 		/**

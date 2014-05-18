@@ -72,7 +72,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 			el.appendChild( frag );
 
-			this.system.verbose( 'audio engine initialized' );
+			this.system.verbose( 'init->audio' );
 		},
 
 		/**

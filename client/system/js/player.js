@@ -18,8 +18,6 @@ define( [ 'global', 'sprite', 'class' ], function( aGlobal, aSprite ) {
 			this._super( );
 
 			this.setLayer( this.system.canvas.layers[ 1 ] );
-
-			this.system.verbose( 'spawned player' );
 		}
 	});
 

@@ -8,10 +8,11 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 	var Sprite = aEntity.extend({
 		animation: null,
-		animations: { },
+		animations: [ ],
 		currentFrame: 0,
 		timeBetweenFrames: 1 / GLOBAL.video.fps,
 		timeSinceLastFrame: this.timeBetweenFrames,
+		sounds: [ ],
 
 		/**
 		 * Method: init
@@ -21,6 +22,9 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 			this._super( aSystem, aGame );
 
 			this.addAnimations( );
+			this.addSounds( );
+
+			this.cache( );
 		},
 
 		/**
@@ -29,6 +33,51 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 		addAnimations: function( ) {
 
+		},
+
+		/**
+		 * Method: addAnimation
+		 * @param {Object} aAnimation
+		 */
+
+		addAnimation: function( aAnimation ) {
+
+		},
+
+		/**
+		 * Method: addSounds
+		 */
+
+		addSounds: function( ) {
+
+		},
+
+		/**
+		 * Method: addSound
+		 * @param {Object} aSound
+		 */
+
+		addSound: function( aSound ) {
+
+		},
+
+		/**
+		 * Method: cache
+		 */
+
+		cache: function( ) {
+			var i, len,
+				el;
+
+			for ( i = 0, len = this.animations.length; i < len; i++ ) {
+				el = new Image( );
+				el.setAttribute( 'src', this.animations[ i ].file_url );
+			}
+
+			for ( i = 0, len = this.sounds.length; i < len; i++ ) {
+				el = new Audio( );
+				el.setAttribute( 'src', this.sounds[ i ].file_url );
+			}
 		},
 
 		/**

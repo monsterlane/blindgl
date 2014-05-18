@@ -12,7 +12,7 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 		start: function( ) {
 			this._super( );
 
-			this.system.verbose( 'game started' );
+			this.system.verbose( 'game->start' );
 
 			this.addClient( );
 		}
