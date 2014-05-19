@@ -12,6 +12,8 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		currentImage: null,
 		currentFrame: -1,
 		lastTick: Date.now( ),
+		moveTime: 20,
+		lastMove: Date.now( ),
 		lastPosition: null,
 		sounds: [ ],
 
@@ -160,6 +162,36 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		},
 
 		/**
+		 * Method: checkState
+		 */
+
+		checkState: function( ) {
+			var moving = !( this.velocity.x == 0 && this.velocity.y == 0 && this.velocity.z == 0 );
+
+			if ( moving == false && this.state != GLOBAL.ai.idle ) {
+				this.setState( GLOBAL.ai.idle );
+			}
+			else if ( moving == true && this.state == GLOBAL.ai.idle ) {
+				this.setState( GLOBAL.ai.walk );
+			}
+
+			if ( moving == true ) {
+				if ( this.velocity.x < 0 && this.velocity.y == 0 && this.direction != GLOBAL.direction.left ) {
+					this.setDirection( GLOBAL.direction.left );
+				}
+				else if ( this.velocity.x > 0 && this.velocity.y == 0 && this.direction != GLOBAL.direction.right ) {
+					this.setDirection( GLOBAL.direction.right );
+				}
+				else if ( this.velocity.x == 0 && this.velocity.y > 0 && this.direction != GLOBAL.direction.down ) {
+					this.setDirection( GLOBAL.direction.down );
+				}
+				else if ( this.velocity.x == 0 && this.velocity.y < 0 && this.direction != GLOBAL.direction.up ) {
+					this.setDirection( GLOBAL.direction.up );
+				}
+			}
+		},
+
+		/**
 		 * Method: move
 		 * @param {Int} aX
 		 * @param {Int} aY
@@ -186,23 +218,39 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		},
 
 		/**
-		 * Method: update
+		 * Method: checkInput
 		 */
 
-		update: function( ) {
-			var posX = this.position.x + this.velocity.x,
-				posY = this.position.y + this.velocity.y,
+		checkInput: function( ) {
+			var now = Date.now( ),
+				elapsed = now - this.lastMove,
+				posX, posY, posZ,
+				maxX, maxY;
+
+			if ( this.state > GLOBAL.ai.idle && elapsed >= this.moveTime ) {
+				this.lastMove = now - ( elapsed % this.moveTime );
+
+				posX = this.position.x + this.velocity.x;
+				posY = this.position.y + this.velocity.y;
 				posZ = this.position.z + this.velocity.v;
+				maxX = this.layer.width;
+				maxY = this.layer.height;
 
-			if ( posX > 0 && posX < this.layer.width - this.bbox[ 0 ] ) {
-				this.position.x = posX;
+				if ( this.solid == GLOBAL.solid.bbox ) {
+					maxX -= this.bbox[ 0 ];
+					maxY -= this.bbox[ 1 ];
+				}
+
+				if ( posX > 0 && posX < maxX ) {
+					this.position.x = posX;
+				}
+
+				if ( posY > 0 && posY < maxY ) {
+					this.position.y = posY;
+				}
+
+				this.position.z = posZ;
 			}
-
-			if ( posY > 0 && posY < this.layer.height - this.bbox[ 1 ] ) {
-				this.position.y = posY;
-			}
-
-			this.position.z = posZ;
 		},
 
 		/**
@@ -213,13 +261,25 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 			var now = Date.now( ),
 				elapsed = now - this.lastTick;
 
-			if ( elapsed >= this.animation.timeBetweenFrames ) {
+			if ( this.animation.frameCount == 1 ) {
+				if ( this.currentFrame == -1 ) {
+					++this.currentFrame;
+
+					this.layer.bufferContext.clearRect( this.lastPosition.x, this.lastPosition.y, this.width, this.height );
+					this.layer.bufferContext.drawImage( this.currentImage, this.animation.frameWidth * this.currentFrame, 0, this.animation.frameWidth, this.animation.frameHeight, this.position.x, this.position.y, this.animation.frameWidth, this.animation.frameHeight );
+
+					this.lastPosition.x = this.position.x;
+					this.lastPosition.y = this.position.y;
+					this.lastPosition.z = this.position.z;
+				}
+			}
+			else if ( elapsed >= this.animation.timeBetweenFrames ) {
 				this.lastTick = now - ( elapsed % this.animation.timeBetweenFrames );
 
 				++this.currentFrame;
 				this.currentFrame %= this.animation.frameCount;
 
-				this.layer.bufferContext.clearRect( this.lastPosition.x, this.lastPosition.y, this.animation.frameWidth, this.animation.frameHeight );
+				this.layer.bufferContext.clearRect( this.lastPosition.x, this.lastPosition.y, this.width, this.height );
 				this.layer.bufferContext.drawImage( this.currentImage, this.animation.frameWidth * this.currentFrame, 0, this.animation.frameWidth, this.animation.frameHeight, this.position.x, this.position.y, this.animation.frameWidth, this.animation.frameHeight );
 
 				this.lastPosition.x = this.position.x;
@@ -235,8 +295,10 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		think: function( ) {
 			this._super( );
 
+			this.checkState( );
+			this.checkInput( );
+
 			if ( this.animation != null ) {
-				this.update( );
 				this.draw( );
 			}
 		}

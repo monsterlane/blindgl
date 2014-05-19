@@ -7,8 +7,13 @@ define( [ 'global', 'sprite', 'class' ], function( aGlobal, aSprite ) {
 	 */
 
 	var Player = aSprite.extend({
-		solid: GLOBAL.solid.bbox,
-		bbox: [ 0, 0 ],
+		/**
+		 * Method: walk
+		 */
+
+		idle: function( ) {
+			this.setState( GLOBAL.ai.idle );
+		},
 
 		/**
 		 * Method: walk
@@ -33,7 +38,7 @@ define( [ 'global', 'sprite', 'class' ], function( aGlobal, aSprite ) {
 			this.setLayer( layer );
 			this.setPosition( x, y, z );
 
-			this.walk( );
+			this.idle( );
 		}
 	});
 

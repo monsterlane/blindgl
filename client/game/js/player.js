@@ -7,7 +7,10 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 	 */
 
 	var Player = aPlayer.extend({
+		solid: GLOBAL.solid.bbox,
 		bbox:[ 16, 24 ],
+		width: 17,
+		height: 24,
 
 		/**
 		 * Method: bindKeyboardBindings
@@ -81,13 +84,49 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			this._super( );
 
 			this.addAnimation({
+				state: GLOBAL.ai.idle,
+				direction: GLOBAL.direction.up,
+				file_url: '/game/img/player/idle-up.png',
+				frameWidth: 16,
+				frameHeight: 24,
+				frameCount: 1
+			});
+
+			this.addAnimation({
+				state: GLOBAL.ai.idle,
+				direction: GLOBAL.direction.down,
+				file_url: '/game/img/player/idle-down.png',
+				frameWidth: 16,
+				frameHeight: 24,
+				frameCount: 1
+			});
+
+			this.addAnimation({
+				state: GLOBAL.ai.idle,
+				direction: GLOBAL.direction.left,
+				file_url: '/game/img/player/idle-left.png',
+				frameWidth: 17,
+				frameHeight: 24,
+				frameCount: 1
+			});
+
+			this.addAnimation({
+				state: GLOBAL.ai.idle,
+				direction: GLOBAL.direction.right,
+				file_url: '/game/img/player/idle-right.png',
+				frameWidth: 17,
+				frameHeight: 24,
+				frameCount: 1
+			});
+
+			this.addAnimation({
 				state: GLOBAL.ai.walk,
 				direction: GLOBAL.direction.up,
 				file_url: '/game/img/player/walk-up.png',
 				frameWidth: 16,
 				frameHeight: 24,
 				frameCount: 7,
-				timeBetweenFrames: 100
+				timeBetweenFrames: 125
 			});
 
 			this.addAnimation({
@@ -97,7 +136,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				frameWidth: 16,
 				frameHeight: 24,
 				frameCount: 7,
-				timeBetweenFrames: 100
+				timeBetweenFrames: 125
 			});
 
 			this.addAnimation({
@@ -107,7 +146,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				frameWidth: 17,
 				frameHeight: 24,
 				frameCount: 8,
-				timeBetweenFrames: 100
+				timeBetweenFrames: 125
 			});
 
 			this.addAnimation({
@@ -117,7 +156,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				frameWidth: 17,
 				frameHeight: 24,
 				frameCount: 8,
-				timeBetweenFrames: 100
+				timeBetweenFrames: 125
 			});
 		},
 

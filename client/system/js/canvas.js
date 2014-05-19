@@ -33,13 +33,19 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			this.display.height = aHeight;
 			this.display.style.zIndex = 10 + ( aIndex * 10 );
 			this.displayContext = this.display.getContext( '2d' );
+
 			this.displayContext.scale( 1, 1 );
+			this.displayContext.mozImageSmoothingEnabled = false;
+			this.displayContext.webkitImageSmoothingEnabled = false;
 
 			this.buffer = document.createElement( 'canvas' );
 			this.buffer.width = aWidth;
 			this.buffer.height = aHeight;
 			this.bufferContext = this.buffer.getContext( '2d' );
+
 			this.bufferContext.scale( 1, 1 );
+			this.bufferContext.mozImageSmoothingEnabled = false;
+			this.bufferContext.webkitImageSmoothingEnabled = false;
 		},
 
 		/**
