@@ -12,7 +12,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		currentImage: null,
 		currentFrame: -1,
 		lastTick: Date.now( ),
-		moveTime: 25,
+		moveTime: 30,
 		lastMove: Date.now( ),
 		lastPosition: null,
 		lastSize: {
@@ -90,14 +90,38 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		 */
 
 		addAnimation: function( aAnimation ) {
-			var s = aAnimation.state,
-				d = aAnimation.direction;
+			var animation = aAnimation || { },
+				i, len1, j, len2;
 
-			if ( !this.animations[ s ] ) {
-				this.animations[ s ] = { };
+			if ( !( aAnimation.state instanceof Array ) ) {
+				animation.state = [ animation.state ];
 			}
 
-			this.animations[ s ][ d ] = aAnimation;
+			if ( !( aAnimation.direction instanceof Array ) ) {
+				animation.direction = [ animation.direction ];
+			}
+
+			for ( i = 0, len1 = animation.state.length; i < len1; i++ ) {
+				for ( j = 0, len2 = animation.direction.length; j < len2; j++ ) {
+					if ( !this.animations[ animation.state[ i ] ] ) {
+						this.animations[ animation.state[ i ] ] = { };
+					}
+
+					this.animations[ animation.state[ i ] ][ animation.direction[ j ] ] = {
+						state: animation.state[ i ],
+						direction: animation.direction[ j ],
+						file_url: animation.file_url,
+						frameWidth: animation.frameWidth,
+						frameHeight: animation.frameHeight,
+						frameCount: animation.frameCount,
+						framePosition: {
+							x: animation.framePosition.x,
+							y: animation.framePosition.y
+						},
+						timeBetweenFrames: animation.timeBetweenFrames
+					};
+				}
+			}
 		},
 
 		/**
@@ -235,11 +259,12 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 			var now = Date.now( ),
 				elapsed = now - this.lastMove,
 				moving = !( this.velocity.x == 0 && this.velocity.y == 0 && this.velocity.z == 0 ),
+				attacking = ( this.state == GLOBAL.ai.attack ) ? true : false,
 				posX, posY, posZ,
 				maxX, maxY;
 
 			if ( this.state > GLOBAL.ai.idle && elapsed >= this.moveTime ) {
-				if ( moving == false ) {
+				if ( moving == false && attacking == false ) {
 					this.setState( GLOBAL.ai.idle );
 				}
 				else {
@@ -278,14 +303,13 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 		draw: function( ) {
 			var now = Date.now( ),
+				elapsed = now - this.lastTick,
 				draw = false,
-				elapsed;
+				posX, posY;
 
 			if ( this.animation != null ) {
-				elapsed = now - this.lastTick;
-
 				if ( this.animation.frameCount == 1 ) {
-					if ( this.currentFrame == -1 ) {
+					if ( this.currentFrame < 0 ) {
 						this.currentFrame = 0;
 
 						draw = true;
@@ -295,17 +319,27 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 					this.lastTick = now - ( elapsed % this.animation.timeBetweenFrames );
 
 					this.currentFrame += 1;
-					this.currentFrame %= this.animation.frameCount;
+
+					if ( this.currentFrame == this.animation.frameCount && this.state == GLOBAL.ai.attack ) {
+						this.setState( this.lastState );
+						this.currentFrame = 0;
+					}
+					else {
+						this.currentFrame %= this.animation.frameCount;
+					}
 
 					draw = true;
 				}
 
 				if ( draw == true ) {
-					this.layer.bufferContext.clearRect( this.lastPosition.x, this.lastPosition.y, this.lastSize.width, this.lastSize.height );
-					this.layer.bufferContext.drawImage( this.currentImage, this.animation.frameWidth * this.currentFrame, 0, this.animation.frameWidth, this.animation.frameHeight, this.position.x, this.position.y, this.animation.frameWidth, this.animation.frameHeight );
+					posX = this.position.x + this.animation.framePosition.x;
+					posY = this.position.y + this.animation.framePosition.y;
 
-					this.lastPosition.x = this.position.x;
-					this.lastPosition.y = this.position.y;
+					this.layer.bufferContext.clearRect( this.lastPosition.x, this.lastPosition.y, this.lastSize.width, this.lastSize.height );
+					this.layer.bufferContext.drawImage( this.currentImage, this.animation.frameWidth * this.currentFrame, 0, this.animation.frameWidth, this.animation.frameHeight, posX, posY, this.animation.frameWidth, this.animation.frameHeight );
+
+					this.lastPosition.x = posX;
+					this.lastPosition.y = posY;
 					this.lastPosition.z = this.position.z;
 
 					this.lastSize.width = this.animation.frameWidth;

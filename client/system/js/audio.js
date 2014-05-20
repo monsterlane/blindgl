@@ -129,6 +129,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		playMusic: function( aUrl, aVolume ) {
 			this.background.sound.setAttribute( 'src', aUrl );
 			this.background.sound.setAttribute( 'volume', aVolume );
+			this.background.sound.setAttribute( 'loop', '' );
 			this.background.sound.load( );
 
 			this.background.playing = true;
@@ -160,18 +161,25 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 * Method: playSound
 		 * @param {String} aUrl
 		 * @param {Int} aVolume
+		 * @param {Bool} aLoop
 		 */
 
-		playSound: function( aUrl, aVolume ) {
-			var bank = this.getNextBank( );
+		playSound: function( aUrl, aVolume, aLoop ) {
+			var bank = this.getNextBank( ),
+				volume = aVolume || 75,
+				loop = aLoop || false;
 
 			if ( bank !== false ) {
 				this.lastBank = bank;
 
 				bank.sound.setAttribute( 'src', aUrl );
-				bank.sound.setAttribute( 'volume', aVolume );
-				bank.sound.load( );
+				bank.sound.setAttribute( 'volume', volume );
 
+				if ( loop ) {
+					bank.sound.setAttribute( 'loop', '' );
+				}
+
+				bank.sound.load( );
 				bank.playing = true;
 				bank.sound.play( );
 			}
@@ -180,12 +188,16 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		/**
 		 * Method: playRandomSound
 		 * @param {Array} aSounds
+		 * @param {Int} aVolume
+		 * @param {Bool} aLoop
 		 */
 
-		playRandomSound: function( aSounds ) {
-			var rnd = Math.floor( Math.random( ) * aSounds.length );
+		playRandomSound: function( aSounds, aVolume, aLoop ) {
+			var rnd = Math.floor( Math.random( ) * aSounds.length ),
+				volume = aVolume || aSounds[ rnd ].volume,
+				loop = aLoop || false;
 
-			this.playSound( aSounds[ rnd ].file_url, aSounds[ rnd ].volume );
+			this.playSound( aSounds[ rnd ].file_url, volume, loop );
 		}
 	});
 

@@ -72,7 +72,10 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		setState: function( aState, aOptions ) {
 			var options = aOptions || { };
 
-			this.lastState = this.state;
+			if ( this.lastState != this.state ) {
+				this.lastState = this.state;
+			}
+
 			this.state = aState;
 		},
 
