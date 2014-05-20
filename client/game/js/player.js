@@ -136,7 +136,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 					x: -10,
 					y: -9
 				},
-				timeBetweenFrames: 100
+				timeBetweenFrames: 50
 			});
 
 			this.addAnimation({
@@ -150,7 +150,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 					x: -4,
 					y: 1
 				},
-				timeBetweenFrames: 100
+				timeBetweenFrames: 50
 			});
 
 			this.addAnimation({
@@ -164,7 +164,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 					x: -12,
 					y: -5
 				},
-				timeBetweenFrames: 100
+				timeBetweenFrames: 50
 			});
 
 			this.addAnimation({
@@ -178,7 +178,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 					x: -2,
 					y: -5
 				},
-				timeBetweenFrames: 100
+				timeBetweenFrames: 50
 			});
 		},
 
@@ -196,25 +196,25 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			this.addSound({
 				state: GLOBAL.ai.attack,
 				file_url: 'game/snd/player/sword1.mp3',
-				volume: 75
+				volume: 50
 			});
 
 			this.addSound({
 				state: GLOBAL.ai.attack,
 				file_url: 'game/snd/player/sword2.mp3',
-				volume: 75
+				volume: 50
 			});
 
 			this.addSound({
 				state: GLOBAL.ai.attack,
 				file_url: 'game/snd/player/sword3.mp3',
-				volume: 75
+				volume: 50
 			});
 
 			this.addSound({
 				state: GLOBAL.ai.attack,
 				file_url: 'game/snd/player/sword4.mp3',
-				volume: 75
+				volume: 50
 			});
 		},
 
@@ -290,8 +290,10 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 		 */
 
 		attack: function( ) {
-			this.setState( GLOBAL.ai.attack );
-			this.system.audio.playRandomSound( this.sounds[ GLOBAL.ai.attack ] );
+			if ( this.state != GLOBAL.ai.attack ) {
+				this.setState( GLOBAL.ai.attack );
+				this.system.audio.playRandomSound( this.sounds[ GLOBAL.ai.attack ] );
+			}
 		}
 	});
 
