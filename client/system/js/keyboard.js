@@ -8,6 +8,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 	 */
 
 	var Button = Class.extend({
+		element: null,
 		down: false,
 
 		/**
@@ -32,7 +33,10 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		init: function( aBinding ) {
-			var binding = aBinding || { };
+			var binding = aBinding || { key: null },
+				cb;
+
+			this.element = document.getElementById( 'bglKeyboard' + aBinding.key );
 
 			if ( binding.hasOwnProperty( 'onUp' ) ) {
 				this.onUp = binding.onUp;
@@ -60,7 +64,9 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			var i;
 
 			for ( i in GLOBAL.input.keyboard ) {
-				this.binding[ GLOBAL.input.keyboard[ i ] ] = new Button( );
+				this.binding[ GLOBAL.input.keyboard[ i ] ] = new Button({
+					key: GLOBAL.input.keyboard[ i ]
+				});
 			}
 		},
 
@@ -91,14 +97,22 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		handleKeypress: function( aKey, aDown ) {
+			var binding;
+
 			if ( this.binding[ aKey ] ) {
-				this.binding[ aKey ].down = aDown;
+				binding = this.binding[ aKey ];
+
+				binding.down = aDown;
 
 				if ( aDown == true ) {
-					this.binding[ aKey ].onDown( );
+					this.showKeyDown( binding.element );
+
+					binding.onDown( );
 				}
 				else {
-					this.binding[ aKey ].onUp( );
+					this.showKeyUp( binding.element );
+
+					binding.onUp( );
 				}
 			}
 		},
@@ -109,8 +123,28 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 * @param {Object} aBinding
 		 */
 
-		bindKey: function( aKey, aBinding ) {
-			this.binding[ aKey ] = new Button( aBinding );
+		bindKey: function( aBinding ) {
+			this.binding[ aBinding.key ] = new Button( aBinding );
+		},
+
+		/**
+		 * showKeyDown
+		 */
+
+		showKeyDown: function( aElement ) {
+			if ( aElement != null ) {
+				aElement.className = 'selected';
+			}
+		},
+
+		/**
+		 * Method: showKeyUp
+		 */
+
+		showKeyUp: function( aElement ) {
+			if ( aElement != null ) {
+				aElement.className = '';
+			}
 		},
 
 		/**

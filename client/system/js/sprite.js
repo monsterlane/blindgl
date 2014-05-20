@@ -12,10 +12,14 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		currentImage: null,
 		currentFrame: -1,
 		lastTick: Date.now( ),
-		moveTime: 20,
+		moveTime: 25,
 		lastMove: Date.now( ),
 		lastPosition: null,
-		sounds: [ ],
+		lastSize: {
+			width: 0,
+			height: 0
+		},
+		sounds: { },
 
 		/**
 		 * Method: init
@@ -105,12 +109,12 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 			var animation = aAnimation || this.animations[ this.state ][ this.direction ];
 
 			if ( this.animation != animation ) {
-				this.animation = animation;
-				this.timeSinceLastFrame = this.animation.timeBetweenFrames;
-				this.currentFrame = -1;
-
 				this.currentImage = new Image( );
-				this.currentImage.setAttribute( 'src', this.animation.file_url );
+				this.currentImage.setAttribute( 'src', animation.file_url );
+
+				this.animation = animation;
+				this.timeSinceLastFrame = animation.timeBetweenFrames;
+				this.currentFrame = -1;
 			}
 		},
 
@@ -128,7 +132,11 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		 */
 
 		addSound: function( aSound ) {
+			if ( !this.sounds[ aSound.state ] ) {
+				this.sounds[ aSound.state ] = [ ];
+			}
 
+			this.sounds[ aSound.state ].push( aSound );
 		},
 
 		/**
@@ -145,7 +153,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		 */
 
 		cache: function( ) {
-			var i, j, len,
+			var i, j,
 				el;
 
 			for ( i in this.animations ) {
@@ -155,38 +163,10 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 				}
 			}
 
-			for ( i = 0, len = this.sounds.length; i < len; i++ ) {
-				el = new Audio( );
-				el.setAttribute( 'src', this.sounds[ i ].file_url );
-			}
-		},
-
-		/**
-		 * Method: checkState
-		 */
-
-		checkState: function( ) {
-			var moving = !( this.velocity.x == 0 && this.velocity.y == 0 && this.velocity.z == 0 );
-
-			if ( moving == false && this.state != GLOBAL.ai.idle ) {
-				this.setState( GLOBAL.ai.idle );
-			}
-			else if ( moving == true && this.state == GLOBAL.ai.idle ) {
-				this.setState( GLOBAL.ai.walk );
-			}
-
-			if ( moving == true ) {
-				if ( this.velocity.x < 0 && this.velocity.y == 0 && this.direction != GLOBAL.direction.left ) {
-					this.setDirection( GLOBAL.direction.left );
-				}
-				else if ( this.velocity.x > 0 && this.velocity.y == 0 && this.direction != GLOBAL.direction.right ) {
-					this.setDirection( GLOBAL.direction.right );
-				}
-				else if ( this.velocity.x == 0 && this.velocity.y > 0 && this.direction != GLOBAL.direction.down ) {
-					this.setDirection( GLOBAL.direction.down );
-				}
-				else if ( this.velocity.x == 0 && this.velocity.y < 0 && this.direction != GLOBAL.direction.up ) {
-					this.setDirection( GLOBAL.direction.up );
+			for ( i in this.sounds ) {
+				for ( j in this.sounds[ i ] ) {
+					el = new Audio( );
+					el.setAttribute( 'src', this.sounds[ i ][ j ].file_url );
 				}
 			}
 		},
@@ -201,7 +181,8 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		move: function( aX, aY, aZ ) {
 			var vX = this.velocity.x + aX,
 				vY = this.velocity.y + aY,
-				vZ = this.velocity.z + aZ;
+				vZ = this.velocity.z + aZ,
+				moving;
 
 			if ( vX > 1 ) vX = 1;
 			else if ( vX < -1 ) vX = -1;
@@ -215,41 +196,79 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 			this.velocity.x = vX;
 			this.velocity.y = vY;
 			this.velocity.z = vZ;
+
+			if ( aX < 0 && this.velocity.x != 0 && this.direction != GLOBAL.direction.left ) {
+				this.setDirection( GLOBAL.direction.left );
+			}
+			else if ( aX > 0 && this.velocity.x != 0 && this.direction != GLOBAL.direction.right ) {
+				this.setDirection( GLOBAL.direction.right );
+			}
+			else if ( aY < 0 && this.velocity.y != 0 && this.direction != GLOBAL.direction.up ) {
+				this.setDirection( GLOBAL.direction.up );
+			}
+			else if ( aY > 0 && this.velocity.y != 0 && this.direction != GLOBAL.direction.down ) {
+				this.setDirection( GLOBAL.direction.down );
+			}
+			else if ( this.velocity.x == 0 ) {
+				if ( this.velocity.y > 0 && this.direction != GLOBAL.direction.down ) {
+					this.setDirection( GLOBAL.direction.down );
+				}
+				else if ( this.velocity.y < 0 && this.direction != GLOBAL.direction.up ) {
+					this.setDirection( GLOBAL.direction.up );
+				}
+			}
+			else if ( this.velocity.y == 0 ) {
+				if ( this.velocity.x > 0 && this.direction != GLOBAL.direction.right ) {
+					this.setDirection( GLOBAL.direction.right );
+				}
+				else if ( this.velocity.x < 0 && this.direction != GLOBAL.direction.left ) {
+					this.setDirection( GLOBAL.direction.left );
+				}
+			}
 		},
 
 		/**
-		 * Method: checkInput
+		 * Method: update
 		 */
 
-		checkInput: function( ) {
+		update: function( ) {
 			var now = Date.now( ),
 				elapsed = now - this.lastMove,
+				moving = !( this.velocity.x == 0 && this.velocity.y == 0 && this.velocity.z == 0 ),
 				posX, posY, posZ,
 				maxX, maxY;
 
 			if ( this.state > GLOBAL.ai.idle && elapsed >= this.moveTime ) {
-				this.lastMove = now - ( elapsed % this.moveTime );
-
-				posX = this.position.x + this.velocity.x;
-				posY = this.position.y + this.velocity.y;
-				posZ = this.position.z + this.velocity.v;
-				maxX = this.layer.width;
-				maxY = this.layer.height;
-
-				if ( this.solid == GLOBAL.solid.bbox ) {
-					maxX -= this.bbox[ 0 ];
-					maxY -= this.bbox[ 1 ];
+				if ( moving == false ) {
+					this.setState( GLOBAL.ai.idle );
 				}
+				else {
+					this.lastMove = now - ( elapsed % this.moveTime );
 
-				if ( posX > 0 && posX < maxX ) {
-					this.position.x = posX;
+					posX = this.position.x + this.velocity.x;
+					posY = this.position.y + this.velocity.y;
+					posZ = this.position.z + this.velocity.v;
+					maxX = this.layer.width;
+					maxY = this.layer.height;
+
+					if ( this.solid == GLOBAL.solid.bbox ) {
+						maxX -= this.bbox[ 0 ];
+						maxY -= this.bbox[ 1 ];
+					}
+
+					if ( posX > 0 && posX < maxX ) {
+						this.position.x = posX;
+					}
+
+					if ( posY > 0 && posY < maxY ) {
+						this.position.y = posY;
+					}
+
+					this.position.z = posZ;
 				}
-
-				if ( posY > 0 && posY < maxY ) {
-					this.position.y = posY;
-				}
-
-				this.position.z = posZ;
+			}
+			else if ( this.state == GLOBAL.ai.idle && moving == true ) {
+				this.setState( GLOBAL.ai.walk );
 			}
 		},
 
@@ -259,32 +278,39 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 		draw: function( ) {
 			var now = Date.now( ),
+				draw = false,
+				elapsed;
+
+			if ( this.animation != null ) {
 				elapsed = now - this.lastTick;
 
-			if ( this.animation.frameCount == 1 ) {
-				if ( this.currentFrame == -1 ) {
-					++this.currentFrame;
+				if ( this.animation.frameCount == 1 ) {
+					if ( this.currentFrame == -1 ) {
+						this.currentFrame = 0;
 
-					this.layer.bufferContext.clearRect( this.lastPosition.x, this.lastPosition.y, this.width, this.height );
+						draw = true;
+					}
+				}
+				else if ( elapsed >= this.animation.timeBetweenFrames ) {
+					this.lastTick = now - ( elapsed % this.animation.timeBetweenFrames );
+
+					this.currentFrame += 1;
+					this.currentFrame %= this.animation.frameCount;
+
+					draw = true;
+				}
+
+				if ( draw == true ) {
+					this.layer.bufferContext.clearRect( this.lastPosition.x, this.lastPosition.y, this.lastSize.width, this.lastSize.height );
 					this.layer.bufferContext.drawImage( this.currentImage, this.animation.frameWidth * this.currentFrame, 0, this.animation.frameWidth, this.animation.frameHeight, this.position.x, this.position.y, this.animation.frameWidth, this.animation.frameHeight );
 
 					this.lastPosition.x = this.position.x;
 					this.lastPosition.y = this.position.y;
 					this.lastPosition.z = this.position.z;
+
+					this.lastSize.width = this.animation.frameWidth;
+					this.lastSize.height = this.animation.frameHeight;
 				}
-			}
-			else if ( elapsed >= this.animation.timeBetweenFrames ) {
-				this.lastTick = now - ( elapsed % this.animation.timeBetweenFrames );
-
-				++this.currentFrame;
-				this.currentFrame %= this.animation.frameCount;
-
-				this.layer.bufferContext.clearRect( this.lastPosition.x, this.lastPosition.y, this.width, this.height );
-				this.layer.bufferContext.drawImage( this.currentImage, this.animation.frameWidth * this.currentFrame, 0, this.animation.frameWidth, this.animation.frameHeight, this.position.x, this.position.y, this.animation.frameWidth, this.animation.frameHeight );
-
-				this.lastPosition.x = this.position.x;
-				this.lastPosition.y = this.position.y;
-				this.lastPosition.z = this.position.z;
 			}
 		},
 
@@ -294,13 +320,8 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 		think: function( ) {
 			this._super( );
-
-			this.checkState( );
-			this.checkInput( );
-
-			if ( this.animation != null ) {
-				this.draw( );
-			}
+			this.update( );
+			this.draw( );
 		}
 	});
 

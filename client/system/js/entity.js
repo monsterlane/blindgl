@@ -10,8 +10,6 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		system: null,
 		game: null,
 		layer: null,
-		width: 0,
-		height: 0,
 		position: {
 			x: 0,
 			y: 0,
@@ -23,6 +21,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			z: 0
 		},
 		state: GLOBAL.ai.idle,
+		lastState: GLOBAL.ai.idle,
 		direction: GLOBAL.direction.down,
 		solid: GLOBAL.solid.none,
 		bbox: [ 0, 0 ],
@@ -73,6 +72,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		setState: function( aState, aOptions ) {
 			var options = aOptions || { };
 
+			this.lastState = this.state;
 			this.state = aState;
 		},
 

@@ -111,7 +111,8 @@ define( [ 'class' ], function( ) {
 			walk: 1,
 			run: 2,
 			chase: 3,
-			evade: 4
+			evade: 4,
+			attack: 5
 		}
 	});
 

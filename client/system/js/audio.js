@@ -175,6 +175,17 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				bank.playing = true;
 				bank.sound.play( );
 			}
+		},
+
+		/**
+		 * Method: playRandomSound
+		 * @param {Array} aSounds
+		 */
+
+		playRandomSound: function( aSounds ) {
+			var rnd = Math.floor( Math.random( ) * aSounds.length );
+
+			this.playSound( aSounds[ rnd ].file_url, aSounds[ rnd ].volume );
 		}
 	});
 

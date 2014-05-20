@@ -30,6 +30,12 @@ span.icon-key-right {
 	height:16px;
 }
 
+span.icon-key-action {
+	background:url(../img/ui/action.png) no-repeat;
+	width:16px;
+	height:16px;
+}
+
 /* */
 
 #bglInterface {
