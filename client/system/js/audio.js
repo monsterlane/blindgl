@@ -122,18 +122,29 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		/**
 		 * Method: playMusic
-		 * @param {String} aUrl
-		 * @param {Int} aVolume
+		 * @param {Object} aSound
 		 */
 
-		playMusic: function( aUrl, aVolume ) {
-			this.background.sound.setAttribute( 'src', aUrl );
-			this.background.sound.setAttribute( 'volume', aVolume );
+		playMusic: function( aSound ) {
+			var sound = {
+				file_url: aSound.file_url,
+				volume: aSound.volume || 50,
+				effectName: aSound.effectName || false,
+				effectDuration: aSound.effectDuration || 0
+			};
+
+			this.background.sound.setAttribute( 'src', sound.file_url );
+			this.background.sound.setAttribute( 'volume', sound.volume );
 			this.background.sound.setAttribute( 'loop', '' );
 			this.background.sound.load( );
 
-			this.background.playing = true;
-			this.background.sound.play( );
+			if ( sound.effectName == 'fadeIn' ) {
+				this.effectsFadeIn( this.background, sound.effectDuration );
+			}
+			else {
+				this.background.playing = true;
+				this.background.sound.play( );
+			}
 		},
 
 		/**
@@ -159,20 +170,20 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		/**
 		 * Method: playSound
-		 * @param {String} aUrl
-		 * @param {Int} aVolume
-		 * @param {Bool} aLoop
+		 * @param {Object} aSound
 		 */
 
-		playSound: function( aUrl, aVolume, aLoop ) {
+		playSound: function( aSound ) {
 			var bank = this.getNextBank( ),
-				volume = aVolume || 75,
-				loop = aLoop || false;
+				volume = aSound.volume || 75,
+				loop = aSound.loop || false,
+				effectName = aSound.effectName || false,
+				effectDuration = aSound.effectDuration || 0;
 
 			if ( bank !== false ) {
 				this.lastBank = bank;
 
-				bank.sound.setAttribute( 'src', aUrl );
+				bank.sound.setAttribute( 'src', aSound.file_url );
 				bank.sound.setAttribute( 'volume', volume );
 
 				if ( loop ) {
@@ -180,24 +191,84 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				}
 
 				bank.sound.load( );
-				bank.playing = true;
-				bank.sound.play( );
+
+				if ( effectName == 'fadeIn' ) {
+					this.effectFadeIn( bank, effectDuration );
+				}
+				else {
+					bank.playing = true;
+					bank.sound.play( );
+				}
 			}
 		},
 
 		/**
 		 * Method: playRandomSound
 		 * @param {Array} aSounds
-		 * @param {Int} aVolume
-		 * @param {Bool} aLoop
 		 */
 
-		playRandomSound: function( aSounds, aVolume, aLoop ) {
-			var rnd = Math.floor( Math.random( ) * aSounds.length ),
-				volume = aVolume || aSounds[ rnd ].volume,
-				loop = aLoop || false;
+		playRandomSound: function( aSounds ) {
+			var rnd = Math.floor( Math.random( ) * aSounds.files.length ),
+				sound = aSounds.files[ rnd ],
+				volume = aSounds.volume || sound.volume || 50,
+				loop = aSounds.loop || sound.loop || false;
 
-			this.playSound( aSounds[ rnd ].file_url, volume, loop );
+			this.playSound({
+				file_url: sound.file_url,
+				volume: volume,
+				loop: loop
+			});
+		},
+
+		/**
+		 * Method: effectsFadeIn
+		 * @param {Object} aSoundbank
+		 */
+
+		effectsFadeIn: function( aSoundbank, aDuration ) {
+			var bank = aSoundbank,
+				duration = aDuration,
+				volume, max, step,
+				self = this;
+
+			if ( bank.playing == false ) {
+				max = parseFloat( bank.sound.getAttribute( 'volume' ), 10 );
+				duration = duration / 20;
+				step = parseFloat( max / duration, 10 );
+
+				bank.sound.setAttribute( 'volume', 0 );
+				bank.sound.setAttribute( 'data-volume', max );
+				bank.sound.setAttribute( 'data-step', step );
+
+				bank.playing = true;
+				bank.sound.play( );
+
+				setTimeout(function( ) {
+					self.effectsFadeIn( bank, duration );
+				});
+			}
+			else {
+				max = parseFloat( bank.sound.getAttribute( 'data-volume' ), 10 );
+				step = parseFloat( bank.sound.getAttribute( 'data-step' ), 10 );
+
+				volume = parseFloat( bank.sound.getAttribute( 'volume' ), 10 );
+				volume += step;
+
+				if ( volume > max ) {
+					volume = max;
+
+					bank.sound.setAttribute( 'volume', volume );
+					bank.sound.removeAttribute( 'data-volume' );
+					bank.sound.removeAttribute( 'data-step' );
+				}
+				else {
+					bank.sound.setAttribute( 'volume', volume );
+
+					setTimeout(function( ) {
+						self.effectsFadeIn( bank, duration );
+					});
+				}
+			}
 		}
 	});
 

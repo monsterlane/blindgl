@@ -14,6 +14,15 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 
 			this.system.verbose( 'game->start' );
 
+			/*
+			this.system.audio.playMusic({
+				file_url: 'game/snd/world/overworld.mp3',
+				volume: 70,
+				effectName: 'fadeIn',
+				effectDuration: 10000
+			});
+			*/
+
 			this.addClient( );
 		}
 	});

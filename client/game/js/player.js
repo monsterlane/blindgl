@@ -292,7 +292,10 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 		attack: function( ) {
 			if ( this.state != GLOBAL.ai.attack ) {
 				this.setState( GLOBAL.ai.attack );
-				this.system.audio.playRandomSound( this.sounds[ GLOBAL.ai.attack ] );
+
+				this.system.audio.playRandomSound({
+					files: this.sounds[ GLOBAL.ai.attack ]
+				});
 			}
 		}
 	});
