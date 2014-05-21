@@ -4,6 +4,10 @@ html, body {
 	height:100%;
 }
 
+body {
+	background-color:black;
+}
+
 span.role-icon {
 	display:inline-block;
 	vertical-align:middle;
@@ -39,12 +43,47 @@ ul.fieldList {
 	top:0; left:0;
 }
 
+#bglLogo {
+	display:block;
+	position:absolute;
+	top:50%; left:50%;
+	margin:-50px 0 0 -112px;
+	width:225px;
+	height:85px;
+	background:url(../img/logo.png) no-repeat top left;
+}
+
 #bglWindow {
 	width:100%;
 	height:100%;
 	margin:0;
-	background-color:#333333;
+	background-color:black;
 	-moz-box-shadow:inset 0 0 5000px rgba(0,0,0, 0.25); -webkit-box-shadow:inset 0 0 5000px rgba(0,0,0, 0.25); box-shadow:inset 0 0 5000px rgba(0,0,0, 0.25);
+}
+	#bglWindow.boot {
+		background:white url(../img/boot.jpg) repeat;
+	}
+		#bglWindow.boot > #bglBoot {
+			display:block;
+			position:relative;
+			width:100%;
+			height:100%;
+		}
+
+	#bglWindow.running {
+		background:black url(../img/background.jpg) no-repeat;
+		background-size:cover;
+	}
+		#bglWindow.running > #bglInterface {
+			display:block;
+		}
+
+#bglBoot {
+	display:none;
+}
+
+#bglInterface {
+	display:none;
 }
 
 #bglCanvas {

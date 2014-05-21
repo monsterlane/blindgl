@@ -64,6 +64,26 @@ define( [ 'global', 'keyboard', 'audio', 'canvas', '../../game/js/game', 'class'
 		 */
 
 		init: function( ) {
+			var self = this;
+
+			if ( this.settings.verbose == false ) {
+				document.getElementById( 'bglWindow' ).className = 'boot';
+
+				setTimeout(function( ) {
+					self.boot( );
+				}, 2000 );
+			}
+			else {
+				this.boot( );
+			}
+		},
+
+		/**
+		 * Method: boot
+		 */
+
+		boot: function( ) {
+			document.getElementById( 'bglWindow' ).className = 'running';
 			this.verbose( 'boot' );
 
 			this.input = new aKeyboard( this );
