@@ -32,11 +32,10 @@ define( [ 'global', 'sprite', 'class' ], function( aGlobal, aSprite ) {
 
 			var layer = this.system.canvas.layers[ 1 ],
 				x = parseInt( layer.width / 2, 10 ) - parseInt( this.bbox[ 0 ] / 2, 10 ),
-				y = parseInt( layer.height / 2, 10 ) - parseInt( this.bbox[ 1 ] / 2, 10 ),
-				z = 0;
+				y = parseInt( layer.height / 2, 10 ) - parseInt( this.bbox[ 1 ] / 2, 10 );
 
 			this.setLayer( layer );
-			this.setPosition( x, y, z );
+			this.setPosition( x, y );
 
 			this.idle( );
 		}

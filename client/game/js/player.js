@@ -9,6 +9,10 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 	var Player = aPlayer.extend({
 		solid: GLOBAL.solid.bbox,
 		bbox:[ 16, 24 ],
+		speed: {
+			walk: 4,
+			run: 6
+		},
 
 		/**
 		 * Method: addAnimations
@@ -136,7 +140,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 					x: -11,
 					y: -10
 				},
-				timeBetweenFrames: 50
+				timeBetweenFrames: 40
 			});
 
 			this.addAnimation({
@@ -150,7 +154,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 					x: -4,
 					y: 1
 				},
-				timeBetweenFrames: 50
+				timeBetweenFrames: 40
 			});
 
 			this.addAnimation({
@@ -164,7 +168,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 					x: -12,
 					y: -5
 				},
-				timeBetweenFrames: 50
+				timeBetweenFrames: 40
 			});
 
 			this.addAnimation({
@@ -178,7 +182,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 					x: -2,
 					y: -5
 				},
-				timeBetweenFrames: 50
+				timeBetweenFrames: 40
 			});
 		},
 
@@ -228,40 +232,40 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			this.system.input.bindKey({
 				key: GLOBAL.input.keyboard.up,
 				onUp: function( ) {
-					self.move( 0, 1, 0 );
+					self.move( 0, 1 );
 				},
 				onDown: function( ) {
-					self.move( 0, -1, 0 );
+					self.move( 0, -1 );
 				}
 			});
 
 			this.system.input.bindKey({
 				key: GLOBAL.input.keyboard.down,
 				onUp: function( ) {
-					self.move( 0, -1, 0 );
+					self.move( 0, -1 );
 				},
 				onDown: function( ) {
-					self.move( 0, 1, 0 );
+					self.move( 0, 1 );
 				}
 			});
 
 			this.system.input.bindKey({
 				key: GLOBAL.input.keyboard.left,
 				onUp: function( ) {
-					self.move( 1, 0, 0 );
+					self.move( 1, 0 );
 				},
 				onDown: function( ) {
-					self.move( -1, 0, 0 );
+					self.move( -1, 0 );
 				}
 			});
 
 			this.system.input.bindKey({
 				key: GLOBAL.input.keyboard.right,
 				onUp: function( ) {
-					self.move( -1, 0, 0 );
+					self.move( -1, 0 );
 				},
 				onDown: function( ) {
-					self.move( 1, 0, 0 );
+					self.move( 1, 0 );
 				}
 			});
 

@@ -12,14 +12,13 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		layer: null,
 		position: {
 			x: 0,
-			y: 0,
-			z: 0
+			y: 0
 		},
 		velocity: {
 			x: 0,
-			y: 0,
-			z: 0
+			y: 0
 		},
+		moving: false,
 		state: GLOBAL.ai.idle,
 		lastState: GLOBAL.ai.idle,
 		direction: GLOBAL.direction.down,
@@ -54,13 +53,11 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 * Method: setPosition
 		 * @param {Int} aX
 		 * @param {Int} aY
-		 * @param {Int} aZ
 		 */
 
-		setPosition: function( aX, aY, aZ ) {
+		setPosition: function( aX, aY ) {
 			this.position.x = aX;
 			this.position.y = aY;
-			this.position.z = aZ;
 		},
 
 		/**
@@ -76,7 +73,17 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				this.lastState = this.state;
 			}
 
-			this.state = aState;
+			if ( this.state != aState ) {
+				this.state = aState;
+			}
+		},
+
+		/**
+		 * Method: updateState
+		 */
+
+		updateState: function( ) {
+			this.moving = !( this.velocity.x == 0 && this.velocity.y == 0 );
 		},
 
 		/**

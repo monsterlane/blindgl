@@ -12,9 +12,15 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		currentImage: null,
 		currentFrame: -1,
 		lastTick: Date.now( ),
-		moveTime: 30,
-		lastMove: Date.now( ),
-		lastPosition: null,
+		speed: {
+			idle: 0,
+			walk: 1,
+			run: 2
+		},
+		lastPosition: {
+			x: 0,
+			y: 0
+		},
 		lastSize: {
 			width: 0,
 			height: 0
@@ -38,16 +44,14 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		 * Method: setPosition
 		 * @param {Int} aX
 		 * @param {Int} aY
-		 * @param {Int} aZ
 		 */
 
-		setPosition: function( aX, aY, aZ ) {
-			this._super( aX, aY, aZ );
+		setPosition: function( aX, aY ) {
+			this._super( aX, aY );
 
 			this.lastPosition = {
 				x: aX,
-				y: aY,
-				z: aZ
+				y: aY
 			};
 		},
 
@@ -199,13 +203,11 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		 * Method: move
 		 * @param {Int} aX
 		 * @param {Int} aY
-		 * @param {Int} aZ
 		 */
 
-		move: function( aX, aY, aZ ) {
+		move: function( aX, aY ) {
 			var vX = this.velocity.x + aX,
 				vY = this.velocity.y + aY,
-				vZ = this.velocity.z + aZ,
 				moving;
 
 			if ( vX > 1 ) vX = 1;
@@ -214,12 +216,8 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 			if ( vY > 1 ) vY = 1;
 			else if ( vY < -1 ) vY = -1;
 
-			if ( vZ > 1 ) vZ = 1;
-			else if ( vZ < -1 ) vZ = -1;
-
 			this.velocity.x = vX;
 			this.velocity.y = vY;
-			this.velocity.z = vZ;
 
 			if ( aX < 0 && this.velocity.x != 0 && this.direction != GLOBAL.direction.left ) {
 				this.setDirection( GLOBAL.direction.left );
@@ -252,48 +250,44 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		},
 
 		/**
-		 * Method: update
+		 * Method: updateState
 		 */
 
-		update: function( ) {
-			var now = Date.now( ),
-				elapsed = now - this.lastMove,
-				moving = !( this.velocity.x == 0 && this.velocity.y == 0 && this.velocity.z == 0 ),
-				attacking = ( this.state == GLOBAL.ai.attack ) ? true : false,
-				posX, posY, posZ,
+		updateState: function( ) {
+			this._super( );
+
+			if ( this.state > GLOBAL.ai.idle && this.state != GLOBAL.ai.attack && this.moving == false ) {
+				this.setState( GLOBAL.ai.idle );
+			}
+			else if ( this.state == GLOBAL.ai.idle && this.moving == true ) {
+				this.setState( GLOBAL.ai.walk );
+			}
+		},
+
+		/**
+		 * Method: updatePosition
+		 */
+
+		updatePosition: function( ) {
+			var posX, posY,
 				maxX, maxY;
 
-			if ( this.state > GLOBAL.ai.idle && elapsed >= this.moveTime ) {
-				if ( moving == false && attacking == false ) {
-					this.setState( GLOBAL.ai.idle );
-				}
-				else {
-					this.lastMove = now - ( elapsed % this.moveTime );
+			posX = this.position.x + ( this.velocity.x * this.speed.walk );
+			posY = this.position.y + ( this.velocity.y * this.speed.walk );
+			maxX = this.layer.width;
+			maxY = this.layer.height;
 
-					posX = this.position.x + this.velocity.x;
-					posY = this.position.y + this.velocity.y;
-					posZ = this.position.z + this.velocity.v;
-					maxX = this.layer.width;
-					maxY = this.layer.height;
-
-					if ( this.solid == GLOBAL.solid.bbox ) {
-						maxX -= this.bbox[ 0 ];
-						maxY -= this.bbox[ 1 ];
-					}
-
-					if ( posX > 0 && posX < maxX ) {
-						this.position.x = posX;
-					}
-
-					if ( posY > 0 && posY < maxY ) {
-						this.position.y = posY;
-					}
-
-					this.position.z = posZ;
-				}
+			if ( this.solid == GLOBAL.solid.bbox ) {
+				maxX -= this.bbox[ 0 ];
+				maxY -= this.bbox[ 1 ];
 			}
-			else if ( this.state == GLOBAL.ai.idle && moving == true ) {
-				this.setState( GLOBAL.ai.walk );
+
+			if ( posX > 0 && posX < maxX ) {
+				this.position.x = posX;
+			}
+
+			if ( posY > 0 && posY < maxY ) {
+				this.position.y = posY;
 			}
 		},
 
@@ -308,6 +302,8 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 				posX, posY;
 
 			if ( this.animation != null ) {
+				this.updateState( );
+
 				if ( this.animation.frameCount == 1 ) {
 					if ( this.currentFrame < 0 ) {
 						this.currentFrame = 0;
@@ -332,6 +328,8 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 				}
 
 				if ( draw == true ) {
+					this.updatePosition( );
+
 					posX = this.position.x + this.animation.framePosition.x;
 					posY = this.position.y + this.animation.framePosition.y;
 
@@ -340,7 +338,6 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 					this.lastPosition.x = posX;
 					this.lastPosition.y = posY;
-					this.lastPosition.z = this.position.z;
 
 					this.lastSize.width = this.animation.frameWidth;
 					this.lastSize.height = this.animation.frameHeight;
@@ -354,7 +351,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 		think: function( ) {
 			this._super( );
-			this.update( );
+
 			this.draw( );
 		}
 	});

@@ -19,6 +19,8 @@ define( [ 'global', 'keyboard', 'audio', 'canvas', '../../game/js/game', 'class'
 		audio: null,
 		canvas: null,
 		game: null,
+		paused: false,
+		pauseTime: null,
 
 		/**
 		 * Method: verbose
@@ -52,11 +54,49 @@ define( [ 'global', 'keyboard', 'audio', 'canvas', '../../game/js/game', 'class'
 		},
 
 		/**
-		 * Method: loadGame
+		 * Method: pause
 		 */
 
-		loadGame: function( ) {
-			this.game = new aGame( this );
+		pause: function( ) {
+			var now = Date( ).time;
+
+			this.paused = true;
+			this.pauseTime = now;
+
+			this.verbose( 'paused' );
+		},
+
+		/**
+		 * Method: unpause
+		 */
+
+		unpause: function( ) {
+			var now = Date( ).time;
+
+			this.paused = false;
+			this.lastTick += ( now - this.pauseTime );
+
+			this.verbose( 'unpaused' );
+		},
+
+		/**
+		 * Method: bindEventListeners
+		 */
+
+		bindEventListeners: function( ) {
+			var self = this;
+
+			window.addEventListener( 'focus', function( ) {
+				if ( self.paused == true ) {
+					self.unpause( );
+				}
+			}, true );
+
+			window.addEventListener( 'blur', function( ) {
+				if ( self.paused == false ) {
+					self.pause( );
+				}
+			}, true );
 		},
 
 		/**
@@ -84,13 +124,23 @@ define( [ 'global', 'keyboard', 'audio', 'canvas', '../../game/js/game', 'class'
 
 		boot: function( ) {
 			document.getElementById( 'bglWindow' ).className = 'running';
+
 			this.verbose( 'boot' );
 
 			this.input = new aKeyboard( this );
 			this.canvas = new aCanvas( this );
 			this.audio = new aAudio( this );
 
+			this.bindEventListeners( );
 			this.loadGame( );
+		},
+
+		/**
+		 * Method: loadGame
+		 */
+
+		loadGame: function( ) {
+			this.game = new aGame( this );
 		},
 
 		/**
@@ -116,8 +166,10 @@ define( [ 'global', 'keyboard', 'audio', 'canvas', '../../game/js/game', 'class'
 				this.engine.ticks = 0;
 			}
 
-			window.requestAnimationFrame( function( ) {
-				self.think( );
+			window.requestAnimationFrame(function( ) {
+				if ( self.paused == false ) {
+					self.think( );
+				}
 			});
 		}
 	});

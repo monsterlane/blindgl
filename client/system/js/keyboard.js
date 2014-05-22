@@ -77,13 +77,13 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		bindEventListeners: function( ) {
 			var self = this;
 
-			document.body.addEventListener( 'keydown', function( aEvent ) {
+			window.addEventListener( 'keydown', function( aEvent ) {
 				if ( aEvent.repeat != true && self.system.game.running == true ) {
 					self.handleKeypress( aEvent.keyCode, true );
 				}
 			}, true );
 
-			document.body.addEventListener( 'keyup', function( aEvent ) {
+			window.addEventListener( 'keyup', function( aEvent ) {
 				if ( aEvent.repeat != true && self.system.game.running == true ) {
 					self.handleKeypress( aEvent.keyCode, false );
 				}
