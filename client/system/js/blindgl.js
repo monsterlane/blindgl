@@ -152,24 +152,24 @@ define( [ 'global', 'keyboard', 'audio', 'canvas', '../../game/js/game', 'class'
 				elapsed = now - this.engine.lastTick,
 				self = this;
 
-			this.engine.ticks++;
+			if ( this.paused == false ) {
+				this.engine.ticks++;
 
-			if ( elapsed >= this.engine.tickRate ) {
-				this.engine.lastTick = now - ( elapsed % this.engine.tickRate );
+				if ( elapsed >= this.engine.tickRate ) {
+					this.engine.lastTick = now - ( elapsed % this.engine.tickRate );
 
-				this.canvas.think( );
-			}
+					this.canvas.think( );
+				}
 
-			if ( this.settings.showFps == true && now - this.engine.lastRate >= 1000 ) {
-				this.engine.fps.innerHTML = this.engine.ticks;
-				this.engine.lastRate = now;
-				this.engine.ticks = 0;
+				if ( this.settings.showFps == true && now - this.engine.lastRate >= 1000 ) {
+					this.engine.fps.innerHTML = this.engine.ticks;
+					this.engine.lastRate = now;
+					this.engine.ticks = 0;
+				}
 			}
 
 			window.requestAnimationFrame(function( ) {
-				if ( self.paused == false ) {
-					self.think( );
-				}
+				self.think( );
 			});
 		}
 	});
