@@ -16,14 +16,6 @@ define( [ 'global', 'sprite', 'class' ], function( aGlobal, aSprite ) {
 		},
 
 		/**
-		 * Method: walk
-		 */
-
-		walk: function( ) {
-			this.setState( GLOBAL.ai.walk );
-		},
-
-		/**
 		 * Method: spawn
 		 */
 

@@ -25,6 +25,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		solid: GLOBAL.solid.none,
 		bbox: [ 0, 0 ],
 		moveType: GLOBAL.moveType.none,
+		sounds: { },
+		sound: null,
 
 		/**
 		 * Method: init
@@ -93,6 +95,38 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		setDirection: function( aDirection ) {
 			this.direction = aDirection;
+		},
+
+		/**
+		 * Method: addSounds
+		 */
+
+		addSounds: function( ) {
+
+		},
+
+		/**
+		 * Method: addSound
+		 * @param {Object} aSound
+		 */
+
+		addSound: function( aSound ) {
+			if ( !this.sounds[ aSound.state ] ) {
+				this.sounds[ aSound.state ] = [ ];
+			}
+
+			this.sounds[ aSound.state ].push( aSound );
+		},
+
+		cache: function( ) {
+			var i, j, el;
+
+			for ( i in this.sounds ) {
+				for ( j in this.sounds[ i ] ) {
+					el = new Audio( );
+					el.setAttribute( 'src', this.sounds[ i ][ j ].fileUrl );
+				}
+			}
 		},
 
 		/**

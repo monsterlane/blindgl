@@ -24,7 +24,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			this.addAnimation({
 				state: GLOBAL.ai.idle,
 				direction: GLOBAL.direction.up,
-				file_url: 'game/img/player/idle-up.png',
+				fileUrl: 'game/img/player/idle-up.png',
 				frameWidth: 16,
 				frameHeight: 24,
 				frameCount: 1,
@@ -37,7 +37,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			this.addAnimation({
 				state: GLOBAL.ai.idle,
 				direction: GLOBAL.direction.down,
-				file_url: 'game/img/player/idle-down.png',
+				fileUrl: 'game/img/player/idle-down.png',
 				frameWidth: 16,
 				frameHeight: 24,
 				frameCount: 1,
@@ -50,7 +50,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			this.addAnimation({
 				state: GLOBAL.ai.idle,
 				direction: GLOBAL.direction.left,
-				file_url: 'game/img/player/idle-left.png',
+				fileUrl: 'game/img/player/idle-left.png',
 				frameWidth: 17,
 				frameHeight: 24,
 				frameCount: 1,
@@ -63,7 +63,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			this.addAnimation({
 				state: GLOBAL.ai.idle,
 				direction: GLOBAL.direction.right,
-				file_url: 'game/img/player/idle-right.png',
+				fileUrl: 'game/img/player/idle-right.png',
 				frameWidth: 17,
 				frameHeight: 24,
 				frameCount: 1,
@@ -76,7 +76,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			this.addAnimation({
 				state: GLOBAL.ai.walk,
 				direction: GLOBAL.direction.up,
-				file_url: 'game/img/player/walk-up.png',
+				fileUrl: 'game/img/player/walk-up.png',
 				frameWidth: 16,
 				frameHeight: 24,
 				frameCount: 7,
@@ -90,7 +90,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			this.addAnimation({
 				state: GLOBAL.ai.walk,
 				direction: GLOBAL.direction.down,
-				file_url: 'game/img/player/walk-down.png',
+				fileUrl: 'game/img/player/walk-down.png',
 				frameWidth: 16,
 				frameHeight: 24,
 				frameCount: 7,
@@ -104,7 +104,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			this.addAnimation({
 				state: GLOBAL.ai.walk,
 				direction: GLOBAL.direction.left,
-				file_url: 'game/img/player/walk-left.png',
+				fileUrl: 'game/img/player/walk-left.png',
 				frameWidth: 17,
 				frameHeight: 24,
 				frameCount: 8,
@@ -118,7 +118,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			this.addAnimation({
 				state: GLOBAL.ai.walk,
 				direction: GLOBAL.direction.right,
-				file_url: 'game/img/player/walk-right.png',
+				fileUrl: 'game/img/player/walk-right.png',
 				frameWidth: 17,
 				frameHeight: 24,
 				frameCount: 8,
@@ -132,7 +132,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			this.addAnimation({
 				state: GLOBAL.ai.attack,
 				direction: GLOBAL.direction.up,
-				file_url: 'game/img/player/attack-up.png',
+				fileUrl: 'game/img/player/attack-up.png',
 				frameWidth: 32,
 				frameHeight: 34,
 				frameCount: 6,
@@ -146,7 +146,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			this.addAnimation({
 				state: GLOBAL.ai.attack,
 				direction: GLOBAL.direction.down,
-				file_url: 'game/img/player/attack-down.png',
+				fileUrl: 'game/img/player/attack-down.png',
 				frameWidth: 32,
 				frameHeight: 30,
 				frameCount: 5,
@@ -160,7 +160,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			this.addAnimation({
 				state: GLOBAL.ai.attack,
 				direction: GLOBAL.direction.left,
-				file_url: 'game/img/player/attack-left.png',
+				fileUrl: 'game/img/player/attack-left.png',
 				frameWidth: 31,
 				frameHeight: 38,
 				frameCount: 6,
@@ -174,7 +174,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			this.addAnimation({
 				state: GLOBAL.ai.attack,
 				direction: GLOBAL.direction.right,
-				file_url: 'game/img/player/attack-right.png',
+				fileUrl: 'game/img/player/attack-right.png',
 				frameWidth: 31,
 				frameHeight: 38,
 				frameCount: 6,
@@ -193,31 +193,31 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 		addSounds: function( ) {
 			this.addSound({
 				state: GLOBAL.ai.walk,
-				file_url: 'game/snd/player/walk.mp3',
-				volume: 25
-			});
-
-			this.addSound({
-				state: GLOBAL.ai.attack,
-				file_url: 'game/snd/player/sword1.mp3',
+				fileUrl: 'game/snd/player/walk.mp3',
 				volume: 50
 			});
 
 			this.addSound({
 				state: GLOBAL.ai.attack,
-				file_url: 'game/snd/player/sword2.mp3',
+				fileUrl: 'game/snd/player/sword1.mp3',
 				volume: 50
 			});
 
 			this.addSound({
 				state: GLOBAL.ai.attack,
-				file_url: 'game/snd/player/sword3.mp3',
+				fileUrl: 'game/snd/player/sword2.mp3',
 				volume: 50
 			});
 
 			this.addSound({
 				state: GLOBAL.ai.attack,
-				file_url: 'game/snd/player/sword4.mp3',
+				fileUrl: 'game/snd/player/sword3.mp3',
+				volume: 50
+			});
+
+			this.addSound({
+				state: GLOBAL.ai.attack,
+				fileUrl: 'game/snd/player/sword4.mp3',
 				volume: 50
 			});
 		},
@@ -294,13 +294,40 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 		 */
 
 		attack: function( ) {
+			var sound;
+
 			if ( this.state != GLOBAL.ai.attack ) {
 				this.setState( GLOBAL.ai.attack );
 
-				this.system.audio.playRandomSound({
+				sound = this.system.audio.playRandomSound({
 					files: this.sounds[ GLOBAL.ai.attack ]
 				});
 			}
+		},
+
+		/**
+		 * Method: updateState
+		 */
+
+		updateState: function( ) {
+			this._super( );
+
+			/*
+			if ( this.state > GLOBAL.ai.idle && this.sound == null ) {
+				console.log( 'go' );
+
+				this.sound = { };
+				this.sound = this.system.audio.playSound({
+					fileUrl: this.sounds[ GLOBAL.ai.walk ][ 0 ].fileUrl,
+					volume: this.sounds[ GLOBAL.ai.walk ][ 0 ].volume,
+					loop: true
+				});
+			}
+			else if ( this.state == GLOBAL.ai.idle && this.sound != null ) {
+				this.sound.stop( );
+				this.sound = null;
+			}
+			*/
 		}
 	});
 

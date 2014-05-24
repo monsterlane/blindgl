@@ -24,10 +24,38 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			this.sound = aElement;
 
 			this.sound.addEventListener( 'ended', function( ) {
-				self.playing = false;
-				self.sound.removeAttribute( 'src' );
-				self.sound.removeAttribute( 'volume' );
-			});
+				if ( self.sound != null && self.sound.hasAttribute( 'loop' ) == false ) {
+					self.stop( );
+				}
+			}, true );
+		},
+
+		/**
+		 * Method: play
+		 */
+
+		play: function( ) {
+			if ( this.sound != null ) {
+				this.playing = true;
+				this.sound.play( );
+			}
+		},
+
+		/**
+		 * Method: stop
+		 */
+
+		stop: function( ) {
+			if ( this.sound != null && this.playing == true ) {
+				this.sound.pause( );
+				this.sound.currentTime = 0;
+
+				this.sound.removeAttribute( 'src' );
+				this.sound.removeAttribute( 'volume' );
+				this.sound.removeAttribute( 'loop' );
+
+				this.playing = false;
+			}
 		}
 	});
 
@@ -127,13 +155,13 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		playMusic: function( aSound ) {
 			var sound = {
-				file_url: aSound.file_url,
+				fileUrl: aSound.fileUrl,
 				volume: aSound.volume || 50,
 				effectName: aSound.effectName || false,
 				effectDuration: aSound.effectDuration || 0
 			};
 
-			this.background.sound.setAttribute( 'src', sound.file_url );
+			this.background.sound.setAttribute( 'src', sound.fileUrl );
 			this.background.sound.setAttribute( 'volume', sound.volume );
 			this.background.sound.setAttribute( 'loop', '' );
 			this.background.sound.load( );
@@ -183,7 +211,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			if ( bank !== false ) {
 				this.lastBank = bank;
 
-				bank.sound.setAttribute( 'src', aSound.file_url );
+				bank.sound.setAttribute( 'src', aSound.fileUrl );
 				bank.sound.setAttribute( 'volume', volume );
 
 				if ( loop ) {
@@ -196,10 +224,11 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 					this.effectFadeIn( bank, effectDuration );
 				}
 				else {
-					bank.playing = true;
-					bank.sound.play( );
+					bank.play( );
 				}
 			}
+
+			return bank;
 		},
 
 		/**
@@ -213,8 +242,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				volume = aSounds.volume || sound.volume || 50,
 				loop = aSounds.loop || sound.loop || false;
 
-			this.playSound({
-				file_url: sound.file_url,
+			return this.playSound({
+				fileUrl: sound.fileUrl,
 				volume: volume,
 				loop: loop
 			});
@@ -240,8 +269,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				bank.sound.setAttribute( 'data-volume', max );
 				bank.sound.setAttribute( 'data-step', step );
 
-				bank.playing = true;
-				bank.sound.play( );
+				bank.play( );
 
 				setTimeout(function( ) {
 					self.effectsFadeIn( bank, duration );
