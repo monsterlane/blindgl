@@ -13,6 +13,7 @@ define( [ 'global', 'keyboard', 'audio', 'canvas', '../../game/js/game', 'class'
 			tickRate: 1000 / GLOBAL.video.fps,
 			lastRate: Date.now( ),
 			lastTick: Date.now( ),
+			pauseRate: 200,
 			ticks: 0
 		},
 		input: null,
@@ -104,16 +105,19 @@ define( [ 'global', 'keyboard', 'audio', 'canvas', '../../game/js/game', 'class'
 		 */
 
 		init: function( ) {
-			var self = this;
+			var win = document.getElementById( 'bglWindow' );
+				self = this;
 
 			if ( this.settings.verbose == false ) {
-				document.getElementById( 'bglWindow' ).className = 'boot';
+				win.className = 'boot';
 
 				setTimeout(function( ) {
+					win.className = 'running';
 					self.boot( );
 				}, 2000 );
 			}
 			else {
+				win.className = 'running';
 				this.boot( );
 			}
 		},
@@ -123,8 +127,6 @@ define( [ 'global', 'keyboard', 'audio', 'canvas', '../../game/js/game', 'class'
 		 */
 
 		boot: function( ) {
-			document.getElementById( 'bglWindow' ).className = 'running';
-
 			this.verbose( 'boot' );
 
 			this.input = new aKeyboard( this );
@@ -141,6 +143,8 @@ define( [ 'global', 'keyboard', 'audio', 'canvas', '../../game/js/game', 'class'
 
 		loadGame: function( ) {
 			this.game = new aGame( this );
+
+			this.think( );
 		},
 
 		/**
@@ -158,6 +162,7 @@ define( [ 'global', 'keyboard', 'audio', 'canvas', '../../game/js/game', 'class'
 				if ( elapsed >= this.engine.tickRate ) {
 					this.engine.lastTick = now - ( elapsed % this.engine.tickRate );
 
+					this.game.think( );
 					this.canvas.think( );
 				}
 
@@ -166,11 +171,19 @@ define( [ 'global', 'keyboard', 'audio', 'canvas', '../../game/js/game', 'class'
 					this.engine.lastRate = now;
 					this.engine.ticks = 0;
 				}
+
+				window.requestAnimationFrame(function( ) {
+					self.think( );
+				});
+			}
+			else {
+				setTimeout(function( ) {
+					window.requestAnimationFrame(function( ) {
+						self.think( );
+					});
+				}, this.pauseRate );
 			}
 
-			window.requestAnimationFrame(function( ) {
-				self.think( );
-			});
 		}
 	});
 

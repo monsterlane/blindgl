@@ -46,7 +46,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		setLayer: function( aLayer ) {
 			this.layer = aLayer;
-			this.layer.entities.push( this );
+			this.game.entities.push( this );
 		},
 
 		/**
@@ -100,6 +100,14 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		spawn: function( ) {
+
+		},
+
+		/**
+		 * Method: draw
+		 */
+
+		draw: function( ) {
 
 		},
 

@@ -8,6 +8,7 @@ define( [ 'client', 'class' ], function( aClient ) {
 		system: null,
 		running: false,
 		clients: [ ],
+		entities: [ ],
 
 		/**
 		 * Method: addClient
@@ -46,7 +47,6 @@ define( [ 'client', 'class' ], function( aClient ) {
 			this.system.hideOverlay( );
 
 			this.running = true;
-			this.think( );
 		},
 
 		/**
@@ -54,7 +54,12 @@ define( [ 'client', 'class' ], function( aClient ) {
 		 */
 
 		think: function( ) {
-			this.system.think( );
+			var i, len;
+
+			for ( i = 0, len = this.entities.length; i < len; i++ ) {
+				this.entities[ i ].think( );
+				this.entities[ i ].draw( );
+			}
 		}
 	});
 

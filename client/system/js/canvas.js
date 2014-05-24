@@ -13,25 +13,24 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		displayContext: null,
 		buffer: null,
 		bufferContext: null,
-		entities: [ ],
 
 		/**
 		 * Method: init
-		 * @param {Int} aWidth
-		 * @param {Int} aHeight
-		 * @param {Int} aIndex
+		 * @param {Object} aOptions
 		 */
 
-		init: function( aWidth, aHeight, aIndex ) {
-			this.width = aWidth;
-			this.height = aHeight;
+		init: function( aOptions ) {
+			var options = aOptions || { };
+
+			this.width = options.width;
+			this.height = options.height;
 
 			this.display = document.createElement( 'canvas' );
-			this.display.id = 'bglLayer' + aIndex;
+			this.display.id = 'bglLayer' + options.index;
 			this.display.className = 'bglLayer';
-			this.display.width = aWidth;
-			this.display.height = aHeight;
-			this.display.style.zIndex = 10 + ( aIndex * 10 );
+			this.display.width = options.width;
+			this.display.height = options.height;
+			this.display.style.zIndex = 10 + ( options.index * 10 );
 			this.displayContext = this.display.getContext( '2d' );
 
 			this.displayContext.scale( 1, 1 );
@@ -39,8 +38,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			this.displayContext.webkitImageSmoothingEnabled = false;
 
 			this.buffer = document.createElement( 'canvas' );
-			this.buffer.width = aWidth;
-			this.buffer.height = aHeight;
+			this.buffer.width = options.width;
+			this.buffer.height = options.height;
 			this.bufferContext = this.buffer.getContext( '2d' );
 
 			this.bufferContext.scale( 1, 1 );
@@ -53,12 +52,6 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		draw: function( ) {
-			var i, len;
-
-			for ( i = 0, len = this.entities.length; i < len; i++ ) {
-				this.entities[ i ].think( );
-			}
-
 			this.displayContext.clearRect( 0, 0, this.width, this.height );
 			this.displayContext.drawImage( this.buffer, 0, 0 );
 		}
@@ -109,14 +102,18 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		init: function( aSystem ) {
 			var el = document.getElementById( 'bglCanvas' ),
 				frag = document.createDocumentFragment( ),
-				layer, i;
+				layer, i, len;
 
 			this.system = aSystem;
 
 			this.setResolution( );
 
-			for ( i = 0; i < GLOBAL.video.numLayers; i++ ) {
-				layer = new Layer( this.resolution[ 0 ], this.resolution[ 1 ], i );
+			for ( i = 0, len = GLOBAL.video.numLayers; i < len; i++ ) {
+				layer = new Layer({
+					width: this.resolution[ 0 ],
+					height: this.resolution[ 1 ],
+					index: i
+				});
 
 				frag.appendChild( layer.display );
 
@@ -144,7 +141,9 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		think: function( ) {
-			for ( i = 0; i < GLOBAL.video.numLayers; i++ ) {
+			var i, len;
+
+			for ( i = 0, len = GLOBAL.video.numLayers; i < len; i++ ) {
 				this.layers[ i ].draw( );
 			}
 		}

@@ -12,6 +12,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		currentImage: null,
 		currentFrame: -1,
 		lastTick: Date.now( ),
+		visible: false,
 		speed: {
 			idle: 0,
 			walk: 1,
@@ -168,21 +169,11 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		},
 
 		/**
-		 * Method: playSound
-		 * @param {Object} aSound
-		 */
-
-		playSound: function( aSound ) {
-			this.system.audio.playSound( aSound.file_url, aSound.volume );
-		},
-
-		/**
 		 * Method: cache
 		 */
 
 		cache: function( ) {
-			var i, j,
-				el;
+			var i, j, el;
 
 			for ( i in this.animations ) {
 				for ( j in this.animations[ i ] ) {
@@ -207,8 +198,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 		move: function( aX, aY ) {
 			var vX = this.velocity.x + aX,
-				vY = this.velocity.y + aY,
-				moving;
+				vY = this.velocity.y + aY;
 
 			if ( vX > 1 ) vX = 1;
 			else if ( vX < -1 ) vX = -1;
@@ -269,25 +259,41 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		 */
 
 		updatePosition: function( ) {
-			var posX, posY,
-				maxX, maxY;
-
-			posX = this.position.x + ( this.velocity.x * this.speed.walk );
-			posY = this.position.y + ( this.velocity.y * this.speed.walk );
-			maxX = this.layer.width;
-			maxY = this.layer.height;
+			var posX = this.position.x + parseInt( this.velocity.x * this.speed.walk, 10 ),
+				posY = this.position.y + parseInt( this.velocity.y * this.speed.walk, 10 ),
+				maxX = this.layer.width,
+				maxY = this.layer.height;
 
 			if ( this.solid == GLOBAL.solid.bbox ) {
 				maxX -= this.bbox[ 0 ];
 				maxY -= this.bbox[ 1 ];
 			}
 
-			if ( posX > 0 && posX < maxX ) {
+			if ( posX < 0 ) {
+				this.position.x = 0;
+			}
+			else if ( this.position.x > maxX ) {
+				this.position.x = maxX;
+			}
+			else {
 				this.position.x = posX;
 			}
 
-			if ( posY > 0 && posY < maxY ) {
+			if ( posY < 0 ) {
+				this.position.y = 0;
+			}
+			else if ( this.position.y > maxY ) {
+				this.position.y = maxY;
+			}
+			else {
 				this.position.y = posY;
+			}
+
+			if ( this.position.x < 0 || this.position.y < 0 || this.position.x > maxX || this.position.y > maxY ) {
+				this.visible = false;
+			}
+			else {
+				this.visible = true;
 			}
 		},
 
@@ -301,9 +307,9 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 				draw = false,
 				posX, posY;
 
-			if ( this.animation != null ) {
-				this.updateState( );
+			this._super( );
 
+			if ( this.visible == true && this.animation != null ) {
 				if ( this.animation.frameCount == 1 ) {
 					if ( this.currentFrame < 0 ) {
 						this.currentFrame = 0;
@@ -328,8 +334,6 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 				}
 
 				if ( draw == true ) {
-					this.updatePosition( );
-
 					posX = this.position.x + this.animation.framePosition.x;
 					posY = this.position.y + this.animation.framePosition.y;
 
@@ -352,7 +356,8 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		think: function( ) {
 			this._super( );
 
-			this.draw( );
+			this.updateState( );
+			this.updatePosition( );
 		}
 	});
 

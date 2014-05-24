@@ -10,8 +10,8 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 		solid: GLOBAL.solid.bbox,
 		bbox:[ 16, 24 ],
 		speed: {
-			walk: 4,
-			run: 6
+			walk: 1,
+			run: 2
 		},
 
 		/**
