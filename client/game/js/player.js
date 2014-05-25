@@ -229,7 +229,19 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 		bindKeyboardBindings: function( ) {
 			var self = this;
 
-			this.system.input.bindKey({
+			this.system.input.mouse.bindKey({
+				element: document.getElementById( 'bglOverlay' ),
+				click: function( aEvent ) {
+					var pos = self.system.input.mouse.getClickOffset( aEvent );
+
+					self.setGoal({
+						x: pos.x,
+						y: pos.y
+					});
+				}
+			});
+
+			this.system.input.keyboard.bindKey({
 				key: GLOBAL.input.keyboard.up,
 				onUp: function( ) {
 					self.move( 0, 1 );
@@ -239,7 +251,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				}
 			});
 
-			this.system.input.bindKey({
+			this.system.input.keyboard.bindKey({
 				key: GLOBAL.input.keyboard.down,
 				onUp: function( ) {
 					self.move( 0, -1 );
@@ -249,7 +261,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				}
 			});
 
-			this.system.input.bindKey({
+			this.system.input.keyboard.bindKey({
 				key: GLOBAL.input.keyboard.left,
 				onUp: function( ) {
 					self.move( 1, 0 );
@@ -259,7 +271,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				}
 			});
 
-			this.system.input.bindKey({
+			this.system.input.keyboard.bindKey({
 				key: GLOBAL.input.keyboard.right,
 				onUp: function( ) {
 					self.move( -1, 0 );
@@ -269,7 +281,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				}
 			});
 
-			this.system.input.bindKey({
+			this.system.input.keyboard.bindKey({
 				key: GLOBAL.input.keyboard.space,
 				onDown: function( ) {
 					self.attack( );

@@ -13,17 +13,19 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		/**
 		 * Method: onUp
+		 * @param {DOMevent} aEvent
 		 */
 
-		onUp: function( ) {
+		onUp: function( aEvent ) {
 
 		},
 
 		/**
 		 * Method: onDown
+		 * @param {DOMevent} aEvent
 		 */
 
-		onDown: function( ) {
+		onDown: function( aEvent ) {
 
 		},
 
@@ -34,9 +36,19 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		init: function( aBinding ) {
 			var binding = aBinding || { key: null },
-				cb;
+				self = this;
 
-			this.element = document.getElementById( 'bglKeyboard' + aBinding.key );
+			this.element = document.getElementById( 'bglKeyboard' + binding.key );
+
+			if ( this.element != null ) {
+				this.element.addEventListener( 'mousedown', function( aEvent ) {
+					self.onDown( aEvent );
+				}, true );
+
+				this.element.addEventListener( 'mouseup', function( aEvent ) {
+					self.onUp( aEvent );
+				}, true );
+			}
 
 			if ( binding.hasOwnProperty( 'onUp' ) ) {
 				this.onUp = binding.onUp;
@@ -119,7 +131,6 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		/**
 		 * Method: bindKey
-		 * @param {Int} aKey
 		 * @param {Object} aBinding
 		 */
 
@@ -129,6 +140,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		/**
 		 * showKeyDown
+		 * @param {DOMelement} aElement
 		 */
 
 		showKeyDown: function( aElement ) {
@@ -139,6 +151,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		/**
 		 * Method: showKeyUp
+		 * @param {DOMelement} aElement
 		 */
 
 		showKeyUp: function( aElement ) {
@@ -158,7 +171,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			this.setDefaultBindings( );
 			this.bindEventListeners( );
 
-			this.system.verbose( 'init->input' );
+			this.system.verbose( 'init->input->keyboard' );
 		}
 	});
 

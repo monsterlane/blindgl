@@ -44,7 +44,6 @@ define( [ 'client', 'class' ], function( aClient ) {
 
 		start: function( ) {
 			this.system.canvas.clear( );
-			this.system.hideOverlay( );
 
 			this.running = true;
 		},

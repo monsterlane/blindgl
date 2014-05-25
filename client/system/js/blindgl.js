@@ -1,5 +1,5 @@
 
-define( [ 'global', 'keyboard', 'audio', 'canvas', '../../game/js/game', 'class' ], function( aGlobal, aKeyboard, aAudio, aCanvas, aGame ) {
+define( [ 'global', 'keyboard', 'mouse', 'audio', 'canvas', '../../game/js/game', 'class' ], function( aGlobal, aKeyboard, aMouse, aAudio, aCanvas, aGame ) {
 	var GLOBAL = new aGlobal( );
 
 	/**
@@ -16,7 +16,7 @@ define( [ 'global', 'keyboard', 'audio', 'canvas', '../../game/js/game', 'class'
 			pauseRate: 200,
 			ticks: 0
 		},
-		input: null,
+		input: { },
 		audio: null,
 		canvas: null,
 		game: null,
@@ -129,7 +129,8 @@ define( [ 'global', 'keyboard', 'audio', 'canvas', '../../game/js/game', 'class'
 		boot: function( ) {
 			this.verbose( 'boot' );
 
-			this.input = new aKeyboard( this );
+			this.input.keyboard = new aKeyboard( this );
+			this.input.mouse = new aMouse( this );
 			this.canvas = new aCanvas( this );
 			this.audio = new aAudio( this );
 

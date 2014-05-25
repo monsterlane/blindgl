@@ -86,6 +86,9 @@ define( [ 'class' ], function( ) {
 				f10: 121,
 				f11: 122,
 				f12: 123
+			},
+			mouse: {
+				//
 			}
 		},
 		solid: {

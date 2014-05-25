@@ -228,49 +228,6 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		},
 
 		/**
-		 * Method: updatePosition
-		 */
-
-		updatePosition: function( ) {
-			var posX = this.position.x + parseInt( this.velocity.x * this.speed.walk, 10 ),
-				posY = this.position.y + parseInt( this.velocity.y * this.speed.walk, 10 ),
-				maxX = this.layer.width,
-				maxY = this.layer.height;
-
-			if ( this.solid == GLOBAL.solid.bbox ) {
-				maxX -= this.bbox[ 0 ];
-				maxY -= this.bbox[ 1 ];
-			}
-
-			if ( posX < 0 ) {
-				this.position.x = 0;
-			}
-			else if ( this.position.x > maxX ) {
-				this.position.x = maxX;
-			}
-			else {
-				this.position.x = posX;
-			}
-
-			if ( posY < 0 ) {
-				this.position.y = 0;
-			}
-			else if ( this.position.y > maxY ) {
-				this.position.y = maxY;
-			}
-			else {
-				this.position.y = posY;
-			}
-
-			if ( this.position.x < 0 || this.position.y < 0 || this.position.x > maxX || this.position.y > maxY ) {
-				this.visible = false;
-			}
-			else {
-				this.visible = true;
-			}
-		},
-
-		/**
 		 * Method: draw
 		 */
 
