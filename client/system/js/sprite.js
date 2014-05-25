@@ -13,11 +13,6 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		currentFrame: -1,
 		lastTick: Date.now( ),
 		visible: false,
-		speed: {
-			idle: 0,
-			walk: 1,
-			run: 2
-		},
 		lastPosition: {
 			x: 0,
 			y: 0

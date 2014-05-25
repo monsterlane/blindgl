@@ -56,8 +56,8 @@ define( [ 'global', 'sprite', 'class' ], function( aGlobal, aSprite ) {
 			this._super( );
 
 			if ( this.goal == null ) {
-				posX = this.position.x + Math.round( this.velocity.x * this.speed.walk );
-				posY = this.position.y + Math.round( this.velocity.y * this.speed.walk );
+				posX = this.position.x + Math.round( this.velocity.x );
+				posY = this.position.y + Math.round( this.velocity.y );
 
 				this.position = this.isReachable({
 					x: posX,

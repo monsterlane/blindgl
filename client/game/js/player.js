@@ -9,10 +9,6 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 	var Player = aPlayer.extend({
 		solid: GLOBAL.solid.bbox,
 		bbox:[ 16, 24 ],
-		speed: {
-			walk: 1,
-			run: 2
-		},
 
 		/**
 		 * Method: addAnimations
