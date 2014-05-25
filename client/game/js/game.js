@@ -20,7 +20,15 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 				background: {
 					fileUrl: 'game/img/world/map/0-0.png',
 					width: 1024,
-					height: 768
+					height: 768,
+					repeat: 'none'
+				},
+				foreground: {
+					fileUrl: 'game/img/world/weather/fog.png',
+					width: 512,
+					height: 512,
+					repeat: 'both',
+					opacity: 0.3
 				},
 				spawn: {
 					x: 0,
