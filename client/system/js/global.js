@@ -24,7 +24,11 @@ define( [ 'class' ], function( ) {
 				[ 1664, 936 ],
 				[ 1920, 1080 ]
 			],
-			numLayers: 3
+			layers: {
+				background: 0,
+				sprite: 1,
+				foreground: 2
+			}
 		},
 		input: {
 			keyboard: {

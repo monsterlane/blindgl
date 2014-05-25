@@ -1,5 +1,5 @@
 
-define( [ 'client', 'class' ], function( aClient ) {
+define( [ 'tile', 'client', 'class' ], function( aTile, aClient ) {
 	/**
 	 * Class: World
 	 */
@@ -8,24 +8,7 @@ define( [ 'client', 'class' ], function( aClient ) {
 		system: null,
 		running: false,
 		clients: [ ],
-		entities: [ ],
-
-		/**
-		 * Method: addClient
-		 */
-
-		addClient: function( ) {
-			var client = new aClient( this.system, this ),
-				count = document.getElementById( 'bglClients' );
-
-			this.clients.push( client );
-
-			client.spawn( );
-
-			if ( count != null ) {
-				count.innerHTML = parseInt( count.innerHTML, 10 ) + 1;
-			}
-		},
+		view: null,
 
 		/**
 		 * Method: init
@@ -55,10 +38,38 @@ define( [ 'client', 'class' ], function( aClient ) {
 		think: function( ) {
 			var i, len;
 
-			for ( i = 0, len = this.entities.length; i < len; i++ ) {
-				this.entities[ i ].think( );
-				this.entities[ i ].draw( );
+			for ( i = 0, len = this.view.entities.length; i < len; i++ ) {
+				this.view.entities[ i ].think( );
+				this.view.entities[ i ].draw( );
 			}
+		},
+
+		/**
+		 * Method: addClient
+		 * @param {Object} aPosition
+		 */
+
+		addClient: function( aPosition ) {
+			var position = aPosition || this.view.spawn,
+				client = new aClient( this.system, this ),
+				count = document.getElementById( 'bglClients' );
+
+			this.clients.push( client );
+
+			client.spawn( position );
+
+			if ( count != null ) {
+				count.innerHTML = this.clients.length;
+			}
+		},
+
+		/**
+		 * Method: loadView
+		 * @param {Object} aView
+		 */
+
+		loadView: function( aView ) {
+			this.view = new aTile( this.system, this, aView );
 		}
 	});
 

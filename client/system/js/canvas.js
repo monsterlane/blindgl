@@ -108,16 +108,16 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 			this.setResolution( );
 
-			for ( i = 0, len = GLOBAL.video.numLayers; i < len; i++ ) {
+			for ( i in GLOBAL.video.layers ) {
 				layer = new Layer({
 					width: this.resolution[ 0 ],
 					height: this.resolution[ 1 ],
-					index: i
+					index: GLOBAL.video.layers[ i ]
 				});
 
 				frag.appendChild( layer.display );
 
-				this.layers.push( layer );
+				this.layers[ GLOBAL.video.layers[ i ] ] = layer;
 			}
 
 			el.appendChild( frag );
@@ -143,7 +143,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		think: function( ) {
 			var i, len;
 
-			for ( i = 0, len = GLOBAL.video.numLayers; i < len; i++ ) {
+			for ( i = 0, len = this.layers.length; i < len; i++ ) {
 				this.layers[ i ].draw( );
 			}
 		}

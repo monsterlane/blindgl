@@ -126,6 +126,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		/**
 		 * Method: getNextBank
+		 * @return {Object/Bool}
 		 */
 
 		getNextBank: function( ) {
@@ -199,6 +200,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		/**
 		 * Method: playSound
 		 * @param {Object} aSound
+		 * @return {Object/Bool}
 		 */
 
 		playSound: function( aSound ) {
@@ -234,6 +236,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		/**
 		 * Method: playRandomSound
 		 * @param {Array} aSounds
+		 * @return {Object/Bool}
 		 */
 
 		playRandomSound: function( aSounds ) {

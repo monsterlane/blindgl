@@ -52,19 +52,23 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		setLayer: function( aLayer ) {
-			this.layer = aLayer;
-			this.game.entities.push( this );
+			var layer = this.system.canvas.layers[ aLayer ] || this.system.canvas.layers[ GLOBAL.layer.sprite ];
+
+			this.layer = layer;
+
+			this.game.view.entities.push( this );
 		},
 
 		/**
 		 * Method: setPosition
-		 * @param {Int} aX
-		 * @param {Int} aY
+		 * @param {Object} aPosition
 		 */
 
-		setPosition: function( aX, aY ) {
-			this.position.x = aX;
-			this.position.y = aY;
+		setPosition: function( aPosition ) {
+			var position = aPosition || { x: 0, y: 0 };
+
+			this.position.x = position.x;
+			this.position.y = position.y;
 		},
 
 		/**
@@ -242,6 +246,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		/**
 		 * Method: isReachable
 		 * @param {Object} aPosition
+		 * @return {Object}
 		 */
 
 		isReachable: function( aPosition ) {
@@ -309,10 +314,13 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		/**
 		 * Method: spawn
+		 * @param {Object} aPosition
 		 */
 
-		spawn: function( ) {
+		spawn: function( aPosition ) {
+			var position = aPosition || { x: 0, y: 0 };
 
+			this.setPosition( position );
 		},
 
 		/**

@@ -297,10 +297,11 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 
 		/**
 		 * Method: spawn
+		 * @param {Object} aPosition
 		 */
 
-		spawn: function( ) {
-			this._super( );
+		spawn: function( aPosition ) {
+			this._super( aPosition );
 
 			this.bindKeyboardBindings( );
 

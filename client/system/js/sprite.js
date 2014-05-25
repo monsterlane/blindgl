@@ -37,17 +37,16 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 		/**
 		 * Method: setPosition
-		 * @param {Int} aX
-		 * @param {Int} aY
+		 * @param {Object} aPosition
 		 */
 
-		setPosition: function( aX, aY ) {
-			this._super( aX, aY );
-
+		setPosition: function( aPosition ) {
 			this.lastPosition = {
-				x: aX,
-				y: aY
+				x: this.position.x,
+				y: this.position.y
 			};
+
+			this._super( aPosition );
 		},
 
 		/**
@@ -157,6 +156,18 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 					el.setAttribute( 'src', this.animations[ i ][ j ].fileUrl );
 				}
 			}
+		},
+
+		/**
+		 * Method: spawn
+		 * @param {Object} aPosition
+		 */
+
+		spawn: function( aPosition ) {
+			this._super( aPosition );
+
+			this.setLayer( GLOBAL.video.layers.sprite );
+			this.setAnimation( );
 		},
 
 		/**

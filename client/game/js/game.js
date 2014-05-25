@@ -10,9 +10,23 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 		 */
 
 		start: function( ) {
+			var self = this;
+
 			this._super( );
 
 			this.system.verbose( 'game->start' );
+
+			this.loadView({
+				background: {
+					fileUrl: 'game/img/world/map/0-0.png',
+					width: 1024,
+					height: 768
+				},
+				spawn: {
+					x: 0,
+					y: 0
+				}
+			});
 
 			/*
 			this.system.audio.playMusic({
