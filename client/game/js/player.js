@@ -82,7 +82,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 					x: 0,
 					y: 0
 				},
-				timeBetweenFrames: 75
+				timeBetweenFrames: 100
 			});
 
 			this.addAnimation({
@@ -96,7 +96,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 					x: 0,
 					y: 0
 				},
-				timeBetweenFrames: 75
+				timeBetweenFrames: 100
 			});
 
 			this.addAnimation({
@@ -110,7 +110,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 					x: 0,
 					y: 0
 				},
-				timeBetweenFrames: 75
+				timeBetweenFrames: 80
 			});
 
 			this.addAnimation({
@@ -124,7 +124,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 					x: 0,
 					y: 0
 				},
-				timeBetweenFrames: 75
+				timeBetweenFrames: 80
 			});
 
 			this.addAnimation({
