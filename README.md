@@ -6,7 +6,7 @@ Work in progress HTML5 game engine written in pure JavaScript.
 All assets are temporary for testing and are not intended for the final version of the game.
 
 
---
+
 
 (The MIT License) Copyright (c) 2013 Jonathan Down
 
