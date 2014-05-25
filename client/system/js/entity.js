@@ -18,6 +18,10 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			x: 0,
 			y: 0
 		},
+		maxVelocity: {
+			x: 1,
+			y: 1
+		},
 		goal: null,
 		state: GLOBAL.ai.idle,
 		lastState: GLOBAL.ai.idle,
@@ -106,6 +110,45 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		},
 
 		/**
+		 * Method: move
+		 * @param {Object} aVelocity
+		 */
+
+		move: function( aVelocity ) {
+			var velocity = {
+					x: ( aVelocity.hasOwnProperty( 'x' ) ) ? aVelocity.x : null,
+					y: ( aVelocity.hasOwnProperty( 'y' ) ) ? aVelocity.y : null
+				},
+				vX, vY;
+
+			if ( velocity.x != null ) {
+				vX = this.velocity.x + velocity.x;
+
+				if ( vX > this.maxVelocity.x ) {
+					vX = this.maxVelocity.x;
+				}
+				else if ( vX < -( this.maxVelocity.x ) ) {
+					vX = -( this.maxVelocity.x );
+				}
+
+				this.velocity.x = vX;
+			}
+
+			if ( velocity.y != null ) {
+				vY = this.velocity.y + velocity.y;
+
+				if ( vY > this.maxVelocity.y ) {
+					vY = this.maxVelocity.y;
+				}
+				else if ( vY < -( this.maxVelocity.y ) ) {
+					vY = -( this.maxVelocity.y );
+				}
+
+				this.velocity.y = vY;
+			}
+		},
+
+		/**
 		 * Method: setGoal
 		 * @param {Mixed} aGoal
 		 */
@@ -145,6 +188,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		moveToGoal: function( ) {
+			var pos;
+
 			if ( this.position.x == this.goal.x && this.position.y == this.goal.y ) {
 				this.reachedGoal( );
 			}
@@ -187,8 +232,11 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		reachedGoal: function( ) {
 			this.goal = null;
+
 			this.velocity.x = 0;
 			this.velocity.y = 0;
+
+			this.setState( GLOBAL.ai.idle );
 		},
 
 		/**

@@ -9,3 +9,6 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# project files
+resources/*

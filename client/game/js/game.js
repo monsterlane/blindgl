@@ -16,7 +16,7 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 
 			/*
 			this.system.audio.playMusic({
-				fileUrl: 'game/snd/world/overworld.mp3',
+				fileUrl: 'game/snd/world/music/overworld.mp3',
 				volume: 70,
 				effectName: 'fadeIn',
 				effectDuration: 10000

@@ -117,7 +117,8 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 							x: animation.framePosition.x,
 							y: animation.framePosition.y
 						},
-						timeBetweenFrames: animation.timeBetweenFrames
+						timeBetweenFrames: animation.timeBetweenFrames,
+						complete: ( animation.complete ) ? animation.complete : function( ) { }
 					};
 				}
 			}
@@ -159,70 +160,6 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		},
 
 		/**
-		 * Method: move
-		 * @param {Int} aX
-		 * @param {Int} aY
-		 */
-
-		move: function( aX, aY ) {
-			var vX = this.velocity.x + aX,
-				vY = this.velocity.y + aY;
-
-			if ( vX > 1 ) vX = 1;
-			else if ( vX < -1 ) vX = -1;
-
-			if ( vY > 1 ) vY = 1;
-			else if ( vY < -1 ) vY = -1;
-
-			this.velocity.x = vX;
-			this.velocity.y = vY;
-
-			if ( aX < 0 && this.velocity.x != 0 && this.direction != GLOBAL.direction.left ) {
-				this.setDirection( GLOBAL.direction.left );
-			}
-			else if ( aX > 0 && this.velocity.x != 0 && this.direction != GLOBAL.direction.right ) {
-				this.setDirection( GLOBAL.direction.right );
-			}
-			else if ( aY < 0 && this.velocity.y != 0 && this.direction != GLOBAL.direction.up ) {
-				this.setDirection( GLOBAL.direction.up );
-			}
-			else if ( aY > 0 && this.velocity.y != 0 && this.direction != GLOBAL.direction.down ) {
-				this.setDirection( GLOBAL.direction.down );
-			}
-			else if ( this.velocity.x == 0 ) {
-				if ( this.velocity.y > 0 && this.direction != GLOBAL.direction.down ) {
-					this.setDirection( GLOBAL.direction.down );
-				}
-				else if ( this.velocity.y < 0 && this.direction != GLOBAL.direction.up ) {
-					this.setDirection( GLOBAL.direction.up );
-				}
-			}
-			else if ( this.velocity.y == 0 ) {
-				if ( this.velocity.x > 0 && this.direction != GLOBAL.direction.right ) {
-					this.setDirection( GLOBAL.direction.right );
-				}
-				else if ( this.velocity.x < 0 && this.direction != GLOBAL.direction.left ) {
-					this.setDirection( GLOBAL.direction.left );
-				}
-			}
-		},
-
-		/**
-		 * Method: updateState
-		 */
-
-		updateState: function( ) {
-			this._super( );
-
-			if ( this.state > GLOBAL.ai.idle && this.state != GLOBAL.ai.attack && this.moving == false ) {
-				this.setState( GLOBAL.ai.idle );
-			}
-			else if ( this.state == GLOBAL.ai.idle && this.moving == true ) {
-				this.setState( GLOBAL.ai.walk );
-			}
-		},
-
-		/**
 		 * Method: draw
 		 */
 
@@ -247,8 +184,8 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 					this.currentFrame += 1;
 
-					if ( this.currentFrame == this.animation.frameCount && this.state == GLOBAL.ai.attack ) {
-						this.setState( this.lastState );
+					if ( this.currentFrame == this.animation.frameCount ) {
+						this.animation.complete( );
 						this.currentFrame = 0;
 					}
 					else {
