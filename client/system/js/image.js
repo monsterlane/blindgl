@@ -86,7 +86,6 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		 * Method: think
 		 */
 
-		/*
 		think: function( ) {
 			var minX = 0,
 				maxX = 50,
@@ -96,6 +95,9 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 			this._super( );
 
+console.log( this.velocity );
+
+			/*
 			if ( this.effect == 'bounce' ) {
 				if ( this.goal == null ) {
 					posX = Math.floor( Math.random( ) * ( maxX - minX + 1 ) ) + minX;
@@ -112,8 +114,8 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 				this.dirty = true;
 			}
+			*/
 		}
-		*/
 	});
 
 	return Image;
