@@ -24,15 +24,14 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 		/**
 		 * Method: init
+		 * @param {Object} aOptions
 		 */
 
-		init: function( aSystem, aGame ) {
-			this._super( aSystem, aGame );
+		init: function( aOptions ) {
+			this._super( aOptions );
 
 			this.addAnimations( );
 			this.addSounds( );
-
-			this.cache( );
 		},
 
 		/**
@@ -132,7 +131,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 			var animation = aAnimation || this.animations[ this.state ][ this.direction ];
 
 			if ( this.animation != animation ) {
-				this.currentImage = new Image( );
+				this.currentImage = document.createElement( 'img' );
 				this.currentImage.setAttribute( 'src', animation.fileUrl );
 
 				this.animation = animation;
@@ -146,15 +145,38 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		 */
 
 		cache: function( ) {
-			var i, j, el;
+			var i, j, el,
+				self = this;
 
+			if ( !this.loading ) {
+				this._super( );
+
+				for ( i in this.animations ) {
+					for ( j in this.animations[ i ] ) {
+						el = document.createElement( 'img' );
+						el.setAttribute( 'src', this.animations[ i ][ j ].fileUrl );
+
+						el.addEventListener( 'load', function( ) {
+							self.loading -= 1;
+							self.loaded( );
+						}, true );
+
+						this.loading += 1;
+					}
+				}
+			}
+		},
+
+		/**
+		 * Method: loaded
+		 */
+
+		loaded: function( ) {
 			this._super( );
 
-			for ( i in this.animations ) {
-				for ( j in this.animations[ i ] ) {
-					el = new Image( );
-					el.setAttribute( 'src', this.animations[ i ][ j ].fileUrl );
-				}
+			if ( this.loading == 0 ) {
+				this.setLayer( GLOBAL.video.layers.middleground );
+				this.setAnimation( );
 			}
 		},
 
@@ -166,8 +188,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		spawn: function( aPosition ) {
 			this._super( aPosition );
 
-			this.setLayer( GLOBAL.video.layers.sprite );
-			this.setAnimation( );
+			this.cache( );
 		},
 
 		/**

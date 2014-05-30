@@ -1,5 +1,5 @@
 
-define( [ 'global', 'class' ], function( aGlobal ) {
+define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 	var GLOBAL = new aGlobal( );
 
 	/**
@@ -56,11 +56,9 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 	 	 * @param {Object} aView
 		 */
 
-		init: function( aSystem, aGame, aView ) {
+		init: function( aSystem, aGame ) {
 			this.system = aSystem;
 			this.game = aGame;
-
-			this.load( aView );
 		},
 
 		/**
@@ -76,11 +74,25 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			}
 
 			if ( tile.hasOwnProperty( 'background' ) ) {
-				this.background = tile.background;
+				this.background = new aImage({
+					system: this.system,
+					game: this.game,
+					element: tile.background
+				});
+
+				this.background.setLayer( GLOBAL.video.layers.background );
+				this.background.spawn( );
 			}
 
 			if ( tile.hasOwnProperty( 'foreground' ) ) {
-				this.foreground = tile.foreground;
+				this.foreground = new aImage({
+					system: this.system,
+					game: this.game,
+					element: tile.foreground
+				});
+
+				this.foreground.setLayer( GLOBAL.video.layers.foreground );
+				this.foreground.spawn( );
 			}
 
 			if ( tile.hasOwnProperty( 'entities' ) ) {

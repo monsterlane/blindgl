@@ -26,7 +26,7 @@ define( [ 'class' ], function( ) {
 			],
 			layers: {
 				background: 0,
-				sprite: 1,
+				middleground: 1,
 				foreground: 2
 			}
 		},

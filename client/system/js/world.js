@@ -51,12 +51,17 @@ define( [ 'tile', 'client', 'class' ], function( aTile, aClient ) {
 
 		addClient: function( aPosition ) {
 			var position = aPosition || this.view.spawn,
-				client = new aClient( this.system, this ),
-				count = document.getElementById( 'bglClients' );
+				count = document.getElementById( 'bglClients' ),
+				client;
 
-			this.clients.push( client );
+			client = new aClient({
+				system: this.system,
+				game: this
+			});
 
 			client.spawn( position );
+
+			this.clients.push( client );
 
 			if ( count != null ) {
 				count.innerHTML = this.clients.length;
@@ -69,7 +74,8 @@ define( [ 'tile', 'client', 'class' ], function( aTile, aClient ) {
 		 */
 
 		loadView: function( aView ) {
-			this.view = new aTile( this.system, this, aView );
+			this.view = new aTile( this.system, this );
+			this.view.load( aView );
 		}
 	});
 

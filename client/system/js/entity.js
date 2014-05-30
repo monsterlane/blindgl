@@ -10,6 +10,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		system: null,
 		game: null,
 		layer: null,
+		loading: 0,
 		position: {
 			x: 0,
 			y: 0
@@ -35,13 +36,12 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		/**
 		 * Method: init
-		 * @param {Object} aSystem
-		 * @param {Object} aGame
+		 * @param {Object} aOptions
 		 */
 
-		init: function( aSystem, aGame ) {
-			this.system = aSystem;
-			this.game = aGame;
+		init: function( aOptions ) {
+			this.system = aOptions.system;
+			this.game = aOptions.game;
 
 			this.system.verbose( 'entity->init' );
 		},
@@ -52,7 +52,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		setLayer: function( aLayer ) {
-			var layer = this.system.canvas.layers[ aLayer ] || this.system.canvas.layers[ GLOBAL.layer.sprite ];
+			var layer = this.system.canvas.layers[ aLayer ] || this.system.canvas.layers[ GLOBAL.layer.middleground ];
 
 			this.layer = layer;
 
@@ -301,15 +301,35 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			this.sounds[ aSound.state ].push( aSound );
 		},
 
+		/**
+		 * Method: cache
+		 */
+
 		cache: function( ) {
-			var i, j, el;
+			var i, j, el,
+				self = this;
 
 			for ( i in this.sounds ) {
 				for ( j in this.sounds[ i ] ) {
 					el = new Audio( );
 					el.setAttribute( 'src', this.sounds[ i ][ j ].fileUrl );
+
+					el.addEventListener( 'loadedmetadata', function( ) {
+						self.loading -= 1;
+						self.loaded( );
+					}, true );
+
+					this.loading += 1;
 				}
 			}
+		},
+
+		/**
+		 * Method: loaded
+		 */
+
+		loaded: function( ) {
+
 		},
 
 		/**
@@ -321,6 +341,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			var position = aPosition || { x: 0, y: 0 };
 
 			this.setPosition( position );
+			this.cache( );
 		},
 
 		/**
