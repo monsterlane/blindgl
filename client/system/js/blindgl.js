@@ -7,22 +7,6 @@ define( [ 'global', 'keyboard', 'mouse', 'audio', 'canvas', '../../game/js/game'
 	 */
 
 	var blindGL = Class.extend({
-		settings: GLOBAL.settings,
-		engine: {
-			fps: document.getElementById( 'bglFps' ),
-			tickRate: 1000 / GLOBAL.video.fps,
-			lastRate: Date.now( ),
-			lastTick: Date.now( ),
-			pauseRate: 200,
-			ticks: 0
-		},
-		input: { },
-		audio: null,
-		canvas: null,
-		game: null,
-		paused: false,
-		pauseTime: null,
-
 		/**
 		 * Method: verbose
 	 	 * @param {String} aMessage
@@ -107,6 +91,24 @@ define( [ 'global', 'keyboard', 'mouse', 'audio', 'canvas', '../../game/js/game'
 		init: function( ) {
 			var win = document.getElementById( 'bglWindow' );
 				self = this;
+
+			this.settings = GLOBAL.settings;
+
+			this.engine = {
+				fps: document.getElementById( 'bglFps' ),
+				tickRate: 1000 / GLOBAL.video.fps,
+				lastRate: Date.now( ),
+				lastTick: Date.now( ),
+				pauseRate: 200,
+				ticks: 0
+			};
+
+			this.input = { };
+			this.audio = null;
+			this.canvas = null;
+			this.game = null;
+			this.paused = false;
+			this.pauseTime = null;
 
 			if ( this.settings.verbose == false ) {
 				win.className = 'boot';

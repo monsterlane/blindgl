@@ -8,11 +8,6 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 	 */
 
 	var Soundbank = Class.extend({
-		sound: null,
-		playing: false,
-		paused: false,
-		next: null,
-
 		/**
 		 * Method: init
 		 * @param {DOMelement} aElement
@@ -22,6 +17,9 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			var self = this;
 
 			this.sound = aElement;
+			this.playing = false;
+			this.paused = false;
+			this.next = null;
 
 			this.sound.addEventListener( 'ended', function( ) {
 				if ( self.sound != null && self.sound.hasAttribute( 'loop' ) == false ) {
@@ -64,11 +62,6 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 	 */
 
 	var Audio = Class.extend({
-		system: null,
-		background: null,
-		banks: [ ],
-		lastBank: false,
-
 		/**
 		 * Method: init
 		 * @param {Object} aSystem
@@ -80,6 +73,9 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				bank, i;
 
 			this.system = aSystem;
+
+			this.banks = [ ];
+			this.lastBank = null;
 
 			bank = document.createElement( 'audio' );
 			bank.setAttribute( 'id', 'bglAudioMusic' );

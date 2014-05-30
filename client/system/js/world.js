@@ -5,11 +5,6 @@ define( [ 'tile', 'client', 'class' ], function( aTile, aClient ) {
 	 */
 
 	var World = Class.extend({
-		system: null,
-		running: false,
-		clients: [ ],
-		view: null,
-
 		/**
 		 * Method: init
 	 	 * @param {Object} aSystem
@@ -17,6 +12,10 @@ define( [ 'tile', 'client', 'class' ], function( aTile, aClient ) {
 
 		init: function( aSystem ) {
 			this.system = aSystem;
+
+			this.running = false;
+			this.clients = [ ];
+			this.view = null;
 
 			this.start( );
 		},

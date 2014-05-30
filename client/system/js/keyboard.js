@@ -8,9 +8,6 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 	 */
 
 	var Button = Class.extend({
-		element: null,
-		down: false,
-
 		/**
 		 * Method: onUp
 		 * @param {DOMevent} aEvent
@@ -39,6 +36,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				self = this;
 
 			this.element = document.getElementById( 'bglKeyboard' + binding.key );
+			this.down = false;
 
 			if ( this.element != null ) {
 				this.element.addEventListener( 'mousedown', function( aEvent ) {
@@ -65,9 +63,6 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 	 */
 
 	var Keyboard = Class.extend({
-		system: null,
-		binding: { },
-
 		/**
 		 * Method: setDefaultBindings
 		 */
@@ -167,6 +162,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		init: function( aSystem ) {
 			this.system = aSystem;
+			this.binding = { };
 
 			this.setDefaultBindings( );
 			this.bindEventListeners( );

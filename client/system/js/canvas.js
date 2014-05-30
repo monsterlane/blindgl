@@ -7,13 +7,6 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 	 */
 
 	var Layer = Class.extend({
-		width: 0,
-		height: 0,
-		display: null,
-		displayContext: null,
-		buffer: null,
-		bufferContext: null,
-
 		/**
 		 * Method: init
 		 * @param {Object} aOptions
@@ -62,10 +55,6 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 	 */
 
 	var Canvas = Class.extend({
-		system: null,
-		resolution: null,
-		layers: [ ],
-
 		/**
 		 * Method: setResolution
 		 */
@@ -105,6 +94,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				layer, i, len;
 
 			this.system = aSystem;
+			this.resolution = null;
+			this.layers = [ ];
 
 			this.setResolution( );
 

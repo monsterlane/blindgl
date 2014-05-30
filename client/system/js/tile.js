@@ -7,9 +7,6 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 	 */
 
 	var Cell = Class.extend({
-		friction: [ 1, 1 ],
-		interactions: [ ],
-
 		/**
 		 * Method: isReachable
 		 * @param {Object} aPosition
@@ -33,7 +30,8 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 		 */
 
 		init: function( ) {
-			//
+			this.friction = [ 1, 1 ];
+			this.interactions = [ ];
 		}
 	});
 

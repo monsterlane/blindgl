@@ -7,9 +7,6 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 	 */
 
 	var Player = aPlayer.extend({
-		solid: GLOBAL.solid.bbox,
-		bbox:[ 16, 24 ],
-
 		/**
 		 * Method: addAnimations
 		 */
@@ -391,6 +388,18 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 
 			this._super( );
 		},
+
+		/**
+		 * Method: init
+		 * @param {Object} aOptions
+		 */
+
+		init: function( aOptions ) {
+			this._super( aOptions );
+
+			this.solid = GLOBAL.solid.bbox;
+			this.bbox = [ 16, 24 ];
+		}
 	});
 
 	return Player;

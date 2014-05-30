@@ -8,9 +8,6 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 	 */
 
 	var Button = Class.extend({
-		element: null,
-		down: false,
-
 		/**
 		 * Method: click
 		 * @param {DOMevent} aEvent
@@ -48,6 +45,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				self = this;
 
 			this.element = binding.element;
+			this.down = false;
 
 			if ( this.element != null ) {
 				this.element.addEventListener( 'click', function( aEvent ) {
@@ -82,9 +80,6 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 	 */
 
 	var Mouse = Class.extend({
-		system: null,
-		binding: { },
-
 		/**
 		 * Method: getClickOffset
 		 * @param {DOMevent} aEvent
@@ -125,6 +120,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		init: function( aSystem ) {
 			this.system = aSystem;
+			this.binding = { };
 
 			this.system.verbose( 'init->input->mouse' );
 		}

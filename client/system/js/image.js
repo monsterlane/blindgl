@@ -7,13 +7,6 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 	 */
 
 	var Image = aEntity.extend({
-		element: null,
-		width: 0,
-		height: 0,
-		effect: null,
-		opacity: 1,
-		dirty: false,
-
 		/**
 		 * Method: init
 		 * @param {Object} aOptions
@@ -32,6 +25,8 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 				self.dirty = true;
 			}, true );
 
+			this.effect = null;
+
 			if ( image.hasOwnProperty( 'effect' ) == true ) {
 				this.effect = image.effect;
 
@@ -41,9 +36,13 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 				}
 			}
 
+			this.opacity = 1;
+
 			if ( image.hasOwnProperty( 'opacity' ) ) {
 				this.opacity = image.opacity;
 			}
+
+			this.dirty = false;
 
 			this.system.verbose( 'image->init' );
 		},
@@ -95,9 +94,6 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 			this._super( );
 
-console.log( this.velocity );
-
-			/*
 			if ( this.effect == 'bounce' ) {
 				if ( this.goal == null ) {
 					posX = Math.floor( Math.random( ) * ( maxX - minX + 1 ) ) + minX;
@@ -114,7 +110,6 @@ console.log( this.velocity );
 
 				this.dirty = true;
 			}
-			*/
 		}
 	});
 

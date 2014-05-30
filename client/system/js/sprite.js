@@ -7,21 +7,6 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 	 */
 
 	var Sprite = aEntity.extend({
-		animation: null,
-		animations: { },
-		currentImage: null,
-		currentFrame: -1,
-		lastTick: Date.now( ),
-		visible: false,
-		lastPosition: {
-			x: 0,
-			y: 0
-		},
-		lastSize: {
-			width: 0,
-			height: 0
-		},
-
 		/**
 		 * Method: init
 		 * @param {Object} aOptions
@@ -29,6 +14,23 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 		init: function( aOptions ) {
 			this._super( aOptions );
+
+			this.animation = null;
+			this.animations = { };
+			this.currentImage = null;
+			this.currentFrame = -1;
+			this.lastTick = Date.now( );
+			this.visible = false;
+
+			this.lastPosition = {
+				x: 0,
+				y: 0
+			};
+
+			this.lastSize = {
+				width: 0,
+				height: 0
+			};
 
 			this.addAnimations( );
 			this.addSounds( );

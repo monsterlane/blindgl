@@ -7,33 +7,6 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 	 */
 
 	var Entity = Class.extend({
-		system: null,
-		game: null,
-		layer: null,
-		loading: 0,
-		position: {
-			x: 0,
-			y: 0
-		},
-		velocity: {
-			x: 0,
-			y: 0
-		},
-		maxVelocity: {
-			x: 1,
-			y: 1
-		},
-		goal: null,
-		state: GLOBAL.ai.idle,
-		lastState: GLOBAL.ai.idle,
-		moveType: GLOBAL.moveType.none,
-		moving: false,
-		direction: GLOBAL.direction.down,
-		solid: GLOBAL.solid.none,
-		bbox: [ 0, 0 ],
-		sounds: { },
-		sound: null,
-
 		/**
 		 * Method: init
 		 * @param {Object} aOptions
@@ -42,6 +15,35 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		init: function( aOptions ) {
 			this.system = aOptions.system;
 			this.game = aOptions.game;
+			this.layer = null;
+
+			this.loading = 0,
+
+			this.position = {
+				x: 0,
+				y: 0
+			};
+
+			this.velocity = {
+				x: 0,
+				y: 0
+			};
+
+			this.maxVelocity = {
+				x: 1,
+				y: 1
+			};
+
+			this.goal = null;
+			this.state = GLOBAL.ai.idle;
+			this.lastState = GLOBAL.ai.idle;
+			this.moveType = GLOBAL.moveType.none;
+			this.moving = false;
+			this.direction = GLOBAL.direction.down;
+			this.solid = GLOBAL.solid.none;
+			this.bbox = [ 0, 0 ];
+			this.sounds = { };
+			this.sound = null;
 
 			this.system.verbose( 'entity->init' );
 		},
