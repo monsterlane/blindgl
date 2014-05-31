@@ -1,5 +1,7 @@
 
 define( [ 'global', 'class' ], function( aGlobal ) {
+	'use strict';
+
 	var GLOBAL = new aGlobal( );
 
 	/**

@@ -1,5 +1,7 @@
 
 define( [ 'global', 'class' ], function( aGlobal ) {
+	'use strict';
+
 	var GLOBAL = new aGlobal( );
 
 	/**
@@ -71,9 +73,11 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			var i;
 
 			for ( i in GLOBAL.input.keyboard ) {
-				this.binding[ GLOBAL.input.keyboard[ i ] ] = new Button({
-					key: GLOBAL.input.keyboard[ i ]
-				});
+				if ( GLOBAL.input.keyboard.hasOwnProperty( i ) == true ) {
+					this.binding[ GLOBAL.input.keyboard[ i ] ] = new Button({
+						key: GLOBAL.input.keyboard[ i ]
+					});
+				}
 			}
 		},
 

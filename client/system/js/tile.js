@@ -1,5 +1,7 @@
 
 define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
+	'use strict';
+
 	var GLOBAL = new aGlobal( );
 
 	/**
@@ -94,8 +96,8 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 		var x = Math.round( aPosition.x ),
 			y = Math.round( aPosition.y );
 
-		if ( x != 0 ) x = Math.abs( x ) - 1;
-		if ( y != 0 ) y = Math.abs( y ) - 1;
+		if ( x != 0 ) { x = Math.abs( x ) - 1; }
+		if ( y != 0 ) { y = Math.abs( y ) - 1; }
 
 		return ANGLE_TOP_LEFT[ y ][ x ];
 	}
@@ -104,8 +106,8 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 		var x = Math.round( aPosition.x ),
 			y = Math.round( aPosition.y );
 
-		if ( x != 0 ) x = Math.abs( x ) - 1;
-		if ( y != 0 ) y = Math.abs( y ) - 1;
+		if ( x != 0 ) { x = Math.abs( x ) - 1; }
+		if ( y != 0 ) { y = Math.abs( y ) - 1; }
 
 		return ANGLE_TOP_RIGHT[ y ][ x ];
 	}
@@ -114,8 +116,8 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 		var x = Math.round( aPosition.x ),
 			y = Math.round( aPosition.y );
 
-		if ( x != 0 ) x = Math.abs( x ) - 1;
-		if ( y != 0 ) y = Math.abs( y ) - 1;
+		if ( x != 0 ) { x = Math.abs( x ) - 1; }
+		if ( y != 0 ) { y = Math.abs( y ) - 1; }
 
 		return ANGLE_BOTTOM_LEFT[ y ][ x ];
 	}
@@ -124,8 +126,8 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 		var x = Math.round( aPosition.x ),
 			y = Math.round( aPosition.y );
 
-		if ( x != 0 ) x = Math.abs( x ) - 1;
-		if ( y != 0 ) y = Math.abs( y ) - 1;
+		if ( x != 0 ) { x = Math.abs( x ) - 1; }
+		if ( y != 0 ) { y = Math.abs( y ) - 1; }
 
 		return ANGLE_BOTTOM_RIGHT[ y ][ x ];
 	}

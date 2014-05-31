@@ -12,5 +12,7 @@ require.config({
  */
 
 require( [ 'blindgl' ], function( blindGL ) {
+	'use strict';
+
 	var engine = new blindGL( );
 });

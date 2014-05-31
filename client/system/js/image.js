@@ -1,5 +1,7 @@
 
 define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
+	'use strict';
+
 	var GLOBAL = new aGlobal( );
 
 	/**
@@ -61,8 +63,6 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		 */
 
 		draw: function( ) {
-			var pattern;
-
 			if ( this.dirty == true ) {
 				if ( this.effect && ( this.effect.name == 'repeat' || this.effect.name == 'bounce' ) ) {
 					if ( this.pattern == null ) {

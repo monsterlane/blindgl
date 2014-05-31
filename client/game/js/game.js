@@ -1,5 +1,7 @@
 
 define( [ '../../system/js/world' ], function( aWorld ) {
+	'use strict';
+
 	/**
 	 * Class: Game
 	 */
@@ -10,8 +12,6 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 		 */
 
 		start: function( ) {
-			var self = this;
-
 			this._super( );
 
 			this.system.verbose( 'game->start' );

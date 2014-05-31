@@ -1,5 +1,7 @@
 
 define( [ 'global', 'class' ], function( aGlobal ) {
+	'use strict';
+
 	var GLOBAL = new aGlobal( );
 
 	/**
@@ -17,7 +19,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			this.game = aOptions.game;
 			this.layer = null;
 
-			this.loading = 0,
+			this.loading = 0;
 
 			this.position = {
 				x: 0,
@@ -252,7 +254,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		isReachable: function( aPosition ) {
-			var maxX = this.layer.width;
+			var maxX = this.layer.width,
 				maxY = this.layer.height,
 				posX = aPosition.x,
 				posY = aPosition.y;
@@ -319,16 +321,20 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				self = this;
 
 			for ( i in this.sounds ) {
-				for ( j in this.sounds[ i ] ) {
-					el = new Audio( );
-					el.setAttribute( 'src', this.sounds[ i ][ j ].fileUrl );
+				if ( this.sounds.hasOwnProperty( i ) == true ) {
+					for ( j in this.sounds[ i ] ) {
+						if ( this.sounds[ i ].hasOwnProperty( j ) == true ) {
+							el = new Audio( );
+							el.setAttribute( 'src', this.sounds[ i ][ j ].fileUrl );
 
-					el.addEventListener( 'loadedmetadata', function( ) {
-						self.loading -= 1;
-						self.loaded( );
-					}, true );
+							el.addEventListener( 'loadedmetadata', function( ) {
+								self.loading -= 1;
+								self.loaded( );
+							}, true );
 
-					this.loading += 1;
+							this.loading += 1;
+						}
+					}
 				}
 			}
 		},

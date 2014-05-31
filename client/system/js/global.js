@@ -1,5 +1,7 @@
 
 define( [ 'class' ], function( ) {
+	'use strict';
+
 	/**
 	 * Class: Global
 	 */

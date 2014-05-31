@@ -1,5 +1,7 @@
 
 define( [ 'global', 'sprite', 'class' ], function( aGlobal, aSprite ) {
+	'use strict';
+
 	var GLOBAL = new aGlobal( );
 
 	/**
@@ -47,7 +49,7 @@ define( [ 'global', 'sprite', 'class' ], function( aGlobal, aSprite ) {
 					y: posY
 				});
 			}
-		},
+		}
 	});
 
 	return Player;

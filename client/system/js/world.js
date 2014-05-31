@@ -1,5 +1,7 @@
 
 define( [ 'tile', 'client', 'class' ], function( aTile, aClient ) {
+	'use strict';
+
 	/**
 	 * Class: World
 	 */

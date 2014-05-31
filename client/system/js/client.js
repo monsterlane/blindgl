@@ -1,5 +1,7 @@
 
 define( [ 'global', '../../game/js/player', 'class' ], function( aGlobal, aPlayer ) {
+	'use strict';
+
 	var GLOBAL = new aGlobal( );
 
 	/**

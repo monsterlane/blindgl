@@ -1,5 +1,7 @@
 
 define( [ 'global', 'keyboard', 'mouse', 'audio', 'canvas', '../../game/js/game', 'class' ], function( aGlobal, aKeyboard, aMouse, aAudio, aCanvas, aGame ) {
+	'use strict';
+
 	var GLOBAL = new aGlobal( );
 
 	/**
@@ -89,7 +91,7 @@ define( [ 'global', 'keyboard', 'mouse', 'audio', 'canvas', '../../game/js/game'
 		 */
 
 		init: function( ) {
-			var win = document.getElementById( 'bglWindow' );
+			var win = document.getElementById( 'bglWindow' ),
 				self = this;
 
 			this.settings = GLOBAL.settings;

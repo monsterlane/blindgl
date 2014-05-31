@@ -1,5 +1,7 @@
 
 define( [ '../../system/js/global', '../../system/js/player' ], function( aGlobal, aPlayer ) {
+	'use strict';
+
 	var GLOBAL = new aGlobal( );
 
 	/**

@@ -1,5 +1,7 @@
 
 define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
+	'use strict';
+
 	var GLOBAL = new aGlobal( );
 
 	/**
@@ -118,7 +120,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 							y: animation.framePosition.y
 						},
 						timeBetweenFrames: animation.timeBetweenFrames,
-						complete: ( animation.complete ) ? animation.complete : function( ) { }
+						complete: animation.complete || function( ) { }
 					};
 				}
 			}
@@ -154,16 +156,20 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 				this._super( );
 
 				for ( i in this.animations ) {
-					for ( j in this.animations[ i ] ) {
-						el = document.createElement( 'img' );
-						el.setAttribute( 'src', this.animations[ i ][ j ].fileUrl );
+					if ( this.animations.hasOwnProperty( i ) == true ) {
+						for ( j in this.animations[ i ] ) {
+							if ( this.animations[ i ].hasOwnProperty( j ) == true ) {
+								el = document.createElement( 'img' );
+								el.setAttribute( 'src', this.animations[ i ][ j ].fileUrl );
 
-						el.addEventListener( 'load', function( ) {
-							self.loading -= 1;
-							self.loaded( );
-						}, true );
+								el.addEventListener( 'load', function( ) {
+									self.loading -= 1;
+									self.loaded( );
+								}, true );
 
-						this.loading += 1;
+								this.loading += 1;
+							}
+						}
 					}
 				}
 			}

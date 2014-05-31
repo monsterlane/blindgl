@@ -1,5 +1,7 @@
 
 define( [ 'global', 'class' ], function( aGlobal ) {
+	'use strict';
+
 	var GLOBAL = new aGlobal( );
 
 	/**
@@ -91,7 +93,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		init: function( aSystem ) {
 			var el = document.getElementById( 'bglCanvas' ),
 				frag = document.createDocumentFragment( ),
-				layer, i, len;
+				layer, i;
 
 			this.system = aSystem;
 			this.resolution = null;
@@ -100,15 +102,17 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			this.setResolution( );
 
 			for ( i in GLOBAL.video.layers ) {
-				layer = new Layer({
-					width: this.resolution[ 0 ],
-					height: this.resolution[ 1 ],
-					index: GLOBAL.video.layers[ i ]
-				});
+				if ( GLOBAL.video.layers.hasOwnProperty( i ) == true ) {
+					layer = new Layer({
+						width: this.resolution[ 0 ],
+						height: this.resolution[ 1 ],
+						index: GLOBAL.video.layers[ i ]
+					});
 
-				frag.appendChild( layer.display );
+					frag.appendChild( layer.display );
 
-				this.layers[ GLOBAL.video.layers[ i ] ] = layer;
+					this.layers[ GLOBAL.video.layers[ i ] ] = layer;
+				}
 			}
 
 			el.appendChild( frag );
