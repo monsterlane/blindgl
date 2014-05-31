@@ -81,7 +81,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 					x: 0,
 					y: 0
 				},
-				timeBetweenFrames: 100
+				timeBetweenFrames: 50
 			});
 
 			this.addAnimation({
@@ -95,7 +95,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 					x: 0,
 					y: 0
 				},
-				timeBetweenFrames: 100
+				timeBetweenFrames: 50
 			});
 
 			this.addAnimation({
@@ -109,7 +109,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 					x: 0,
 					y: 0
 				},
-				timeBetweenFrames: 80
+				timeBetweenFrames: 50
 			});
 
 			this.addAnimation({
@@ -123,7 +123,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 					x: 0,
 					y: 0
 				},
-				timeBetweenFrames: 80
+				timeBetweenFrames: 50
 			});
 
 			this.addAnimation({
@@ -362,17 +362,17 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			this.velocity.y = 0;
 
 			if ( this.system.input.keyboard.binding[ GLOBAL.input.keyboard.up ].down === true ) {
-				this.velocity.y -= 1;
+				this.velocity.y -= this.maxVelocity.y;
 			}
 			else if ( this.system.input.keyboard.binding[ GLOBAL.input.keyboard.down ].down ) {
-				this.velocity.y += 1;
+				this.velocity.y += this.maxVelocity.y;
 			}
 
 			if ( this.system.input.keyboard.binding[ GLOBAL.input.keyboard.left ].down === true ) {
-				this.velocity.x -= 1;
+				this.velocity.x -= this.maxVelocity.x;
 			}
 			else if ( this.system.input.keyboard.binding[ GLOBAL.input.keyboard.right ].down ) {
-				this.velocity.x += 1;
+				this.velocity.x += this.maxVelocity.x;
 			}
 
 			if ( this.velocity.y < 0 ) {
@@ -401,6 +401,11 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 
 			this.solid = GLOBAL.solid.bbox;
 			this.bbox = [ 16, 24 ];
+
+			this.maxVelocity = {
+				x: 0.75,
+				y: 0.75
+			};
 		}
 	});
 

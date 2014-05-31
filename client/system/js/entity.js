@@ -124,8 +124,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		move: function( aVelocity ) {
 			var velocity = {
-					x: ( aVelocity.hasOwnProperty( 'x' ) ) ? aVelocity.x : null,
-					y: ( aVelocity.hasOwnProperty( 'y' ) ) ? aVelocity.y : null
+					x: ( aVelocity.hasOwnProperty( 'x' ) === true ) ? aVelocity.x : null,
+					y: ( aVelocity.hasOwnProperty( 'y' ) === true ) ? aVelocity.y : null
 				},
 				vX, vY;
 
