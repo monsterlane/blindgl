@@ -24,7 +24,7 @@ define( [ 'global', 'sprite', 'class' ], function( aGlobal, aSprite ) {
 		 */
 
 		move: function( aX, aY ) {
-			if ( this.goal != null ) {
+			if ( this.goal !== null ) {
 				this.reachedGoal( );
 			}
 
@@ -40,7 +40,7 @@ define( [ 'global', 'sprite', 'class' ], function( aGlobal, aSprite ) {
 
 			this._super( );
 
-			if ( this.goal == null ) {
+			if ( this.goal === null ) {
 				posX = this.position.x + Math.round( this.velocity.x );
 				posY = this.position.y + Math.round( this.velocity.y );
 

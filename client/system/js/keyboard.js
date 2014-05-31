@@ -40,7 +40,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			this.element = document.getElementById( 'bglKeyboard' + binding.key );
 			this.down = false;
 
-			if ( this.element != null ) {
+			if ( this.element !== null ) {
 				this.element.addEventListener( 'mousedown', function( aEvent ) {
 					self.onDown( aEvent );
 				}, true );
@@ -50,11 +50,11 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				}, true );
 			}
 
-			if ( binding.hasOwnProperty( 'onUp' ) ) {
+			if ( binding.hasOwnProperty( 'onUp' ) === true ) {
 				this.onUp = binding.onUp;
 			}
 
-			if ( binding.hasOwnProperty( 'onDown' ) ) {
+			if ( binding.hasOwnProperty( 'onDown' ) === true ) {
 				this.onDown = binding.onDown;
 			}
 		}
@@ -73,7 +73,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			var i;
 
 			for ( i in GLOBAL.input.keyboard ) {
-				if ( GLOBAL.input.keyboard.hasOwnProperty( i ) == true ) {
+				if ( GLOBAL.input.keyboard.hasOwnProperty( i ) === true ) {
 					this.binding[ GLOBAL.input.keyboard[ i ] ] = new Button({
 						key: GLOBAL.input.keyboard[ i ]
 					});
@@ -89,13 +89,13 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			var self = this;
 
 			window.addEventListener( 'keydown', function( aEvent ) {
-				if ( aEvent.repeat != true && self.system.game.running == true ) {
+				if ( aEvent.repeat !== true && self.system.game.running === true ) {
 					self.handleKeypress( aEvent.keyCode, true );
 				}
 			}, true );
 
 			window.addEventListener( 'keyup', function( aEvent ) {
-				if ( aEvent.repeat != true && self.system.game.running == true ) {
+				if ( aEvent.repeat !== true && self.system.game.running === true ) {
 					self.handleKeypress( aEvent.keyCode, false );
 				}
 			}, true );
@@ -115,7 +115,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 				binding.down = aDown;
 
-				if ( aDown == true ) {
+				if ( aDown === true ) {
 					this.showKeyDown( binding.element );
 
 					binding.onDown( );
@@ -143,7 +143,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		showKeyDown: function( aElement ) {
-			if ( aElement != null ) {
+			if ( aElement !== null ) {
 				aElement.className = 'selected';
 			}
 		},
@@ -154,7 +154,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		showKeyUp: function( aElement ) {
-			if ( aElement != null ) {
+			if ( aElement !== null ) {
 				aElement.className = '';
 			}
 		},

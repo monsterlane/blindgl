@@ -102,7 +102,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			this.setResolution( );
 
 			for ( i in GLOBAL.video.layers ) {
-				if ( GLOBAL.video.layers.hasOwnProperty( i ) == true ) {
+				if ( GLOBAL.video.layers.hasOwnProperty( i ) === true ) {
 					layer = new Layer({
 						width: this.resolution[ 0 ],
 						height: this.resolution[ 1 ],

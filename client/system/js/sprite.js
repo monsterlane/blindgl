@@ -134,7 +134,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		setAnimation: function( aAnimation ) {
 			var animation = aAnimation || this.animations[ this.state ][ this.direction ];
 
-			if ( this.animation != animation ) {
+			if ( this.animation !== animation ) {
 				this.currentImage = document.createElement( 'img' );
 				this.currentImage.setAttribute( 'src', animation.fileUrl );
 
@@ -156,9 +156,9 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 				this._super( );
 
 				for ( i in this.animations ) {
-					if ( this.animations.hasOwnProperty( i ) == true ) {
+					if ( this.animations.hasOwnProperty( i ) === true ) {
 						for ( j in this.animations[ i ] ) {
-							if ( this.animations[ i ].hasOwnProperty( j ) == true ) {
+							if ( this.animations[ i ].hasOwnProperty( j ) === true ) {
 								el = document.createElement( 'img' );
 								el.setAttribute( 'src', this.animations[ i ][ j ].fileUrl );
 
@@ -182,7 +182,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		loaded: function( ) {
 			this._super( );
 
-			if ( this.loading == 0 ) {
+			if ( this.loading === 0 ) {
 				this.setLayer( GLOBAL.video.layers.middleground );
 				this.setAnimation( );
 			}
@@ -211,8 +211,8 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 			this._super( );
 
-			if ( this.visible == true && this.animation != null ) {
-				if ( this.animation.frameCount == 1 ) {
+			if ( this.visible === true && this.animation !== null ) {
+				if ( this.animation.frameCount === 1 ) {
 					if ( this.currentFrame < 0 ) {
 						this.currentFrame = 0;
 
@@ -224,7 +224,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 					this.currentFrame += 1;
 
-					if ( this.currentFrame == this.animation.frameCount ) {
+					if ( this.currentFrame === this.animation.frameCount ) {
 						this.animation.complete( );
 						this.currentFrame = 0;
 					}
@@ -235,7 +235,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 					draw = true;
 				}
 
-				if ( draw == true ) {
+				if ( draw === true ) {
 					posX = Math.round( this.position.x + this.animation.framePosition.x );
 					posY = Math.round( this.position.y + this.animation.framePosition.y );
 

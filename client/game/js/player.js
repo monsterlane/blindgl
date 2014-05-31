@@ -314,7 +314,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 		attack: function( ) {
 			var sound;
 
-			if ( this.state != GLOBAL.ai.attack ) {
+			if ( this.state !== GLOBAL.ai.attack ) {
 				this.setState( GLOBAL.ai.attack );
 
 				sound = this.system.audio.playRandomSound({
@@ -330,15 +330,15 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 		updateState: function( ) {
 			this._super( );
 
-			if ( this.state > GLOBAL.ai.idle && this.state != GLOBAL.ai.attack && this.moving == false ) {
+			if ( this.state > GLOBAL.ai.idle && this.state !== GLOBAL.ai.attack && this.moving === false ) {
 				this.setState( GLOBAL.ai.idle );
 			}
-			else if ( this.state == GLOBAL.ai.idle && this.moving == true ) {
+			else if ( this.state === GLOBAL.ai.idle && this.moving === true ) {
 				this.setState( GLOBAL.ai.walk );
 			}
 
 			/*
-			if ( this.state > GLOBAL.ai.idle && this.sound == null ) {
+			if ( this.state > GLOBAL.ai.idle && this.sound === null ) {
 				this.sound = { };
 				this.sound = this.system.audio.playSound({
 					fileUrl: this.sounds[ GLOBAL.ai.walk ][ 0 ].fileUrl,
@@ -346,7 +346,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 					loop: true
 				});
 			}
-			else if ( this.state == GLOBAL.ai.idle && this.sound != null ) {
+			else if ( this.state === GLOBAL.ai.idle && this.sound !== null ) {
 				this.sound.stop( );
 				this.sound = null;
 			}
@@ -361,14 +361,14 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			this.velocity.x = 0;
 			this.velocity.y = 0;
 
-			if ( this.system.input.keyboard.binding[ GLOBAL.input.keyboard.up ].down == true ) {
+			if ( this.system.input.keyboard.binding[ GLOBAL.input.keyboard.up ].down === true ) {
 				this.velocity.y -= 1;
 			}
 			else if ( this.system.input.keyboard.binding[ GLOBAL.input.keyboard.down ].down ) {
 				this.velocity.y += 1;
 			}
 
-			if ( this.system.input.keyboard.binding[ GLOBAL.input.keyboard.left ].down == true ) {
+			if ( this.system.input.keyboard.binding[ GLOBAL.input.keyboard.left ].down === true ) {
 				this.velocity.x -= 1;
 			}
 			else if ( this.system.input.keyboard.binding[ GLOBAL.input.keyboard.right ].down ) {

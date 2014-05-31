@@ -49,7 +49,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			this.element = binding.element;
 			this.down = false;
 
-			if ( this.element != null ) {
+			if ( this.element !== null ) {
 				this.element.addEventListener( 'click', function( aEvent ) {
 					self.click( aEvent );
 				}, true );
@@ -63,15 +63,15 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				}, true );
 			}
 
-			if ( binding.hasOwnProperty( 'click' ) ) {
+			if ( binding.hasOwnProperty( 'click' ) === true ) {
 				this.click = binding.click;
 			}
 
-			if ( binding.hasOwnProperty( 'onUp' ) ) {
+			if ( binding.hasOwnProperty( 'onUp' ) === true ) {
 				this.onUp = binding.onUp;
 			}
 
-			if ( binding.hasOwnProperty( 'onDown' ) ) {
+			if ( binding.hasOwnProperty( 'onDown' ) === true ) {
 				this.onDown = binding.onDown;
 			}
 		}

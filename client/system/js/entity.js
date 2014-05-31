@@ -84,11 +84,11 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		setState: function( aState, aOptions ) {
 			var options = aOptions || { };
 
-			if ( this.lastState != this.state ) {
+			if ( this.lastState !== this.state ) {
 				this.lastState = this.state;
 			}
 
-			if ( this.state != aState ) {
+			if ( this.state !== aState ) {
 				this.state = aState;
 			}
 		},
@@ -98,7 +98,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		updateState: function( ) {
-			this.moving = !( this.velocity.x == 0 && this.velocity.y == 0 );
+			this.moving = !( this.velocity.x === 0 && this.velocity.y === 0 );
 
 			if ( this.position.x < 0 || this.position.y < 0 || this.position.x > this.layer.width || this.position.y > this.layer.height ) {
 				this.visible = false;
@@ -129,7 +129,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				},
 				vX, vY;
 
-			if ( velocity.x != null ) {
+			if ( velocity.x !== null ) {
 				vX = this.velocity.x + velocity.x;
 
 				if ( vX > this.maxVelocity.x ) {
@@ -142,7 +142,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				this.velocity.x = vX;
 			}
 
-			if ( velocity.y != null ) {
+			if ( velocity.y !== null ) {
 				vY = this.velocity.y + velocity.y;
 
 				if ( vY > this.maxVelocity.y ) {
@@ -164,7 +164,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		setGoal: function( aGoal ) {
 			var goal = aGoal || null;
 
-			if ( goal !== null && typeof goal === 'object' && goal != this.goal ) {
+			if ( goal !== null && typeof goal === 'object' && goal !== this.goal ) {
 				this.goal = goal;
 
 				this.setState( GLOBAL.ai.walk );
@@ -198,7 +198,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		moveToGoal: function( ) {
 			var posX, posY;
 
-			if ( Math.round( this.position.x ) == this.goal.x && Math.round( this.position.y ) == this.goal.y ) {
+			if ( Math.round( this.position.x ) === this.goal.x && Math.round( this.position.y ) === this.goal.y ) {
 				this.reachedGoal( );
 			}
 			else {
@@ -259,14 +259,14 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				posX = aPosition.x,
 				posY = aPosition.y;
 
-			if ( this.solid == GLOBAL.solid.none ) {
+			if ( this.solid === GLOBAL.solid.none ) {
 				return {
 					x: posX,
 					y: posY
 				};
 			}
 
-			if ( this.solid == GLOBAL.solid.bbox ) {
+			if ( this.solid === GLOBAL.solid.bbox ) {
 				maxX -= this.bbox[ 0 ];
 				maxY -= this.bbox[ 1 ];
 			}
@@ -321,9 +321,9 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				self = this;
 
 			for ( i in this.sounds ) {
-				if ( this.sounds.hasOwnProperty( i ) == true ) {
+				if ( this.sounds.hasOwnProperty( i ) === true ) {
 					for ( j in this.sounds[ i ] ) {
-						if ( this.sounds[ i ].hasOwnProperty( j ) == true ) {
+						if ( this.sounds[ i ].hasOwnProperty( j ) === true ) {
 							el = new Audio( );
 							el.setAttribute( 'src', this.sounds[ i ][ j ].fileUrl );
 
@@ -380,7 +380,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		updatePosition: function( ) {
-			if ( this.goal != null ) {
+			if ( this.goal !== null ) {
 				this.moveToGoal( );
 			}
 		}

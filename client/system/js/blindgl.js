@@ -15,7 +15,7 @@ define( [ 'global', 'keyboard', 'mouse', 'audio', 'canvas', '../../game/js/game'
 		 */
 
 		verbose: function( aMessage ) {
-			if ( this.settings.verbose == true ) {
+			if ( this.settings.verbose === true ) {
 				console.log( 'blindGL::' + aMessage );
 			}
 		},
@@ -74,13 +74,13 @@ define( [ 'global', 'keyboard', 'mouse', 'audio', 'canvas', '../../game/js/game'
 			var self = this;
 
 			window.addEventListener( 'focus', function( ) {
-				if ( self.paused == true ) {
+				if ( self.paused === true ) {
 					self.unpause( );
 				}
 			}, true );
 
 			window.addEventListener( 'blur', function( ) {
-				if ( self.paused == false ) {
+				if ( self.paused === false ) {
 					self.pause( );
 				}
 			}, true );
@@ -112,7 +112,7 @@ define( [ 'global', 'keyboard', 'mouse', 'audio', 'canvas', '../../game/js/game'
 			this.paused = false;
 			this.pauseTime = null;
 
-			if ( this.settings.verbose == false ) {
+			if ( this.settings.verbose === false ) {
 				win.className = 'boot';
 
 				setTimeout(function( ) {
@@ -161,8 +161,8 @@ define( [ 'global', 'keyboard', 'mouse', 'audio', 'canvas', '../../game/js/game'
 				elapsed = now - this.engine.lastTick,
 				self = this;
 
-			if ( this.paused == false ) {
-				this.engine.ticks++;
+			if ( this.paused === false ) {
+				this.engine.ticks += 1;
 
 				if ( elapsed >= this.engine.tickRate ) {
 					this.engine.lastTick = now - ( elapsed % this.engine.tickRate );
@@ -171,7 +171,7 @@ define( [ 'global', 'keyboard', 'mouse', 'audio', 'canvas', '../../game/js/game'
 					this.canvas.think( );
 				}
 
-				if ( this.settings.showFps == true && now - this.engine.lastRate >= 1000 ) {
+				if ( this.settings.showFps === true && now - this.engine.lastRate >= 1000 ) {
 					this.engine.fps.innerHTML = this.engine.ticks;
 					this.engine.lastRate = now;
 					this.engine.ticks = 0;

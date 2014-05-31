@@ -64,7 +64,7 @@ define( [ 'tile', 'client', 'class' ], function( aTile, aClient ) {
 
 			this.clients.push( client );
 
-			if ( count != null ) {
+			if ( count !== null ) {
 				count.innerHTML = this.clients.length;
 			}
 		},

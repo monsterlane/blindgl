@@ -96,8 +96,8 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 		var x = Math.round( aPosition.x ),
 			y = Math.round( aPosition.y );
 
-		if ( x != 0 ) { x = Math.abs( x ) - 1; }
-		if ( y != 0 ) { y = Math.abs( y ) - 1; }
+		if ( x !== 0 ) { x = Math.abs( x ) - 1; }
+		if ( y !== 0 ) { y = Math.abs( y ) - 1; }
 
 		return ANGLE_TOP_LEFT[ y ][ x ];
 	}
@@ -106,8 +106,8 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 		var x = Math.round( aPosition.x ),
 			y = Math.round( aPosition.y );
 
-		if ( x != 0 ) { x = Math.abs( x ) - 1; }
-		if ( y != 0 ) { y = Math.abs( y ) - 1; }
+		if ( x !== 0 ) { x = Math.abs( x ) - 1; }
+		if ( y !== 0 ) { y = Math.abs( y ) - 1; }
 
 		return ANGLE_TOP_RIGHT[ y ][ x ];
 	}
@@ -116,8 +116,8 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 		var x = Math.round( aPosition.x ),
 			y = Math.round( aPosition.y );
 
-		if ( x != 0 ) { x = Math.abs( x ) - 1; }
-		if ( y != 0 ) { y = Math.abs( y ) - 1; }
+		if ( x !== 0 ) { x = Math.abs( x ) - 1; }
+		if ( y !== 0 ) { y = Math.abs( y ) - 1; }
 
 		return ANGLE_BOTTOM_LEFT[ y ][ x ];
 	}
@@ -126,8 +126,8 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 		var x = Math.round( aPosition.x ),
 			y = Math.round( aPosition.y );
 
-		if ( x != 0 ) { x = Math.abs( x ) - 1; }
-		if ( y != 0 ) { y = Math.abs( y ) - 1; }
+		if ( x !== 0 ) { x = Math.abs( x ) - 1; }
+		if ( y !== 0 ) { y = Math.abs( y ) - 1; }
 
 		return ANGLE_BOTTOM_RIGHT[ y ][ x ];
 	}
@@ -148,19 +148,19 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 			this.friction = [ 1, 1 ];
 			this.interactions = [ ];
 
-			if ( options.type == 'N' ) {
+			if ( options.type === 'N' ) {
 				this.isReachable = collideNone;
 			}
-			else if ( options.type == 'TR' ) {
+			else if ( options.type === 'TR' ) {
 				this.isReachable = collideAngleTopRight;
 			}
-			else if ( options.type == 'TL' ) {
+			else if ( options.type === 'TL' ) {
 				this.isReachable = collideAngleTopLeft;
 			}
-			else if ( options.type == 'BR' ) {
+			else if ( options.type === 'BR' ) {
 				this.isReachable = collideAngleBottomRight;
 			}
-			else if ( options.type == 'BL' ) {
+			else if ( options.type === 'BL' ) {
 				this.isReachable = collideAngleBottomLeft;
 			}
 			else {
@@ -199,19 +199,19 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 		load: function( aTile ) {
 			var tile = aTile || { };
 
-			if ( tile.hasOwnProperty( 'background' ) ) {
+			if ( tile.hasOwnProperty( 'background' ) === true ) {
 				this.loadBackground( tile.background );
 			}
 
-			if ( tile.hasOwnProperty( 'foreground' ) ) {
+			if ( tile.hasOwnProperty( 'foreground' ) === true ) {
 				this.loadForeground( tile.foreground );
 			}
 
-			if ( tile.hasOwnProperty( 'grid' ) ) {
+			if ( tile.hasOwnProperty( 'grid' ) === true ) {
 				this.loadGrid( tile.grid );
 			}
 
-			if ( tile.hasOwnProperty( 'entities' ) ) {
+			if ( tile.hasOwnProperty( 'entities' ) === true ) {
 				this.loadEntities( tile.entities );
 			}
 		},

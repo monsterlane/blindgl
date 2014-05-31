@@ -24,7 +24,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			this.next = null;
 
 			this.sound.addEventListener( 'ended', function( ) {
-				if ( self.sound != null && self.sound.hasAttribute( 'loop' ) == false ) {
+				if ( self.sound !== null && self.sound.hasAttribute( 'loop' ) === false ) {
 					self.stop( );
 				}
 			}, true );
@@ -35,7 +35,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		play: function( ) {
-			if ( this.sound != null ) {
+			if ( this.sound !== null ) {
 				this.playing = true;
 				this.sound.play( );
 			}
@@ -46,7 +46,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		stop: function( ) {
-			if ( this.sound != null && this.playing == true ) {
+			if ( this.sound !== null && this.playing === true ) {
 				this.sound.pause( );
 				this.sound.currentTime = 0;
 
@@ -112,7 +112,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 			this.banks.push( bank );
 
-			if ( len == 0 ) {
+			if ( len === 0 ) {
 				this.banks[ 0 ].next = this.banks[ 0 ];
 				this.lastBank = this.banks[ 0 ];
 			}
@@ -139,12 +139,12 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			len = this.banks.length;
 			bank = this.lastBank;
 
-			while ( i < len && bank.playing == true ) {
+			while ( i < len && bank.playing === true ) {
 				bank = bank.next;
 				i++;
 			}
 
-			return ( i == len ) ? false : bank;
+			return ( i === len ) ? false : bank;
 		},
 
 		/**
@@ -165,7 +165,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			this.background.sound.setAttribute( 'loop', '' );
 			this.background.sound.load( );
 
-			if ( sound.effectName == 'fadeIn' ) {
+			if ( sound.effectName === 'fadeIn' ) {
 				this.effectsFadeIn( this.background, sound.effectDuration );
 			}
 			else {
@@ -220,7 +220,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 				bank.sound.load( );
 
-				if ( effectName == 'fadeIn' ) {
+				if ( effectName === 'fadeIn' ) {
 					this.effectFadeIn( bank, effectDuration );
 				}
 				else {
@@ -261,7 +261,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				volume, max, step,
 				self = this;
 
-			if ( bank.playing == false ) {
+			if ( bank.playing === false ) {
 				max = parseFloat( bank.sound.getAttribute( 'volume' ), 10 );
 				duration = duration / 20;
 				step = parseFloat( max / duration, 10 );
