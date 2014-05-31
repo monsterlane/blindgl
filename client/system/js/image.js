@@ -25,6 +25,8 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 				self.dirty = true;
 			}, true );
 
+			this.pattern = null;
+
 			if ( image.hasOwnProperty( 'effect' ) == true && image.effect.hasOwnProperty( 'name' ) == true ) {
 				this.effect = image.effect;
 
@@ -62,27 +64,26 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 			var pattern;
 
 			if ( this.dirty == true ) {
-				if ( this.opacity < 1 ) {
-					this.layer.bufferContext.save( );
-					this.layer.bufferContext.globalAlpha = this.opacity;
-				}
-
 				if ( this.effect && ( this.effect.name == 'repeat' || this.effect.name == 'bounce' ) ) {
+					if ( this.pattern == null ) {
+						this.pattern = this.layer.bufferContext.createPattern( this.element, 'repeat' );
+					}
+
+					this.layer.bufferContext.save( );
 					this.layer.bufferContext.clearRect( 0, 0, this.layer.width, this.layer.height );
 
-					pattern = this.layer.bufferContext.createPattern( this.element, 'repeat' );
-
         			this.layer.bufferContext.translate( this.position.x, this.position.y );
-					this.layer.bufferContext.fillStyle = pattern;
+        			this.layer.bufferContext.globalAlpha = this.opacity;
+					this.layer.bufferContext.fillStyle = this.pattern;
 					this.layer.bufferContext.fillRect( -( this.position.x ), -( this.position.y ), this.layer.width, this.layer.height );
 					this.layer.bufferContext.translate( -( this.position.x ), -( this.position.y ) );
+					this.layer.bufferContext.restore( );
 				}
 				else {
+					this.layer.bufferContext.save( );
 					this.layer.bufferContext.clearRect( this.position.x, this.position.y, this.width, this.height );
+					this.layer.bufferContext.globalAlpha = this.opacity;
 					this.layer.bufferContext.drawImage( this.element, this.position.x, this.position.y );
-				}
-
-				if ( this.opacity < 1 ) {
 					this.layer.bufferContext.restore( );
 				}
 
