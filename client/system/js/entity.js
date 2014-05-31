@@ -257,6 +257,13 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				posX = aPosition.x,
 				posY = aPosition.y;
 
+			if ( this.solid == GLOBAL.solid.none ) {
+				return {
+					x: posX,
+					y: posY
+				};
+			}
+
 			if ( this.solid == GLOBAL.solid.bbox ) {
 				maxX -= this.bbox[ 0 ];
 				maxY -= this.bbox[ 1 ];

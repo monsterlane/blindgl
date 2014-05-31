@@ -65,8 +65,10 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 					pattern = this.layer.bufferContext.createPattern( this.element, 'repeat' );
 
+        			this.layer.bufferContext.translate( this.position.x, this.position.y );
 					this.layer.bufferContext.fillStyle = pattern;
-					this.layer.bufferContext.fillRect( this.position.x, this.position.y, this.layer.width, this.layer.height );
+					this.layer.bufferContext.fillRect( -( this.position.x ), -( this.position.y ), this.layer.width, this.layer.height );
+					this.layer.bufferContext.translate( -( this.position.x ), -( this.position.y ) );
 				}
 				else {
 					this.layer.bufferContext.clearRect( this.position.x, this.position.y, this.width, this.height );
@@ -87,9 +89,9 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 		think: function( ) {
 			var minX = 0,
-				maxX = 50,
+				maxX = 100,
 				minY = 0,
-				maxY = 50,
+				maxY = 100,
 				posX, posY;
 
 			this._super( );
@@ -100,8 +102,8 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 					posY = Math.floor( Math.random( ) * ( maxY - minY + 1 ) ) + minY;
 
 					this.setGoal({
-						x: posX - 50,
-						y: posY - 50,
+						x: posX - 100,
+						y: posY - 100,
 					});
 				}
 				else {
