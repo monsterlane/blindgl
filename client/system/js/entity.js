@@ -311,10 +311,10 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		},
 
 		/**
-		 * Method: cache
+		 * Method: load
 		 */
 
-		cache: function( ) {
+		load: function( ) {
 			var i, j, el,
 				self = this;
 
@@ -350,7 +350,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			var position = aPosition || { x: 0, y: 0 };
 
 			this.setPosition( position );
-			this.cache( );
+			this.load( );
 		},
 
 		/**

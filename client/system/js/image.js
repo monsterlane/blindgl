@@ -25,9 +25,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 				self.dirty = true;
 			}, true );
 
-			this.effect = null;
-
-			if ( image.hasOwnProperty( 'effect' ) == true && image.effect != null && typeof image.effect === 'object' ) {
+			if ( image.hasOwnProperty( 'effect' ) == true && image.effect.hasOwnProperty( 'name' ) == true ) {
 				this.effect = image.effect;
 
 				if ( this.effect.name == 'bounce' ) {
@@ -35,11 +33,15 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 					this.height += this.effect.offset.y;
 				}
 			}
-
-			this.opacity = 1;
+			else {
+				this.effect = null;
+			}
 
 			if ( image.hasOwnProperty( 'opacity' ) ) {
 				this.opacity = image.opacity;
+			}
+			else {
+				this.opacity = 1;
 			}
 
 			this.dirty = false;
@@ -95,8 +97,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 			this._super( );
 
 			if ( this.effect && this.effect.name == 'bounce' ) {
-				minX = 0;
-				minY = 0;
+				minX = minY = 0;
 				maxX = this.effect.offset.x;
 				maxY = this.effect.offset.y;
 
@@ -106,7 +107,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 					this.setGoal({
 						x: posX - this.effect.offset.x,
-						y: posY - this.effect.offset.y,
+						y: posY - this.effect.offset.y
 					});
 				}
 				else {

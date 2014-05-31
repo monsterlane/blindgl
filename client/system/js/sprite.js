@@ -143,10 +143,10 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		},
 
 		/**
-		 * Method: cache
+		 * Method: load
 		 */
 
-		cache: function( ) {
+		load: function( ) {
 			var i, j, el,
 				self = this;
 
@@ -190,7 +190,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		spawn: function( aPosition ) {
 			this._super( aPosition );
 
-			this.cache( );
+			this.load( );
 		},
 
 		/**
