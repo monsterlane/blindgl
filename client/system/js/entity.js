@@ -162,7 +162,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		setGoal: function( aGoal ) {
 			var goal = aGoal || null;
 
-			if ( goal !== null && typeof goal === 'object' ) {
+			if ( goal !== null && typeof goal === 'object' && goal != this.goal ) {
 				this.goal = goal;
 
 				this.setState( GLOBAL.ai.walk );
@@ -194,28 +194,28 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		moveToGoal: function( ) {
-			var pos;
+			var posX, posY;
 
-			if ( parseInt( this.position.x, 10 ) == this.goal.x && parseInt( this.position.y, 10 ) == this.goal.y ) {
+			if ( Math.round( this.position.x ) == this.goal.x && Math.round( this.position.y ) == this.goal.y ) {
 				this.reachedGoal( );
 			}
 			else {
 				this.faceGoal( );
 
-				if ( this.position.x < this.goal.x ) {
+				if ( this.position.x + this.maxVelocity.x < this.goal.x ) {
 					this.velocity.x = this.maxVelocity.x;
 				}
-				else if ( this.position.x > this.goal.x ) {
+				else if ( this.position.x - this.maxVelocity.x > this.goal.x ) {
 					this.velocity.x = -( this.maxVelocity.x );
 				}
 				else {
 					this.velocity.x = 0;
 				}
 
-				if ( this.position.y < this.goal.y ) {
+				if ( this.position.y + this.maxVelocity.y < this.goal.y ) {
 					this.velocity.y = this.maxVelocity.y;
 				}
-				else if ( this.position.y > this.goal.y ) {
+				else if ( this.position.y - this.maxVelocity.y > this.goal.y ) {
 					this.velocity.y = -( this.maxVelocity.y );
 				}
 				else {

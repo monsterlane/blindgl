@@ -230,8 +230,8 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 				}
 
 				if ( draw == true ) {
-					posX = this.position.x + this.animation.framePosition.x;
-					posY = this.position.y + this.animation.framePosition.y;
+					posX = Math.round( this.position.x + this.animation.framePosition.x );
+					posY = Math.round( this.position.y + this.animation.framePosition.y );
 
 					this.layer.bufferContext.clearRect( this.lastPosition.x, this.lastPosition.y, this.lastSize.width, this.lastSize.height );
 					this.layer.bufferContext.drawImage( this.currentImage, this.animation.frameWidth * this.currentFrame, 0, this.animation.frameWidth, this.animation.frameHeight, posX, posY, this.animation.frameWidth, this.animation.frameHeight );
