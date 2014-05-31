@@ -94,8 +94,8 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 		var x = Math.round( aPosition.x ),
 			y = Math.round( aPosition.y );
 
-		x = ( x != 0 ) ? Math.abs( x ) - 1 : 0;
-		y = ( y != 0 ) ? Math.abs( y ) - 1 : 0;
+		if ( x != 0 ) x = Math.abs( x ) - 1;
+		if ( y != 0 ) y = Math.abs( y ) - 1;
 
 		return ANGLE_TOP_LEFT[ y ][ x ];
 	}
@@ -104,8 +104,8 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 		var x = Math.round( aPosition.x ),
 			y = Math.round( aPosition.y );
 
-		x = ( x != 0 ) ? Math.abs( x ) - 1 : 0;
-		y = ( y != 0 ) ? Math.abs( y ) - 1 : 0;
+		if ( x != 0 ) x = Math.abs( x ) - 1;
+		if ( y != 0 ) y = Math.abs( y ) - 1;
 
 		return ANGLE_TOP_RIGHT[ y ][ x ];
 	}
@@ -114,8 +114,8 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 		var x = Math.round( aPosition.x ),
 			y = Math.round( aPosition.y );
 
-		x = ( x != 0 ) ? Math.abs( x ) - 1 : 0;
-		y = ( y != 0 ) ? Math.abs( y ) - 1 : 0;
+		if ( x != 0 ) x = Math.abs( x ) - 1;
+		if ( y != 0 ) y = Math.abs( y ) - 1;
 
 		return ANGLE_BOTTOM_LEFT[ y ][ x ];
 	}
@@ -124,8 +124,8 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 		var x = Math.round( aPosition.x ),
 			y = Math.round( aPosition.y );
 
-		x = ( x != 0 ) ? Math.abs( x ) - 1 : 0;
-		y = ( y != 0 ) ? Math.abs( y ) - 1 : 0;
+		if ( x != 0 ) x = Math.abs( x ) - 1;
+		if ( y != 0 ) y = Math.abs( y ) - 1;
 
 		return ANGLE_BOTTOM_RIGHT[ y ][ x ];
 	}
@@ -172,13 +172,6 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 	 */
 
 	var Tile = Class.extend({
-		system: null,
-		game: null,
-		grid: [ ],
-		background: null,
-		foreground: null,
-		entities: [ ],
-
 		/**
 		 * Method: init
 	 	 * @param {Object} aSystem
@@ -189,6 +182,11 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 		init: function( aSystem, aGame ) {
 			this.system = aSystem;
 			this.game = aGame;
+
+			this.grid = [ ];
+			this.background = null;
+			this.foreground = null;
+			this.entities = [ ];
 		},
 
 		/**
