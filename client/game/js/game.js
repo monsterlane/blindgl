@@ -42,7 +42,12393 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 				spawn: {
 					x: 0,
 					y: 0
-				}
+				},
+				grid: [
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						}
+					]
+				]
 			});
 
 			/*

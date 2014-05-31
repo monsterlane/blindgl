@@ -177,17 +177,20 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		faceGoal: function( ) {
-			if ( this.goal.y < this.position.y ) {
+			if ( this.velocity.y < 0 ) {
 				this.setDirection( GLOBAL.direction.up );
 			}
-			else if ( this.goal.y > this.position.y ) {
+			else if ( this.velocity.y > 0 ) {
 				this.setDirection( GLOBAL.direction.down );
 			}
-			else if ( this.goal.x < this.position.x ) {
+			else if ( this.velocity.x < 0 ) {
 				this.setDirection( GLOBAL.direction.left );
 			}
-			else {
+			else if ( this.velocity.x > 0 ) {
 				this.setDirection( GLOBAL.direction.right );
+			}
+			else {
+				this.setDirection( GLOBAL.direction.down );
 			}
 		},
 
@@ -196,14 +199,12 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		moveToGoal: function( ) {
-			var posX, posY;
+			var position;
 
 			if ( Math.round( this.position.x ) === this.goal.x && Math.round( this.position.y ) === this.goal.y ) {
 				this.reachedGoal( );
 			}
 			else {
-				this.faceGoal( );
-
 				if ( this.position.x + this.maxVelocity.x < this.goal.x ) {
 					this.velocity.x = this.maxVelocity.x;
 				}
@@ -224,13 +225,14 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 					this.velocity.y = 0;
 				}
 
-				posX = this.position.x + this.velocity.x;
-				posY = this.position.y + this.velocity.y;
+				this.faceGoal( );
 
-				this.position = this.isReachable({
-					x: posX,
-					y: posY
-				});
+				position = {
+					x: this.position.x + this.velocity.x,
+					y: this.position.y + this.velocity.y
+				};
+
+				this.position = this.isReachable( position );
 			}
 		},
 
@@ -254,41 +256,71 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		isReachable: function( aPosition ) {
-			var maxX = this.layer.width,
-				maxY = this.layer.height,
-				posX = aPosition.x,
-				posY = aPosition.y;
+			var position = aPosition,
+				tileX, tileY,
+				tilePosition;
 
-			if ( this.solid === GLOBAL.solid.none ) {
-				return {
-					x: posX,
-					y: posY
-				};
+			if ( this.layer !== null && this.solid === GLOBAL.solid.bbox ) {
+				if ( position.x < 0 ) {
+					position.x = 0;
+				}
+				else if ( position.x + this.bbox[ 0 ] > this.layer.width ) {
+					position.x = this.layer.width - this.bbox[ 0 ];
+				}
+
+				if ( position.y < 0 ) {
+					position.y = 0;
+				}
+				else if ( position.y + this.bbox[ 1 ] > this.layer.height ) {
+					position.y = this.layer.height - this.bbox[ 1 ];
+				}
+
+				tilePosition = { };
+
+				tileX = Math.floor( position.x / 16 );
+				tileY = Math.floor( position.y / 16 );
+
+				tilePosition.x = Math.round( position.x - ( tileX * 16 ) );
+				tilePosition.y = Math.round( position.y - ( tileY * 16 ) );
+
+				if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( tilePosition ) === false ) {
+					position = this.position;
+				}
+
+				tileX = Math.floor( ( position.x + this.bbox[ 0 ] ) / 16 );
+				tileY = Math.floor( position.y / 16 );
+
+				tilePosition.x = Math.round( position.x + this.bbox[ 0 ] - ( tileX * 16 ) );
+				tilePosition.y = Math.round( position.y - ( tileY * 16 ) );
+
+				if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( tilePosition ) === false ) {
+					position = this.position;
+				}
+
+				tileX = Math.floor( ( position.x + this.bbox[ 0 ] ) / 16 );
+				tileY = Math.floor( ( position.y + this.bbox[ 1 ] ) / 16 );
+
+				tilePosition.x = Math.round( position.x + this.bbox[ 0 ] - ( tileX * 16 ) );
+				tilePosition.y = Math.round( position.y + this.bbox[ 1 ] - ( tileY * 16 ) );
+
+				if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( tilePosition ) === false ) {
+					position = this.position;
+				}
+
+				tileX = Math.floor( position.x / 16 );
+				tileY = Math.floor( ( position.y + this.bbox[ 1 ] ) / 16 );
+
+				tilePosition.x = Math.round( position.x - ( tileX * 16 ) );
+				tilePosition.y = Math.round( position.y + this.bbox[ 1 ] - ( tileY * 16 ) );
+
+				if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( tilePosition ) === false ) {
+					position = this.position;
+				}
+
+				return position;
 			}
 
-			if ( this.solid === GLOBAL.solid.bbox ) {
-				maxX -= this.bbox[ 0 ];
-				maxY -= this.bbox[ 1 ];
-			}
-
-			if ( posX < 0 ) {
-				posX = 0;
-			}
-			else if ( posX > maxX ) {
-				posX = maxX;
-			}
-
-			if ( posY < 0 ) {
-				posY = 0;
-			}
-			else if ( posY > maxY ) {
-				posY = maxY;
-			}
-
-			return {
-				x: posX,
-				y: posY
-			};
+			return position;
 		},
 
 		/**

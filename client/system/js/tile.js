@@ -148,20 +148,32 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 			this.friction = [ 1, 1 ];
 			this.interactions = [ ];
 
-			if ( options.type === 'N' ) {
+			if ( options.collide === 'none' ) {
 				this.isReachable = collideNone;
 			}
-			else if ( options.type === 'TR' ) {
+			else if ( options.collide === 'topRight' ) {
 				this.isReachable = collideAngleTopRight;
 			}
-			else if ( options.type === 'TL' ) {
+			else if ( options.collide === 'topLeft' ) {
 				this.isReachable = collideAngleTopLeft;
 			}
-			else if ( options.type === 'BR' ) {
+			else if ( options.collide === 'bottomRight' ) {
 				this.isReachable = collideAngleBottomRight;
 			}
-			else if ( options.type === 'BL' ) {
+			else if ( options.collide === 'bottomLeft' ) {
 				this.isReachable = collideAngleBottomLeft;
+			}
+			else if ( options.collide === 'top' ) {
+				this.isReachable = collideWall;
+			}
+			else if ( options.collide === 'right' ) {
+				this.isReachable = collideWall;
+			}
+			else if ( options.collide === 'bottom' ) {
+				this.isReachable = collideWall;
+			}
+			else if ( options.collide === 'left' ) {
+				this.isReachable = collideWall;
 			}
 			else {
 				this.isReachable = collideWall;
@@ -254,7 +266,15 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 		 */
 
 		loadGrid: function( aGrid ) {
+			var i, len1, j, len2;
+
 			this.grid = aGrid;
+
+			for ( i = 0, len1 = this.grid.length; i < len1; i++ ) {
+				for ( j = 0, len2 = this.grid[ i ].length; j < len2; j++ ) {
+					this.grid[ i ][ j ] = new Cell( this.grid[ i ][ j ] );
+				}
+			}
 		},
 
 		/**

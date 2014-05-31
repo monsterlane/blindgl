@@ -36,18 +36,15 @@ define( [ 'global', 'sprite', 'class' ], function( aGlobal, aSprite ) {
 		 */
 
 		updatePosition: function( ) {
-			var posX, posY;
+			var position = { };
 
 			this._super( );
 
 			if ( this.goal === null ) {
-				posX = this.position.x + this.velocity.x;
-				posY = this.position.y + this.velocity.y;
+				position.x = this.position.x + this.velocity.x;
+				position.y = this.position.y + this.velocity.y;
 
-				this.position = this.isReachable({
-					x: posX,
-					y: posY
-				});
+				this.position = this.isReachable( position );
 			}
 		}
 	});
