@@ -28,10 +28,13 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 					height: 512,
 					effect: {
 						name: 'bounce',
-						duration: 1000,
 						offset: {
 							x: 100,
 							y: 100
+						},
+						velocity: {
+							x: 0.1,
+							y: 0.1
 						}
 					},
 					opacity: 0.3

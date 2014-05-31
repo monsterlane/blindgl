@@ -196,7 +196,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		moveToGoal: function( ) {
 			var pos;
 
-			if ( this.position.x == this.goal.x && this.position.y == this.goal.y ) {
+			if ( parseInt( this.position.x, 10 ) == this.goal.x && parseInt( this.position.y, 10 ) == this.goal.y ) {
 				this.reachedGoal( );
 			}
 			else {
@@ -222,8 +222,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 					this.velocity.y = 0;
 				}
 
-				posX = this.position.x + Math.round( this.velocity.x );
-				posY = this.position.y + Math.round( this.velocity.y );
+				posX = this.position.x + this.velocity.x;
+				posY = this.position.y + this.velocity.y;
 
 				this.position = this.isReachable({
 					x: posX,

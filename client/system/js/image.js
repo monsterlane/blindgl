@@ -33,8 +33,8 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 					this.height += this.effect.offset.y;
 
 					this.maxVelocity = {
-						x: 1,
-						y: 1
+						x: this.effect.velocity.x,
+						y: this.effect.velocity.y
 					};
 				}
 			}
