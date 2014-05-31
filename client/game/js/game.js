@@ -90,23 +90,23 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'none',
+							collide: 'wall',
 							effect: null
 						},
 						{
-							collide: 'none',
+							collide: 'wall',
 							effect: null
 						},
 						{
-							collide: 'none',
+							collide: 'wall',
 							effect: null
 						},
 						{
-							collide: 'none',
+							collide: 'wall',
 							effect: null
 						},
 						{
-							collide: 'none',
+							collide: 'wall',
 							effect: null
 						},
 						{

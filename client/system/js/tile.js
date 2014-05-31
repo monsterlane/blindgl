@@ -143,7 +143,7 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 		 */
 
 		init: function( aOptions ) {
-			var options = aOptions || { type: 'N' };
+			var options = aOptions || { collide: 'none' };
 
 			this.friction = [ 1, 1 ];
 			this.interactions = [ ];
