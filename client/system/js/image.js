@@ -31,6 +31,11 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 				if ( this.effect.name == 'bounce' ) {
 					this.width += this.effect.offset.x;
 					this.height += this.effect.offset.y;
+
+					this.maxVelocity = {
+						x: 1,
+						y: 1
+					};
 				}
 			}
 			else {

@@ -203,20 +203,20 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				this.faceGoal( );
 
 				if ( this.position.x < this.goal.x ) {
-					this.velocity.x = 1;
+					this.velocity.x = this.maxVelocity.x;
 				}
 				else if ( this.position.x > this.goal.x ) {
-					this.velocity.x = -1;
+					this.velocity.x = -( this.maxVelocity.x );
 				}
 				else {
 					this.velocity.x = 0;
 				}
 
 				if ( this.position.y < this.goal.y ) {
-					this.velocity.y = 1;
+					this.velocity.y = this.maxVelocity.y;
 				}
 				else if ( this.position.y > this.goal.y ) {
-					this.velocity.y = -1;
+					this.velocity.y = -( this.maxVelocity.y );
 				}
 				else {
 					this.velocity.y = 0;
