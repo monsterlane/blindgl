@@ -27,12 +27,12 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 			this.effect = null;
 
-			if ( image.hasOwnProperty( 'effect' ) == true ) {
+			if ( image.hasOwnProperty( 'effect' ) == true && image.effect != null && typeof image.effect === 'object' ) {
 				this.effect = image.effect;
 
-				if ( this.effect == 'bounce' ) {
-					this.width += 100;
-					this.height += 100;
+				if ( this.effect.name == 'bounce' ) {
+					this.width += this.effect.offset.x;
+					this.height += this.effect.offset.y;
 				}
 			}
 
@@ -60,7 +60,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 					this.layer.bufferContext.globalAlpha = this.opacity;
 				}
 
-				if ( this.effect == 'repeat' || this.effect == 'bounce' ) {
+				if ( this.effect && ( this.effect.name == 'repeat' || this.effect.name == 'bounce' ) ) {
 					this.layer.bufferContext.clearRect( 0, 0, this.layer.width, this.layer.height );
 
 					pattern = this.layer.bufferContext.createPattern( this.element, 'repeat' );
@@ -88,22 +88,25 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		 */
 
 		think: function( ) {
-			var minX = 0,
-				maxX = 100,
-				minY = 0,
-				maxY = 100,
+			var minX, maxX,
+				minY, maxY,
 				posX, posY;
 
 			this._super( );
 
-			if ( this.effect == 'bounce' ) {
+			if ( this.effect && this.effect.name == 'bounce' ) {
+				minX = 0;
+				minY = 0;
+				maxX = this.effect.offset.x;
+				maxY = this.effect.offset.y;
+
 				if ( this.goal == null ) {
 					posX = Math.floor( Math.random( ) * ( maxX - minX + 1 ) ) + minX;
 					posY = Math.floor( Math.random( ) * ( maxY - minY + 1 ) ) + minY;
 
 					this.setGoal({
-						x: posX - 100,
-						y: posY - 100,
+						x: posX - this.effect.offset.x,
+						y: posY - this.effect.offset.y,
 					});
 				}
 				else {

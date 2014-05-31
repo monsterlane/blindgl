@@ -26,7 +26,14 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 					fileUrl: 'game/img/world/weather/fog.png',
 					width: 512,
 					height: 512,
-					effect: 'bounce',
+					effect: {
+						name: 'bounce',
+						duration: 1000,
+						offset: {
+							x: 100,
+							y: 100
+						}
+					},
 					opacity: 0.3
 				},
 				spawn: {
