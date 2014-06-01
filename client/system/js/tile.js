@@ -317,6 +317,11 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 			this.background = null;
 			this.foreground = null;
 			this.entities = [ ];
+
+			this.spawn = {
+				x: 0,
+				y: 0
+			};
 		},
 
 		/**
@@ -341,6 +346,10 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 
 			if ( tile.hasOwnProperty( 'entities' ) === true ) {
 				this.loadEntities( tile.entities );
+			}
+
+			if ( tile.hasOwnProperty( 'spawn' ) === true ) {
+				this.spawn = tile.spawn;
 			}
 		},
 
