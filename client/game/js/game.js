@@ -40,7 +40,7 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 					opacity: 0.3
 				},
 				spawn: {
-					x: 166,
+					x: 169,
 					y: 150
 				},
 				grid: [

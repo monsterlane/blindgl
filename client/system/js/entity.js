@@ -257,6 +257,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		isReachable: function( aPosition ) {
 			var position = aPosition,
+				offset = 1,
 				tileX, tileY,
 				tilePosition;
 
@@ -278,42 +279,42 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				tilePosition = { };
 
 				if ( this.velocity.x > 0 ) {
-					tileX = Math.floor( ( position.x + this.bbox[ 0 ] ) / 16 );
-					tileY = Math.floor( this.position.y / 16 );
+					tileX = Math.floor( ( position.x + this.bbox[ 0 ] - offset ) / 16 );
+					tileY = Math.floor( ( this.position.y - offset ) / 16 );
 
-					tilePosition.x = Math.round( position.x + this.bbox[ 0 ] - ( tileX * 16 ) );
-					tilePosition.y = Math.round( this.position.y - ( tileY * 16 ) );
+					tilePosition.x = Math.round( position.x + this.bbox[ 0 ] - offset - ( tileX * 16 ) );
+					tilePosition.y = Math.round( this.position.y - offset - ( tileY * 16 ) );
 
 					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( tilePosition ) === false ) {
 						position.x = this.position.x;
 					}
 
-					tileX = Math.floor( ( position.x + this.bbox[ 0 ] ) / 16 );
-					tileY = Math.floor( ( this.position.y + this.bbox[ 1 ] ) / 16 );
+					tileX = Math.floor( ( position.x + this.bbox[ 0 ] - offset ) / 16 );
+					tileY = Math.floor( ( this.position.y + this.bbox[ 1 ] - offset ) / 16 );
 
-					tilePosition.x = Math.round( position.x + this.bbox[ 0 ] - ( tileX * 16 ) );
-					tilePosition.y = Math.round( this.position.y + this.bbox[ 1 ] - ( tileY * 16 ) );
+					tilePosition.x = Math.round( position.x + this.bbox[ 0 ] - offset - ( tileX * 16 ) );
+					tilePosition.y = Math.round( this.position.y + this.bbox[ 1 ] - offset - ( tileY * 16 ) );
 
 					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( tilePosition ) === false ) {
 						position.x = this.position.x;
 					}
 				}
 				else if ( this.velocity.x < 0 ) {
-					tileX = Math.floor( position.x / 16 );
-					tileY = Math.floor( this.position.y / 16 );
+					tileX = Math.floor( ( position.x + offset ) / 16 );
+					tileY = Math.floor( ( this.position.y + offset ) / 16 );
 
-					tilePosition.x = Math.round( position.x - ( tileX * 16 ) );
-					tilePosition.y = Math.round( this.position.y - ( tileY * 16 ) );
+					tilePosition.x = Math.round( position.x + offset - ( tileX * 16 ) );
+					tilePosition.y = Math.round( this.position.y + offset - ( tileY * 16 ) );
 
 					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( tilePosition ) === false ) {
 						position.x = this.position.x;
 					}
 
-					tileX = Math.floor( position.x / 16 );
-					tileY = Math.floor( ( this.position.y + this.bbox[ 1 ] ) / 16 );
+					tileX = Math.floor( ( position.x + offset ) / 16 );
+					tileY = Math.floor( ( this.position.y - offset + this.bbox[ 1 ] ) / 16 );
 
-					tilePosition.x = Math.round( position.x - ( tileX * 16 ) );
-					tilePosition.y = Math.round( this.position.y + this.bbox[ 1 ] - ( tileY * 16 ) );
+					tilePosition.x = Math.round( position.x + offset - ( tileX * 16 ) );
+					tilePosition.y = Math.round( this.position.y - offset + this.bbox[ 1 ] - ( tileY * 16 ) );
 
 					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( tilePosition ) === false ) {
 						position.x = this.position.x;
@@ -321,42 +322,42 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				}
 
 				if ( this.velocity.y > 0 ) {
-					tileX = Math.floor( this.position.x / 16 );
-					tileY = Math.floor( ( position.y + this.bbox[ 1 ] ) / 16 );
+					tileX = Math.floor( ( this.position.x + offset ) / 16 );
+					tileY = Math.floor( ( position.y + this.bbox[ 1 ] - offset ) / 16 );
 
-					tilePosition.x = Math.round( this.position.x - ( tileX * 16 ) );
-					tilePosition.y = Math.round( position.y + this.bbox[ 1 ] - ( tileY * 16 ) );
+					tilePosition.x = Math.round( this.position.x + offset - ( tileX * 16 ) );
+					tilePosition.y = Math.round( position.y + this.bbox[ 1 ] - offset - ( tileY * 16 ) );
 
 					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( tilePosition ) === false ) {
 						position.y = this.position.y;
 					}
 
-					tileX = Math.floor( ( this.position.x + this.bbox[ 0 ] ) / 16 );
-					tileY = Math.floor( ( position.y + this.bbox[ 1 ] ) / 16 );
+					tileX = Math.floor( ( this.position.x + this.bbox[ 0 ] - offset ) / 16 );
+					tileY = Math.floor( ( position.y + this.bbox[ 1 ] - offset ) / 16 );
 
-					tilePosition.x = Math.round( this.position.x + this.bbox[ 0 ] - ( tileX * 16 ) );
-					tilePosition.y = Math.round( position.y + this.bbox[ 1 ] - ( tileY * 16 ) );
+					tilePosition.x = Math.round( this.position.x + this.bbox[ 0 ] - offset - ( tileX * 16 ) );
+					tilePosition.y = Math.round( position.y + this.bbox[ 1 ] - offset - ( tileY * 16 ) );
 
 					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( tilePosition ) === false ) {
 						position.y = this.position.y;
 					}
 				}
 				else if ( this.velocity.y < 0 ) {
-					tileX = Math.floor( this.position.x / 16 );
-					tileY = Math.floor( position.y / 16 );
+					tileX = Math.floor( ( this.position.x + offset ) / 16 );
+					tileY = Math.floor( ( position.y + offset ) / 16 );
 
-					tilePosition.x = Math.round( this.position.x - ( tileX * 16 ) );
-					tilePosition.y = Math.round( position.y - ( tileY * 16 ) );
+					tilePosition.x = Math.round( this.position.x + offset - ( tileX * 16 ) );
+					tilePosition.y = Math.round( position.y + offset - ( tileY * 16 ) );
 
 					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( tilePosition ) === false ) {
 						position.y = this.position.y;
 					}
 
-					tileX = Math.floor( ( this.position.x + this.bbox[ 0 ] ) / 16 );
-					tileY = Math.floor( position.y / 16 );
+					tileX = Math.floor( ( this.position.x + this.bbox[ 0 ] - offset ) / 16 );
+					tileY = Math.floor( ( position.y + offset ) / 16 );
 
-					tilePosition.x = Math.round( this.position.x + this.bbox[ 0 ] - ( tileX * 16 ) );
-					tilePosition.y = Math.round( position.y - ( tileY * 16 ) );
+					tilePosition.x = Math.round( this.position.x + this.bbox[ 0 ] - offset - ( tileX * 16 ) );
+					tilePosition.y = Math.round( position.y + offset - ( tileY * 16 ) );
 
 					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( tilePosition ) === false ) {
 						position.y = this.position.y;
