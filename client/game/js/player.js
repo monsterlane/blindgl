@@ -400,7 +400,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			this._super( aOptions );
 
 			this.solid = GLOBAL.solid.bbox;
-			this.bbox = [ 16, 24 ];
+			this.bbox = [ 16, 16 ];
 
 			this.maxVelocity = {
 				x: 0.75,

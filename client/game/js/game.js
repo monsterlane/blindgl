@@ -33,8 +33,8 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							y: 100
 						},
 						velocity: {
-							x: 0.1,
-							y: 0.1
+							x: 0.15,
+							y: 0.15
 						}
 					},
 					opacity: 0.3

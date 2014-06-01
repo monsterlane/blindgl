@@ -237,7 +237,13 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 
 				if ( draw === true ) {
 					posX = Math.round( this.position.x + this.animation.framePosition.x );
-					posY = Math.round( this.position.y + this.animation.framePosition.y );
+
+					if ( this.solid === GLOBAL.solid.bbox ) {
+						posY = Math.round( this.position.y + this.animation.framePosition.y - ( this.animation.frameHeight - this.bbox[ 1 ] ) );
+					}
+					else {
+						posY = Math.round( this.position.y + this.animation.framePosition.y );
+					}
 
 					this.layer.bufferContext.clearRect( this.lastPosition.x, this.lastPosition.y, this.lastSize.width, this.lastSize.height );
 					this.layer.bufferContext.drawImage( this.currentImage, this.animation.frameWidth * this.currentFrame, 0, this.animation.frameWidth, this.animation.frameHeight, posX, posY, this.animation.frameWidth, this.animation.frameHeight );
