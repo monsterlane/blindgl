@@ -8,22 +8,23 @@ body {
 	background-color:#DADADA;
 }
 
-#bglWindow {
-	text-align:center;
+#bglInterface {
+	margin:2em auto;
 }
-	#bglWindow > table {
-		margin:2em auto 0 auto;
+	#bglInterface > table {
+		width:100%;
+		height:100%;
 		border:none;
 		table-layout:fixed;
 		border-collapse:collapse;
 		outline:1px solid #666;
 	}
-		#bglWindow > table > tbody > tr {
+		#bglInterface > table > tbody > tr {
 			display:block;
 			vertical-align:top;
 			height:16px;
 		}
-			#bglWindow > table > tbody > tr > td {
+			#bglInterface > table > tbody > tr > td {
 				display:inline-block;
 				width:16px;
 				height:16px;
@@ -32,7 +33,7 @@ body {
 				overflow:hidden;
 				vertical-align:top;
 			}
-				#bglWindow > table > tbody > tr > td > input[type=text] {
+				#bglInterface > table > tbody > tr > td > input[type=text] {
 					width:16px;
 					height:16px;
 					padding:0;
@@ -44,21 +45,29 @@ body {
 					text-align:center;
 					opacity:0.2;
 				}
-					#bglWindow > table > tbody > tr > td > input[type=text]:focus {
+					#bglInterface > table > tbody > tr > td > input[type=text]:focus {
 						opacity:0.6;
 					}
 
-	#bglWindow > textarea {
-		display:block;
-		margin:1em auto 0 auto;
+	#bglInterface > fieldset {
+		position:relative;
+		margin:1em 0;
+	}
+		#bglInterface > fieldset > table > tbody > tr > td {
+			padding:0.25em 1em 0.25em 0;
+		}
+		#bglInterface > fieldset > button {
+			position:absolute;
+			top:0; right:0.5em;
+			text-align:center;
+			padding:1em 2em;
+			border:1px solid #666;
+		}
+
+	#bglInterface > textarea {
+		display:none;
+		width:100%;
+		height:64px;
 		border:none;
 		outline:1px solid #666;
-	}
-
-	#bglWindow > button {
-		display:inline-block;
-		text-align:center;
-		padding:1em 2em;
-		margin:1em 0 2em 0;
-		border:1px solid #666;
 	}

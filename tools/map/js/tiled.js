@@ -12,24 +12,16 @@ define( [ 'class' ], function( ) {
 		 */
 
 		init: function( ) {
-			var el = document.getElementById( 'bglWindow' ),
+			var gui = document.getElementById( 'bglInterface' ),
+				tbody = document.getElementById( 'bglTiledCells' ),
 				frag = document.createDocumentFragment( ),
-				table, tbody, tr, td, input,
+				tr, td, input,
 				button, textarea,
 				i, len1, j, len2,
 				self = this;
 
-			table = document.createElement( 'table' );
-			table.setAttribute( 'width', 1024 );
-			table.setAttribute( 'height', 768 );
-			table.setAttribute( 'cellpadding', 0 );
-			table.setAttribute( 'cellspacing', 0 );
-			table.setAttribute( 'border', 0 );
-			table.style.backgroundImage = "url('img/0-0.png')";
-			frag.appendChild( table );
-
-			tbody = document.createElement( 'tbody' );
-			table.appendChild( tbody );
+			gui.style.width = '1024px';
+			tbody.style.backgroundImage = "url('img/0-0.png')";
 
 			for ( i = 0, len1 = ( 768 / 16 ); i < len1; i++ ) {
 				tr = document.createElement( 'tr' );
@@ -41,66 +33,127 @@ define( [ 'class' ], function( ) {
 					input = document.createElement( 'input' );
 					input.setAttribute( 'type', 'text' );
 					td.appendChild( input );
+
+					input.addEventListener( 'focus', function( ) {
+						this.select( );
+					}, true );
+
+					input.addEventListener( 'keyup', function( ) {
+						if ( this.value !== '' ) {
+							this.value = this.value.toUpperCase( );
+
+							if ( this.parentNode.nextSibling != null ) {
+								this.parentNode.nextSibling.firstChild.focus( );
+							}
+							else if ( this.parentNode.parentNode.nextSibling != null ) {
+								this.parentNode.parentNode.nextSibling.firstChild.firstChild.focus( );
+							}
+						}
+					}, true );
 				}
 
-				tbody.appendChild( tr );
+				frag.appendChild( tr );
 			}
 
-			textarea = document.createElement( 'textarea' );
-			textarea.style.width = '1024px';
-			textarea.style.height = '64px';
+			tbody.appendChild( frag );
 
-			frag.appendChild( textarea );
-
-			button = document.createElement( 'button' );
-			button.setAttribute( 'type', 'button' );
-			button.innerHTML = 'Generate Collision Map';
-
-			button.addEventListener( 'click', function( aEvent ) {
+			document.getElementById( 'bglTiledGenerateButton' ).addEventListener( 'click', function( aEvent ) {
 				aEvent.preventDefault( );
-				self.generateGrid( table, textarea );
+				self.generateGrid( );
 			}, true );
-
-			frag.appendChild( button );
-
-			el.appendChild( frag );
 		},
 
 		/**
 		 * Method: generateGrid
-		 * @param {DOMelement} aData
-		 * @param {DOMelement} aOutput
 		 */
 
-		generateGrid: function( aData, aOutput ) {
-			var data = aData.firstChild,
-				output = aOutput,
-				str = [ ], input, type,
+		generateGrid: function( ) {
+			var data = document.getElementById( 'bglTiledCells' ),
+				output = document.getElementById( 'bglTiledOutput' ),
+				str = [ ],
+				input, type, effect,
 				i, len1, j, len2;
 
 			for ( i = 0, len1 = data.childNodes.length; i < len1; i++ ) {
 				str.push( '[' );
 
 				for ( j = 0, len2 = data.childNodes[ i ].childNodes.length; j < len2; j++ ) {
-					input = data.childNodes[ i ].childNodes[ j ].childNodes[ 0 ].value;
+					input = data.childNodes[ i ].childNodes[ j ].childNodes[ 0 ];
+					effect = 'null';
 
 					if ( input.value === 'O' ) {
 						type = 'none';
 					}
-					else {
+					else if ( input.value === 'X' ) {
 						type = 'wall';
+					}
+					else if ( input.value === 'T' ) {
+						type = 'topHalfOpen';
+					}
+					else if ( input.value === 'B' ) {
+						type = 'bottomHalfOpen';
+					}
+					else if ( input.value === 'L' ) {
+						type = 'leftHalfOpen';
+					}
+					else if ( input.value === 'R' ) {
+						type = 'rightHalfOpen';
+					}
+					else if ( input.value === 'V' ) {
+						type = 'angleTopRight';
+					}
+					else if ( input.value === 'C' ) {
+						type = 'angleTopLeft';
+					}
+					else if ( input.value === 'M' ) {
+						type = 'angleBottomRight';
+					}
+					else if ( input.value === 'N' ) {
+						type = 'angleBottomLeft';
+					}
+					else if ( input.value === 'G' ) {
+						type = 'none';
+
+						effect = 'grass';
+					}
+					else if ( input.value === 'W' ) {
+						type = 'none';
+
+						effect = 'shallowWater';
+					}
+					else if ( input.value === 'D' ) {
+						type = 'none';
+
+						effect = 'deepWater';
+					}
+					else {
+						input.focus( );
+						return;
 					}
 
 					str.push( '	{' );
-					str.push( '	collide: \'' + type + '\',' );
-					str.push( '	effect:null' );
-					str.push( '},' );
+					str.push( '		collide: \'' + type + '\',' );
+					str.push( '		effect: ' + effect );
+
+					if ( j + 1 < len2 ) {
+						str.push( '	},' );
+					}
+					else {
+						str.push( '	}' );
+					}
 				}
 
-				str.push( ']' );
+				if ( i + 1 < len1 ) {
+					str.push( '],' );
+				}
+				else {
+					str.push( ']' );
+				}
 			}
 
 			output.value = str.join( "\n" );
+
+			output.style.display = 'block';
 		}
 	});
 

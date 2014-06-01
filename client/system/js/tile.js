@@ -8,6 +8,82 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 	 * Constants
 	 */
 
+	var TOP_HALF_OPEN = [
+		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
+		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
+		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
+		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
+		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
+		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
+		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
+		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
+		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
+		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
+		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
+		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
+		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
+		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
+		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
+		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ]
+	];
+
+	var BOTTOM_HALF_OPEN = [
+		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
+		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
+		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
+		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
+		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
+		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
+		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
+		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
+		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
+		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
+		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
+		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
+		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
+		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
+		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
+		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ]
+	];
+
+	var RIGHT_HALF_OPEN = [
+		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
+		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
+		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
+		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
+		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
+		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
+		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
+		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
+		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
+		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
+		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
+		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
+		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
+		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
+		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
+		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ]
+	];
+
+	var LEFT_HALF_OPEN = [
+		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
+		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
+		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
+		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
+		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
+		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
+		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
+		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
+		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
+		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
+		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
+		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
+		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
+		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
+		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
+		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ]
+	];
+
 	var ANGLE_TOP_LEFT = [
 		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false ],
 		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, false ],
@@ -92,14 +168,52 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 		return false;
 	}
 
-	function collideAngleTopLeft( aPosition ) {
+	function collideTopHalfOpen( aPosition ) {
 		var x = Math.round( aPosition.x ),
 			y = Math.round( aPosition.y );
 
 		if ( x !== 0 ) { x = Math.abs( x ) - 1; }
 		if ( y !== 0 ) { y = Math.abs( y ) - 1; }
 
-console.log( x + ' | ' + y );
+		return TOP_HALF_OPEN[ y ][ x ];
+	}
+
+	function collideBottomHalfOpen( aPosition ) {
+		var x = Math.round( aPosition.x ),
+			y = Math.round( aPosition.y );
+
+		if ( x !== 0 ) { x = Math.abs( x ) - 1; }
+		if ( y !== 0 ) { y = Math.abs( y ) - 1; }
+
+		return BOTTOM_HALF_OPEN[ y ][ x ];
+	}
+
+	function collideRightHalfOpen( aPosition ) {
+		var x = Math.round( aPosition.x ),
+			y = Math.round( aPosition.y );
+
+		if ( x !== 0 ) { x = Math.abs( x ) - 1; }
+		if ( y !== 0 ) { y = Math.abs( y ) - 1; }
+
+		return RIGHT_HALF_OPEN[ y ][ x ];
+	}
+
+	function collideLeftHalfOpen( aPosition ) {
+		var x = Math.round( aPosition.x ),
+			y = Math.round( aPosition.y );
+
+		if ( x !== 0 ) { x = Math.abs( x ) - 1; }
+		if ( y !== 0 ) { y = Math.abs( y ) - 1; }
+
+		return LEFT_HALF_OPEN[ y ][ x ];
+	}
+
+	function collideAngleTopLeft( aPosition ) {
+		var x = Math.round( aPosition.x ),
+			y = Math.round( aPosition.y );
+
+		if ( x !== 0 ) { x = Math.abs( x ) - 1; }
+		if ( y !== 0 ) { y = Math.abs( y ) - 1; }
 
 		return ANGLE_TOP_LEFT[ y ][ x ];
 	}
@@ -145,7 +259,7 @@ console.log( x + ' | ' + y );
 		 */
 
 		init: function( aOptions ) {
-			var options = aOptions || { collide: 'none' };
+			var options = aOptions || { collide: 'none', effect: null };
 
 			this.friction = [ 1, 1 ];
 			this.interactions = [ ];
@@ -153,29 +267,29 @@ console.log( x + ' | ' + y );
 			if ( options.collide === 'none' ) {
 				this.isReachable = collideNone;
 			}
-			else if ( options.collide === 'topRight' ) {
+			else if ( options.collide === 'angleTopRight' ) {
 				this.isReachable = collideAngleTopRight;
 			}
-			else if ( options.collide === 'topLeft' ) {
+			else if ( options.collide === 'angleTopLeft' ) {
 				this.isReachable = collideAngleTopLeft;
 			}
-			else if ( options.collide === 'bottomRight' ) {
+			else if ( options.collide === 'angleBottomRight' ) {
 				this.isReachable = collideAngleBottomRight;
 			}
-			else if ( options.collide === 'bottomLeft' ) {
+			else if ( options.collide === 'angleBottomLeft' ) {
 				this.isReachable = collideAngleBottomLeft;
 			}
-			else if ( options.collide === 'top' ) {
-				this.isReachable = collideWall;
+			else if ( options.collide === 'topHalfOpen' ) {
+				this.isReachable = collideTopHalfOpen;
 			}
-			else if ( options.collide === 'right' ) {
-				this.isReachable = collideWall;
+			else if ( options.collide === 'bottomHalfOpen' ) {
+				this.isReachable = collideBottomHalfOpen;
 			}
-			else if ( options.collide === 'bottom' ) {
-				this.isReachable = collideWall;
+			else if ( options.collide === 'rightHalfOpen' ) {
+				this.isReachable = collideRightHalfOpen;
 			}
-			else if ( options.collide === 'left' ) {
-				this.isReachable = collideWall;
+			else if ( options.collide === 'leftHalfOpen' ) {
+				this.isReachable = collideLeftHalfOpen;
 			}
 			else {
 				this.isReachable = collideWall;

@@ -18,7 +18,72 @@
 <body>
 
 <article id="bglWindow">
+	<section id="bglInterface">
+		<header>
+			<hgroup>
+				<h1>Tiled</h1>
+			</hgroup>
+		</header>
 
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tbody id="bglTiledCells"></tbody>
+		</table>
+
+		<fieldset>
+			<legend>Legend</legend>
+
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr>
+						<td>O</td>
+						<td>- open</td>
+						<td>X</td>
+						<td>- wall</td>
+					</tr>
+					<tr>
+						<td>T</td>
+						<td>- top half open</td>
+						<td>B</td>
+						<td>- bottom half open</td>
+					</tr>
+					<tr>
+						<td>R</td>
+						<td>- right half open</td>
+						<td>L</td>
+						<td>- left half open</td>
+					</tr>
+					<tr>
+						<td>C</td>
+						<td>- angle top left open</td>
+						<td>V</td>
+						<td>- angle top right open</td>
+					</tr>
+					<tr>
+						<td>N</td>
+						<td>- angle bottom left open</td>
+						<td>M</td>
+						<td>- angle bottom right open</td>
+					</tr>
+					<tr>
+						<td>W</td>
+						<td>- shallow water</td>
+						<td>D</td>
+						<td>- deep water</td>
+					</tr>
+					<tr>
+						<td>G</td>
+						<td>- grass</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<button id="bglTiledGenerateButton">Generate Tile Data</button>
+		</fieldset>
+
+		<textarea id="bglTiledOutput"></textarea>
+	</section>
 </article>
 
 </body>
