@@ -99,6 +99,8 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 		if ( x !== 0 ) { x = Math.abs( x ) - 1; }
 		if ( y !== 0 ) { y = Math.abs( y ) - 1; }
 
+console.log( x + ' | ' + y );
+
 		return ANGLE_TOP_LEFT[ y ][ x ];
 	}
 

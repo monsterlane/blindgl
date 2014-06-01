@@ -130,7 +130,19 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'none',
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
 							effect: null
 						},
 						{
@@ -194,7 +206,51 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
 							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
 							effect: null
 						},
 						{
@@ -234,71 +290,15 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'none',
+							collide: 'wall',
 							effect: null
 						},
 						{
-							collide: 'none',
+							collide: 'wall',
 							effect: null
 						},
 						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
+							collide: 'wall',
 							effect: null
 						}
 					],
@@ -348,7 +348,75 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
 							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
 							effect: null
 						},
 						{
@@ -476,87 +544,19 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'none',
+							collide: 'topLeft',
 							effect: null
 						},
 						{
-							collide: 'none',
+							collide: 'wall',
 							effect: null
 						},
 						{
-							collide: 'none',
+							collide: 'wall',
 							effect: null
 						},
 						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
+							collide: 'wall',
 							effect: null
 						}
 					],
