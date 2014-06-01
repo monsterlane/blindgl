@@ -26,8 +26,8 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				frameHeight: 24,
 				frameCount: 1,
 				framePosition: {
-					x: 0,
-					y: 0
+					x: -3,
+					y: -22
 				}
 			});
 
@@ -39,8 +39,8 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				frameHeight: 24,
 				frameCount: 1,
 				framePosition: {
-					x: 0,
-					y: 0
+					x: -3,
+					y: -22
 				}
 			});
 
@@ -52,8 +52,8 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				frameHeight: 24,
 				frameCount: 1,
 				framePosition: {
-					x: 0,
-					y: 0
+					x: -3,
+					y: -22
 				}
 			});
 
@@ -65,8 +65,8 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				frameHeight: 24,
 				frameCount: 1,
 				framePosition: {
-					x: 0,
-					y: 0
+					x: -3,
+					y: -22
 				}
 			});
 
@@ -78,8 +78,8 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				frameHeight: 24,
 				frameCount: 7,
 				framePosition: {
-					x: 0,
-					y: 0
+					x: -3,
+					y: -22
 				},
 				timeBetweenFrames: 50
 			});
@@ -92,8 +92,8 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				frameHeight: 24,
 				frameCount: 7,
 				framePosition: {
-					x: 0,
-					y: 0
+					x: -3,
+					y: -22
 				},
 				timeBetweenFrames: 50
 			});
@@ -106,8 +106,8 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				frameHeight: 24,
 				frameCount: 8,
 				framePosition: {
-					x: 0,
-					y: 0
+					x: -3,
+					y: -22
 				},
 				timeBetweenFrames: 50
 			});
@@ -120,8 +120,8 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				frameHeight: 24,
 				frameCount: 8,
 				framePosition: {
-					x: 0,
-					y: 0
+					x: -3,
+					y: -22
 				},
 				timeBetweenFrames: 50
 			});
@@ -134,8 +134,8 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				frameHeight: 34,
 				frameCount: 6,
 				framePosition: {
-					x: -11,
-					y: -10
+					x: -13,
+					y: -32
 				},
 				timeBetweenFrames: 40,
 				complete: function( ) {
@@ -151,8 +151,8 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				frameHeight: 30,
 				frameCount: 5,
 				framePosition: {
-					x: -4,
-					y: 1
+					x: -8,
+					y: -23
 				},
 				timeBetweenFrames: 40,
 				complete: function( ) {
@@ -168,8 +168,8 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				frameHeight: 38,
 				frameCount: 6,
 				framePosition: {
-					x: -12,
-					y: -5
+					x: -15,
+					y: -27
 				},
 				timeBetweenFrames: 40,
 				complete: function( ) {
@@ -185,8 +185,8 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 				frameHeight: 38,
 				frameCount: 6,
 				framePosition: {
-					x: -2,
-					y: -5
+					x: -3,
+					y: -27
 				},
 				timeBetweenFrames: 40,
 				complete: function( ) {

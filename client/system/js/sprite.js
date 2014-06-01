@@ -239,7 +239,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 					posX = Math.round( this.position.x + this.animation.framePosition.x );
 
 					if ( this.solid === GLOBAL.solid.bbox ) {
-						posY = Math.round( this.position.y + this.animation.framePosition.y - ( this.animation.frameHeight - this.bbox[ 1 ] ) );
+						posY = Math.round( this.position.y + this.animation.framePosition.y + this.bbox[ 1 ] );
 					}
 					else {
 						posY = Math.round( this.position.y + this.animation.framePosition.y );
