@@ -1,5 +1,5 @@
 
-define( [ 'global', 'sprite', 'class' ], function( aGlobal, aSprite ) {
+define( [ 'global', 'vector', 'sprite', 'class' ], function( aGlobal, aVector, aSprite ) {
 	'use strict';
 
 	var GLOBAL = new aGlobal( );
@@ -36,13 +36,15 @@ define( [ 'global', 'sprite', 'class' ], function( aGlobal, aSprite ) {
 		 */
 
 		updatePosition: function( ) {
-			var position = { };
+			var position;
 
 			this._super( );
 
 			if ( this.goal === null ) {
-				position.x = this.position.x + this.velocity.x;
-				position.y = this.position.y + this.velocity.y;
+				position = new aVector({
+					x: this.position.x + this.velocity.x,
+					y: this.position.y + this.velocity.y
+				});
 
 				this.position = this.isReachable( position );
 			}

@@ -1,5 +1,5 @@
 
-define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
+define( [ 'global', 'vector', 'image', 'class' ], function( aGlobal, aVector, aImage ) {
 	'use strict';
 
 	var GLOBAL = new aGlobal( );
@@ -8,244 +8,12 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 	 * Constants
 	 */
 
-	var TOP_HALF_OPEN = [
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ]
-	];
-
-	var BOTTOM_HALF_OPEN = [
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ]
-	];
-
-	var RIGHT_HALF_OPEN = [
-		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ]
-	];
-
-	var LEFT_HALF_OPEN = [
-		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ]
-	];
-
-	var ANGLE_TOP_LEFT = [
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, false ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, false, false, false ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, true, true, true, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, true, true, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, true, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, false, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, false, false, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, false, false, false, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ true, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ]
-	];
-
-	var ANGLE_TOP_RIGHT = [
-		[ false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ false, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ false, false, false, true, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, true, true, true, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, true, true, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, true, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, false, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, false, false, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, false, false, false, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, true, true, true ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, true ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ]
-	];
-
-	var ANGLE_BOTTOM_LEFT = [
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ true, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, false, false, false, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, false, false, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, false, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, true, false, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, true, true, false, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, true, true, true, false, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, false, false, false, false ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, false, false, false ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, false ],
-		[ true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false ]
-	];
-
-	var ANGLE_BOTTOM_RIGHT = [
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, true ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, false, true, true, true ],
-		[ false, false, false, false, false, false, false, false, false, false, false, false, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, false, false, false, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, false, false, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, false, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, false, true, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, false, true, true, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, false, true, true, true, true, true, true, true, true, true, true, true ],
-		[ false, false, false, false, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ false, false, false, true, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ false, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true ],
-		[ false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ]
-	];
-
-	function collideNone( aPosition ) {
+	function collideNone( aEntity ) {
 		return true;
 	}
 
-	function collideWall( aPosition ) {
+	function collideWall( aEntity ) {
 		return false;
-	}
-
-	function collideTopHalfOpen( aPosition ) {
-		var x = Math.round( aPosition.x ),
-			y = Math.round( aPosition.y );
-
-		if ( x !== 0 ) { x = Math.abs( x ) - 1; }
-		if ( y !== 0 ) { y = Math.abs( y ) - 1; }
-
-		return TOP_HALF_OPEN[ y ][ x ];
-	}
-
-	function collideBottomHalfOpen( aPosition ) {
-		var x = Math.round( aPosition.x ),
-			y = Math.round( aPosition.y );
-
-		if ( x !== 0 ) { x = Math.abs( x ) - 1; }
-		if ( y !== 0 ) { y = Math.abs( y ) - 1; }
-
-		return BOTTOM_HALF_OPEN[ y ][ x ];
-	}
-
-	function collideRightHalfOpen( aPosition ) {
-		var x = Math.round( aPosition.x ),
-			y = Math.round( aPosition.y );
-
-		if ( x !== 0 ) { x = Math.abs( x ) - 1; }
-		if ( y !== 0 ) { y = Math.abs( y ) - 1; }
-
-		return RIGHT_HALF_OPEN[ y ][ x ];
-	}
-
-	function collideLeftHalfOpen( aPosition ) {
-		var x = Math.round( aPosition.x ),
-			y = Math.round( aPosition.y );
-
-		if ( x !== 0 ) { x = Math.abs( x ) - 1; }
-		if ( y !== 0 ) { y = Math.abs( y ) - 1; }
-
-		return LEFT_HALF_OPEN[ y ][ x ];
-	}
-
-	function collideAngleTopLeft( aPosition ) {
-		var x = Math.round( aPosition.x ),
-			y = Math.round( aPosition.y );
-
-		if ( x !== 0 ) { x = Math.abs( x ) - 1; }
-		if ( y !== 0 ) { y = Math.abs( y ) - 1; }
-
-		return ANGLE_TOP_LEFT[ y ][ x ];
-	}
-
-	function collideAngleTopRight( aPosition ) {
-		var x = Math.round( aPosition.x ),
-			y = Math.round( aPosition.y );
-
-		if ( x !== 0 ) { x = Math.abs( x ) - 1; }
-		if ( y !== 0 ) { y = Math.abs( y ) - 1; }
-
-		return ANGLE_TOP_RIGHT[ y ][ x ];
-	}
-
-	function collideAngleBottomLeft( aPosition ) {
-		var x = Math.round( aPosition.x ),
-			y = Math.round( aPosition.y );
-
-		if ( x !== 0 ) { x = Math.abs( x ) - 1; }
-		if ( y !== 0 ) { y = Math.abs( y ) - 1; }
-
-		return ANGLE_BOTTOM_LEFT[ y ][ x ];
-	}
-
-	function collideAngleBottomRight( aPosition ) {
-		var x = Math.round( aPosition.x ),
-			y = Math.round( aPosition.y );
-
-		if ( x !== 0 ) { x = Math.abs( x ) - 1; }
-		if ( y !== 0 ) { y = Math.abs( y ) - 1; }
-
-		return ANGLE_BOTTOM_RIGHT[ y ][ x ];
 	}
 
 	/**
@@ -259,8 +27,28 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 		 */
 
 		init: function( aOptions ) {
-			var options = aOptions || { collide: 'none', effect: null };
+			var pi180 = Math.PI / 180,
+				options = aOptions || {
+				row: 0,
+				index: 0,
+				collide: 'none',
+				effect: null
+			};
 
+			this.system = options.system;
+			this.game = options.game;
+
+			this.position = new aVector({
+				x: ( options.index * 16 ),
+				y: ( options.row * 16 )
+			});
+
+			this.angle = 0;
+			this.axes = [ ];
+			this.axes[ 0 ] = new aVector( 1, 0 );
+			this.axes[ 1 ] = new aVector( 0, -1 );
+
+			this.bbox = [ 16, 16 ];
 			this.friction = [ 1, 1 ];
 			this.interactions = [ ];
 
@@ -268,32 +56,78 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 				this.isReachable = collideNone;
 			}
 			else if ( options.collide === 'angleTopRight' ) {
-				this.isReachable = collideAngleTopRight;
+				this.bbox = [ 23, 2 ];
+				this.position.add({ x: -1, y: 0 });
+
+				this.axes[ 0 ].setAngle( 45 * pi180 );
+				this.axes[ 1 ].setAngle( 45 * pi180 );
 			}
 			else if ( options.collide === 'angleTopLeft' ) {
-				this.isReachable = collideAngleTopLeft;
+				this.bbox = [ 23, 2 ];
+				this.position.add({ x: 1, y: 0 });
+
+				this.axes[ 0 ].setAngle( 135 * pi180 );
+				this.axes[ 1 ].setAngle( 135 * pi180 );
 			}
 			else if ( options.collide === 'angleBottomRight' ) {
-				this.isReachable = collideAngleBottomRight;
+				this.bbox = [ 23, 2 ];
+				this.position.add({ x: -1, y: 0 });
+
+				this.axes[ 0 ].setAngle( 135 * pi180 );
+				this.axes[ 1 ].setAngle( 135 * pi180 );
 			}
 			else if ( options.collide === 'angleBottomLeft' ) {
-				this.isReachable = collideAngleBottomLeft;
+				this.bbox = [ 23, 2 ];
+				this.position.add({ x: 1, y: 0 });
+
+				this.axes[ 0 ].setAngle( 45 * pi180 );
+				this.axes[ 1 ].setAngle( 45 * pi180 );
 			}
 			else if ( options.collide === 'topHalfOpen' ) {
-				this.isReachable = collideTopHalfOpen;
+				this.bbox = [ 16, 8 ];
+
+				this.position.add({ x: 0, y: 8 });
 			}
 			else if ( options.collide === 'bottomHalfOpen' ) {
-				this.isReachable = collideBottomHalfOpen;
+				this.bbox = [ 16, 8 ];
 			}
 			else if ( options.collide === 'rightHalfOpen' ) {
-				this.isReachable = collideRightHalfOpen;
+				this.bbox = [ 8, 16 ];
 			}
 			else if ( options.collide === 'leftHalfOpen' ) {
-				this.isReachable = collideLeftHalfOpen;
+				this.bbox = [ 8, 16 ];
+
+				this.position.add({ x: 8, y: 0 });
 			}
 			else {
 				this.isReachable = collideWall;
 			}
+		},
+
+		/**
+		 * Method: isReachable
+		 * @param {Object} aEntity
+		 */
+
+		isReachable: function( aEntity ) {
+			var collision = aEntity.isColliding( this );
+
+			if ( collision === false ) {
+				this.touch( aEntity );
+
+				return true;
+			}
+
+			return false;
+		},
+
+		/**
+		 * Method: touch
+		 * @param {Object} aEntity
+		 */
+
+		touch: function( aEntity ) {
+			//
 		}
 	});
 
@@ -318,10 +152,7 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 			this.foreground = null;
 			this.entities = [ ];
 
-			this.spawn = {
-				x: 0,
-				y: 0
-			};
+			this.spawn = new aVector( );
 		},
 
 		/**
@@ -391,13 +222,20 @@ define( [ 'global', 'image', 'class' ], function( aGlobal, aImage ) {
 		 */
 
 		loadGrid: function( aGrid ) {
-			var i, len1, j, len2;
+			var cell, i, len1, j, len2;
 
 			this.grid = aGrid;
 
 			for ( i = 0, len1 = this.grid.length; i < len1; i++ ) {
 				for ( j = 0, len2 = this.grid[ i ].length; j < len2; j++ ) {
-					this.grid[ i ][ j ] = new Cell( this.grid[ i ][ j ] );
+					cell = this.grid[ i ][ j ];
+
+					cell.system = this.system;
+					cell.game = this.game;
+					cell.row = i;
+					cell.index = j;
+
+					this.grid[ i ][ j ] = new Cell( cell );
 				}
 			}
 		},

@@ -1,5 +1,5 @@
 
-define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
+define( [ 'global', 'entity', 'vector', 'class' ], function( aGlobal, aEntity, aVector ) {
 	'use strict';
 
 	var GLOBAL = new aGlobal( );
@@ -24,10 +24,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 			this.lastTick = Date.now( );
 			this.visible = false;
 
-			this.lastPosition = {
-				x: 0,
-				y: 0
-			};
+			this.lastPosition = new aVector( );
 
 			this.lastSize = {
 				width: 0,
@@ -44,10 +41,7 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 		 */
 
 		setPosition: function( aPosition ) {
-			this.lastPosition = {
-				x: this.position.x,
-				y: this.position.y
-			};
+			this.lastPosition = new aVector( this.position.x, this.position.y );
 
 			this._super( aPosition );
 		},

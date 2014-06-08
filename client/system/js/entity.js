@@ -1,5 +1,5 @@
 
-define( [ 'global', 'class' ], function( aGlobal ) {
+define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 	'use strict';
 
 	var GLOBAL = new aGlobal( );
@@ -18,32 +18,28 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			this.system = aOptions.system;
 			this.game = aOptions.game;
 			this.layer = null;
-
 			this.loading = 0;
 
-			this.position = {
-				x: 0,
-				y: 0
-			};
+			this.position = new aVector( );
+			this.velocity = new aVector( );
+			this.maxVelocity = new aVector( 1, 1 );
 
-			this.velocity = {
-				x: 0,
-				y: 0
-			};
+			this.angle = 0;
+			this.axes = [ ];
+			this.axes[ 0 ] = new aVector( 1, 0 );
+			this.axes[ 1 ] = new aVector( 0, -1 );
 
-			this.maxVelocity = {
-				x: 1,
-				y: 1
-			};
-
-			this.goal = null;
 			this.state = GLOBAL.ai.idle;
 			this.lastState = GLOBAL.ai.idle;
-			this.moveType = GLOBAL.moveType.none;
+			this.goal = null;
+
 			this.moving = false;
+			this.moveType = GLOBAL.moveType.none;
 			this.direction = GLOBAL.direction.down;
+
 			this.solid = GLOBAL.solid.none;
 			this.bbox = [ 0, 0 ];
+
 			this.sounds = { };
 			this.sound = null;
 
@@ -56,7 +52,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		setLayer: function( aLayer ) {
-			var layer = this.system.canvas.layers[ aLayer ] || this.system.canvas.layers[ GLOBAL.layer.middleground ];
+			var layer = this.system.canvas.layers[ aLayer ] || this.system.canvas.layers[ GLOBAL.video.layers.middleground ];
 
 			this.layer = layer;
 
@@ -69,10 +65,31 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		setPosition: function( aPosition ) {
-			var position = aPosition || { x: 0, y: 0 };
+			this.position = new aVector( aPosition );
+		},
 
-			this.position.x = position.x;
-			this.position.y = position.y;
+		/**
+		 * Method: rotate
+		 * @param {Int} aAngle
+		 */
+
+		rotate: function( aAngle ) {
+			var a = Number( aAngle ) || 0;
+
+			this.axes[ 0 ].rotate( a );
+			this.axes[ 1 ].rotate( a );
+		},
+
+		/**
+		 * Method: setAngle
+		 * @param {Int} aAngle
+		 */
+
+		setAngle: function( aAngle ) {
+			var a = Number( aAngle ) || 0;
+
+			this.axes[ 0 ].setAngle( a );
+			this.axes[ 1 ].setAngle( a );
 		},
 
 		/**
@@ -227,10 +244,10 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 				this.faceGoal( );
 
-				position = {
+				position = new aVector({
 					x: this.position.x + this.velocity.x,
 					y: this.position.y + this.velocity.y
-				};
+				});
 
 				this.position = this.isReachable( position );
 			}
@@ -243,8 +260,10 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		reachedGoal: function( ) {
 			this.goal = null;
 
-			this.velocity.x = 0;
-			this.velocity.y = 0;
+			this.velocity.set({
+				x: 0,
+				y: 0
+			});
 
 			this.setState( GLOBAL.ai.idle );
 		},
@@ -257,9 +276,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		isReachable: function( aPosition ) {
 			var position = aPosition,
-				offset = 1,
-				tileX, tileY,
-				tilePosition;
+				tileX, tileY;
 
 			if ( this.layer !== null && this.solid === GLOBAL.solid.bbox ) {
 				if ( position.x < 0 ) {
@@ -276,96 +293,126 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 					position.y = this.layer.height - this.bbox[ 1 ];
 				}
 
-				tilePosition = { };
-
 				if ( this.velocity.x > 0 ) {
-					tileX = Math.floor( ( position.x + this.bbox[ 0 ] - offset ) / 16 );
-					tileY = Math.floor( ( this.position.y - offset ) / 16 );
+					tileX = Math.floor( ( position.x + this.bbox[ 0 ] ) / 16 );
+					tileY = Math.floor( this.position.y / 16 );
 
-					tilePosition.x = Math.round( position.x + this.bbox[ 0 ] - offset - ( tileX * 16 ) );
-					tilePosition.y = Math.round( this.position.y - offset - ( tileY * 16 ) );
-
-					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( tilePosition ) === false ) {
+					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
 						position.x = this.position.x;
 					}
 
-					tileX = Math.floor( ( position.x + this.bbox[ 0 ] - offset ) / 16 );
-					tileY = Math.floor( ( this.position.y + this.bbox[ 1 ] - offset ) / 16 );
+					tileX = Math.floor( ( position.x + this.bbox[ 0 ] ) / 16 );
+					tileY = Math.floor( ( this.position.y + this.bbox[ 1 ] ) / 16 );
 
-					tilePosition.x = Math.round( position.x + this.bbox[ 0 ] - offset - ( tileX * 16 ) );
-					tilePosition.y = Math.round( this.position.y + this.bbox[ 1 ] - offset - ( tileY * 16 ) );
-
-					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( tilePosition ) === false ) {
+					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
 						position.x = this.position.x;
 					}
 				}
 				else if ( this.velocity.x < 0 ) {
-					tileX = Math.floor( ( position.x + offset ) / 16 );
-					tileY = Math.floor( ( this.position.y + offset ) / 16 );
+					tileX = Math.floor( position.x / 16 );
+					tileY = Math.floor( this.position.y / 16 );
 
-					tilePosition.x = Math.round( position.x + offset - ( tileX * 16 ) );
-					tilePosition.y = Math.round( this.position.y + offset - ( tileY * 16 ) );
-
-					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( tilePosition ) === false ) {
+					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
 						position.x = this.position.x;
 					}
 
-					tileX = Math.floor( ( position.x + offset ) / 16 );
-					tileY = Math.floor( ( this.position.y - offset + this.bbox[ 1 ] ) / 16 );
+					tileX = Math.floor( position.x / 16 );
+					tileY = Math.floor( ( this.position.y + this.bbox[ 1 ] ) / 16 );
 
-					tilePosition.x = Math.round( position.x + offset - ( tileX * 16 ) );
-					tilePosition.y = Math.round( this.position.y - offset + this.bbox[ 1 ] - ( tileY * 16 ) );
-
-					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( tilePosition ) === false ) {
+					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
 						position.x = this.position.x;
 					}
 				}
 
 				if ( this.velocity.y > 0 ) {
-					tileX = Math.floor( ( this.position.x + offset ) / 16 );
-					tileY = Math.floor( ( position.y + this.bbox[ 1 ] - offset ) / 16 );
+					tileX = Math.floor( this.position.x / 16 );
+					tileY = Math.floor( ( position.y + this.bbox[ 1 ] ) / 16 );
 
-					tilePosition.x = Math.round( this.position.x + offset - ( tileX * 16 ) );
-					tilePosition.y = Math.round( position.y + this.bbox[ 1 ] - offset - ( tileY * 16 ) );
-
-					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( tilePosition ) === false ) {
+					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
 						position.y = this.position.y;
 					}
 
-					tileX = Math.floor( ( this.position.x + this.bbox[ 0 ] - offset ) / 16 );
-					tileY = Math.floor( ( position.y + this.bbox[ 1 ] - offset ) / 16 );
+					tileX = Math.floor( ( this.position.x + this.bbox[ 0 ] ) / 16 );
+					tileY = Math.floor( ( position.y + this.bbox[ 1 ] ) / 16 );
 
-					tilePosition.x = Math.round( this.position.x + this.bbox[ 0 ] - offset - ( tileX * 16 ) );
-					tilePosition.y = Math.round( position.y + this.bbox[ 1 ] - offset - ( tileY * 16 ) );
-
-					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( tilePosition ) === false ) {
+					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
 						position.y = this.position.y;
 					}
 				}
 				else if ( this.velocity.y < 0 ) {
-					tileX = Math.floor( ( this.position.x + offset ) / 16 );
-					tileY = Math.floor( ( position.y + offset ) / 16 );
+					tileX = Math.floor( this.position.x / 16 );
+					tileY = Math.floor( position.y / 16 );
 
-					tilePosition.x = Math.round( this.position.x + offset - ( tileX * 16 ) );
-					tilePosition.y = Math.round( position.y + offset - ( tileY * 16 ) );
-
-					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( tilePosition ) === false ) {
+					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
 						position.y = this.position.y;
 					}
 
-					tileX = Math.floor( ( this.position.x + this.bbox[ 0 ] - offset ) / 16 );
-					tileY = Math.floor( ( position.y + offset ) / 16 );
+					tileX = Math.floor( ( this.position.x + this.bbox[ 0 ] ) / 16 );
+					tileY = Math.floor( position.y / 16 );
 
-					tilePosition.x = Math.round( this.position.x + this.bbox[ 0 ] - offset - ( tileX * 16 ) );
-					tilePosition.y = Math.round( position.y + offset - ( tileY * 16 ) );
-
-					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( tilePosition ) === false ) {
+					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
 						position.y = this.position.y;
 					}
 				}
 			}
 
 			return position;
+		},
+
+		/**
+		 * Method: isColliding
+		 */
+
+		isColliding: function( aEntity ) {
+			var t, s1, s2,
+				d = [ ],
+				ra = 0,
+				rb = 0;
+
+			t = new aVector( aEntity.position.x, aEntity.position.y );
+			t.subtract( this.position );
+
+			s1 = new aVector( t.dot( this.axes[ 0 ] ), t.dot( this.axes[ 1 ] ) );
+
+			t.set( this.position );
+			t.subtract( aEntity.position );
+
+			s2 = new aVector( t.dot( aEntity.axes[ 0 ] ), t.dot( aEntity.axes[ 1 ] ) );
+
+			d[ 0 ] = this.axes[ 0 ].dot( aEntity.axes[ 0 ] );
+			d[ 1 ] = this.axes[ 0 ].dot( aEntity.axes[ 1 ] );
+			d[ 2 ] = this.axes[ 1 ].dot( aEntity.axes[ 0 ] );
+			d[ 3 ] = this.axes[ 1 ].dot( aEntity.axes[ 1 ] );
+
+			ra = this.bbox[ 0 ] * 0.5;
+			rb = Math.abs( d[ 0 ] ) * aEntity.bbox[ 0 ] * 0.5 + Math.abs( d[ 1 ] ) * aEntity.bbox[ 1 ] * 0.5;
+
+			if ( Math.abs( s1.x ) > ra + rb ) {
+				return false;
+			}
+
+			ra = this.height * 0.5;
+			rb = Math.abs( d[ 2 ] ) * aEntity.bbox[ 1 ] * 0.5 + Math.abs( d[ 3 ] ) * aEntity.height * 0.5;
+
+			if ( Math.abs( s1.y ) > ra + rb ) {
+				return false;
+			}
+
+			ra = Math.abs( d[ 0 ] ) * this.bbox[ 0 ] * 0.5 + Math.abs( d[ 2 ] ) * this.bbox[ 1 ] * 0.5;
+			rb = aEntity.bbox[ 0 ] * 0.5;
+
+			if ( Math.abs( s2.x ) > ra + rb ) {
+				return false;
+			}
+
+			ra = Math.abs( d[ 1 ] ) * this.bbox[ 0 ] * 0.5 + Math.abs( d[ 3 ] ) * this.bbox[ 1 ] * 0.5;
+			rb = aEntity.bbox[ 1 ] * 0.5;
+
+			if ( Math.abs( s2.y ) > ra + rb ) {
+				return false;
+			}
+
+			return true;
 		},
 
 		/**
