@@ -1,5 +1,5 @@
 
-define( [ '../../system/js/global', '../../system/js/player' ], function( aGlobal, aPlayer ) {
+define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/player' ], function( aGlobal, aVector, aPlayer ) {
 	'use strict';
 
 	var GLOBAL = new aGlobal( );
@@ -71,7 +71,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			});
 
 			this.addAnimation({
-				state: GLOBAL.ai.walk,
+				state: [ GLOBAL.ai.walk, GLOBAL.ai.run ],
 				direction: GLOBAL.direction.up,
 				fileUrl: 'game/img/player/walk/up.png',
 				frameWidth: 16,
@@ -85,7 +85,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			});
 
 			this.addAnimation({
-				state: GLOBAL.ai.walk,
+				state: [ GLOBAL.ai.walk, GLOBAL.ai.run ],
 				direction: GLOBAL.direction.down,
 				fileUrl: 'game/img/player/walk/down.png',
 				frameWidth: 16,
@@ -99,7 +99,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			});
 
 			this.addAnimation({
-				state: GLOBAL.ai.walk,
+				state: [ GLOBAL.ai.walk, GLOBAL.ai.run ],
 				direction: GLOBAL.direction.left,
 				fileUrl: 'game/img/player/walk/left.png',
 				frameWidth: 17,
@@ -113,7 +113,7 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			});
 
 			this.addAnimation({
-				state: GLOBAL.ai.walk,
+				state: [ GLOBAL.ai.walk, GLOBAL.ai.run ],
 				direction: GLOBAL.direction.right,
 				fileUrl: 'game/img/player/walk/right.png',
 				frameWidth: 17,
@@ -292,6 +292,16 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 					self.attack( );
 				}
 			});
+
+			this.system.input.keyboard.bindKey({
+				key: GLOBAL.input.keyboard.shift,
+				onDown: function( ) {
+					self.setState( GLOBAL.ai.run );
+				},
+				onUp: function( ) {
+					self.setState( self.lastState );
+				}
+			});
 		},
 
 		/**
@@ -319,6 +329,29 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 
 				sound = this.system.audio.playRandomSound({
 					files: this.sounds[ GLOBAL.ai.attack ]
+				});
+			}
+		},
+
+		/**
+		 * Method: setState
+		 * @param {Int} aState
+		 * @param {Object} aOptions
+		 */
+
+		setState: function( aState, aOptions ) {
+			this._super( aState, aOptions );
+
+			if ( this.state === GLOBAL.ai.walk ) {
+				this.maxVelocity = new aVector({
+					x: 0.75,
+					y: 0.75,
+				});
+			}
+			else if ( this.state === GLOBAL.ai.run ) {
+				this.maxVelocity = new aVector({
+					x: 1.25,
+					y: 1.25
 				});
 			}
 		},
@@ -362,17 +395,29 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 			this.velocity.y = 0;
 
 			if ( this.system.input.keyboard.binding[ GLOBAL.input.keyboard.up ].down === true ) {
-				this.velocity.y -= this.maxVelocity.y;
+				this.velocity.subtract({
+					x: 0,
+					y: this.maxVelocity.y
+				});
 			}
 			else if ( this.system.input.keyboard.binding[ GLOBAL.input.keyboard.down ].down ) {
-				this.velocity.y += this.maxVelocity.y;
+				this.velocity.add({
+					x: 0,
+					y: this.maxVelocity.y
+				});
 			}
 
 			if ( this.system.input.keyboard.binding[ GLOBAL.input.keyboard.left ].down === true ) {
-				this.velocity.x -= this.maxVelocity.x;
+				this.velocity.subtract({
+					x: this.maxVelocity.x,
+					y: 0
+				});
 			}
 			else if ( this.system.input.keyboard.binding[ GLOBAL.input.keyboard.right ].down ) {
-				this.velocity.x += this.maxVelocity.x;
+				this.velocity.add({
+					x: this.maxVelocity.x,
+					y: 0
+				});
 			}
 
 			if ( this.velocity.y < 0 ) {
@@ -401,11 +446,6 @@ define( [ '../../system/js/global', '../../system/js/player' ], function( aGloba
 
 			this.solid = GLOBAL.solid.bbox;
 			this.bbox = [ 16, 16 ];
-
-			this.maxVelocity = {
-				x: 0.75,
-				y: 0.75
-			};
 		}
 	});
 

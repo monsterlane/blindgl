@@ -1,5 +1,5 @@
 
-define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
+define( [ 'global', 'vector', 'entity', 'class' ], function( aGlobal, aVector, aEntity ) {
 	'use strict';
 
 	var GLOBAL = new aGlobal( );
@@ -36,10 +36,10 @@ define( [ 'global', 'entity', 'class' ], function( aGlobal, aEntity ) {
 					this.width += this.effect.offset.x;
 					this.height += this.effect.offset.y;
 
-					this.maxVelocity = {
+					this.maxVelocity = new aVector({
 						x: this.effect.velocity.x,
 						y: this.effect.velocity.y
-					};
+					});
 				}
 			}
 			else {
