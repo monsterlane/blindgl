@@ -27,7 +27,7 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				frameCount: 1,
 				framePosition: {
 					x: 0,
-					y: 0
+					y: 1
 				}
 			});
 
@@ -40,7 +40,7 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				frameCount: 1,
 				framePosition: {
 					x: 0,
-					y: 0
+					y: 1
 				}
 			});
 
@@ -52,7 +52,7 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				frameHeight: 24,
 				frameCount: 1,
 				framePosition: {
-					x: 0,
+					x: 1,
 					y: 0
 				}
 			});
@@ -65,7 +65,7 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				frameHeight: 24,
 				frameCount: 1,
 				framePosition: {
-					x: 0,
+					x: -1,
 					y: 0
 				}
 			});
@@ -79,7 +79,7 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				frameCount: 7,
 				framePosition: {
 					x: 0,
-					y: 0
+					y: 1
 				},
 				timeBetweenFrames: 50
 			});
@@ -93,7 +93,7 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				frameCount: 7,
 				framePosition: {
 					x: 0,
-					y: 0
+					y: 1
 				},
 				timeBetweenFrames: 50
 			});
@@ -106,7 +106,7 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				frameHeight: 24,
 				frameCount: 8,
 				framePosition: {
-					x: 0,
+					x: 1,
 					y: 0
 				},
 				timeBetweenFrames: 50
@@ -120,7 +120,7 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				frameHeight: 24,
 				frameCount: 8,
 				framePosition: {
-					x: 0,
+					x: -1,
 					y: 0
 				},
 				timeBetweenFrames: 50

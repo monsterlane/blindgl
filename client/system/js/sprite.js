@@ -239,6 +239,7 @@ define( [ 'global', 'entity', 'vector', 'class' ], function( aGlobal, aEntity, a
 					posY = Math.round( this.position.y - ( this.bbox[ 1 ] * 0.5 ) );
 
 					this.layer.bufferContext.globalAlpha = 0.5;
+					this.layer.bufferContext.fillStyle = 'yellow';
 					this.layer.bufferContext.fillRect( posX, posY, this.bbox[ 0 ], this.bbox[ 1 ] );
 					this.layer.bufferContext.globalAlpha = 1;
 

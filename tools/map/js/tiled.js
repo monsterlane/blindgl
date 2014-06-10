@@ -61,6 +61,11 @@ define( [ 'class' ], function( ) {
 				aEvent.preventDefault( );
 				self.generateGrid( );
 			}, true );
+
+			document.getElementById( 'bglTiledLoadButton' ).addEventListener( 'click', function( aEvent ) {
+				aEvent.preventDefault( );
+				self.loadGrid( );
+			}, true );
 		},
 
 		/**
@@ -119,12 +124,7 @@ define( [ 'class' ], function( ) {
 					else if ( input.value === 'W' ) {
 						type = 'none';
 
-						effect = 'shallowWater';
-					}
-					else if ( input.value === 'D' ) {
-						type = 'none';
-
-						effect = 'deepWater';
+						effect = 'water';
 					}
 					else {
 						input.focus( );
@@ -133,7 +133,7 @@ define( [ 'class' ], function( ) {
 
 					str.push( '	{' );
 					str.push( '		collide: \'' + type + '\',' );
-					str.push( '		effect: ' + effect );
+					str.push( '		effect: \'' + effect + '\'' );
 
 					if ( j + 1 < len2 ) {
 						str.push( '	},' );
@@ -152,8 +152,65 @@ define( [ 'class' ], function( ) {
 			}
 
 			output.value = str.join( "\n" );
+		},
 
-			output.style.display = 'block';
+		/**
+		 * Method: loadGrid
+		 */
+
+		loadGrid: function( ) {
+			var data = document.getElementById( 'bglTiledCells' ),
+				output = document.getElementById( 'bglTiledOutput' ),
+				input = eval( output.value ),
+				code, i, len1, j, len2;
+
+			if ( input instanceof Array ) {
+				for ( i = 0, len1 = input.length; i < len1; i++ ) {
+					for ( j = 0, len2 = input[ i ].length; j < len2; j++ ) {
+						if ( input[ i ][ j ].collide === 'none' ) {
+							code = 'O';
+						}
+						else if ( input[ i ][ j ].collide === 'wall' ) {
+							code = 'X';
+						}
+						else if ( input[ i ][ j ].collide === 'topHalfOpen' ) {
+							code = 'T';
+						}
+						else if ( input[ i ][ j ].collide === 'bottomHalfOpen' ) {
+							code = 'B';
+						}
+						else if ( input[ i ][ j ].collide === 'leftHalfOpen' ) {
+							code = 'L';
+						}
+						else if ( input[ i ][ j ].collide === 'rightHalfOpen' ) {
+							code = 'R';
+						}
+						else if ( input[ i ][ j ].collide === 'angleTopRight' ) {
+							code = 'V';
+						}
+						else if ( input[ i ][ j ].collide === 'angleTopLeft' ) {
+							code = 'C';
+						}
+						else if ( input[ i ][ j ].collide === 'angleBottomRight' ) {
+							code = 'M';
+						}
+						else if ( input[ i ][ j ].collide === 'angleBottomLeft' ) {
+							code = 'N';
+						}
+						else if ( input[ i ][ j ].collide === 'grass' ) {
+							code = 'G';
+						}
+						else if ( input[ i ][ j ].collide === 'water' ) {
+							code = 'W';
+						}
+						else {
+							code = '';
+						}
+
+						data.childNodes[ i ].childNodes[ j ].childNodes[ 0 ].value = code;
+					}
+				}
+			}
 		}
 	});
 

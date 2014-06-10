@@ -161,6 +161,7 @@ define( [ 'global', 'vector', 'image', 'class' ], function( aGlobal, aVector, aI
 					layer.bufferContext.globalAlpha = 0.5;
 					layer.bufferContext.fillStyle = 'yellow';
 					layer.bufferContext.fillRect( -( boxX ), -( boxY ), this.bbox[ 0 ], this.bbox[ 1 ] );
+					layer.bufferContext.globalAlpha = 1;
 
 					layer.bufferContext.restore( );
 				}

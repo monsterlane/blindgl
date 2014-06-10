@@ -111,23 +111,23 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'wall',
@@ -147,7 +147,43 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
 						},
 						{
 							collide: 'none',
@@ -155,75 +191,19 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'wall',
@@ -255,31 +235,51 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
 							effect: null
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
@@ -373,15 +373,15 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'wall',
@@ -389,31 +389,31 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'wall',
@@ -421,7 +421,27 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
 						},
 						{
 							collide: 'none',
@@ -429,7 +449,27 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
@@ -437,7 +477,23 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
 						},
 						{
 							collide: 'none',
@@ -445,95 +501,39 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
@@ -631,15 +631,15 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'wall',
@@ -647,7 +647,59 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
 						},
 						{
 							collide: 'none',
@@ -655,59 +707,7 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'wall',
@@ -715,7 +715,43 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
 						},
 						{
 							collide: 'none',
@@ -723,71 +759,35 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
@@ -889,15 +889,15 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'wall',
@@ -905,27 +905,27 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'wall',
@@ -933,7 +933,31 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
 						},
 						{
 							collide: 'none',
@@ -941,63 +965,19 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'wall',
@@ -1009,11 +989,11 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
@@ -1029,7 +1009,7 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'water'
 						},
 						{
 							collide: 'none',
@@ -1037,22 +1017,6 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleTopLeft',
 							effect: null
 						},
 						{
@@ -1064,22 +1028,16 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'wall',
-							effect: null
+							collide: 'none',
+							effect: 'grass'
 						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
@@ -1114,2391 +1072,11 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'angleTopRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleTopLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
 							collide: 'wall',
 							effect: null
 						}
 					],
 					[
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleTopLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleTopRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleBottomLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleBottomLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleBottomLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleBottomLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleBottomLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleBottomRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleBottomLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleTopLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleBottomLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleBottomRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
 						{
 							collide: 'none',
 							effect: null
@@ -3548,8 +1126,1096 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
 							collide: 'none',
 							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'angleTopLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'angleTopLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleTopRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
 						},
 						{
 							collide: 'none',
@@ -3585,7 +2251,483 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
 							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'angleBottomLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'angleBottomLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'angleBottomLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
 						},
 						{
 							collide: 'none',
@@ -3621,6 +2763,90 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
 							effect: null
 						},
 						{
@@ -3630,6 +2856,522 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						{
 							collide: 'none',
 							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'angleBottomLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'angleBottomLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleBottomRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'angleBottomLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'angleTopLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'angleBottomLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleBottomRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
@@ -3731,6 +3473,228 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'angleTopLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleTopRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
 							effect: null
 						},
 						{
@@ -3743,6 +3707,2210 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'angleTopLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'angleBottomLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'angleTopLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'angleTopLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleBottomRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleBottomRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleBottomRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
 							effect: null
 						},
 						{
@@ -3798,7 +5966,45 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'none',
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleBottomRight',
 							effect: null
 						},
 						{
@@ -3847,7 +6053,27 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
 							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
 						},
 						{
 							collide: 'none',
@@ -3879,6 +6105,58 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'angleTopLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
 							effect: null
 						},
 						{
@@ -3895,6 +6173,50 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'angleTopLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
 							effect: null
 						},
 						{
@@ -3940,54 +6262,6 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
 							collide: 'none',
 							effect: null
 						},
@@ -4032,6 +6306,138 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'angleTopLeft',
+							effect: null
+						},
+						{
 							collide: 'wall',
 							effect: null
 						},
@@ -4056,103 +6462,19 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'none',
+							collide: 'wall',
 							effect: null
 						},
 						{
-							collide: 'none',
+							collide: 'wall',
 							effect: null
 						},
 						{
-							collide: 'none',
+							collide: 'wall',
 							effect: null
 						},
 						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
+							collide: 'wall',
 							effect: null
 						},
 						{
@@ -4198,6 +6520,146 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
 							collide: 'wall',
 							effect: null
 						},
@@ -4226,7 +6688,19 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'none',
+							collide: 'angleTopLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleBottomRight',
 							effect: null
 						},
 						{
@@ -4246,43 +6720,7 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
+							collide: 'angleBottomLeft',
 							effect: null
 						},
 						{
@@ -4295,122 +6733,6 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
 							effect: null
 						},
 						{
@@ -4456,6 +6778,146 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
 							collide: 'wall',
 							effect: null
 						},
@@ -4468,55 +6930,31 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
+							collide: 'angleBottomRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'angleTopLeft',
+							effect: null
+						},
+						{
 							collide: 'wall',
 							effect: null
 						},
 						{
-							collide: 'none',
+							collide: 'wall',
 							effect: null
 						},
 						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
+							collide: 'angleBottomRight',
 							effect: null
 						},
 						{
@@ -4553,122 +6991,6 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
 							effect: null
 						},
 						{
@@ -4714,6 +7036,218 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleBottomRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleBottomRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
 							collide: 'wall',
 							effect: null
 						},
@@ -4727,6 +7261,2756 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'angleBottomLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'angleTopLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleTopRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'angleBottomLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleBottomRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleBottomRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleBottomRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleBottomRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleBottomRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'angleTopLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'angleBottomLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleBottomRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleTopRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'water'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'angleTopLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleTopRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleTopLeft',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleBottomRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleTopRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'angleBottomRight',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						}
+					],
+					[
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'wall',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
 							effect: null
 						},
 						{
@@ -4820,1420 +10104,6 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						{
 							collide: 'wall',
 							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleTopLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleTopLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleBottomRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleBottomRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleBottomRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleBottomRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleTopLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleTopLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
 						}
 					],
 					[
@@ -6279,3881 +10149,11 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleTopLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleTopLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleBottomRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleBottomLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleBottomRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleTopLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleBottomRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleBottomRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleBottomRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleBottomLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleTopLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleTopRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleBottomLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleBottomRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleBottomRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleBottomRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleTopRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleTopLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleBottomRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleBottomRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleTopLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleBottomLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleBottomRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleTopRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleTopLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleTopRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleTopLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleBottomRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleTopRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'angleBottomRight',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'angleBottomLeft',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						}
-					],
-					[
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'wall',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
@@ -10169,23 +10169,23 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'wall',
@@ -10221,27 +10221,27 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
@@ -10407,7 +10407,43 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
 							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: null
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
+						},
+						{
+							collide: 'none',
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
@@ -10447,63 +10483,27 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
-						},
-						{
-							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
@@ -10741,31 +10741,31 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'wall',
@@ -11003,27 +11003,27 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'angleBottomLeft',
@@ -11265,19 +11265,19 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
-							effect: null
+							effect: 'grass'
 						},
 						{
 							collide: 'none',
