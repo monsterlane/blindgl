@@ -29,6 +29,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			this.displayContext = this.display.getContext( '2d' );
 
 			this.displayContext.scale( 1, 1 );
+			this.displayContext.translate( 0, 0 );
 			this.displayContext.mozImageSmoothingEnabled = false;
 			this.displayContext.webkitImageSmoothingEnabled = false;
 
@@ -38,6 +39,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			this.bufferContext = this.buffer.getContext( '2d' );
 
 			this.bufferContext.scale( 1, 1 );
+			this.bufferContext.translate( 0, 0 );
 			this.bufferContext.mozImageSmoothingEnabled = false;
 			this.bufferContext.webkitImageSmoothingEnabled = false;
 		},

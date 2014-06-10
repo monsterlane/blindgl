@@ -41,7 +41,10 @@ define( [ 'global', 'entity', 'vector', 'class' ], function( aGlobal, aEntity, a
 		 */
 
 		setPosition: function( aPosition ) {
-			this.lastPosition = new aVector( this.position.x, this.position.y );
+			this.lastPosition = new aVector({
+				x: this.position.x,
+				y: this.position.y
+			});
 
 			this._super( aPosition );
 		},
@@ -230,16 +233,18 @@ define( [ 'global', 'entity', 'vector', 'class' ], function( aGlobal, aEntity, a
 				}
 
 				if ( draw === true ) {
-					posX = Math.round( this.position.x + this.animation.framePosition.x );
-
-					if ( this.solid === GLOBAL.solid.bbox ) {
-						posY = Math.round( this.position.y + this.animation.framePosition.y + this.bbox[ 1 ] );
-					}
-					else {
-						posY = Math.round( this.position.y + this.animation.framePosition.y );
-					}
-
 					this.layer.bufferContext.clearRect( this.lastPosition.x, this.lastPosition.y, this.lastSize.width, this.lastSize.height );
+
+					posX = Math.round( this.position.x - ( this.bbox[ 0 ] * 0.5 ) );
+					posY = Math.round( this.position.y - ( this.bbox[ 1 ] * 0.5 ) );
+
+					this.layer.bufferContext.globalAlpha = 0.5;
+					this.layer.bufferContext.fillRect( posX, posY, this.bbox[ 0 ], this.bbox[ 1 ] );
+					this.layer.bufferContext.globalAlpha = 1;
+
+					posX = Math.round( this.position.x - ( this.animation.frameWidth * 0.5 ) + this.animation.framePosition.x );
+					posY = Math.round( this.position.y - this.animation.frameHeight + ( this.bbox[ 1 ] * 0.5 ) + this.animation.framePosition.y );
+
 					this.layer.bufferContext.drawImage( this.currentImage, this.animation.frameWidth * this.currentFrame, 0, this.animation.frameWidth, this.animation.frameHeight, posX, posY, this.animation.frameWidth, this.animation.frameHeight );
 
 					this.lastPosition.x = posX;

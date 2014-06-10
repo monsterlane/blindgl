@@ -26,8 +26,8 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				frameHeight: 24,
 				frameCount: 1,
 				framePosition: {
-					x: -3,
-					y: -22
+					x: 0,
+					y: 0
 				}
 			});
 
@@ -39,8 +39,8 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				frameHeight: 24,
 				frameCount: 1,
 				framePosition: {
-					x: -3,
-					y: -22
+					x: 0,
+					y: 0
 				}
 			});
 
@@ -52,8 +52,8 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				frameHeight: 24,
 				frameCount: 1,
 				framePosition: {
-					x: -3,
-					y: -22
+					x: 0,
+					y: 0
 				}
 			});
 
@@ -65,8 +65,8 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				frameHeight: 24,
 				frameCount: 1,
 				framePosition: {
-					x: -3,
-					y: -22
+					x: 0,
+					y: 0
 				}
 			});
 
@@ -78,8 +78,8 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				frameHeight: 24,
 				frameCount: 7,
 				framePosition: {
-					x: -3,
-					y: -22
+					x: 0,
+					y: 0
 				},
 				timeBetweenFrames: 50
 			});
@@ -92,8 +92,8 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				frameHeight: 24,
 				frameCount: 7,
 				framePosition: {
-					x: -3,
-					y: -22
+					x: 0,
+					y: 0
 				},
 				timeBetweenFrames: 50
 			});
@@ -106,8 +106,8 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				frameHeight: 24,
 				frameCount: 8,
 				framePosition: {
-					x: -3,
-					y: -22
+					x: 0,
+					y: 0
 				},
 				timeBetweenFrames: 50
 			});
@@ -120,8 +120,8 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				frameHeight: 24,
 				frameCount: 8,
 				framePosition: {
-					x: -3,
-					y: -22
+					x: 0,
+					y: 0
 				},
 				timeBetweenFrames: 50
 			});
@@ -134,8 +134,8 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				frameHeight: 34,
 				frameCount: 6,
 				framePosition: {
-					x: -13,
-					y: -32
+					x: -3,
+					y: 0
 				},
 				timeBetweenFrames: 40,
 				complete: function( ) {
@@ -151,8 +151,8 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				frameHeight: 30,
 				frameCount: 5,
 				framePosition: {
-					x: -8,
-					y: -23
+					x: 3,
+					y: 5
 				},
 				timeBetweenFrames: 40,
 				complete: function( ) {
@@ -168,8 +168,8 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				frameHeight: 38,
 				frameCount: 6,
 				framePosition: {
-					x: -15,
-					y: -27
+					x: -5,
+					y: 7
 				},
 				timeBetweenFrames: 40,
 				complete: function( ) {
@@ -185,8 +185,8 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				frameHeight: 38,
 				frameCount: 6,
 				framePosition: {
-					x: -3,
-					y: -27
+					x: 5,
+					y: 7
 				},
 				timeBetweenFrames: 40,
 				complete: function( ) {
@@ -299,7 +299,7 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 					self.setState( GLOBAL.ai.run );
 				},
 				onUp: function( ) {
-					self.setState( self.lastState );
+					self.setState( GLOBAL.ai.idle );
 				}
 			});
 		},
@@ -445,7 +445,7 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 			this._super( aOptions );
 
 			this.solid = GLOBAL.solid.bbox;
-			this.bbox = [ 16, 16 ];
+			this.bbox = [ 12, 12 ];
 		}
 	});
 

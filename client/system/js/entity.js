@@ -276,81 +276,83 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 
 		isReachable: function( aPosition ) {
 			var position = aPosition,
+				boxX = this.bbox[ 0 ] * 0.5,
+				boxY = this.bbox[ 1 ] * 0.5,
 				tileX, tileY;
 
 			if ( this.layer !== null && this.solid === GLOBAL.solid.bbox ) {
 				if ( position.x < 0 ) {
 					position.x = 0;
 				}
-				else if ( position.x + this.bbox[ 0 ] > this.layer.width ) {
-					position.x = this.layer.width - this.bbox[ 0 ];
+				else if ( position.x + boxX > this.layer.width ) {
+					position.x = this.layer.width - boxX;
 				}
 
 				if ( position.y < 0 ) {
 					position.y = 0;
 				}
-				else if ( position.y + this.bbox[ 1 ] > this.layer.height ) {
-					position.y = this.layer.height - this.bbox[ 1 ];
+				else if ( position.y + boxY > this.layer.height ) {
+					position.y = this.layer.height - boxY;
 				}
 
 				if ( this.velocity.x > 0 ) {
-					tileX = Math.floor( ( position.x + this.bbox[ 0 ] ) / 16 );
-					tileY = Math.floor( this.position.y / 16 );
+					tileX = Math.floor( ( position.x + boxX ) / 16 );
+					tileY = Math.floor( ( this.position.y - boxY ) / 16 );
 
-					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
+					if ( this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
 						position.x = this.position.x;
 					}
 
-					tileX = Math.floor( ( position.x + this.bbox[ 0 ] ) / 16 );
-					tileY = Math.floor( ( this.position.y + this.bbox[ 1 ] ) / 16 );
+					tileX = Math.floor( ( position.x + boxX ) / 16 );
+					tileY = Math.floor( ( this.position.y + boxY ) / 16 );
 
-					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
+					if ( this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
 						position.x = this.position.x;
 					}
 				}
 				else if ( this.velocity.x < 0 ) {
-					tileX = Math.floor( position.x / 16 );
-					tileY = Math.floor( this.position.y / 16 );
+					tileX = Math.floor( ( position.x - boxX ) / 16 );
+					tileY = Math.floor( ( this.position.y - boxY ) / 16 );
 
-					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
+					if ( this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
 						position.x = this.position.x;
 					}
 
-					tileX = Math.floor( position.x / 16 );
-					tileY = Math.floor( ( this.position.y + this.bbox[ 1 ] ) / 16 );
+					tileX = Math.floor( ( position.x - boxX ) / 16 );
+					tileY = Math.floor( ( this.position.y + boxY ) / 16 );
 
-					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
+					if ( this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
 						position.x = this.position.x;
 					}
 				}
 
 				if ( this.velocity.y > 0 ) {
-					tileX = Math.floor( this.position.x / 16 );
-					tileY = Math.floor( ( position.y + this.bbox[ 1 ] ) / 16 );
+					tileX = Math.floor( ( this.position.x - boxX ) / 16 );
+					tileY = Math.floor( ( position.y + boxY ) / 16 );
 
-					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
+					if ( this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
 						position.y = this.position.y;
 					}
 
-					tileX = Math.floor( ( this.position.x + this.bbox[ 0 ] ) / 16 );
-					tileY = Math.floor( ( position.y + this.bbox[ 1 ] ) / 16 );
+					tileX = Math.floor( ( this.position.x + boxX ) / 16 );
+					tileY = Math.floor( ( position.y + boxY ) / 16 );
 
-					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
+					if ( this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
 						position.y = this.position.y;
 					}
 				}
 				else if ( this.velocity.y < 0 ) {
-					tileX = Math.floor( this.position.x / 16 );
-					tileY = Math.floor( position.y / 16 );
+					tileX = Math.floor( ( this.position.x - boxX ) / 16 );
+					tileY = Math.floor( ( position.y - boxY ) / 16 );
 
-					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
+					if ( this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
 						position.y = this.position.y;
 					}
 
-					tileX = Math.floor( ( this.position.x + this.bbox[ 0 ] ) / 16 );
-					tileY = Math.floor( position.y / 16 );
+					tileX = Math.floor( ( this.position.x + boxX ) / 16 );
+					tileY = Math.floor( ( position.y - boxY ) / 16 );
 
-					if ( !this.game.view.grid[ tileY ][ tileX ] || this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
+					if ( this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
 						position.y = this.position.y;
 					}
 				}
@@ -385,27 +387,27 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 			d[ 3 ] = this.axes[ 1 ].dot( aEntity.axes[ 1 ] );
 
 			ra = this.bbox[ 0 ] * 0.5;
-			rb = Math.abs( d[ 0 ] ) * aEntity.bbox[ 0 ] * 0.5 + Math.abs( d[ 1 ] ) * aEntity.bbox[ 1 ] * 0.5;
+			rb = Math.abs( d[ 0 ] ) * aEntity.bbox[ 0 ] * 0.5 + ( Math.abs( d[ 1 ] ) * aEntity.bbox[ 1 ] * 0.5 );
 
 			if ( Math.abs( s1.x ) > ra + rb ) {
 				return false;
 			}
 
 			ra = this.height * 0.5;
-			rb = Math.abs( d[ 2 ] ) * aEntity.bbox[ 1 ] * 0.5 + Math.abs( d[ 3 ] ) * aEntity.height * 0.5;
+			rb = Math.abs( d[ 2 ] ) * aEntity.bbox[ 1 ] * 0.5 + ( Math.abs( d[ 3 ] ) * aEntity.height * 0.5 );
 
 			if ( Math.abs( s1.y ) > ra + rb ) {
 				return false;
 			}
 
-			ra = Math.abs( d[ 0 ] ) * this.bbox[ 0 ] * 0.5 + Math.abs( d[ 2 ] ) * this.bbox[ 1 ] * 0.5;
+			ra = Math.abs( d[ 0 ] ) * this.bbox[ 0 ] * 0.5 + ( Math.abs( d[ 2 ] ) * this.bbox[ 1 ] * 0.5 );
 			rb = aEntity.bbox[ 0 ] * 0.5;
 
 			if ( Math.abs( s2.x ) > ra + rb ) {
 				return false;
 			}
 
-			ra = Math.abs( d[ 1 ] ) * this.bbox[ 0 ] * 0.5 + Math.abs( d[ 3 ] ) * this.bbox[ 1 ] * 0.5;
+			ra = Math.abs( d[ 1 ] ) * this.bbox[ 0 ] * 0.5 + ( Math.abs( d[ 3 ] ) * this.bbox[ 1 ] * 0.5 );
 			rb = aEntity.bbox[ 1 ] * 0.5;
 
 			if ( Math.abs( s2.y ) > ra + rb ) {

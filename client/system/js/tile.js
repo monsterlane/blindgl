@@ -37,10 +37,11 @@ define( [ 'global', 'vector', 'image', 'class' ], function( aGlobal, aVector, aI
 
 			this.system = options.system;
 			this.game = options.game;
+			this.collide = options.collide;
 
 			this.position = new aVector({
-				x: ( options.index * 16 ),
-				y: ( options.row * 16 )
+				x: ( options.index * 16 ) + 8,
+				y: ( options.row * 16 ) + 8
 			});
 
 			this.angle = 0;
@@ -51,34 +52,31 @@ define( [ 'global', 'vector', 'image', 'class' ], function( aGlobal, aVector, aI
 			this.bbox = [ 16, 16 ];
 			this.friction = [ 1, 1 ];
 			this.interactions = [ ];
+			this.dirty = true;
 
 			if ( options.collide === 'none' ) {
 				this.isReachable = collideNone;
 			}
 			else if ( options.collide === 'angleTopRight' ) {
 				this.bbox = [ 23, 2 ];
-				this.position.add({ x: -1, y: 0 });
 
 				this.axes[ 0 ].setAngle( 45 * pi180 );
 				this.axes[ 1 ].setAngle( 45 * pi180 );
 			}
 			else if ( options.collide === 'angleTopLeft' ) {
 				this.bbox = [ 23, 2 ];
-				this.position.add({ x: 1, y: 0 });
 
 				this.axes[ 0 ].setAngle( 135 * pi180 );
 				this.axes[ 1 ].setAngle( 135 * pi180 );
 			}
 			else if ( options.collide === 'angleBottomRight' ) {
 				this.bbox = [ 23, 2 ];
-				this.position.add({ x: -1, y: 0 });
 
 				this.axes[ 0 ].setAngle( 135 * pi180 );
 				this.axes[ 1 ].setAngle( 135 * pi180 );
 			}
 			else if ( options.collide === 'angleBottomLeft' ) {
 				this.bbox = [ 23, 2 ];
-				this.position.add({ x: 1, y: 0 });
 
 				this.axes[ 0 ].setAngle( 45 * pi180 );
 				this.axes[ 1 ].setAngle( 45 * pi180 );
@@ -102,6 +100,8 @@ define( [ 'global', 'vector', 'image', 'class' ], function( aGlobal, aVector, aI
 			else {
 				this.isReachable = collideWall;
 			}
+
+			this.game.view.entities.push( this );
 		},
 
 		/**
@@ -128,6 +128,45 @@ define( [ 'global', 'vector', 'image', 'class' ], function( aGlobal, aVector, aI
 
 		touch: function( aEntity ) {
 			//
+		},
+
+		/**
+		 * Method: think
+		 */
+
+		think: function( ) {
+			//
+		},
+
+		/**
+		 * Method: draw
+		 */
+
+		draw: function( ) {
+			var layer, boxX, boxY;
+
+			if ( this.dirty === true ) {
+				if ( this.collide !== 'none' ) {
+					layer = this.system.canvas.layers[ GLOBAL.video.layers.middleground ];
+
+					boxX = Math.floor( this.bbox[ 0 ] * 0.5 );
+					boxY = Math.floor( this.bbox[ 1 ] * 0.5 );
+
+					layer.bufferContext.save( );
+
+					layer.bufferContext.translate( this.position.x, this.position.y );
+					layer.bufferContext.rotate( this.axes[ 0 ].angle( ) );
+					layer.bufferContext.clearRect( -( boxX ), -( boxY ), this.bbox[ 0 ], this.bbox[ 1 ] );
+
+					layer.bufferContext.globalAlpha = 0.5;
+					layer.bufferContext.fillStyle = 'yellow';
+					layer.bufferContext.fillRect( -( boxX ), -( boxY ), this.bbox[ 0 ], this.bbox[ 1 ] );
+
+					layer.bufferContext.restore( );
+				}
+
+				this.dirty = false;
+			}
 		}
 	});
 
