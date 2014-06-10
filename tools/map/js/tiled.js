@@ -66,6 +66,10 @@ define( [ 'class' ], function( ) {
 				aEvent.preventDefault( );
 				self.loadGrid( );
 			}, true );
+
+			document.getElementById( 'bglTiledOutput' ).addEventListener( 'click', function( aEvent ) {
+				this.select( );
+			}, true );
 		},
 
 		/**
@@ -79,8 +83,10 @@ define( [ 'class' ], function( ) {
 				input, type, effect,
 				i, len1, j, len2;
 
+			str.push( '[' );
+
 			for ( i = 0, len1 = data.childNodes.length; i < len1; i++ ) {
-				str.push( '[' );
+				str.push( '	[' );
 
 				for ( j = 0, len2 = data.childNodes[ i ].childNodes.length; j < len2; j++ ) {
 					input = data.childNodes[ i ].childNodes[ j ].childNodes[ 0 ];
@@ -119,37 +125,39 @@ define( [ 'class' ], function( ) {
 					else if ( input.value === 'G' ) {
 						type = 'none';
 
-						effect = 'grass';
+						effect = '\'grass\'';
 					}
 					else if ( input.value === 'W' ) {
 						type = 'none';
 
-						effect = 'water';
+						effect = '\'water\'';
 					}
 					else {
 						input.focus( );
 						return;
 					}
 
-					str.push( '	{' );
-					str.push( '		collide: \'' + type + '\',' );
-					str.push( '		effect: \'' + effect + '\'' );
+					str.push( '		{' );
+					str.push( '			collide: \'' + type + '\',' );
+					str.push( '			effect: ' + effect );
 
 					if ( j + 1 < len2 ) {
-						str.push( '	},' );
+						str.push( '		},' );
 					}
 					else {
-						str.push( '	}' );
+						str.push( '		}' );
 					}
 				}
 
 				if ( i + 1 < len1 ) {
-					str.push( '],' );
+					str.push( '	],' );
 				}
 				else {
-					str.push( ']' );
+					str.push( '	]' );
 				}
 			}
+
+			str.push( ']' );
 
 			output.value = str.join( "\n" );
 		},
@@ -165,52 +173,56 @@ define( [ 'class' ], function( ) {
 				code, i, len1, j, len2;
 
 			if ( input instanceof Array ) {
-				for ( i = 0, len1 = input.length; i < len1; i++ ) {
-					for ( j = 0, len2 = input[ i ].length; j < len2; j++ ) {
-						if ( input[ i ][ j ].collide === 'none' ) {
-							code = 'O';
-						}
-						else if ( input[ i ][ j ].collide === 'wall' ) {
-							code = 'X';
-						}
-						else if ( input[ i ][ j ].collide === 'topHalfOpen' ) {
-							code = 'T';
-						}
-						else if ( input[ i ][ j ].collide === 'bottomHalfOpen' ) {
-							code = 'B';
-						}
-						else if ( input[ i ][ j ].collide === 'leftHalfOpen' ) {
-							code = 'L';
-						}
-						else if ( input[ i ][ j ].collide === 'rightHalfOpen' ) {
-							code = 'R';
-						}
-						else if ( input[ i ][ j ].collide === 'angleTopRight' ) {
-							code = 'V';
-						}
-						else if ( input[ i ][ j ].collide === 'angleTopLeft' ) {
-							code = 'C';
-						}
-						else if ( input[ i ][ j ].collide === 'angleBottomRight' ) {
-							code = 'M';
-						}
-						else if ( input[ i ][ j ].collide === 'angleBottomLeft' ) {
-							code = 'N';
-						}
-						else if ( input[ i ][ j ].collide === 'grass' ) {
-							code = 'G';
-						}
-						else if ( input[ i ][ j ].collide === 'water' ) {
-							code = 'W';
-						}
-						else {
-							code = '';
-						}
+				if ( input[ 0 ] instanceof Array ) {
+					for ( i = 0, len1 = input.length; i < len1; i++ ) {
+						for ( j = 0, len2 = input[ i ].length; j < len2; j++ ) {
+							if ( input[ i ][ j ].effect === 'grass' ) {
+								code = 'G';
+							}
+							else if ( input[ i ][ j ].effect === 'water' ) {
+								code = 'W';
+							}
+							else if ( input[ i ][ j ].collide === 'none' ) {
+								code = 'O';
+							}
+							else if ( input[ i ][ j ].collide === 'wall' ) {
+								code = 'X';
+							}
+							else if ( input[ i ][ j ].collide === 'topHalfOpen' ) {
+								code = 'T';
+							}
+							else if ( input[ i ][ j ].collide === 'bottomHalfOpen' ) {
+								code = 'B';
+							}
+							else if ( input[ i ][ j ].collide === 'leftHalfOpen' ) {
+								code = 'L';
+							}
+							else if ( input[ i ][ j ].collide === 'rightHalfOpen' ) {
+								code = 'R';
+							}
+							else if ( input[ i ][ j ].collide === 'angleTopRight' ) {
+								code = 'V';
+							}
+							else if ( input[ i ][ j ].collide === 'angleTopLeft' ) {
+								code = 'C';
+							}
+							else if ( input[ i ][ j ].collide === 'angleBottomRight' ) {
+								code = 'M';
+							}
+							else if ( input[ i ][ j ].collide === 'angleBottomLeft' ) {
+								code = 'N';
+							}
+							else {
+								code = '';
+							}
 
-						data.childNodes[ i ].childNodes[ j ].childNodes[ 0 ].value = code;
+							data.childNodes[ i ].childNodes[ j ].childNodes[ 0 ].value = code;
+						}
 					}
 				}
 			}
+
+			output.value = '';
 		}
 	});
 
