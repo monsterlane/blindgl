@@ -6180,11 +6180,11 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'angleTopLeft',
+							collide: 'none',
 							effect: null
 						},
 						{
-							collide: 'wall',
+							collide: 'angleTopLeft',
 							effect: null
 						},
 						{
@@ -6434,11 +6434,11 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'angleTopLeft',
+							collide: 'none',
 							effect: null
 						},
 						{
-							collide: 'wall',
+							collide: 'angleTopLeft',
 							effect: null
 						},
 						{
@@ -6688,11 +6688,11 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'angleTopLeft',
+							collide: 'none',
 							effect: null
 						},
 						{
-							collide: 'wall',
+							collide: 'angleTopLeft',
 							effect: null
 						},
 						{
@@ -6942,6 +6942,10 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
+							collide: 'none',
+							effect: null
+						},
+						{
 							collide: 'angleTopLeft',
 							effect: null
 						},
@@ -6950,10 +6954,6 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'wall',
-							effect: null
-						},
-						{
 							collide: 'angleBottomRight',
 							effect: null
 						},
@@ -7200,7 +7200,7 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'wall',
+							collide: 'none',
 							effect: null
 						},
 						{
@@ -7458,7 +7458,7 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'wall',
+							collide: 'none',
 							effect: null
 						},
 						{
@@ -7716,7 +7716,7 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'wall',
+							collide: 'none',
 							effect: null
 						},
 						{
@@ -7974,7 +7974,7 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'wall',
+							collide: 'none',
 							effect: null
 						},
 						{
@@ -8232,7 +8232,7 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'wall',
+							collide: 'none',
 							effect: null
 						},
 						{
@@ -8478,19 +8478,19 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'wall',
+							collide: 'angleTopRight',
 							effect: null
 						},
 						{
-							collide: 'wall',
+							collide: 'none',
 							effect: null
 						},
 						{
-							collide: 'wall',
+							collide: 'none',
 							effect: null
 						},
 						{
-							collide: 'wall',
+							collide: 'angleTopLeft',
 							effect: null
 						},
 						{
