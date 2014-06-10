@@ -128,23 +128,20 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		 */
 
 		getNextBank: function( ) {
-			var bank,
-				i, len;
+			var bank, i;
 
 			if ( this.lastBank === false ) {
 				return false;
 			}
 
-			i = 0;
-			len = this.banks.length;
+			i = this.banks.length;
 			bank = this.lastBank;
 
-			while ( i < len && bank.playing === true ) {
+			while (i-- && bank.playing === true ) {
 				bank = bank.next;
-				i++;
 			}
 
-			return ( i === len ) ? false : bank;
+			return ( i === 0 ) ? false : bank;
 		},
 
 		/**
