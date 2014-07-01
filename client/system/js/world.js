@@ -6,7 +6,7 @@ define( [ 'tile', 'client', 'class' ], function( aTile, aClient ) {
 	 * Class: World
 	 */
 
-	var World = Class.extend({
+	var World = Object.subClass({
 		/**
 		 * Method: init
 	 	 * @param {Object} aSystem
@@ -30,6 +30,8 @@ define( [ 'tile', 'client', 'class' ], function( aTile, aClient ) {
 			this.system.canvas.clear( );
 
 			this.running = true;
+
+			return this;
 		},
 
 		/**
@@ -43,6 +45,8 @@ define( [ 'tile', 'client', 'class' ], function( aTile, aClient ) {
 				this.view.entities[ i ].think( );
 				this.view.entities[ i ].draw( );
 			}
+
+			return this;
 		},
 
 		/**
@@ -67,6 +71,8 @@ define( [ 'tile', 'client', 'class' ], function( aTile, aClient ) {
 			if ( count !== null ) {
 				count.innerHTML = this.clients.length;
 			}
+
+			return this;
 		},
 
 		/**
@@ -77,6 +83,8 @@ define( [ 'tile', 'client', 'class' ], function( aTile, aClient ) {
 		loadView: function( aView ) {
 			this.view = new aTile( this.system, this );
 			this.view.load( aView );
+
+			return this;
 		}
 	});
 

@@ -6,7 +6,7 @@ define( [ 'class' ], function( ) {
 	 * Class: Tiled
 	 */
 
-	var Tiled = Class.extend({
+	var Tiled = Object.subClass({
 		/**
 		 * Method: init
 		 */
@@ -21,6 +21,7 @@ define( [ 'class' ], function( ) {
 				self = this;
 
 			gui.style.width = '1024px';
+
 			tbody.style.backgroundImage = "url('img/0-0.png')";
 
 			for ( i = 0, len1 = ( 768 / 16 ); i < len1; i++ ) {
@@ -160,6 +161,8 @@ define( [ 'class' ], function( ) {
 			str.push( ']' );
 
 			output.value = str.join( "\n" );
+
+			return this;
 		},
 
 		/**
@@ -223,8 +226,11 @@ define( [ 'class' ], function( ) {
 			}
 
 			output.value = '';
+
+			return this;
 		}
 	});
 
 	return Tiled;
 });
+

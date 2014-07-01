@@ -2,32 +2,14 @@
 define( [ 'global', 'class' ], function( aGlobal ) {
 	'use strict';
 
-	var GLOBAL = new aGlobal( );
+	var GLOBAL = aGlobal.get( );
 
 	/**
 	 * Class: Button
 	 * @param {DOMelement} aElement
 	 */
 
-	var Button = Class.extend({
-		/**
-		 * Method: onUp
-		 * @param {DOMevent} aEvent
-		 */
-
-		onUp: function( aEvent ) {
-
-		},
-
-		/**
-		 * Method: onDown
-		 * @param {DOMevent} aEvent
-		 */
-
-		onDown: function( aEvent ) {
-
-		},
-
+	var Button = Object.subClass({
 		/**
 		 * Method: init
 		 * @param {Object} aBinding
@@ -57,6 +39,24 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			if ( binding.hasOwnProperty( 'onDown' ) === true ) {
 				this.onDown = binding.onDown;
 			}
+		},
+
+		/**
+		 * Method: onUp
+		 * @param {DOMevent} aEvent
+		 */
+
+		onUp: function( aEvent ) {
+			return this;
+		},
+
+		/**
+		 * Method: onDown
+		 * @param {DOMevent} aEvent
+		 */
+
+		onDown: function( aEvent ) {
+			return this;
 		}
 	});
 
@@ -64,7 +64,22 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 	 * Class: Input
 	 */
 
-	var Keyboard = Class.extend({
+	var Keyboard = Object.subClass({
+		/**
+		 * Method: init
+		 * @param {Object} aSystem
+		 */
+
+		init: function( aSystem ) {
+			this.system = aSystem;
+			this.binding = { };
+
+			this.setDefaultBindings( );
+			this.bindEventListeners( );
+
+			this.system.verbose( 'init->input->keyboard' );
+		},
+
 		/**
 		 * Method: setDefaultBindings
 		 */
@@ -79,6 +94,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 					});
 				}
 			}
+
+			return this;
 		},
 
 		/**
@@ -99,6 +116,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 					self.handleKeypress( aEvent.keyCode, false );
 				}
 			}, true );
+
+			return this;
 		},
 
 		/**
@@ -126,6 +145,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 					binding.onUp( );
 				}
 			}
+
+			return this;
 		},
 
 		/**
@@ -135,6 +156,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		bindKey: function( aBinding ) {
 			this.binding[ aBinding.key ] = new Button( aBinding );
+
+			return this;
 		},
 
 		/**
@@ -146,6 +169,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			if ( aElement !== null ) {
 				aElement.className = 'selected';
 			}
+
+			return this;
 		},
 
 		/**
@@ -157,21 +182,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			if ( aElement !== null ) {
 				aElement.className = '';
 			}
-		},
 
-		/**
-		 * Method: init
-		 * @param {Object} aSystem
-		 */
-
-		init: function( aSystem ) {
-			this.system = aSystem;
-			this.binding = { };
-
-			this.setDefaultBindings( );
-			this.bindEventListeners( );
-
-			this.system.verbose( 'init->input->keyboard' );
+			return this;
 		}
 	});
 

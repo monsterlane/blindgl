@@ -6,7 +6,7 @@ define( [ 'class' ], function( ) {
 	 * Class: Vector
 	 */
 
-	var Vector = Class.extend({
+	var Vector = Object.subClass({
 		/**
 		 * Method: init
 		 * @param {Mixed} aX
@@ -14,14 +14,8 @@ define( [ 'class' ], function( ) {
 		 */
 
 		init: function( aX, aY ) {
-			if ( typeof aX === 'object' && aX.hasOwnProperty( 'x' ) === true && aX.hasOwnProperty( 'y' ) === true ) {
-				this.x = aX.x;
-				this.y = aX.y;
-			}
-			else {
-				this.x = Number( aX ) || 0;
-				this.y = Number( aY ) || 0;
-			}
+			this.x = Number( aX ) || 0;
+			this.y = Number( aY ) || 0;
 		},
 
 		/**
@@ -31,14 +25,8 @@ define( [ 'class' ], function( ) {
 		 */
 
 		set: function( aX, aY ) {
-			if ( typeof aX === 'object' && aX.hasOwnProperty( 'x' ) === true && aX.hasOwnProperty( 'y' ) === true ) {
-				this.x = aX.x;
-				this.y = aX.y;
-			}
-			else {
-				this.x = Number( aX ) || this.x;
-				this.y = Number( aY ) || this.y;
-			}
+			this.x = Number( aX ) || this.x;
+			this.y = Number( aY ) || this.y;
 
 			return this;
 		},
@@ -52,22 +40,8 @@ define( [ 'class' ], function( ) {
 			var o = this.angle( ),
 				a = Number( aAngle ) || 0;
 
-			this.rotate( -o );
+			this.rotate( -( o ) );
 			this.rotate( a );
-
-			return this;
-		},
-
-		/**
-		 * Method: scale
-		 * @param {Float} aScale
-		 */
-
-		scale: function( aScale ) {
-			var r = Number( aScale ) || 1;
-
-			this.x *= r;
-			this.y *= r;
 
 			return this;
 		},
@@ -75,27 +49,25 @@ define( [ 'class' ], function( ) {
 		/**
 		 * Method: add
 		 * @param {Object} aVector
-		 * @param {Float} aScale
 		 */
 
-		add: function( aVector, aScale ) {
-			var s = Number( aScale ) || 1;
+		add: function( aVector ) {
+			this.x += aVector.x;
+			this.y += aVector.y;
 
-			this.x += aVector.x * s;
-			this.y += aVector.y * s;
+			return this;
 		},
 
 		/**
 		 * Method: subtract
 		 * @param {Object} aVector
-		 * @param {Float} aScale
 		 */
 
-		subtract: function( aVector, aScale ) {
-			var s = Number( aScale ) || 1;
+		subtract: function( aVector ) {
+			this.x -= aVector.x;
+			this.y -= aVector.y;
 
-			this.x -= aVector.x * s;
-			this.y -= aVector.y * s;
+			return this;
 		},
 
 		/**
@@ -112,7 +84,30 @@ define( [ 'class' ], function( ) {
 		 */
 
 		magnitude: function( ) {
-			return Math.sqrt( this.x * this.x + this.y * this.y );
+			return Math.sqrt( this.len2( ) );
+		},
+
+		/**
+		 * Method: len2
+		 */
+
+		len2: function( ) {
+			return this.dot( this );
+		},
+
+		/**
+		 * Method: normalize
+		 */
+
+		normalize: function( ) {
+			var m = this.magnitude( );
+
+			if ( m > 0 ) {
+				this.x = this.x / m;
+				this.y = this.y / m;
+			}
+
+			return this;
 		},
 
 		/**
@@ -122,21 +117,13 @@ define( [ 'class' ], function( ) {
 
 		rotate: function( aAngle ) {
 			var a = Number( aAngle ) || 0,
-				x = this.x * Math.cos( a ) + this.y * Math.sin( a ),
-				y = this.x * Math.sin( a ) - this.y * Math.cos( a );
+				x = this.x,
+				y = this.y;
 
-			this.x = x;
-			this.y = -y;
+			this.x = x * Math.cos( a ) - y * Math.sin( a ),
+			this.y = x * Math.sin( a ) + y * Math.cos( a );
 
 			return this;
-		},
-
-		/**
-		 * Method: angle
-		 */
-
-		angle: function( ) {
-			return Math.atan2( -this.y, this.x );
 		},
 
 		/**
@@ -144,10 +131,31 @@ define( [ 'class' ], function( ) {
 		 */
 
 		invert: function( ) {
-			this.x = -this.x;
-			this.y = -this.y;
+			this.x = -( this.x );
+			this.y = -( this.y );
 
 			return this;
+		},
+
+		/**
+		 * Method: perp
+		 */
+
+		perp: function( ) {
+			var x = this.x;
+
+			this.x = this.y;
+			this.y = -( x );
+
+			return this;
+		},
+
+		/**
+		 * Method: clone
+		 */
+
+		clone: function( ) {
+			return new Vector( this.x, this.y );
 		},
 
 		/**

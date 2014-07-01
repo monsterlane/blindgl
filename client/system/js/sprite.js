@@ -2,13 +2,13 @@
 define( [ 'global', 'entity', 'vector', 'class' ], function( aGlobal, aEntity, aVector ) {
 	'use strict';
 
-	var GLOBAL = new aGlobal( );
+	var GLOBAL = aGlobal.get( );
 
 	/**
 	 * Class: Sprite
 	 */
 
-	var Sprite = aEntity.extend({
+	var Sprite = aEntity.subClass({
 		/**
 		 * Method: init
 		 * @param {Object} aOptions
@@ -41,12 +41,11 @@ define( [ 'global', 'entity', 'vector', 'class' ], function( aGlobal, aEntity, a
 		 */
 
 		setPosition: function( aPosition ) {
-			this.lastPosition = new aVector({
-				x: this.position.x,
-				y: this.position.y
-			});
+			this.lastPosition = this.position.clone( );
 
 			this._super( aPosition );
+
+			return this;
 		},
 
 		/**
@@ -61,6 +60,8 @@ define( [ 'global', 'entity', 'vector', 'class' ], function( aGlobal, aEntity, a
 			if ( this.animations[ this.state ] ) {
 				this.setAnimation( );
 			}
+
+			return this;
 		},
 
 		/**
@@ -72,6 +73,8 @@ define( [ 'global', 'entity', 'vector', 'class' ], function( aGlobal, aEntity, a
 			this._super( aDirection );
 
 			this.setAnimation( );
+
+			return this;
 		},
 
 		/**
@@ -79,7 +82,7 @@ define( [ 'global', 'entity', 'vector', 'class' ], function( aGlobal, aEntity, a
 		 */
 
 		addAnimations: function( ) {
-
+			return this;
 		},
 
 		/**
@@ -121,6 +124,8 @@ define( [ 'global', 'entity', 'vector', 'class' ], function( aGlobal, aEntity, a
 					};
 				}
 			}
+
+			return this;
 		},
 
 		/**
@@ -139,6 +144,8 @@ define( [ 'global', 'entity', 'vector', 'class' ], function( aGlobal, aEntity, a
 				this.timeSinceLastFrame = animation.timeBetweenFrames;
 				this.currentFrame = -1;
 			}
+
+			return this;
 		},
 
 		/**
@@ -156,6 +163,8 @@ define( [ 'global', 'entity', 'vector', 'class' ], function( aGlobal, aEntity, a
 					if ( this.animations.hasOwnProperty( i ) === true ) {
 						for ( j in this.animations[ i ] ) {
 							if ( this.animations[ i ].hasOwnProperty( j ) === true ) {
+								this.loading += 1;
+
 								el = document.createElement( 'img' );
 								el.setAttribute( 'src', this.animations[ i ][ j ].fileUrl );
 
@@ -163,13 +172,13 @@ define( [ 'global', 'entity', 'vector', 'class' ], function( aGlobal, aEntity, a
 									self.loading -= 1;
 									self.loaded( );
 								}, true );
-
-								this.loading += 1;
 							}
 						}
 					}
 				}
 			}
+
+			return this;
 		},
 
 		/**
@@ -183,6 +192,8 @@ define( [ 'global', 'entity', 'vector', 'class' ], function( aGlobal, aEntity, a
 				this.setLayer( GLOBAL.video.layers.middleground );
 				this.setAnimation( );
 			}
+
+			return this;
 		},
 
 		/**
@@ -194,6 +205,8 @@ define( [ 'global', 'entity', 'vector', 'class' ], function( aGlobal, aEntity, a
 			this._super( aPosition );
 
 			this.load( );
+
+			return this;
 		},
 
 		/**
@@ -204,7 +217,8 @@ define( [ 'global', 'entity', 'vector', 'class' ], function( aGlobal, aEntity, a
 			var now = Date.now( ),
 				elapsed = now - this.lastTick,
 				draw = false,
-				posX, posY;
+				posX, posY,
+				i, len;
 
 			this._super( );
 
@@ -233,20 +247,30 @@ define( [ 'global', 'entity', 'vector', 'class' ], function( aGlobal, aEntity, a
 				}
 
 				if ( draw === true ) {
+					this.layer.bufferContext.save( );
 					this.layer.bufferContext.clearRect( this.lastPosition.x, this.lastPosition.y, this.lastSize.width, this.lastSize.height );
 
-					posX = Math.round( this.position.x - ( this.bbox[ 0 ] * 0.5 ) );
-					posY = Math.round( this.position.y - ( this.bbox[ 1 ] * 0.5 ) );
+					posX = Math.round( this.position.x - this.boundingBox.center.x );
+					posY = Math.round( this.position.y - this.boundingBox.center.y );
 
 					this.layer.bufferContext.globalAlpha = 0.5;
 					this.layer.bufferContext.fillStyle = 'yellow';
-					this.layer.bufferContext.fillRect( posX, posY, this.bbox[ 0 ], this.bbox[ 1 ] );
-					this.layer.bufferContext.globalAlpha = 1;
+					this.layer.bufferContext.beginPath( );
+					this.layer.bufferContext.moveTo( posX + this.boundingBox.vertices[ 0 ].x, posY + this.boundingBox.vertices[ 0 ].y );
+
+					for ( i = 1, len = this.boundingBox.vertices.length; i < len; i++ ) {
+						this.layer.bufferContext.lineTo( posX + this.boundingBox.vertices[ i ].x, posY + this.boundingBox.vertices[ i ].y );
+					}
+
+					this.layer.bufferContext.closePath( );
+					this.layer.bufferContext.fill( );
 
 					posX = Math.round( this.position.x - ( this.animation.frameWidth * 0.5 ) + this.animation.framePosition.x );
-					posY = Math.round( this.position.y - this.animation.frameHeight + ( this.bbox[ 1 ] * 0.5 ) + this.animation.framePosition.y );
+					posY = Math.round( this.position.y - this.animation.frameHeight + this.boundingBox.center.y + this.animation.framePosition.y );
 
+					this.layer.bufferContext.globalAlpha = 1;
 					this.layer.bufferContext.drawImage( this.currentImage, this.animation.frameWidth * this.currentFrame, 0, this.animation.frameWidth, this.animation.frameHeight, posX, posY, this.animation.frameWidth, this.animation.frameHeight );
+					this.layer.bufferContext.restore( );
 
 					this.lastPosition.x = posX;
 					this.lastPosition.y = posY;
@@ -255,6 +279,8 @@ define( [ 'global', 'entity', 'vector', 'class' ], function( aGlobal, aEntity, a
 					this.lastSize.height = this.animation.frameHeight;
 				}
 			}
+
+			return this;
 		},
 
 		/**
@@ -266,6 +292,8 @@ define( [ 'global', 'entity', 'vector', 'class' ], function( aGlobal, aEntity, a
 
 			this.updateState( );
 			this.updatePosition( );
+
+			return this;
 		}
 	});
 

@@ -2,13 +2,13 @@
 define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 	'use strict';
 
-	var GLOBAL = new aGlobal( );
+	var GLOBAL = aGlobal.get( );
 
 	/**
 	 * Class: Entity
 	 */
 
-	var Entity = Class.extend({
+	var Entity = Object.subClass({
 		/**
 		 * Method: init
 		 * @param {Object} aOptions
@@ -24,11 +24,6 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 			this.velocity = new aVector( );
 			this.maxVelocity = new aVector( 1, 1 );
 
-			this.angle = 0;
-			this.axes = [ ];
-			this.axes[ 0 ] = new aVector( 1, 0 );
-			this.axes[ 1 ] = new aVector( 0, -1 );
-
 			this.state = GLOBAL.ai.idle;
 			this.lastState = GLOBAL.ai.idle;
 			this.goal = null;
@@ -38,7 +33,7 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 			this.direction = GLOBAL.direction.down;
 
 			this.solid = GLOBAL.solid.none;
-			this.bbox = [ 0, 0 ];
+			this.boundingBox = null;
 
 			this.sounds = { };
 			this.sound = null;
@@ -57,6 +52,8 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 			this.layer = layer;
 
 			this.game.view.entities.push( this );
+
+			return this;
 		},
 
 		/**
@@ -65,31 +62,9 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 		 */
 
 		setPosition: function( aPosition ) {
-			this.position = new aVector( aPosition );
-		},
+			this.position = new aVector( aPosition.x, aPosition.y );
 
-		/**
-		 * Method: rotate
-		 * @param {Int} aAngle
-		 */
-
-		rotate: function( aAngle ) {
-			var a = Number( aAngle ) || 0;
-
-			this.axes[ 0 ].rotate( a );
-			this.axes[ 1 ].rotate( a );
-		},
-
-		/**
-		 * Method: setAngle
-		 * @param {Int} aAngle
-		 */
-
-		setAngle: function( aAngle ) {
-			var a = Number( aAngle ) || 0;
-
-			this.axes[ 0 ].setAngle( a );
-			this.axes[ 1 ].setAngle( a );
+			return this;
 		},
 
 		/**
@@ -108,6 +83,8 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 			if ( this.state !== aState ) {
 				this.state = aState;
 			}
+
+			return this;
 		},
 
 		/**
@@ -123,6 +100,8 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 			else {
 				this.visible = true;
 			}
+
+			return this;
 		},
 
 		/**
@@ -132,6 +111,8 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 
 		setDirection: function( aDirection ) {
 			this.direction = aDirection;
+
+			return this;
 		},
 
 		/**
@@ -171,6 +152,8 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 
 				this.velocity.y = vY;
 			}
+
+			return this;
 		},
 
 		/**
@@ -187,6 +170,8 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 				this.setState( GLOBAL.ai.walk );
 				this.moveToGoal( );
 			}
+
+			return this;
 		},
 
 		/**
@@ -209,6 +194,8 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 			else {
 				this.setDirection( GLOBAL.direction.down );
 			}
+
+			return this;
 		},
 
 		/**
@@ -244,13 +231,12 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 
 				this.faceGoal( );
 
-				position = new aVector({
-					x: this.position.x + this.velocity.x,
-					y: this.position.y + this.velocity.y
-				});
+				position = new aVector( this.position.x + this.velocity.x, this.position.y + this.velocity.y );
 
 				this.position = this.isReachable( position );
 			}
+
+			return this;
 		},
 
 		/**
@@ -266,6 +252,8 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 			});
 
 			this.setState( GLOBAL.ai.idle );
+
+			return this;
 		},
 
 		/**
@@ -276,83 +264,33 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 
 		isReachable: function( aPosition ) {
 			var position = aPosition,
-				boxX = this.bbox[ 0 ] * 0.5,
-				boxY = this.bbox[ 1 ] * 0.5,
-				tileX, tileY;
+				boxX, boxY, tileX, tileY, reachable,
+				i, len;
 
-			if ( this.layer !== null && this.solid === GLOBAL.solid.bbox ) {
-				if ( position.x < 0 ) {
-					position.x = 0;
-				}
-				else if ( position.x + boxX > this.layer.width ) {
-					position.x = this.layer.width - boxX;
-				}
+			if ( this.layer !== null && this.solid === GLOBAL.solid.boundingBox ) {
+				for ( i = 0, len = this.boundingBox.vertices.length; i < len; i++ ) {
+					boxX = this.boundingBox.vertices[ i ].x - this.boundingBox.center.x;
+					boxY = this.boundingBox.vertices[ i ].y - this.boundingBox.center.y;
 
-				if ( position.y < 0 ) {
-					position.y = 0;
-				}
-				else if ( position.y + boxY > this.layer.height ) {
-					position.y = this.layer.height - boxY;
-				}
-
-				if ( this.velocity.x > 0 ) {
-					tileX = Math.floor( ( position.x + boxX ) / 16 );
-					tileY = Math.floor( ( this.position.y - boxY ) / 16 );
-
-					if ( this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
-						position.x = this.position.x;
+					if ( position.x - boxX < 0 ) {
+						position.x = boxX;
+					}
+					else if ( position.x + boxX > this.layer.width ) {
+						position.x = this.layer.width - boxX;
 					}
 
-					tileX = Math.floor( ( position.x + boxX ) / 16 );
-					tileY = Math.floor( ( this.position.y + boxY ) / 16 );
-
-					if ( this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
-						position.x = this.position.x;
+					if ( position.y - boxY < 0 ) {
+						position.y = boxY;
 					}
-				}
-				else if ( this.velocity.x < 0 ) {
-					tileX = Math.floor( ( position.x - boxX ) / 16 );
-					tileY = Math.floor( ( this.position.y - boxY ) / 16 );
-
-					if ( this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
-						position.x = this.position.x;
+					else if ( position.y + boxY > this.layer.height ) {
+						position.y = this.layer.height - boxY;
 					}
 
 					tileX = Math.floor( ( position.x - boxX ) / 16 );
-					tileY = Math.floor( ( this.position.y + boxY ) / 16 );
+					tileY = Math.floor( ( position.y - boxY ) / 16 );
 
-					if ( this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
+					if ( this.game.view.grid[ tileY ][ tileX ].isReachable( this ) !== true ) {
 						position.x = this.position.x;
-					}
-				}
-
-				if ( this.velocity.y > 0 ) {
-					tileX = Math.floor( ( this.position.x - boxX ) / 16 );
-					tileY = Math.floor( ( position.y + boxY ) / 16 );
-
-					if ( this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
-						position.y = this.position.y;
-					}
-
-					tileX = Math.floor( ( this.position.x + boxX ) / 16 );
-					tileY = Math.floor( ( position.y + boxY ) / 16 );
-
-					if ( this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
-						position.y = this.position.y;
-					}
-				}
-				else if ( this.velocity.y < 0 ) {
-					tileX = Math.floor( ( this.position.x - boxX ) / 16 );
-					tileY = Math.floor( ( position.y - boxY ) / 16 );
-
-					if ( this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
-						position.y = this.position.y;
-					}
-
-					tileX = Math.floor( ( this.position.x + boxX ) / 16 );
-					tileY = Math.floor( ( position.y - boxY ) / 16 );
-
-					if ( this.game.view.grid[ tileY ][ tileX ].isReachable( this ) === false ) {
 						position.y = this.position.y;
 					}
 				}
@@ -366,55 +304,51 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 		 */
 
 		isColliding: function( aEntity ) {
-			var t, s1, s2,
-				d = [ ],
-				ra = 0,
-				rb = 0;
+			var i, len;
 
-			t = new aVector( aEntity.position.x, aEntity.position.y );
-			t.subtract( this.position );
-
-			s1 = new aVector( t.dot( this.axes[ 0 ] ), t.dot( this.axes[ 1 ] ) );
-
-			t.set( this.position );
-			t.subtract( aEntity.position );
-
-			s2 = new aVector( t.dot( aEntity.axes[ 0 ] ), t.dot( aEntity.axes[ 1 ] ) );
-
-			d[ 0 ] = this.axes[ 0 ].dot( aEntity.axes[ 0 ] );
-			d[ 1 ] = this.axes[ 0 ].dot( aEntity.axes[ 1 ] );
-			d[ 2 ] = this.axes[ 1 ].dot( aEntity.axes[ 0 ] );
-			d[ 3 ] = this.axes[ 1 ].dot( aEntity.axes[ 1 ] );
-
-			ra = this.bbox[ 0 ] * 0.5;
-			rb = Math.abs( d[ 0 ] ) * aEntity.bbox[ 0 ] * 0.5 + ( Math.abs( d[ 1 ] ) * aEntity.bbox[ 1 ] * 0.5 );
-
-			if ( Math.abs( s1.x ) > ra + rb ) {
+			if ( this.solid === GLOBAL.solid.not || aEntity.solid === GLOBAL.solid.not ) {
 				return false;
 			}
 
-			ra = this.height * 0.5;
-			rb = Math.abs( d[ 2 ] ) * aEntity.bbox[ 1 ] * 0.5 + ( Math.abs( d[ 3 ] ) * aEntity.height * 0.5 );
-
-			if ( Math.abs( s1.y ) > ra + rb ) {
-				return false;
+			for ( i = 0, len = this.boundingBox.vertices.length; i < len; i++ ) {
+				if ( this.isSeparatingAxis( aEntity, this.boundingBox.normals[ i ] ) === true ) {
+					return false;
+				}
 			}
 
-			ra = Math.abs( d[ 0 ] ) * this.bbox[ 0 ] * 0.5 + ( Math.abs( d[ 2 ] ) * this.bbox[ 1 ] * 0.5 );
-			rb = aEntity.bbox[ 0 ] * 0.5;
-
-			if ( Math.abs( s2.x ) > ra + rb ) {
-				return false;
-			}
-
-			ra = Math.abs( d[ 1 ] ) * this.bbox[ 0 ] * 0.5 + ( Math.abs( d[ 3 ] ) * this.bbox[ 1 ] * 0.5 );
-			rb = aEntity.bbox[ 1 ] * 0.5;
-
-			if ( Math.abs( s2.y ) > ra + rb ) {
-				return false;
+			for ( i = 0, len = aEntity.boundingBox.vertices.length; i < len; i++ ) {
+				if ( this.isSeparatingAxis( aEntity, aEntity.boundingBox.normals[ i ] ) === true ) {
+					return false;
+				}
 			}
 
 			return true;
+		},
+
+		/**
+		 * Method: isSeparatingAxis
+		 * @param {Object} aEntity
+		 * @param {Vector} aAxis
+		 */
+
+		isSeparatingAxis: function( aEntity, aAxis ) {
+			var offset, projected,
+				rangeA, rangeB;
+
+			offset = aEntity.position.clone( ).subtract( this.position );
+			projected = offset.dot( aAxis );
+
+			rangeA = this.boundingBox.flattenVerticesOn( aAxis );
+			rangeB = aEntity.boundingBox.flattenVerticesOn( aAxis );
+
+			rangeB[ 0 ] += projected;
+			rangeB[ 1 ] += projected;
+
+			if ( rangeA[ 0 ] > rangeB[ 1 ] || rangeB[ 0 ] > rangeA[ 1 ] ) {
+				return true;
+			}
+
+			return false;
 		},
 
 		/**
@@ -422,7 +356,7 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 		 */
 
 		addSounds: function( ) {
-
+			return this;
 		},
 
 		/**
@@ -431,11 +365,15 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 		 */
 
 		addSound: function( aSound ) {
+			var len;
+
 			if ( !this.sounds[ aSound.state ] ) {
 				this.sounds[ aSound.state ] = [ ];
 			}
 
-			this.sounds[ aSound.state ].push( aSound );
+			len = this.sounds[ aSound.state ].push( aSound );
+
+			return this.sounds[ aSound.state ][ len - 1 ];
 		},
 
 		/**
@@ -463,6 +401,8 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 					}
 				}
 			}
+
+			return this;
 		},
 
 		/**
@@ -470,7 +410,7 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 		 */
 
 		loaded: function( ) {
-
+			return this;
 		},
 
 		/**
@@ -479,10 +419,12 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 		 */
 
 		spawn: function( aPosition ) {
-			var position = aPosition || { x: 0, y: 0 };
+			var position = aPosition || new aVector( );
 
 			this.setPosition( position );
 			this.load( );
+
+			return this;
 		},
 
 		/**
@@ -490,7 +432,7 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 		 */
 
 		draw: function( ) {
-
+			return this;
 		},
 
 		/**
@@ -498,7 +440,7 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 		 */
 
 		think: function( ) {
-
+			return this;
 		},
 
 		/**
@@ -509,6 +451,8 @@ define( [ 'global', 'vector', 'class' ], function( aGlobal, aVector ) {
 			if ( this.goal !== null ) {
 				this.moveToGoal( );
 			}
+
+			return this;
 		}
 	});
 

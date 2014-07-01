@@ -1,104 +1,151 @@
 
-define( [ 'global', 'vector', 'image', 'class' ], function( aGlobal, aVector, aImage ) {
+define( [ 'global', 'vector', 'polygon', 'image', 'class' ], function( aGlobal, aVector, aPolygon, aImage ) {
 	'use strict';
 
-	var GLOBAL = new aGlobal( );
-
-	/**
-	 * Constants
-	 */
-
-	function collideNone( aEntity ) {
-		return true;
-	}
-
-	function collideWall( aEntity ) {
-		return false;
-	}
+	var GLOBAL = aGlobal.get( );
 
 	/**
 	 * Class: cell
 	 */
 
-	var Cell = Class.extend({
+	var Cell = Object.subClass({
 		/**
 		 * Method: init
 		 * @param {Object} aOptions
 		 */
 
 		init: function( aOptions ) {
-			var pi180 = Math.PI / 180,
-				options = aOptions || {
-				row: 0,
-				index: 0,
-				collide: 'none',
-				effect: null
-			};
+			var options = aOptions || {
+					row: 0,
+					index: 0
+				};
 
 			this.system = options.system;
 			this.game = options.game;
-			this.collide = options.collide;
 
-			this.position = new aVector({
-				x: ( options.index * 16 ) + 8,
-				y: ( options.row * 16 ) + 8
-			});
-
-			this.angle = 0;
-			this.axes = [ ];
-			this.axes[ 0 ] = new aVector( 1, 0 );
-			this.axes[ 1 ] = new aVector( 0, -1 );
-
-			this.bbox = [ 16, 16 ];
-			this.friction = [ 1, 1 ];
-			this.interactions = [ ];
+			this.position = new aVector( ( options.index * 16 ) + 8, ( options.row * 16 ) + 8 );
+			this.layer = this.system.canvas.layers[ GLOBAL.video.layers.middleground ];
+			this.boundingBox = null;
 			this.dirty = true;
 
+			this.friction = [ 1, 1 ];
+			this.interactions = [ ];
+
 			if ( options.collide === 'none' ) {
-				this.isReachable = collideNone;
+				this.solid = GLOBAL.solid.not;
+				this.dirty = false;
 			}
 			else if ( options.collide === 'angleTopRight' ) {
-				this.bbox = [ 23, 2 ];
+				this.solid = GLOBAL.solid.boundingBox;
 
-				this.axes[ 0 ].setAngle( 45 * pi180 );
-				this.axes[ 1 ].setAngle( 45 * pi180 );
+				this.position.x -= 3;
+				this.position.y += 3;
+
+				this.boundingBox = new aPolygon([
+					new aVector( 0, 0 ),
+					new aVector( 16, 0 ),
+					new aVector( 0, 16 )
+				]);
+
+				this.boundingBox.rotate( 270 * GLOBAL.convert.degreesToRadians );
 			}
 			else if ( options.collide === 'angleTopLeft' ) {
-				this.bbox = [ 23, 2 ];
+				this.solid = GLOBAL.solid.boundingBox;
 
-				this.axes[ 0 ].setAngle( 135 * pi180 );
-				this.axes[ 1 ].setAngle( 135 * pi180 );
+				this.position.x += 3;
+				this.position.y += 3;
+
+				this.boundingBox = new aPolygon([
+					new aVector( 0, 0 ),
+					new aVector( 16, 0 ),
+					new aVector( 0, 16 )
+				]);
+
+				this.boundingBox.rotate( 180 * GLOBAL.convert.degreesToRadians );
 			}
 			else if ( options.collide === 'angleBottomRight' ) {
-				this.bbox = [ 23, 2 ];
+				this.solid = GLOBAL.solid.boundingBox;
 
-				this.axes[ 0 ].setAngle( 135 * pi180 );
-				this.axes[ 1 ].setAngle( 135 * pi180 );
+				this.position.x -= 3;
+				this.position.y -= 3;
+
+				this.boundingBox = new aPolygon([
+					new aVector( 0, 0 ),
+					new aVector( 16, 0 ),
+					new aVector( 0, 16 )
+				]);
 			}
 			else if ( options.collide === 'angleBottomLeft' ) {
-				this.bbox = [ 23, 2 ];
+				this.solid = GLOBAL.solid.boundingBox;
 
-				this.axes[ 0 ].setAngle( 45 * pi180 );
-				this.axes[ 1 ].setAngle( 45 * pi180 );
+				this.position.x += 3;
+				this.position.y -= 3;
+
+				this.boundingBox = new aPolygon([
+					new aVector( 0, 0 ),
+					new aVector( 16, 0 ),
+					new aVector( 0, 16 )
+				]);
+
+				this.boundingBox.rotate( 90 * GLOBAL.convert.degreesToRadians );
 			}
 			else if ( options.collide === 'topHalfOpen' ) {
-				this.bbox = [ 16, 8 ];
+				this.solid = GLOBAL.solid.boundingBox;
 
-				this.position.add({ x: 0, y: 8 });
+				this.position.x += 4;
+
+				this.boundingBox = new aPolygon([
+					new aVector( 0, 0 ),
+					new aVector( 16, 0 ),
+					new aVector( 16, 8 ),
+					new aVector( 0, 8 )
+				]);
 			}
 			else if ( options.collide === 'bottomHalfOpen' ) {
-				this.bbox = [ 16, 8 ];
+				this.solid = GLOBAL.solid.boundingBox;
+
+				this.position.y -= 4;
+
+				this.boundingBox = new aPolygon([
+					new aVector( 0, 0 ),
+					new aVector( 16, 0 ),
+					new aVector( 16, 8 ),
+					new aVector( 0, 8 )
+				]);
 			}
 			else if ( options.collide === 'rightHalfOpen' ) {
-				this.bbox = [ 8, 16 ];
+				this.solid = GLOBAL.solid.boundingBox;
+
+				this.position.x -= 4;
+
+				this.boundingBox = new aPolygon([
+					new aVector( 0, 0 ),
+					new aVector( 8, 0 ),
+					new aVector( 8, 16 ),
+					new aVector( 0, 16 )
+				]);
 			}
 			else if ( options.collide === 'leftHalfOpen' ) {
-				this.bbox = [ 8, 16 ];
+				this.solid = GLOBAL.solid.boundingBox;
 
-				this.position.add({ x: 8, y: 0 });
+				this.position.x += 4;
+
+				this.boundingBox = new aPolygon([
+					new aVector( 0, 0 ),
+					new aVector( 16, 0 ),
+					new aVector( 16, 8 ),
+					new aVector( 0, 8 )
+				]);
 			}
 			else {
-				this.isReachable = collideWall;
+				this.solid = GLOBAL.solid.bsp;
+
+				this.boundingBox = new aPolygon([
+					new aVector( 0, 0 ),
+					new aVector( 16, 0 ),
+					new aVector( 16, 16 ),
+					new aVector( 0, 16 )
+				]);
 			}
 
 			this.game.view.entities.push( this );
@@ -110,15 +157,43 @@ define( [ 'global', 'vector', 'image', 'class' ], function( aGlobal, aVector, aI
 		 */
 
 		isReachable: function( aEntity ) {
-			var collision = aEntity.isColliding( this );
+			var reachable = false;
 
-			if ( collision === false ) {
-				this.touch( aEntity );
-
-				return true;
+			if ( this.solid === GLOBAL.solid.not ) {
+				reachable = true;
+			}
+			else if ( this.solid === GLOBAL.solid.boundingBox && aEntity.isColliding( this ) === true ) {
+				reachable = false;
 			}
 
-			return false;
+			if ( reachable === true ) {
+				this.touch( aEntity );
+			}
+
+			return reachable;
+		},
+
+		/**
+		 * Method: flattenVerticesOn
+		 * @param {Vector} aNormal
+		 */
+
+		flattenVerticesOn: function( aNormal ) {
+			var min = Number.MAX_VALUE,
+				max = -( Number.MAX_VALUE ),
+				dot, result,
+				i, len;
+
+			for ( i = 0, len = this.boundingBox.vertices.length; i < len; i++ ) {
+				dot = this.boundingBox.vertices[ i ].dot( aNormal );
+
+				if ( dot < min ) { min = dot; }
+				if ( dot > max ) { max = dot; }
+			}
+
+			result = [ min, max ];
+
+			return result;
 		},
 
 		/**
@@ -127,7 +202,7 @@ define( [ 'global', 'vector', 'image', 'class' ], function( aGlobal, aVector, aI
 		 */
 
 		touch: function( aEntity ) {
-			//
+			return this;
 		},
 
 		/**
@@ -135,7 +210,7 @@ define( [ 'global', 'vector', 'image', 'class' ], function( aGlobal, aVector, aI
 		 */
 
 		think: function( ) {
-			//
+			return this;
 		},
 
 		/**
@@ -143,31 +218,38 @@ define( [ 'global', 'vector', 'image', 'class' ], function( aGlobal, aVector, aI
 		 */
 
 		draw: function( ) {
-			var layer, boxX, boxY;
+			var position,
+				i, len;
 
 			if ( this.dirty === true ) {
-				if ( this.collide !== 'none' ) {
-					layer = this.system.canvas.layers[ GLOBAL.video.layers.middleground ];
+				if ( this.solid === GLOBAL.solid.boundingBox || this.solid === GLOBAL.solid.bsp ) {
+					position = this.boundingBox.getCenter( );
+					position.x = this.position.x - position.x;
+					position.y = this.position.y - position.y;
 
-					boxX = Math.floor( this.bbox[ 0 ] * 0.5 );
-					boxY = Math.floor( this.bbox[ 1 ] * 0.5 );
+					this.layer.bufferContext.save( );
+					this.layer.bufferContext.translate( position.x, position.y );
 
-					layer.bufferContext.save( );
+					this.layer.bufferContext.globalAlpha = 0.5;
+					this.layer.bufferContext.fillStyle = 'yellow';
+					this.layer.bufferContext.beginPath( );
+					this.layer.bufferContext.moveTo( this.boundingBox.vertices[ 0 ].x, this.boundingBox.vertices[ 0 ].y );
 
-					layer.bufferContext.translate( this.position.x, this.position.y );
-					layer.bufferContext.rotate( this.axes[ 0 ].angle( ) );
-					layer.bufferContext.clearRect( -( boxX ), -( boxY ), this.bbox[ 0 ], this.bbox[ 1 ] );
+					for ( i = 1, len = this.boundingBox.vertices.length; i < len; i++ ) {
+						this.layer.bufferContext.lineTo( this.boundingBox.vertices[ i ].x, this.boundingBox.vertices[ i ].y );
+					}
 
-					layer.bufferContext.globalAlpha = 0.5;
-					layer.bufferContext.fillStyle = 'yellow';
-					layer.bufferContext.fillRect( -( boxX ), -( boxY ), this.bbox[ 0 ], this.bbox[ 1 ] );
-					layer.bufferContext.globalAlpha = 1;
+					this.layer.bufferContext.closePath( );
+					this.layer.bufferContext.fill( );
 
-					layer.bufferContext.restore( );
+					this.layer.bufferContext.globalAlpha = 1;
+					this.layer.bufferContext.restore( );
 				}
 
 				this.dirty = false;
 			}
+
+			return this;
 		}
 	});
 
@@ -175,7 +257,7 @@ define( [ 'global', 'vector', 'image', 'class' ], function( aGlobal, aVector, aI
 	 * Class: World
 	 */
 
-	var Tile = Class.extend({
+	var Tile = Object.subClass({
 		/**
 		 * Method: init
 	 	 * @param {Object} aSystem
@@ -222,6 +304,8 @@ define( [ 'global', 'vector', 'image', 'class' ], function( aGlobal, aVector, aI
 			if ( tile.hasOwnProperty( 'spawn' ) === true ) {
 				this.spawn = tile.spawn;
 			}
+
+			return this;
 		},
 
 		/**
@@ -238,6 +322,8 @@ define( [ 'global', 'vector', 'image', 'class' ], function( aGlobal, aVector, aI
 
 			this.background.setLayer( GLOBAL.video.layers.background );
 			this.background.spawn( );
+
+			return this;
 		},
 
 		/**
@@ -254,6 +340,8 @@ define( [ 'global', 'vector', 'image', 'class' ], function( aGlobal, aVector, aI
 
 			this.foreground.setLayer( GLOBAL.video.layers.foreground );
 			this.foreground.spawn( );
+
+			return this;
 		},
 
 		/**
@@ -278,6 +366,8 @@ define( [ 'global', 'vector', 'image', 'class' ], function( aGlobal, aVector, aI
 					this.grid[ i ][ j ] = new Cell( cell );
 				}
 			}
+
+			return this;
 		},
 
 		/**
@@ -287,6 +377,8 @@ define( [ 'global', 'vector', 'image', 'class' ], function( aGlobal, aVector, aI
 
 		loadEntities: function( aEntities ) {
 			this.entities = aEntities;
+
+			return this;
 		}
 	});
 

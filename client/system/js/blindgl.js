@@ -2,13 +2,13 @@
 define( [ 'global', 'keyboard', 'mouse', 'audio', 'canvas', '../../game/js/game', 'class' ], function( aGlobal, aKeyboard, aMouse, aAudio, aCanvas, aGame ) {
 	'use strict';
 
-	var GLOBAL = new aGlobal( );
+	var GLOBAL = aGlobal.get( );
 
 	/**
 	 * Class: blindGL
 	 */
 
-	var blindGL = Class.extend({
+	var blindGL = Object.subClass({
 		/**
 		 * Method: verbose
 	 	 * @param {String} aMessage
@@ -45,7 +45,7 @@ define( [ 'global', 'keyboard', 'mouse', 'audio', 'canvas', '../../game/js/game'
 		 */
 
 		pause: function( ) {
-			var now = Date( ).time;
+			var now = Date.now( );
 
 			this.paused = true;
 			this.pauseTime = now;
@@ -58,7 +58,7 @@ define( [ 'global', 'keyboard', 'mouse', 'audio', 'canvas', '../../game/js/game'
 		 */
 
 		unpause: function( ) {
-			var now = Date( ).time;
+			var now = Date.now( );
 
 			this.paused = false;
 			this.lastTick += ( now - this.pauseTime );

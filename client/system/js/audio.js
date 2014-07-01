@@ -2,14 +2,14 @@
 define( [ 'global', 'class' ], function( aGlobal ) {
 	'use strict';
 
-	var GLOBAL = new aGlobal( );
+	var GLOBAL = aGlobal.get( );
 
 	/**
 	 * Class: Soundbank
 	 * @param {DOMelement} aElement
 	 */
 
-	var Soundbank = Class.extend({
+	var Soundbank = Object.subClass({
 		/**
 		 * Method: init
 		 * @param {DOMelement} aElement
@@ -39,6 +39,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				this.playing = true;
 				this.sound.play( );
 			}
+
+			return this;
 		},
 
 		/**
@@ -56,6 +58,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 				this.playing = false;
 			}
+
+			return this;
 		}
 	});
 
@@ -63,7 +67,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 	 * Class: Audio
 	 */
 
-	var Audio = Class.extend({
+	var Audio = Object.subClass({
 		/**
 		 * Method: init
 		 * @param {Object} aSystem
@@ -120,6 +124,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				this.banks[ len ].next = this.banks[ 0 ];
 				this.banks[ len - 1 ].next = this.banks[ len ];
 			}
+
+			return this;
 		},
 
 		/**
@@ -169,6 +175,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 				this.background.playing = true;
 				this.background.sound.play( );
 			}
+
+			return this;
 		},
 
 		/**
@@ -179,6 +187,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			this.background.sound.pause( );
 			this.background.playing = false;
 			this.background.paused = true;
+
+			return this;
 		},
 
 		/**
@@ -190,6 +200,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			this.background.sound.currentTime = 0;
 			this.background.playing = false;
 			this.background.paused = false;
+
+			return this;
 		},
 
 		/**

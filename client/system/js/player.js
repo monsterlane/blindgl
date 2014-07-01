@@ -2,19 +2,21 @@
 define( [ 'global', 'vector', 'sprite', 'class' ], function( aGlobal, aVector, aSprite ) {
 	'use strict';
 
-	var GLOBAL = new aGlobal( );
+	var GLOBAL = aGlobal.get( );
 
 	/**
 	 * Class: Player
 	 */
 
-	var Player = aSprite.extend({
+	var Player = aSprite.subClass({
 		/**
 		 * Method: walk
 		 */
 
 		idle: function( ) {
 			this.setState( GLOBAL.ai.idle );
+
+			return this;
 		},
 
 		/**
@@ -29,6 +31,8 @@ define( [ 'global', 'vector', 'sprite', 'class' ], function( aGlobal, aVector, a
 			}
 
 			this._super( aX, aY );
+
+			return this;
 		},
 
 		/**
@@ -41,13 +45,12 @@ define( [ 'global', 'vector', 'sprite', 'class' ], function( aGlobal, aVector, a
 			this._super( );
 
 			if ( this.goal === null ) {
-				position = new aVector({
-					x: this.position.x + this.velocity.x,
-					y: this.position.y + this.velocity.y
-				});
+				position = new aVector( this.position.x + this.velocity.x, this.position.y + this.velocity.y );
 
 				this.position = this.isReachable( position );
 			}
+
+			return this;
 		}
 	});
 

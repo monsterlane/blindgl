@@ -1,14 +1,32 @@
 
-define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/player' ], function( aGlobal, aVector, aPlayer ) {
+define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/polygon', '../../system/js/player' ], function( aGlobal, aVector, aPolygon, aPlayer ) {
 	'use strict';
 
-	var GLOBAL = new aGlobal( );
+	var GLOBAL = aGlobal.get( );
 
 	/**
 	 * Class: Game
 	 */
 
-	var Player = aPlayer.extend({
+	var Player = aPlayer.subClass({
+		/**
+		 * Method: init
+		 * @param {Object} aOptions
+		 */
+
+		init: function( aOptions ) {
+			this._super( aOptions );
+
+			this.solid = GLOBAL.solid.boundingBox;
+
+			this.boundingBox = new aPolygon([
+				new aVector( 0, 0 ),
+				new aVector( 12, 0 ),
+				new aVector( 12, 12 ),
+				new aVector( 0, 12 )
+			]);
+		},
+
 		/**
 		 * Method: addAnimations
 		 */
@@ -193,6 +211,8 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 					self.setState( self.lastState );
 				}
 			});
+
+			return this;
 		},
 
 		/**
@@ -229,6 +249,8 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				fileUrl: 'game/snd/player/attack/sword4.mp3',
 				volume: 50
 			});
+
+			return this;
 		},
 
 		/**
@@ -302,6 +324,8 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 					self.setState( GLOBAL.ai.idle );
 				}
 			});
+
+			return this;
 		},
 
 		/**
@@ -315,6 +339,8 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 			this.bindKeyboardBindings( );
 
 			this.system.verbose( 'player->spawn' );
+
+			return this;
 		},
 
 		/**
@@ -331,6 +357,8 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 					files: this.sounds[ GLOBAL.ai.attack ]
 				});
 			}
+
+			return this;
 		},
 
 		/**
@@ -343,17 +371,13 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 			this._super( aState, aOptions );
 
 			if ( this.state === GLOBAL.ai.walk ) {
-				this.maxVelocity = new aVector({
-					x: 0.75,
-					y: 0.75,
-				});
+				this.maxVelocity = new aVector( 0.75, 0.75 );
 			}
 			else if ( this.state === GLOBAL.ai.run ) {
-				this.maxVelocity = new aVector({
-					x: 1.25,
-					y: 1.25
-				});
+				this.maxVelocity = new aVector( 1.25, 1.25 );
 			}
+
+			return this;
 		},
 
 		/**
@@ -384,6 +408,8 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 				this.sound = null;
 			}
 			*/
+
+			return this;
 		},
 
 		/**
@@ -434,18 +460,8 @@ define( [ '../../system/js/global', '../../system/js/vector', '../../system/js/p
 			}
 
 			this._super( );
-		},
 
-		/**
-		 * Method: init
-		 * @param {Object} aOptions
-		 */
-
-		init: function( aOptions ) {
-			this._super( aOptions );
-
-			this.solid = GLOBAL.solid.bbox;
-			this.bbox = [ 12, 12 ];
+			return this;
 		}
 	});
 

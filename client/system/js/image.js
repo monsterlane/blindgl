@@ -2,13 +2,13 @@
 define( [ 'global', 'vector', 'entity', 'class' ], function( aGlobal, aVector, aEntity ) {
 	'use strict';
 
-	var GLOBAL = new aGlobal( );
+	var GLOBAL = aGlobal.get( );
 
 	/**
 	 * Class: Image
 	 */
 
-	var Image = aEntity.extend({
+	var Image = aEntity.subClass({
 		/**
 		 * Method: init
 		 * @param {Object} aOptions
@@ -20,14 +20,15 @@ define( [ 'global', 'vector', 'entity', 'class' ], function( aGlobal, aVector, a
 
 			this._super( aOptions );
 
+			this.pattern = null;
+			this.dirty = false;
+
 			this.element = document.createElement( 'img' );
 			this.element.setAttribute( 'src', image.fileUrl );
 
 			this.element.addEventListener( 'load', function( ) {
 				self.dirty = true;
 			}, true );
-
-			this.pattern = null;
 
 			if ( image.hasOwnProperty( 'effect' ) === true && image.effect.hasOwnProperty( 'name' ) === true ) {
 				this.effect = image.effect;
@@ -36,10 +37,7 @@ define( [ 'global', 'vector', 'entity', 'class' ], function( aGlobal, aVector, a
 					this.width += this.effect.offset.x;
 					this.height += this.effect.offset.y;
 
-					this.maxVelocity = new aVector({
-						x: this.effect.velocity.x,
-						y: this.effect.velocity.y
-					});
+					this.maxVelocity = new aVector( this.effect.velocity.x, this.effect.velocity.y );
 				}
 			}
 			else {
@@ -53,8 +51,6 @@ define( [ 'global', 'vector', 'entity', 'class' ], function( aGlobal, aVector, a
 				this.opacity = 1;
 			}
 
-			this.dirty = false;
-
 			this.system.verbose( 'image->init' );
 		},
 
@@ -66,7 +62,10 @@ define( [ 'global', 'vector', 'entity', 'class' ], function( aGlobal, aVector, a
 			if ( this.dirty === true ) {
 				if ( this.effect && ( this.effect.name === 'repeat' || this.effect.name === 'bounce' ) ) {
 					if ( this.pattern === null ) {
-						this.pattern = this.layer.bufferContext.createPattern( this.element, 'repeat' );
+						try {
+							this.pattern = this.layer.bufferContext.createPattern( this.element, 'repeat' );
+						}
+						catch( err ) { }
 					}
 
 					this.layer.bufferContext.save( );
@@ -89,6 +88,8 @@ define( [ 'global', 'vector', 'entity', 'class' ], function( aGlobal, aVector, a
 
 				this.dirty = false;
 			}
+
+			return this;
 		},
 
 		/**
@@ -103,28 +104,30 @@ define( [ 'global', 'vector', 'entity', 'class' ], function( aGlobal, aVector, a
 			this._super( );
 
 			if ( this.effect ) {
-					if ( this.effect.name === 'bounce' ) {
-						minX = minY = 0;
-						maxX = this.effect.offset.x;
-						maxY = this.effect.offset.y;
+				if ( this.effect.name === 'bounce' ) {
+					minX = minY = 0;
+					maxX = this.effect.offset.x;
+					maxY = this.effect.offset.y;
 
-						if ( this.goal === null ) {
-							posX = Math.floor( Math.random( ) * ( maxX - minX + 1 ) ) + minX;
-							posY = Math.floor( Math.random( ) * ( maxY - minY + 1 ) ) + minY;
+					if ( this.goal === null ) {
+						posX = Math.floor( Math.random( ) * ( maxX - minX + 1 ) ) + minX;
+						posY = Math.floor( Math.random( ) * ( maxY - minY + 1 ) ) + minY;
 
-							this.setGoal({
-								x: posX - this.effect.offset.x,
-								y: posY - this.effect.offset.y
-							});
-						}
-						else {
-							this.moveToGoal( );
-						}
-
-						this.dirty = true;
+						this.setGoal({
+							x: posX - this.effect.offset.x,
+							y: posY - this.effect.offset.y
+						});
 					}
+					else {
+						this.moveToGoal( );
+					}
+
+					this.dirty = true;
 				}
 			}
+
+			return this;
+		}
 	});
 
 	return Image;

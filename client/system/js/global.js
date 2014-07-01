@@ -1,12 +1,12 @@
 
-define( [ 'class' ], function( ) {
+define( function( ) {
 	'use strict';
 
 	/**
-	 * Class: Global
+	 * Globals
 	 */
 
-	var Global = Class.extend({
+	var Global = {
 		settings: {
 			verbose: true,
 			showFps: true
@@ -99,7 +99,8 @@ define( [ 'class' ], function( ) {
 		},
 		solid: {
 			not: 0,
-			bbox: 1
+			boundingBox: 1,
+			bsp: 2
 		},
 		moveType: {
 			none: 0,
@@ -122,8 +123,16 @@ define( [ 'class' ], function( ) {
 			chase: 3,
 			evade: 4,
 			attack: 5
+		},
+		convert: {
+			degreesToRadians: Math.PI / 180,
+			radiansToDegrees: 180 / Math.PI
 		}
-	});
+	};
 
-	return Global;
+	return {
+		get: function( ) {
+			return Global;
+		}
+	};
 });

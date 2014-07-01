@@ -4,7 +4,7 @@
  */
 
 require.config({
-	urlArgs: new Date( ).getTime( ).toString( )
+	urlArgs: Date.now( )
 });
 
 /**

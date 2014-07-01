@@ -2,13 +2,13 @@
 define( [ 'global', 'class' ], function( aGlobal ) {
 	'use strict';
 
-	var GLOBAL = new aGlobal( );
+	var GLOBAL = aGlobal.get( );
 
 	/**
 	 * Class: Layer
 	 */
 
-	var Layer = Class.extend({
+	var Layer = Object.subClass({
 		/**
 		 * Method: init
 		 * @param {Object} aOptions
@@ -51,6 +51,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		draw: function( ) {
 			this.displayContext.clearRect( 0, 0, this.width, this.height );
 			this.displayContext.drawImage( this.buffer, 0, 0 );
+
+			return this;
 		}
 	});
 
@@ -58,35 +60,7 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 	 * Class: Canvas
 	 */
 
-	var Canvas = Class.extend({
-		/**
-		 * Method: setResolution
-		 */
-
-		setResolution: function( ) {
-			var el = document.getElementById( 'bglInterface' ),
-				width = window.innerWidth,
-				height = window.innerHeight,
-				i = GLOBAL.video.resolutions.length,
-				res = 0;
-
-			while ( i-- ) {
-				if ( GLOBAL.video.resolutions[ i ][ 0 ] < width && GLOBAL.video.resolutions[ i ][ 1 ] < height ) {
-					res = i;
-					break;
-				}
-			}
-
-			this.resolution = GLOBAL.video.resolutions[ res ];
-
-			el.style.width = GLOBAL.video.resolutions[ res ][ 0 ] + 'px';
-			el.style.height = GLOBAL.video.resolutions[ res ][ 1 ] + 'px';
-			el.style.margin = '-' + parseInt( GLOBAL.video.resolutions[ res ][ 1 ] / 2, 10 ) + 'px 0 0 -' + parseInt( GLOBAL.video.resolutions[ res ][ 0 ] / 2, 10 ) + 'px';
-
-			el.querySelectorAll( 'header' )[ 0 ].style.display = 'inline-block';
-			el.querySelectorAll( 'footer' )[ 0 ].style.display = 'inline-block';
-		},
-
+	var Canvas = Object.subClass({
 		/**
 		 * Method: init
 		 * @param {Object} aSystem
@@ -123,6 +97,36 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 		},
 
 		/**
+		 * Method: setResolution
+		 */
+
+		setResolution: function( ) {
+			var el = document.getElementById( 'bglInterface' ),
+				width = window.innerWidth,
+				height = window.innerHeight,
+				i = GLOBAL.video.resolutions.length,
+				res = 0;
+
+			while ( i-- ) {
+				if ( GLOBAL.video.resolutions[ i ][ 0 ] < width && GLOBAL.video.resolutions[ i ][ 1 ] < height ) {
+					res = i;
+					break;
+				}
+			}
+
+			this.resolution = GLOBAL.video.resolutions[ res ];
+
+			el.style.width = GLOBAL.video.resolutions[ res ][ 0 ] + 'px';
+			el.style.height = GLOBAL.video.resolutions[ res ][ 1 ] + 'px';
+			el.style.margin = '-' + parseInt( GLOBAL.video.resolutions[ res ][ 1 ] / 2, 10 ) + 'px 0 0 -' + parseInt( GLOBAL.video.resolutions[ res ][ 0 ] / 2, 10 ) + 'px';
+
+			el.querySelectorAll( 'header' )[ 0 ].style.display = 'inline-block';
+			el.querySelectorAll( 'footer' )[ 0 ].style.display = 'inline-block';
+
+			return this;
+		},
+
+		/**
 		 * Method: clear
 		 */
 
@@ -131,6 +135,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 			el.style.backgroundImage = 'none';
 			el.style.backgroundColor = '#fff';
+
+			return this;
 		},
 
 		/**
@@ -143,6 +149,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			for ( i = 0, len = this.layers.length; i < len; i++ ) {
 				this.layers[ i ].draw( );
 			}
+
+			return this;
 		}
 	});
 

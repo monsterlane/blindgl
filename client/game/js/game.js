@@ -6,7 +6,7 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 	 * Class: Game
 	 */
 
-	var Game = aWorld.extend({
+	var Game = aWorld.subClass({
 		/**
 		 * Method: start
 		 */
@@ -40,7 +40,7 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 					opacity: 0.3
 				},
 				spawn: {
-					x: 174,
+					x: 175,
 					y: 150
 				},
 				grid: [
@@ -8716,7 +8716,7 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 							effect: null
 						},
 						{
-							collide: 'none',
+							collide: 'angleTopLeft',
 							effect: null
 						},
 						{
@@ -12431,16 +12431,16 @@ define( [ '../../system/js/world' ], function( aWorld ) {
 				]
 			});
 
-			/*
 			this.system.audio.playMusic({
 				fileUrl: 'game/snd/world/music/overworld.mp3',
 				volume: 70,
 				effectName: 'fadeIn',
 				effectDuration: 10000
 			});
-			*/
 
 			this.addClient( this.view.spawn );
+
+			return this;
 		}
 	});
 

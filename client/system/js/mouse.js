@@ -2,41 +2,14 @@
 define( [ 'global', 'class' ], function( aGlobal ) {
 	'use strict';
 
-	var GLOBAL = new aGlobal( );
+	var GLOBAL = aGlobal.get( );
 
 	/**
 	 * Class: Button
 	 * @param {DOMelement} aElement
 	 */
 
-	var Button = Class.extend({
-		/**
-		 * Method: click
-		 * @param {DOMevent} aEvent
-		 */
-
-		click: function( aEvent ) {
-
-		},
-
-		/**
-		 * Method: onUp
-		 * @param {DOMevent} aEvent
-		 */
-
-		onUp: function( aEvent ) {
-
-		},
-
-		/**
-		 * Method: onDown
-		 * @param {DOMevent} aEvent
-		 */
-
-		onDown: function( aEvent ) {
-
-		},
-
+	var Button = Object.subClass({
 		/**
 		 * Method: init
 		 * @param {Object} aBinding
@@ -74,6 +47,33 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 			if ( binding.hasOwnProperty( 'onDown' ) === true ) {
 				this.onDown = binding.onDown;
 			}
+		},
+
+		/**
+		 * Method: click
+		 * @param {DOMevent} aEvent
+		 */
+
+		click: function( aEvent ) {
+			return this;
+		},
+
+		/**
+		 * Method: onUp
+		 * @param {DOMevent} aEvent
+		 */
+
+		onUp: function( aEvent ) {
+			return this;
+		},
+
+		/**
+		 * Method: onDown
+		 * @param {DOMevent} aEvent
+		 */
+
+		onDown: function( aEvent ) {
+			return this;
 		}
 	});
 
@@ -81,7 +81,19 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 	 * Class: Input
 	 */
 
-	var Mouse = Class.extend({
+	var Mouse = Object.subClass({
+		/**
+		 * Method: init
+		 * @param {Object} aSystem
+		 */
+
+		init: function( aSystem ) {
+			this.system = aSystem;
+			this.binding = { };
+
+			this.system.verbose( 'init->input->mouse' );
+		},
+
 		/**
 		 * Method: getClickOffset
 		 * @param {DOMevent} aEvent
@@ -113,18 +125,8 @@ define( [ 'global', 'class' ], function( aGlobal ) {
 
 		bindKey: function( aBinding ) {
 			this.binding[ aBinding.element.id ] = new Button( aBinding );
-		},
 
-		/**
-		 * Method: init
-		 * @param {Object} aSystem
-		 */
-
-		init: function( aSystem ) {
-			this.system = aSystem;
-			this.binding = { };
-
-			this.system.verbose( 'init->input->mouse' );
+			return this;
 		}
 	});
 

@@ -11,4 +11,6 @@ ehthumbs.db
 Thumbs.db
 
 # project files
+client/r.js
+client/dist/*
 resources/*
